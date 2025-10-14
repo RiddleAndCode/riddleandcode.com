@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="{%if lang == 'de'%}de{%else%}en{%endif%}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- SEO Meta Tags -->
+    <title>{{page_title}} — Riddle&Code</title>
+    <meta name="description" content="{{page_description}}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.riddleandcode.com/{{current_page}}">
+    <meta property="og:title" content="{{page_title}} — Riddle&Code">
+    <meta property="og:description" content="{{page_description}}">
+    <meta property="og:image" content="https://www.riddleandcode.com/assets/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.riddleandcode.com/{{current_page}}">
+    <meta property="twitter:title" content="{{page_title}} — Riddle&Code">
+    <meta property="twitter:description" content="{{page_description}}">
+    <meta property="twitter:image" content="https://www.riddleandcode.com/assets/images/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.riddleandcode.com/{{current_page}}">
+    
+    <!-- Language Alternates -->
+    <link rel="alternate" hreflang="en" href="https://www.riddleandcode.com/{{current_page}}">
+    <link rel="alternate" hreflang="de" href="https://www.riddleandcode.com/de/{{current_page}}">
+    <link rel="alternate" hreflang="x-default" href="https://www.riddleandcode.com/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/images/favicon-original.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon-original.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/assets/css/main.css" as="style">
+    <link rel="preload" href="/assets/js/main.js" as="script">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Riddle&Code",
+        "url": "https://www.riddleandcode.com",
+        "logo": "https://www.riddleandcode.com/assets/images/logo.png",
+        "description": "{%if lang == 'de'%}Industrielösungen für Web3. Maximieren Sie die Produktivität mit unseren Blockchain-Lösungen für Maschinen.{%else%}Industry Solutions for Web3. Unlock the full potential of industrial machines for Web3 applications.{%endif%}",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+43-1-123-4567",
+            "contactType": "Customer Service"
+        },
+        "sameAs": [
+            "https://twitter.com/riddleandcode",
+            "https://linkedin.com/company/riddle-&-code",
+            "https://github.com/RiddleAndCode"
+        ]
+    }
+    </script>
+    
+    <!-- Additional head content -->
+    {{additional_head}}
+</head>
+<body class="{{body_class}}">
+    <!-- Include Header -->
+    {%include components/header.html%}
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        {{content}}
+    </main>
+    
+    <!-- Include Footer -->
+    {%include components/footer.html%}
+    
+    <!-- Scripts -->
+    <script src="/assets/js/main.js"></script>
+    
+    <!-- Additional scripts -->
+    {{additional_scripts}}
+    
+    <!-- Analytics (if needed) -->
+    {%if site.analytics_id%}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{site.analytics_id}}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{site.analytics_id}}');
+    </script>
+    {%endif%}
+</body>
+</html>

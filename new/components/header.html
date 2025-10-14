@@ -1,0 +1,59 @@
+<!-- Header Component -->
+<header class="header">
+    <div class="container">
+        <nav class="nav">
+            <!-- Logo -->
+            <a href="{%if lang == 'de'%}/de.html{%else%}/index.html{%endif%}" class="nav-logo">
+                <img src="/assets/images/logo-original.png" alt="Riddle&Code" />
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <ul class="nav-menu">
+                <li><a href="{%if lang == 'de'%}/de/energy-community/mypwr.html{%else%}/energy-community/mypwr.html{%endif%}">
+                    {%if lang == 'de'%}MYPWR{%else%}MYPWR{%endif%}
+                </a></li>
+                <li><a href="{%if lang == 'de'%}/de/product/security-technology.html{%else%}/product/security-technology.html{%endif%}">
+                    {%if lang == 'de'%}Sicherheitstechnologie{%else%}Security Technology{%endif%}
+                </a></li>
+                <li><a href="{%if lang == 'de'%}/de/sustainability.html{%else%}/sustainability.html{%endif%}">
+                    {%if lang == 'de'%}Nachhaltigkeit{%else%}Sustainability{%endif%}
+                </a></li>
+                <li><a href="{%if lang == 'de'%}/de/showcase.html{%else%}/showcase.html{%endif%}">
+                    {%if lang == 'de'%}Schaukasten{%else%}Showcase{%endif%}
+                </a></li>
+                <li><a href="{%if lang == 'de'%}/de/company/overview.html{%else%}/company/overview.html{%endif%}">
+                    {%if lang == 'de'%}Firma{%else%}Company{%endif%}
+                </a></li>
+                
+                <!-- Language Switcher -->
+                <li class="language-switcher">
+                    <div class="language-current">
+                        <span>{%if lang == 'de'%}Deutsch{%else%}English{%endif%}</span>
+                        <svg width="12" height="8" viewBox="0 0 12 8" fill="currentColor">
+                            <path d="M6 8L0 2h12L6 8z"/>
+                        </svg>
+                    </div>
+                    <div class="language-dropdown">
+                        <a href="{%if current_page%}{%if lang == 'de'%}/{{ current_page | replace: 'de/', '' | replace: 'de.html', 'index.html' }}{%else%}/de/{{ current_page }}{%endif%}{%endif%}">
+                            {%if lang == 'de'%}English{%else%}Deutsch{%endif%}
+                        </a>
+                    </div>
+                </li>
+                
+                <!-- CTA Button -->
+                <li>
+                    <a href="{%if lang == 'de'%}/de/company/get-in-touch.html{%else%}/company/get-in-touch.html{%endif%}" class="btn btn-primary">
+                        {%if lang == 'de'%}Kontakt{%else%}Get in Touch{%endif%}
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="nav-toggle">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+            </div>
+        </nav>
+    </div>
+</header>
