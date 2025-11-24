@@ -1,404 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decentralization Layers - Energy Grid Architecture</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #0a0a0a;
-            color: #ffffff;
-            line-height: 1.6;
-        }
+      body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0a0a0a;
+      color: #ffffff;
+      line-height: 1.6;
+      }
 
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 60px 40px;
-        }
+      .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 60px 40px;
+      }
 
-        header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
+      header {
+      text-align: center;
+      margin-bottom: 60px;
+      }
 
-        h1 {
-            font-size: 3rem;
-            font-weight: 300;
-            margin-bottom: 20px;
-            background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+      h1 {
+      font-size: 3rem;
+      font-weight: 300;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      }
 
-        .subtitle {
-            font-size: 1.3rem;
-            color: #888;
-            font-weight: 300;
-        }
+      .subtitle {
+      font-size: 1.3rem;
+      color: #888;
+      font-weight: 300;
+      }
 
-        .grid-image {
-            width: 100%;
-            max-width: 1024px;
-            margin: 0 auto 80px;
-            display: block;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0, 255, 136, 0.1);
-        }
+      .grid-image {
+      width: 100%;
+      max-width: 1024px;
+      margin: 0 auto 80px;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 255, 136, 0.1);
+      }
 
-        .layers-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 40px;
-            margin-bottom: 80px;
-        }
+      .layers-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 40px;
+      margin-bottom: 80px;
+      }
 
-        .layer-card {
-            background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
-            border: 1px solid #333;
-            border-radius: 16px;
-            padding: 40px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
+      .layer-card {
+      background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+      border: 1px solid #333;
+      border-radius: 16px;
+      padding: 40px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      }
 
-        .layer-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #00ff88 0%, #00d4ff 100%);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
+      .layer-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #00ff88 0%, #00d4ff 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      }
 
-        .layer-card:hover {
-            transform: translateY(-5px);
-            border-color: #00ff88;
-            box-shadow: 0 10px 40px rgba(0, 255, 136, 0.2);
-        }
+      .layer-card:hover {
+      transform: translateY(-5px);
+      border-color: #00ff88;
+      box-shadow: 0 10px 40px rgba(0, 255, 136, 0.2);
+      }
 
-        .layer-card:hover::before {
-            opacity: 1;
-        }
+      .layer-card:hover::before {
+      opacity: 1;
+      }
 
-        .layer-number {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
-            color: #0a0a0a;
-            font-size: 1.5rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-        }
+      .layer-number {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+      color: #0a0a0a;
+      font-size: 1.5rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      }
 
-        .layer-title {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-            color: #00ff88;
-        }
+      .layer-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #00ff88;
+      }
 
-        .layer-description {
-            font-size: 1.1rem;
-            color: #aaa;
-            margin-bottom: 24px;
-            line-height: 1.7;
-        }
+      .layer-description {
+      font-size: 1.1rem;
+      color: #aaa;
+      margin-bottom: 24px;
+      line-height: 1.7;
+      }
 
-        .layer-focus {
-            background: #151515;
-            border-left: 3px solid #00ff88;
-            padding: 16px 20px;
-            margin-bottom: 24px;
-            border-radius: 4px;
-        }
+      .layer-focus {
+      background: #151515;
+      border-left: 3px solid #00ff88;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+      border-radius: 4px;
+      }
 
-        .layer-focus-title {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #00ff88;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
+      .layer-focus-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #00ff88;
+      margin-bottom: 8px;
+      font-weight: 600;
+      }
 
-        .layer-focus-content {
-            font-size: 1.05rem;
-            color: #ccc;
-        }
+      .layer-focus-content {
+      font-size: 1.05rem;
+      color: #ccc;
+      }
 
-        .components-list {
-            list-style: none;
-            padding: 0;
-        }
+      .components-list {
+      list-style: none;
+      padding: 0;
+      }
 
-        .components-list li {
-            padding: 10px 0;
-            border-bottom: 1px solid #222;
-            font-size: 1.05rem;
-            color: #ccc;
-            display: flex;
-            align-items: center;
-        }
+      .components-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #222;
+      font-size: 1.05rem;
+      color: #ccc;
+      display: flex;
+      align-items: center;
+      }
 
-        .components-list li:last-child {
-            border-bottom: none;
-        }
+      .components-list li:last-child {
+      border-bottom: none;
+      }
 
-        .components-list li::before {
-            content: '→';
-            color: #00ff88;
-            font-weight: bold;
-            margin-right: 12px;
-            font-size: 1.2rem;
-        }
+      .components-list li::before {
+      content: '→';
+      color: #00ff88;
+      font-weight: bold;
+      margin-right: 12px;
+      font-size: 1.2rem;
+      }
 
-        .components-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-            color: #fff;
-        }
+      .components-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #fff;
+      }
 
-        .similarities-section {
-            background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
-            border: 1px solid #333;
-            border-radius: 16px;
-            padding: 50px;
-            margin-top: 60px;
-        }
+      .similarities-section {
+      background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+      border: 1px solid #333;
+      border-radius: 16px;
+      padding: 50px;
+      margin-top: 60px;
+      }
 
-        .similarities-title {
-            font-size: 2.2rem;
-            font-weight: 600;
-            margin-bottom: 30px;
-            text-align: center;
-            color: #00d4ff;
-        }
+      .similarities-title {
+      font-size: 2.2rem;
+      font-weight: 600;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #00d4ff;
+      }
 
-        .similarities-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+      .similarities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      }
 
-        .similarity-item {
-            background: #151515;
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #222;
-            transition: all 0.3s ease;
-        }
+      .similarity-item {
+      background: #151515;
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid #222;
+      transition: all 0.3s ease;
+      }
 
-        .similarity-item:hover {
-            border-color: #00d4ff;
-            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.15);
-        }
+      .similarity-item:hover {
+      border-color: #00d4ff;
+      box-shadow: 0 5px 20px rgba(0, 212, 255, 0.15);
+      }
 
-        .similarity-icon {
-            font-size: 2.5rem;
-            margin-bottom: 16px;
-        }
+      .similarity-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      }
 
-        .similarity-label {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: #00d4ff;
-        }
+      .similarity-label {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #00d4ff;
+      }
 
-        .similarity-text {
-            font-size: 1.05rem;
-            color: #aaa;
-            line-height: 1.6;
-        }
+      .similarity-text {
+      font-size: 1.05rem;
+      color: #aaa;
+      line-height: 1.6;
+      }
 
-        .highlight {
-            color: #00ff88;
-            font-weight: 600;
-        }
+      .highlight {
+      color: #00ff88;
+      font-weight: 600;
+      }
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 40px 20px;
-            }
+      @media (max-width: 768px) {
+      .container {
+      padding: 40px 20px;
+      }
 
-            h1 {
-                font-size: 2rem;
-            }
+      h1 {
+      font-size: 2rem;
+      }
 
-            .subtitle {
-                font-size: 1.1rem;
-            }
+      .subtitle {
+      font-size: 1.1rem;
+      }
 
-            .layers-container {
-                grid-template-columns: 1fr;
-            }
+      .layers-container {
+      grid-template-columns: 1fr;
+      }
 
-            .layer-card {
-                padding: 30px;
-            }
+      .layer-card {
+      padding: 30px;
+      }
 
-            .similarities-section {
-                padding: 30px;
-            }
-        }
+      .similarities-section {
+      padding: 30px;
+      }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1>Decentralization Layers in Energy Systems</h1>
-            <p class="subtitle">Monitoring and Control Across Three Scales</p>
-        </header>
+      <header>
+        <h1>Decentralization Layers in Energy Systems</h1>
+        <p class="subtitle">Monitoring and Control Across Three Scales</p>
+      </header>
 
-        <img src="decentralization-layers.png" alt="Energy Grid Architecture - Central + Distributed Renewable Generation" class="grid-image">
+      <img src="decentralization-layers.png" alt="Energy Grid Architecture - Central + Distributed Renewable Generation" class="grid-image">
 
-        <div class="layers-container">
-            <!-- Layer 1: Within Houses -->
-            <div class="layer-card">
-                <div class="layer-number">1</div>
-                <h2 class="layer-title">Within Houses</h2>
-                <p class="layer-description">
-                    Decentralized energy assets at the household level, enabling individual buildings to generate, store, and manage their own energy.
-                </p>
-                
-                <div class="layer-focus">
-                    <div class="layer-focus-title">Monitoring & Control Focus</div>
-                    <div class="layer-focus-content">Individual asset optimization and household energy management</div>
-                </div>
+      <div class="layers-container">
+        <!-- Layer 1: Within Houses -->
+          <div class="layer-card">
+            <div class="layer-number">1</div>
+            <h2 class="layer-title">Within Houses</h2>
+            <p class="layer-description">
+              Decentralized energy assets at the household level, enabling individual buildings to generate, store, and manage their own energy.
+            </p>
 
-                <h3 class="components-title">Key Components</h3>
-                <ul class="components-list">
-                    <li>Photovoltaic (PV) Systems</li>
-                    <li>Battery Storage</li>
-                    <li>Heat Pumps</li>
-                    <li>Cooling Systems</li>
-                    <li>Smart Home Devices</li>
-                    <li>Energy Management Systems</li>
-                </ul>
+            <div class="layer-focus">
+              <div class="layer-focus-title">Monitoring & Control Focus</div>
+              <div class="layer-focus-content">Individual asset optimization and household energy management</div>
             </div>
 
-            <!-- Layer 2: Within Energy Communities -->
-            <div class="layer-card">
-                <div class="layer-number">2</div>
-                <h2 class="layer-title">Within Energy Communities</h2>
-                <p class="layer-description">
-                    Coordinated management and optimization across multiple households, balancing producers, consumers, and storage within a local community.
-                </p>
-                
-                <div class="layer-focus">
-                    <div class="layer-focus-title">Monitoring & Control Focus</div>
-                    <div class="layer-focus-content">Community-level coordination between producers, consumers, and storage systems</div>
-                </div>
+            <h3 class="components-title">Key Components</h3>
+            <ul class="components-list">
+              <li>Photovoltaic (PV) Systems</li>
+              <li>Battery Storage</li>
+              <li>Heat Pumps</li>
+              <li>Cooling Systems</li>
+              <li>Smart Home Devices</li>
+              <li>Energy Management Systems</li>
+            </ul>
+          </div>
 
-                <h3 class="components-title">Managed Elements</h3>
-                <ul class="components-list">
-                    <li>Energy Producers (Multiple PV systems)</li>
-                    <li>Energy Consumers (Households, small businesses)</li>
-                    <li>Shared Storage Systems</li>
-                    <li>Local Trading Mechanisms</li>
-                    <li>Community Energy Optimization</li>
-                    <li>Peer-to-Peer Energy Exchange</li>
-                </ul>
+          <!-- Layer 2: Within Energy Communities -->
+            <div class="layer-card">
+              <div class="layer-number">2</div>
+              <h2 class="layer-title">Within Energy Communities</h2>
+              <p class="layer-description">
+                Coordinated management and optimization across multiple households, balancing producers, consumers, and storage within a local community.
+              </p>
+
+              <div class="layer-focus">
+                <div class="layer-focus-title">Monitoring & Control Focus</div>
+                <div class="layer-focus-content">Community-level coordination between producers, consumers, and storage systems</div>
+              </div>
+
+              <h3 class="components-title">Managed Elements</h3>
+              <ul class="components-list">
+                <li>Energy Producers (Multiple PV systems)</li>
+                <li>Energy Consumers (Households, small businesses)</li>
+                <li>Shared Storage Systems</li>
+                <li>Local Trading Mechanisms</li>
+                <li>Community Energy Optimization</li>
+                <li>Peer-to-Peer Energy Exchange</li>
+              </ul>
             </div>
 
             <!-- Layer 3: DSO Level -->
-            <div class="layer-card">
+              <div class="layer-card">
                 <div class="layer-number">3</div>
                 <h2 class="layer-title">Distribution System Operator (DSO) Level</h2>
                 <p class="layer-description">
-                    Large-scale coordination across the distribution network, managing bigger producers, consumers, and storage systems for grid stability and efficiency.
+                  Large-scale coordination across the distribution network, managing bigger producers, consumers, and storage systems for grid stability and efficiency.
                 </p>
-                
+
                 <div class="layer-focus">
-                    <div class="layer-focus-title">Monitoring & Control Focus</div>
-                    <div class="layer-focus-content">Grid-level optimization and coordination of large-scale assets and communities</div>
+                  <div class="layer-focus-title">Monitoring & Control Focus</div>
+                  <div class="layer-focus-content">Grid-level optimization and coordination of large-scale assets and communities</div>
                 </div>
 
                 <h3 class="components-title">Managed Elements</h3>
                 <ul class="components-list">
-                    <li>Large-scale Producers (Solar farms, wind parks)</li>
-                    <li>Industrial Consumers</li>
-                    <li>Grid-scale Storage Systems</li>
-                    <li>Multiple Energy Communities</li>
-                    <li>Distribution Network Management</li>
-                    <li>Grid Balancing & Stability</li>
+                  <li>Large-scale Producers (Solar farms, wind parks)</li>
+                  <li>Industrial Consumers</li>
+                  <li>Grid-scale Storage Systems</li>
+                  <li>Multiple Energy Communities</li>
+                  <li>Distribution Network Management</li>
+                  <li>Grid Balancing & Stability</li>
                 </ul>
+              </div>
             </div>
-        </div>
 
-        <!-- Similarities Section -->
-        <div class="similarities-section">
-            <h2 class="similarities-title">Common Patterns Across All Layers</h2>
-            
-            <div class="similarities-grid">
-                <div class="similarity-item">
+            <!-- Similarities Section -->
+              <div class="similarities-section">
+                <h2 class="similarities-title">Common Patterns Across All Layers</h2>
+
+                <div class="similarities-grid">
+                  <div class="similarity-item">
                     <div class="similarity-icon">🔄</div>
                     <div class="similarity-label">Same Core Functions</div>
                     <p class="similarity-text">
-                        All three layers perform the same fundamental operations: <span class="highlight">monitoring, optimizing, and coordinating</span> between producers, consumers, and storage.
+                      All three layers perform the same fundamental operations: <span class="highlight">monitoring, optimizing, and coordinating</span> between producers, consumers, and storage.
                     </p>
-                </div>
+                  </div>
 
-                <div class="similarity-item">
+                  <div class="similarity-item">
                     <div class="similarity-icon">⚖️</div>
                     <div class="similarity-label">Energy Balance Management</div>
                     <p class="similarity-text">
-                        Each layer must <span class="highlight">balance supply and demand</span> in real-time, ensuring efficient energy use within its scope of control.
+                      Each layer must <span class="highlight">balance supply and demand</span> in real-time, ensuring efficient energy use within its scope of control.
                     </p>
-                </div>
+                  </div>
 
-                <div class="similarity-item">
+                  <div class="similarity-item">
                     <div class="similarity-icon">📊</div>
                     <div class="similarity-label">Data-Driven Decisions</div>
                     <p class="similarity-text">
-                        All levels rely on <span class="highlight">real-time data collection and analysis</span> to make intelligent control decisions.
+                      All levels rely on <span class="highlight">real-time data collection and analysis</span> to make intelligent control decisions.
                     </p>
-                </div>
+                  </div>
 
-                <div class="similarity-item">
+                  <div class="similarity-item">
                     <div class="similarity-icon">🎯</div>
                     <div class="similarity-label">Optimization Goals</div>
                     <p class="similarity-text">
-                        Each layer optimizes for <span class="highlight">cost reduction, efficiency, and grid stability</span> within its operational context.
+                      Each layer optimizes for <span class="highlight">cost reduction, efficiency, and grid stability</span> within its operational context.
                     </p>
-                </div>
+                  </div>
 
-                <div class="similarity-item">
+                  <div class="similarity-item">
                     <div class="similarity-icon">🔗</div>
                     <div class="similarity-label">Hierarchical Integration</div>
                     <p class="similarity-text">
-                        Layers are <span class="highlight">nested and interconnected</span> - houses within communities, communities within DSO networks.
+                      Layers are <span class="highlight">nested and interconnected</span> - houses within communities, communities within DSO networks.
                     </p>
-                </div>
+                  </div>
 
-                <div class="similarity-item">
+                  <div class="similarity-item">
                     <div class="similarity-icon">⚡</div>
                     <div class="similarity-label">Scalable Architecture</div>
                     <p class="similarity-text">
-                        The same <span class="highlight">monitoring and control principles</span> scale from individual devices to entire distribution grids.
+                      The same <span class="highlight">monitoring and control principles</span> scale from individual devices to entire distribution grids.
                     </p>
+                  </div>
                 </div>
+              </div>
             </div>
-        </div>
-    </div>
-</body>
-</html>
+          </body>
+        </html>
