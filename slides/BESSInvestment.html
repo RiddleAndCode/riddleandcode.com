@@ -807,10 +807,22 @@
                             <path d="M 300 90 L 300 200" stroke="#ffd700" stroke-width="3" fill="none" marker-end="url(#arrowhead4)"/>
                             <circle cx="270" cy="145" r="22" fill="#ffd700" stroke="none"/>
                             <text x="270" y="153" font-size="20" fill="#0a0a0a" text-anchor="middle" font-weight="bold">1</text>
-                            <text x="180" y="140" font-size="11" fill="#ffd700" text-anchor="start">Provide</text>
-                            <text x="180" y="153" font-size="11" fill="#ffd700" text-anchor="start">Grid Access</text>
+                            <text x="200" y="110" font-size="11" fill="#ffd700" text-anchor="start">Provide</text>
+                            <text x="200" y="123" font-size="11" fill="#ffd700" text-anchor="start">Grid Access</text>
                             
-                            <!-- Arrow 2: RDDL SPV pays for grid access -->
+                            <!-- Arrow 2: Investors invest in RDDL SPV for BESS Development -->
+                            <defs>
+                                <marker id="arrowhead4b" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                                    <polygon points="0 0, 10 3, 0 6" fill="#ffd700"/>
+                                </marker>
+                            </defs>
+                            <path d="M 130 90 Q 180 145 230 200" stroke="#ffd700" stroke-width="3" fill="none" marker-end="url(#arrowhead4b)"/>
+                            <circle cx="180" cy="145" r="22" fill="#ffd700" stroke="none"/>
+                            <text x="180" y="153" font-size="20" fill="#0a0a0a" text-anchor="middle" font-weight="bold">2</text>
+                            <text x="150" y="130" font-size="10" fill="#ffd700" text-anchor="end">BESS Dev.</text>
+                            <text x="150" y="143" font-size="10" fill="#ffd700" text-anchor="end">Investment</text>
+                            
+                            <!-- Arrow 3: RDDL SPV pays for grid access -->
                             <defs>
                                 <marker id="arrowhead5" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
                                     <polygon points="0 0, 10 3, 0 6" fill="#00d4ff"/>
@@ -818,12 +830,12 @@
                             </defs>
                             <path d="M 310 200 L 310 90" stroke="#00d4ff" stroke-width="3" fill="none" marker-end="url(#arrowhead5)"/>
                             <circle cx="330" cy="145" r="22" fill="#00d4ff" stroke="none"/>
-                            <text x="330" y="153" font-size="20" fill="#0a0a0a" text-anchor="middle" font-weight="bold">2</text>
+                            <text x="330" y="153" font-size="20" fill="#0a0a0a" text-anchor="middle" font-weight="bold">3</text>
                             <text x="420" y="127" font-size="10" fill="#00d4ff" text-anchor="end">Pay for Grid</text>
                             <text x="420" y="140" font-size="10" fill="#00d4ff" text-anchor="end">Access Dev &</text>
                             <text x="420" y="153" font-size="10" fill="#00d4ff" text-anchor="end">Connectivity</text>
                             
-                            <!-- Arrow 3: RDDL SPV builds the Energy Asset -->
+                            <!-- Arrow 4: RDDL SPV builds the Energy Asset -->
                             <defs>
                                 <marker id="arrowhead6" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
                                     <polygon points="0 0, 10 3, 0 6" fill="#ff6b35"/>
@@ -831,7 +843,7 @@
                             </defs>
                             <path d="M 230 235 L 170 235" stroke="#ff6b35" stroke-width="3" fill="none" marker-end="url(#arrowhead6)"/>
                             <circle cx="200" cy="265" r="22" fill="#ff6b35" stroke="none"/>
-                            <text x="200" y="273" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">3</text>
+                            <text x="200" y="273" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">4</text>
                             <text x="200" y="295" font-size="11" fill="#ff6b35" text-anchor="middle">RDDL SPV</text>
                             <text x="200" y="308" font-size="11" fill="#ff6b35" text-anchor="middle">Builds Asset</text>
                         </svg>
@@ -847,11 +859,15 @@
                                     <div style="font-size:15px;color:#e0e0e0;line-height:1.4;">Local Operator provides grid access</div>
                                 </div>
                                 <div style="display:flex;align-items:start;gap:12px;">
-                                    <div style="background:#00d4ff;color:#0a0a0a;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:16px;flex-shrink:0;">2</div>
+                                    <div style="background:#ffd700;color:#0a0a0a;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:16px;flex-shrink:0;">2</div>
+                                    <div style="font-size:15px;color:#e0e0e0;line-height:1.4;">Investors provide BESS development investment to RDDL SPV</div>
+                                </div>
+                                <div style="display:flex;align-items:start;gap:12px;">
+                                    <div style="background:#00d4ff;color:#0a0a0a;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:16px;flex-shrink:0;">3</div>
                                     <div style="font-size:15px;color:#e0e0e0;line-height:1.4;">RDDL SPV pays for grid access development aspects and connectivity fees</div>
                                 </div>
                                 <div style="display:flex;align-items:start;gap:12px;">
-                                    <div style="background:#ff6b35;color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:16px;flex-shrink:0;">3</div>
+                                    <div style="background:#ff6b35;color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold;font-size:16px;flex-shrink:0;">4</div>
                                     <div style="font-size:15px;color:#e0e0e0;line-height:1.4;">RDDL SPV builds the energy asset</div>
                                 </div>
                             </div>
@@ -859,6 +875,19 @@
                         
                         <div>
                             <h3 style="font-size:24px;margin-bottom:25px;color:#ffd700;">The Actors</h3>
+                            
+                            <!-- Investors -->
+                            <div style="display:flex;align-items:center;gap:15px;margin-bottom:20px;">
+                                <svg style="width:40px;height:40px;flex-shrink:0;" viewBox="0 0 80 80">
+                                    <path d="M 15 40 L 25 30 L 35 40 M 35 40 L 45 30 L 55 40" stroke="#00ff88" stroke-width="2.5" fill="none"/>
+                                    <path d="M 15 40 L 15 55 L 25 55 M 55 40 L 55 55 L 45 55" stroke="#00ff88" stroke-width="2.5" fill="none"/>
+                                    <circle cx="35" cy="40" r="8" stroke="#00ff88" stroke-width="2.5" fill="none"/>
+                                </svg>
+                                <div>
+                                    <div style="font-size:16px;color:#00ff88;font-weight:600;">Investors</div>
+                                    <div style="font-size:13px;color:#999;">Provide Development Capital</div>
+                                </div>
+                            </div>
                             
                             <!-- Development Partner -->
                             <div style="display:flex;align-items:center;gap:15px;margin-bottom:20px;">
