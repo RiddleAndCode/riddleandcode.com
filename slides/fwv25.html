@@ -236,6 +236,53 @@
             margin-left: 15px;
         }
 
+        /* Print styles for PDF generation */
+        @media print {
+            @page {
+                size: landscape;
+                margin: 0;
+            }
+
+            body {
+                overflow: visible;
+            }
+
+            .presentation {
+                width: auto;
+                height: auto;
+            }
+
+            .slide {
+                opacity: 1 !important;
+                position: relative !important;
+                page-break-after: always;
+                page-break-inside: avoid;
+                width: 100vw;
+                height: 100vh;
+                min-height: 100vh;
+                display: flex !important;
+            }
+
+            .slide:last-child {
+                page-break-after: auto;
+            }
+
+            .controls {
+                display: none !important;
+            }
+
+            button {
+                display: none !important;
+            }
+
+            /* Ensure backgrounds and colors print */
+            * {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color-adjust: exact !important;
+            }
+        }
+
         .controls {
             position: fixed;
             right: 40px;
