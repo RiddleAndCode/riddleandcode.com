@@ -24,41 +24,49 @@
           <script async="" fs-cc-mode="opt-in" src="https://cdn.jsdelivr.net/npm/@finsweet/cookie-consent@1/fs-cc.js"></script>
           <!-- Google Tag Manager -->
             <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-T2VR79F');</script>
-            <!-- End Google Tag Manager --></head>
+            <!-- End Google Tag Manager -->
+<style>
+/* Dropdown positioning fix - must override Webflow CSS */
+.w-dropdown, .dropdown-2 { position: relative; }
+.w-dropdown-list, .dropdown-list-2 {
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  right: auto !important;
+  z-index: 900;
+  display: none;
+  min-width: 120px;
+  width: auto;
+  margin-top: 5px;
+  padding: 5px 0;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.w-dropdown-list a, .dropdown-list-2 a {
+  display: block;
+  padding: 8px 16px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+.w-dropdown.w--open .w-dropdown-list, .dropdown-2.w--open .dropdown-list-2 {
+  display: block !important;
+}
+
+/* Hide stray navigation elements */
+.nav-icon-line { display: block !important; }
+</style>
+
+</head>
               <body>
                 <div class="wrapper">
-                  <nav class="navbar navigation-2 navigation-3">
-                    <div class="nav">
-                      <a class="nav-logo w-nav-brand" href="../../de.html">
-                        <img alt="" class="logo" loading="lazy" sizes="(max-width: 479px) 98vw, (max-width: 767px) 99vw, (max-width: 912px) 100vw, 912px" src="../../images/640eb41653155cff97638680_RIDDLE&CODE_SHORTLOGO_OPTION_C_POS_grey.png" srcset="../../images/640eb41653155cff97638680_RIDDLE&CODE_SHORTLOGO_OPTION_C_POS_grey-p-500.png 500w, ../../images/640eb41653155cff97638680_RIDDLE&CODE_SHORTLOGO_OPTION_C_POS_grey.png 912w"/>
-                      </a>
-                      <div class="nav-container">
-                        <a class="link w-inline-block" href="../company/get-in-touch.html">
-                          <p class="button nav">Kontaktieren Sie uns</p>
-                        </a>
-                        <div class="locales-wrapper-2 w-locales-list">
-                          <div class="dropdown-2 w-dropdown" data-delay="0" data-hover="false">
-                            <div class="dropdown-toggle-2 w-dropdown-toggle">
-                              <div class="w-icon-dropdown-toggle"></div>
-                              <div class="text-block-69">Sprache</div>
-                            </div>
-                            <nav class="dropdown-list-2 w-dropdown-list">
-                              <div class="locales-list-2 w-locales-items" role="list">
-                                <div class="w-locales-item" role="listitem">
-                                  <a class="link-5" href="../../showcase/new-partnership-of-riddle-code-and-s1seven-to-revolutionise-the-metal-industry.html" hreflang="en">English</a>
-                                </div>
-                                <div class="w-locales-item" role="listitem">
-                                  <a aria-current="page" class="link-5 w--current" href="new-partnership-of-riddle-code-and-s1seven-to-revolutionise-the-metal-industry.html" hreflang="de">German</a>
-                                </div>
-                              </div>
-                            </nav>
-                          </div>
+                  <!-- Header loaded dynamically -->
+<div id="header-placeholder"></div>
+<script src="../../scripts/load-header.js"></script>
+<script src="../scripts/simple-dropdown.js"></script>
+</div>
                         </div>
-                        <a class="nav-icon w-inline-block" data-w-id="f6c561d2-5e30-59be-3524-d2f6206c0a97" href="#">
-                          <div class="nav-icon-line _1"></div>
-                          <div class="nav-icon-line _2"></div>
-                          <div class="nav-icon-line _3"></div>
-                        </a>
+                        
                       </div>
                     </div>
                     <div class="nav-menu" fs-scrolldisable-element="when-visible">
@@ -149,7 +157,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="section" data-w-id="e97c4ff0-1732-3067-db69-25e5f59be01f" style="opacity:1">
+                  <div class="section" data-w-id="e97c4ff0-1732-3067-db69-25e5f59be01f" style="opacity:0">
                     <div class="padding">
                       <h2>New Partnership of Riddle&amp;Code and S1Seven to Revolutionise the Metal Industry</h2>
                       <div class="w-richtext">
