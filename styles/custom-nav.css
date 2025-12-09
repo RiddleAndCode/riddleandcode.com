@@ -41,6 +41,14 @@
   min-width: 0;
 }
 
+/* Smooth hamburger menu animation - mobile only */
+@media (max-width: 991px) {
+  .nav-menu {
+    transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+    will-change: max-height, opacity;
+  }
+}
+
 /* Hide stray navigation elements */
 .nav-icon-line { display: block !important; }
 

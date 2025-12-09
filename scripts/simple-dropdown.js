@@ -64,16 +64,42 @@
     const navbar = document.querySelector('.navbar');
     
     if (navIcon && navMenu) {
+      // Set initial state - only on mobile
+      const isMobile = window.innerWidth <= 991;
+      
+      if (isMobile) {
+        navMenu.style.maxHeight = '0';
+        navMenu.style.overflow = 'hidden';
+        navMenu.style.opacity = '0';
+      }
+      
+      navMenu.style.transition = 'max-height 0.4s ease-out, opacity 0.3s ease-out';
+      
       navIcon.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
         
-        // Toggle menu visibility
-        if (navMenu.style.display === 'flex' || navMenu.style.display === 'block') {
-          navMenu.style.display = 'none';
+        // Toggle menu visibility with slide animation
+        const isOpen = navbar.classList.contains('open');
+        
+        if (isOpen) {
+          // Close: slide up
+          navMenu.style.maxHeight = '0';
+          navMenu.style.opacity = '0';
+          setTimeout(function() {
+            navMenu.style.overflow = 'hidden';
+          }, 400); // Wait for animation to complete
           navbar.classList.remove('open');
         } else {
+          // Open: slide down
           navMenu.style.display = 'flex';
+          navMenu.style.overflow = 'hidden'; // Keep hidden during animation
+          // Use a large fixed height for smooth animation
+          navMenu.style.maxHeight = '2000px';
+          navMenu.style.opacity = '1';
+          setTimeout(function() {
+            navMenu.style.overflow = 'visible'; // Allow dropdowns to show
+          }, 400);
           navbar.classList.add('open');
         }
       });
@@ -81,8 +107,30 @@
       // Close menu when clicking outside
       document.addEventListener('click', function(e) {
         if (!e.target.closest('.navbar')) {
-          navMenu.style.display = 'none';
+          const isMobile = window.innerWidth <= 991;
+          if (isMobile) {
+            navMenu.style.maxHeight = '0';
+            navMenu.style.opacity = '0';
+            navMenu.style.overflow = 'hidden';
+          }
           navbar.classList.remove('open');
+        }
+      });
+      
+      // Handle window resize
+      window.addEventListener('resize', function() {
+        const isMobile = window.innerWidth <= 991;
+        if (!isMobile) {
+          // Reset styles on desktop
+          navMenu.style.maxHeight = '';
+          navMenu.style.opacity = '';
+          navMenu.style.overflow = '';
+          navbar.classList.remove('open');
+        } else if (!navbar.classList.contains('open')) {
+          // Ensure menu is hidden on mobile
+          navMenu.style.maxHeight = '0';
+          navMenu.style.opacity = '0';
+          navMenu.style.overflow = 'hidden';
         }
       });
     }
