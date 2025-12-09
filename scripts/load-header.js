@@ -4,6 +4,36 @@
 (function() {
   'use strict';
   
+  // Inject Google Analytics tracking code
+  function injectGoogleAnalytics() {
+    // Only inject if not already present
+    if (document.querySelector('script[src*="googletagmanager.com/gtag/js"]')) {
+      console.log('Google Analytics already loaded');
+      return;
+    }
+    
+    // Load gtag.js script
+    const gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-6PKLPEVZNF';
+    document.head.appendChild(gtagScript);
+    
+    // Initialize gtag
+    const gtagInit = document.createElement('script');
+    gtagInit.textContent = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-6PKLPEVZNF');
+    `;
+    document.head.appendChild(gtagInit);
+    
+    console.log('Google Analytics loaded: G-6PKLPEVZNF');
+  }
+  
+  // Inject GA immediately (before DOM loads for faster tracking)
+  injectGoogleAnalytics();
+  
   const headerHTML = `<nav class="navbar navigation-2 navigation-3">
   <div class="nav">
     <a class="nav-logo w-nav-brand" href="index.html">
