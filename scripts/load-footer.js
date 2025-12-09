@@ -18,8 +18,11 @@
           <a class="link-dark big w-inline-block" href="#">
             <p class="no-margin">Products</p>
           </a>
-          <a class="link-dark w-inline-block" href="energy-community/mypwr.html">
+          <a class="link-dark w-inline-block" href="product/mypwr.html">
             <p class="no-margin">MYPWR Info</p>
+          </a>
+          <a class="link-dark w-inline-block" href="product/infrastructure-for-decentralized-assets.html">
+            <p class="no-margin">DER Infrastructure</p>
           </a>
           <a class="link-dark w-inline-block" href="product/security-technology.html">
             <p class="no-margin">Security Tech.</p>
