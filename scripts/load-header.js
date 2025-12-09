@@ -151,6 +151,14 @@
     
     console.log('Loading header - Script path:', scriptPath, 'Depth:', depth, 'PathToRoot:', pathToRoot);
     
+    // Load custom navigation CSS if not already loaded
+    if (!document.querySelector('link[href*="custom-nav.css"]')) {
+      const cssLink = document.createElement('link');
+      cssLink.rel = 'stylesheet';
+      cssLink.href = pathToRoot + 'styles/custom-nav.css';
+      document.head.appendChild(cssLink);
+    }
+    
     // Insert the header HTML
     headerPlaceholder.innerHTML = headerHTML;
     
