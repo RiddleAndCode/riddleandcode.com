@@ -2048,7 +2048,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Spacemono;
-  src: url("https://cdn.prod.website-files.com/63eb258eae57fdd13c41eaff/63eb275c8167117e96ad01da_SpaceMono-Bold.ttf") format("truetype");
+  src: url("../ttf/SpaceMono-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -2056,7 +2056,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Spacemono;
-  src: url("https://cdn.prod.website-files.com/63eb258eae57fdd13c41eaff/63eb275c334e6187da518478_SpaceMono-Regular.ttf") format("truetype");
+  src: url("../ttf/SpaceMono-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -2064,7 +2064,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Helveticaneue;
-  src: url("https://cdn.prod.website-files.com/63eb258eae57fdd13c41eaff/63eb36fdf03250c91ea73a39_HelveticaNeue%20Regular.ttf") format("truetype");
+  src: url("../ttf/HelveticaNeue-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -2072,7 +2072,7 @@ textarea.w-input, textarea.w-select {
 
 @font-face {
   font-family: Helveticaneue;
-  src: url("https://cdn.prod.website-files.com/63eb258eae57fdd13c41eaff/63eb36fd49ff871185449f75_HelveticaNeue%20Bold.ttf") format("truetype");
+  src: url("../ttf/HelveticaNeue-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
