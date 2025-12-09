@@ -43,3 +43,12 @@
 
 /* Hide stray navigation elements */
 .nav-icon-line { display: block !important; }
+
+/* Webflow replacement animations */
+.section[data-w-id].is-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+[data-w-id] {
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}

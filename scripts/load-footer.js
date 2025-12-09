@@ -184,6 +184,41 @@
     
     // Trigger a custom event when footer is loaded
     document.dispatchEvent(new CustomEvent('footerLoaded'));
+    
+    // Load Webflow replacement script
+    loadWebflowReplacement();
+  }
+  
+  // Load the Webflow replacement script dynamically
+  function loadWebflowReplacement() {
+    // Check if script already loaded
+    if (document.querySelector('script[src*="webflow-replacement"]')) {
+      return;
+    }
+    
+    // Calculate path to scripts directory
+    const scripts = document.getElementsByTagName('script');
+    let scriptPath = 'scripts/';
+    
+    for (let script of scripts) {
+      const src = script.getAttribute('src');
+      if (src && src.includes('load-footer.js')) {
+        scriptPath = src.replace('load-footer.js', '');
+        break;
+      }
+    }
+    
+    // Load the replacement script
+    const script = document.createElement('script');
+    script.src = scriptPath + 'webflow-replacement.js';
+    script.type = 'text/javascript';
+    script.onload = function() {
+      console.log('[Footer] Webflow replacement script loaded');
+    };
+    script.onerror = function() {
+      console.error('[Footer] Failed to load webflow-replacement.js');
+    };
+    document.body.appendChild(script);
   }
   
   // Load footer when DOM is ready
