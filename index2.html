@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Riddle&Code — Energy Infrastructure for the Future</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta content="Transform energy assets into intelligent, coordinated power plants through secure connectivity and real-time optimization." name="description"/>
+  
+  <!-- Open Graph / Social -->
+  <meta content="Riddle&Code — Energy Infrastructure for the Future" property="og:title"/>
+  <meta content="Transform energy assets into intelligent, coordinated power plants through secure connectivity and real-time optimization." property="og:description"/>
+  <meta content="images/6414afea39e2ec1d18d1ff32_open_graph.jpg" property="og:image"/>
+  <meta content="website" property="og:type"/>
+  
+  <!-- Favicon -->
+  <link href="images/641436b897f1d137d2d2845d_fav_icon.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="images/641437162f7f81829faa8c24_webclip.png" rel="apple-touch-icon"/>
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6PKLPEVZNF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-6PKLPEVZNF');
+  </script>
+  
+  <!-- Cookie Consent -->
+  <script async="" fs-cc-mode="opt-in" src="https://cdn.jsdelivr.net/npm/@finsweet/cookie-consent@1/fs-cc.js"></script>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    :root {
+      --primary-green: #00ff88;
+      --primary-blue: #00d4ff;
+      --dark-bg: #0a0a0a;
+      --card-bg: #111111;
+      --text-primary: #ffffff;
+      --text-secondary: #e0e0e0;
+      --text-muted: #999999;
+      --border-color: #333333;
+      --spacing-xs: 0.5rem;
+      --spacing-sm: 1rem;
+      --spacing-md: 2rem;
+      --spacing-lg: 4rem;
+      --spacing-xl: 6rem;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+      background: var(--dark-bg);
+      color: var(--text-secondary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    /* Navigation */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .nav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+    
+    .nav-logo img {
+      height: 32px;
+      width: auto;
+    }
+    
+    .nav-menu {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      list-style: none;
+    }
+    
+    .nav-link {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+      white-space: nowrap;
+    }
+    
+    .nav-link:hover {
+      color: var(--primary-green);
+    }
+    
+    .nav-cta {
+      background: var(--primary-green);
+      color: var(--dark-bg);
+      padding: 0.6rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 255, 136, 0.3);
+    }
+    
+    /* Hero Section */
+    .hero {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: var(--spacing-xl) 2rem;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 300;
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-md);
+      line-height: 1.1;
+    }
+    
+    .hero h1 .highlight {
+      color: var(--primary-green);
+      font-weight: 600;
+    }
+    
+    .hero-subtitle {
+      font-size: clamp(1.25rem, 2vw, 1.5rem);
+      color: var(--text-secondary);
+      max-width: 800px;
+      margin: 0 auto var(--spacing-lg) auto;
+    }
+    
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: var(--spacing-lg);
+      flex-wrap: wrap;
+      margin-top: var(--spacing-lg);
+    }
+    
+    .stat {
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary-green);
+      display: block;
+    }
+    
+    .stat-label {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    /* Section */
+    .section {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: var(--spacing-xl) 2rem;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .section-tag {
+      display: inline-block;
+      color: var(--primary-blue);
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .section-description {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    /* Target Groups Grid */
+    .target-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-lg);
+    }
+    
+    .target-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: var(--spacing-md);
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .target-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary-green);
+      box-shadow: 0 8px 24px rgba(0, 255, 136, 0.15);
+    }
+    
+    .target-icon {
+      font-size: 3rem;
+      margin-bottom: var(--spacing-sm);
+      display: block;
+    }
+    
+    .target-title {
+      font-size: 1.5rem;
+      color: var(--primary-blue);
+      margin-bottom: var(--spacing-sm);
+      font-weight: 600;
+    }
+    
+    .target-description {
+      color: var(--text-secondary);
+      margin-bottom: var(--spacing-md);
+      line-height: 1.6;
+    }
+    
+    .connectivity-list {
+      list-style: none;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .connectivity-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    
+    .connectivity-badge {
+      background: var(--primary-green);
+      color: var(--dark-bg);
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    
+    .benefit-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    
+    .benefit-tag {
+      background: rgba(0, 255, 136, 0.1);
+      color: var(--primary-green);
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      border: 1px solid rgba(0, 255, 136, 0.2);
+    }
+    
+    /* Value Proposition */
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-lg);
+    }
+    
+    .value-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: var(--spacing-md);
+    }
+    
+    .value-card h3 {
+      color: var(--primary-green);
+      font-size: 1.25rem;
+      margin-bottom: var(--spacing-sm);
+      font-weight: 600;
+    }
+    
+    .value-card p {
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+    
+    /* Tech Stack */
+    .tech-stack {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: var(--spacing-lg);
+      margin-top: var(--spacing-lg);
+    }
+    
+    .tech-layers {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-md);
+    }
+    
+    .tech-layer {
+      background: rgba(0, 255, 136, 0.05);
+      border-left: 4px solid var(--primary-green);
+      padding: var(--spacing-md);
+      border-radius: 8px;
+    }
+    
+    .tech-layer h4 {
+      color: var(--primary-green);
+      font-size: 1.125rem;
+      margin-bottom: var(--spacing-xs);
+      font-weight: 600;
+    }
+    
+    .tech-layer p {
+      color: var(--text-secondary);
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .tech-features {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: var(--spacing-sm);
+    }
+    
+    .tech-feature {
+      background: var(--dark-bg);
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+    
+    /* CTA Section */
+    .cta-section {
+      text-align: center;
+      background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 212, 255, 0.1));
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: var(--spacing-lg);
+      margin-top: var(--spacing-xl);
+    }
+    
+    .cta-section h2 {
+      font-size: 2rem;
+      color: var(--text-primary);
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .cta-buttons {
+      display: flex;
+      gap: var(--spacing-md);
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: var(--spacing-md);
+    }
+    
+    .btn {
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    
+    .btn-primary {
+      background: var(--primary-green);
+      color: var(--dark-bg);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 255, 136, 0.4);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: var(--primary-green);
+      border: 2px solid var(--primary-green);
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(0, 255, 136, 0.1);
+      transform: translateY(-2px);
+    }
+    
+    /* Footer */
+    .footer {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: var(--spacing-xl) 2rem var(--spacing-md) 2rem;
+      border-top: 1px solid var(--border-color);
+      margin-top: var(--spacing-xl);
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--spacing-lg);
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .footer-column h4 {
+      color: var(--text-primary);
+      font-size: 1rem;
+      margin-bottom: var(--spacing-sm);
+      font-weight: 600;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-links a:hover {
+      color: var(--primary-green);
+    }
+    
+    .footer-bottom {
+      text-align: center;
+      padding-top: var(--spacing-md);
+      border-top: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+    
+    .footer-bottom a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+    
+    .footer-bottom a:hover {
+      color: var(--primary-green);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-menu {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      
+      .hero {
+        padding: var(--spacing-lg) 2rem;
+      }
+      
+      .section {
+        padding: var(--spacing-lg) 2rem;
+      }
+      
+      .target-grid,
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .hero-stats {
+        gap: var(--spacing-md);
+      }
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">
+        <img src="images/640eb41653155cff97638680_RIDDLE&CODE_SHORTLOGO_OPTION_C_POS_grey.png" alt="Riddle&Code Logo">
+        <span>Riddle&Code</span>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="#solutions" class="nav-link">Solutions</a></li>
+        <li><a href="#technology" class="nav-link">Technology</a></li>
+        <li><a href="product/mypwr.html" class="nav-link">MYPWR</a></li>
+        <li><a href="company/about-us.html" class="nav-link">Company</a></li>
+        <li><a href="news/low-power-networks-the-backbone-of-profitable-energy-communities.html" class="nav-link">News</a></li>
+        <li><a href="company/get-in-touch.html" class="nav-cta">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 class="fade-in">
+      From <span class="highlight">Energy Community</span><br>
+      to <span class="highlight">Power Plant</span>
+    </h1>
+    <p class="hero-subtitle fade-in">
+      We transform distributed energy assets into intelligent, coordinated systems through secure connectivity and real-time optimization — enabling load balancing, peak shaving, and new revenue streams across every layer of the energy ecosystem.
+    </p>
+    <div class="hero-stats fade-in">
+      <div class="stat">
+        <span class="stat-value">1.5M</span>
+        <span class="stat-label">Messages/Day per Node</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">10km</span>
+        <span class="stat-label">Coverage Range</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">99.9%</span>
+        <span class="stat-label">Uptime Reliability</span>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Solutions Section -->
+  <section class="section" id="solutions">
+    <div class="section-header">
+      <span class="section-tag">Solutions for Every Scale</span>
+      <h2 class="section-title">Load Balancing & Peak Shaving Across the Energy Ecosystem</h2>
+      <p class="section-description">
+        Intelligent energy management is needed at every level — from individual households to entire distribution networks. Our infrastructure enables coordination and optimization wherever energy flows.
+      </p>
+    </div>
+    
+    <div class="target-grid">
+      <!-- DSO & Regions -->
+      <div class="target-card">
+        <span class="target-icon">⚡</span>
+        <h3 class="target-title">DSO & Regions</h3>
+        <p class="target-description">
+          Manage thousands of distributed assets across wide areas with resilient, low-power connectivity that scales to regional demands.
+        </p>
+        <ul class="connectivity-list">
+          <li>
+            <span class="connectivity-badge">mioty</span>
+            Low-Power Wide-Area Network
+          </li>
+          <li>• 1.5M messages per node/day</li>
+          <li>• 4.5-10 km coverage range</li>
+          <li>• 5G and Starlink uplink</li>
+        </ul>
+        <div class="benefit-tags">
+          <span class="benefit-tag">Grid Stability</span>
+          <span class="benefit-tag">Demand Response</span>
+          <span class="benefit-tag">Regional Scale</span>
+        </div>
+      </div>
+      
+      <!-- Energy Communities / Microgrids -->
+      <div class="target-card">
+        <span class="target-icon">🏘️</span>
+        <h3 class="target-title">Energy Communities & Microgrids</h3>
+        <p class="target-description">
+          Enable peer-to-peer energy trading and community-wide optimization with flexible connectivity options for local coordination.
+        </p>
+        <ul class="connectivity-list">
+          <li>
+            <span class="connectivity-badge">mioty</span>
+            <span class="connectivity-badge">Ethernet</span>
+            <span class="connectivity-badge">ZigBee</span>
+          </li>
+          <li>• Real-time community visibility</li>
+          <li>• Local energy sharing</li>
+          <li>• Grid independence</li>
+        </ul>
+        <div class="benefit-tags">
+          <span class="benefit-tag">Self-Sufficiency</span>
+          <span class="benefit-tag">P2P Trading</span>
+          <span class="benefit-tag">Carbon Credits</span>
+        </div>
+      </div>
+      
+      <!-- Facilities -->
+      <div class="target-card">
+        <span class="target-icon">🏭</span>
+        <h3 class="target-title">Facilities & Large Buildings</h3>
+        <p class="target-description">
+          Reduce operational costs and meet sustainability goals with granular visibility into energy consumption and production.
+        </p>
+        <ul class="connectivity-list">
+          <li>
+            <span class="connectivity-badge">ZigBee</span>
+            <span class="connectivity-badge">Ethernet</span>
+            <span class="connectivity-badge">Modbus</span>
+          </li>
+          <li>• Detailed asset monitoring</li>
+          <li>• Automated optimization</li>
+          <li>• Integration with BMS</li>
+        </ul>
+        <div class="benefit-tags">
+          <span class="benefit-tag">Cost Reduction</span>
+          <span class="benefit-tag">ESG Reporting</span>
+          <span class="benefit-tag">Peak Shaving</span>
+        </div>
+      </div>
+      
+      <!-- Households -->
+      <div class="target-card">
+        <span class="target-icon">🏠</span>
+        <h3 class="target-title">Households</h3>
+        <p class="target-description">
+          Maximize solar and battery value through smart coordination with community and grid, turning homes into active participants in the energy market.
+        </p>
+        <ul class="connectivity-list">
+          <li>
+            <span class="connectivity-badge">ZigBee</span>
+            <span class="connectivity-badge">mioty</span>
+          </li>
+          <li>• Solar + storage optimization</li>
+          <li>• Smart home integration</li>
+          <li>• Community participation</li>
+        </ul>
+        <div class="benefit-tags">
+          <span class="benefit-tag">Bill Reduction</span>
+          <span class="benefit-tag">Energy Independence</span>
+          <span class="benefit-tag">Grid Services</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Technology Section -->
+  <section class="section" id="technology">
+    <div class="section-header">
+      <span class="section-tag">Our Technology Stack</span>
+      <h2 class="section-title">The Value Behind the Infrastructure</h2>
+      <p class="section-description">
+        Enterprise-grade hardware, secure connectivity, and intelligent software working together to unlock the full potential of distributed energy resources.
+      </p>
+    </div>
+    
+    <div class="value-grid">
+      <div class="value-card">
+        <h3>🔒 Security-First Architecture</h3>
+        <p>
+          Tamper-proof hardware with cryptographic identities ensures every data point is authentic and traceable. Private keys stay "off the bus" for maximum protection.
+        </p>
+      </div>
+      
+      <div class="value-card">
+        <h3>🌐 Independent Connectivity</h3>
+        <p>
+          Purpose-built low-power networks that operate independently of internet connectivity, ensuring reliability even in challenging environments.
+        </p>
+      </div>
+      
+      <div class="value-card">
+        <h3>📊 Real-Time Data</h3>
+        <p>
+          Sub-second visibility into energy flows enables predictive optimization and rapid response to changing grid conditions.
+        </p>
+      </div>
+      
+      <div class="value-card">
+        <h3>🔗 Blockchain Integration</h3>
+        <p>
+          Access emerging energy markets through the RDDL Network — from renewable certificates to peer-to-peer trading and carbon credits.
+        </p>
+      </div>
+      
+      <div class="value-card">
+        <h3>⚙️ Plug & Play Hardware</h3>
+        <p>
+          Easy installation and configuration with support for multiple protocols (Modbus, M-Bus, SML) and seamless integration with existing systems.
+        </p>
+      </div>
+      
+      <div class="value-card">
+        <h3>🎯 Enterprise-Grade Reliability</h3>
+        <p>
+          Built for mission-critical applications with 99.9% uptime, redundant systems, and proven performance in production environments.
+        </p>
+      </div>
+    </div>
+    
+    <div class="tech-stack">
+      <h3 style="color: var(--text-primary); font-size: 1.75rem; margin-bottom: var(--spacing-md);">Technology Layers</h3>
+      
+      <div class="tech-layers">
+        <div class="tech-layer">
+          <h4>Hardware Layer — Trust Anchors</h4>
+          <p>Secure hardware modules with cryptographic identities that bridge physical assets and digital infrastructure.</p>
+          <div class="tech-features">
+            <span class="tech-feature">Tamper-Proof Design</span>
+            <span class="tech-feature">Cryptographic Keys</span>
+            <span class="tech-feature">Industrial Grade</span>
+            <span class="tech-feature">Multi-Protocol Support</span>
+          </div>
+        </div>
+        
+        <div class="tech-layer">
+          <h4>Connectivity Layer — mioty & More</h4>
+          <p>Flexible, scalable connectivity solutions from household ZigBee to regional mioty networks.</p>
+          <div class="tech-features">
+            <span class="tech-feature">Low-Power Wide-Area</span>
+            <span class="tech-feature">Mesh Networks</span>
+            <span class="tech-feature">Internet-Independent</span>
+            <span class="tech-feature">99.9% Uptime</span>
+          </div>
+        </div>
+        
+        <div class="tech-layer">
+          <h4>Data Layer — Real-Time Intelligence</h4>
+          <p>Transform raw meter data into actionable insights with our edge computing and analytics platform.</p>
+          <div class="tech-features">
+            <span class="tech-feature">Edge Processing</span>
+            <span class="tech-feature">Predictive Analytics</span>
+            <span class="tech-feature">API Access</span>
+            <span class="tech-feature">Cloud Integration</span>
+          </div>
+        </div>
+        
+        <div class="tech-layer">
+          <h4>Application Layer — MYPWR Suite</h4>
+          <p>Complete software platform for energy management, trading, and optimization across all scales.</p>
+          <div class="tech-features">
+            <span class="tech-feature">Energy Trading</span>
+            <span class="tech-feature">Load Optimization</span>
+            <span class="tech-feature">Market Access</span>
+            <span class="tech-feature">ESG Reporting</span>
+          </div>
+        </div>
+        
+        <div class="tech-layer">
+          <h4>Blockchain Layer — RDDL Network</h4>
+          <p>Access decentralized energy markets, tokenization, and verifiable carbon credits.</p>
+          <div class="tech-features">
+            <span class="tech-feature">P2P Trading</span>
+            <span class="tech-feature">Carbon Tokens</span>
+            <span class="tech-feature">REC Certificates</span>
+            <span class="tech-feature">Smart Contracts</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="cta-section">
+      <h2>Ready to Transform Your Energy Assets?</h2>
+      <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: var(--spacing-md);">
+        Whether you're managing a single building or an entire distribution network, we have the infrastructure and expertise to help you succeed.
+      </p>
+      <div class="cta-buttons">
+        <a href="company/get-in-touch.html" class="btn btn-primary">Request a Demo</a>
+        <a href="product/mypwr.html" class="btn btn-secondary">Explore MYPWR</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-column">
+        <h4>Products</h4>
+        <ul class="footer-links">
+          <li><a href="product/mypwr.html">MYPWR Platform</a></li>
+          <li><a href="product/security-technology.html">Security Technology</a></li>
+          <li><a href="product/key-and-identity-management.html">Key & Identity Management</a></li>
+          <li><a href="product/infrastructure-for-decentralized-assets.html">Infrastructure Solutions</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="company/about-us.html">About Us</a></li>
+          <li><a href="company/career.html">Careers</a></li>
+          <li><a href="company/news.html">News</a></li>
+          <li><a href="company/media.html">Media</a></li>
+          <li><a href="company/get-in-touch.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <ul class="footer-links">
+          <li><a href="showcase.html">Showcases</a></li>
+          <li><a href="https://rddl.io" target="_blank">RDDL Network</a></li>
+          <li><a href="sustainability.html">Sustainability</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Legal</h4>
+        <ul class="footer-links">
+          <li><a href="legal.html">Imprint</a></li>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2025 Riddle&Code GmbH. All rights reserved. | <a href="https://rddl.io" target="_blank">RDDL Network</a></p>
+    </div>
+  </footer>
+  
+  <script>
+    // Simple fade-in animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, observerOptions);
+    
+    document.querySelectorAll('.target-card, .value-card, .tech-layer').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
