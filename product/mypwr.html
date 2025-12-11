@@ -33,18 +33,134 @@
       <div id="nav-placeholder"></div>
       <script src="../scripts/load-nav.js"></script>
 
-      <section class="hero">
-        <h1 class="fade-in">
-          <span class="highlight" style="color: var(--mypwr);">MYPWR</span><br>
-          Secure Energy Infrastructure for the Future
-        </h1>
-        <p class="hero-subtitle fade-in">
-          Transform your fragmented energy infrastructure into a synchronized, self-optimizing community with hardware-secured data integrity. Our platform solves connectivity challenges, enables real-time control of all energy assets with verifiable trust, and automatically balances loads to maximize your community's energy independence and profitability.
-        </p>
-        <div style="margin-top: 2rem;">
-          <a href="../company/get-in-touch.html" class="btn btn-primary" style="background: var(--mypwr);">Request an Energy Agent</a>
+      <section class="hero hero-with-visual">
+        <div class="hero-content">
+          <h1 class="fade-in">
+            <span class="highlight" style="color: var(--mypwr);">MYPWR</span><br>
+            Secure Energy Infrastructure for the Future
+          </h1>
+          <p class="hero-subtitle fade-in">
+            Transform your fragmented energy infrastructure into a synchronized, self-optimizing community with hardware-secured data integrity. Our platform solves connectivity challenges, enables real-time control of all energy assets with verifiable trust, and automatically balances loads to maximize your community's energy independence and profitability.
+          </p>
+          <div style="margin-top: 2rem;">
+            <a href="../company/get-in-touch.html" class="btn btn-primary" style="background: var(--mypwr);">Request an Energy Agent</a>
+          </div>
+        </div>
+        <div class="hero-visual fade-in">
+          <svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Solar rays -->
+            <line x1="150" y1="30" x2="150" y2="50" stroke="var(--mypwr, currentColor)" stroke-width="3" stroke-linecap="round"/>
+            <line x1="210" y1="50" x2="195" y2="65" stroke="var(--mypwr, currentColor)" stroke-width="3" stroke-linecap="round"/>
+            <line x1="250" y1="90" x2="230" y2="100" stroke="var(--mypwr, currentColor)" stroke-width="3" stroke-linecap="round"/>
+            <line x1="90" y1="50" x2="105" y2="65" stroke="var(--mypwr, currentColor)" stroke-width="3" stroke-linecap="round"/>
+            <line x1="50" y1="90" x2="70" y2="100" stroke="var(--mypwr, currentColor)" stroke-width="3" stroke-linecap="round"/>
+            
+            <!-- Central sun/energy source -->
+            <circle cx="150" cy="90" r="30" fill="var(--mypwr, currentColor)" opacity="0.2"/>
+            <circle cx="150" cy="90" r="20" fill="var(--mypwr, currentColor)"/>
+            
+            <!-- Energy flow lines -->
+            <path d="M150 120 Q120 150 90 180" stroke="currentColor" stroke-width="2.5" opacity="0.6" stroke-dasharray="5 5"/>
+            <path d="M150 120 Q150 160 150 200" stroke="currentColor" stroke-width="2.5" opacity="0.6" stroke-dasharray="5 5"/>
+            <path d="M150 120 Q180 150 210 180" stroke="currentColor" stroke-width="2.5" opacity="0.6" stroke-dasharray="5 5"/>
+            
+            <!-- Houses with solar panels -->
+            <g>
+              <!-- Left house -->
+              <path d="M60 180L90 160L120 180V220H60V180Z" stroke="currentColor" stroke-width="2" fill="none"/>
+              <rect x="75" y="195" width="10" height="15" fill="currentColor"/>
+              <rect x="95" y="195" width="10" height="15" fill="currentColor"/>
+              <rect x="70" y="155" width="40" height="12" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              <line x1="75" y1="155" x2="75" y2="167" stroke="currentColor" stroke-width="1"/>
+              <line x1="85" y1="155" x2="85" y2="167" stroke="currentColor" stroke-width="1"/>
+              <line x1="95" y1="155" x2="95" y2="167" stroke="currentColor" stroke-width="1"/>
+              <line x1="105" y1="155" x2="105" y2="167" stroke="currentColor" stroke-width="1"/>
+            </g>
+            
+            <g>
+              <!-- Center house -->
+              <path d="M120 200L150 175L180 200V240H120V200Z" stroke="currentColor" stroke-width="2" fill="none"/>
+              <rect x="135" y="215" width="12" height="18" fill="currentColor"/>
+              <rect x="153" y="215" width="12" height="18" fill="currentColor"/>
+              <rect x="130" y="168" width="40" height="14" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              <line x1="135" y1="168" x2="135" y2="182" stroke="currentColor" stroke-width="1"/>
+              <line x1="145" y1="168" x2="145" y2="182" stroke="currentColor" stroke-width="1"/>
+              <line x1="155" y1="168" x2="155" y2="182" stroke="currentColor" stroke-width="1"/>
+              <line x1="165" y1="168" x2="165" y2="182" stroke="currentColor" stroke-width="1"/>
+            </g>
+            
+            <g>
+              <!-- Right house -->
+              <path d="M180 180L210 160L240 180V220H180V180Z" stroke="currentColor" stroke-width="2" fill="none"/>
+              <rect x="195" y="195" width="10" height="15" fill="currentColor"/>
+              <rect x="215" y="195" width="10" height="15" fill="currentColor"/>
+              <rect x="190" y="155" width="40" height="12" stroke="currentColor" stroke-width="1.5" fill="none"/>
+              <line x1="195" y1="155" x2="195" y2="167" stroke="currentColor" stroke-width="1"/>
+              <line x1="205" y1="155" x2="205" y2="167" stroke="currentColor" stroke-width="1"/>
+              <line x1="215" y1="155" x2="215" y2="167" stroke="currentColor" stroke-width="1"/>
+              <line x1="225" y1="155" x2="225" y2="167" stroke="currentColor" stroke-width="1"/>
+            </g>
+            
+            <!-- Energy flow indicators -->
+            <circle cx="120" cy="150" r="4" fill="var(--mypwr, currentColor)"/>
+            <circle cx="150" cy="160" r="4" fill="var(--mypwr, currentColor)"/>
+            <circle cx="180" cy="150" r="4" fill="var(--mypwr, currentColor)"/>
+            
+            <!-- Ground line -->
+            <line x1="40" y1="245" x2="260" y2="245" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
         </div>
       </section>
+
+      <style>
+        .hero-with-visual {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 4rem;
+          align-items: center;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .hero-content {
+          max-width: none;
+        }
+
+        .hero-visual {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--primary-green);
+        }
+
+        .hero-visual svg {
+          width: 100%;
+          height: auto;
+          max-width: 300px;
+          filter: drop-shadow(0 4px 20px rgba(255, 187, 0, 0.3));
+          animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+
+        @media (max-width: 968px) {
+          .hero-with-visual {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+          }
+
+          .hero-visual {
+            order: -1;
+          }
+
+          .hero-visual svg {
+            max-width: 200px;
+          }
+        }
+      </style>
 
       <section class="section">
         <div class="section-header">
@@ -57,7 +173,27 @@
 
         <div class="target-grid">
           <div class="target-card">
-            <span class="target-icon">🌱</span>
+            <span class="target-icon" style="color: var(--mypwr);">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Solar panel with sun -->
+                <circle cx="24" cy="12" r="6" fill="currentColor" opacity="0.3"/>
+                <line x1="24" y1="4" x2="24" y2="8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="34" y1="8" x2="31" y2="11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="38" y1="16" x2="34" y2="16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="14" y1="8" x2="17" y2="11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="10" y1="16" x2="14" y2="16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <!-- Solar panel -->
+                <rect x="10" y="22" width="28" height="18" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                <line x1="17" y1="22" x2="17" y2="40" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="24" y1="22" x2="24" y2="40" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="31" y1="22" x2="31" y2="40" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="10" y1="28" x2="38" y2="28" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="10" y1="34" x2="38" y2="34" stroke="currentColor" stroke-width="1.5"/>
+                <!-- Verification checkmark -->
+                <circle cx="38" cy="36" r="8" fill="currentColor"/>
+                <path d="M33 36L36 39L43 32" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
             <h3 class="target-title" style="color: var(--mypwr);">Green Energy Producers</h3>
             <p class="target-description">
               Provide Verifiable Proof with Next Generation Energy Certificates! MYPWR's hardware-secured, blockchain-enabled certificates provide immutable proof of time, location and source with real-time traceability and cross-sector compatibility (green mobility, materials, heat, etc.) in a highly auditable manner.
@@ -65,7 +201,14 @@
           </div>
 
           <div class="target-card">
-            <span class="target-icon">⚡</span>
+            <span class="target-icon" style="color: var(--mypwr);">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Energy bolt with circular platform -->
+                <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="2" fill="none" opacity="0.3"/>
+                <path d="M26 10L16 26H22L18 38L32 20H26L26 10Z" stroke="currentColor" stroke-width="2.5" fill="currentColor" opacity="0.3"/>
+                <path d="M26 10L16 26H22L18 38L32 20H26L26 10Z" stroke="currentColor" stroke-width="2.5" fill="none"/>
+              </svg>
+            </span>
             <h3 class="target-title" style="color: var(--mypwr);">MYPWR Platform</h3>
             <p class="target-description">
               MYPWR by Riddle&Code is a secure Software-as-a-Service (SaaS) platform that empowers communities to generate, manage, and distribute their own energy with verifiable data integrity. Built with security by design to address the inefficiencies and trust challenges of traditional energy systems.
@@ -73,7 +216,22 @@
           </div>
 
           <div class="target-card">
-            <span class="target-icon">🔌</span>
+            <span class="target-icon" style="color: var(--mypwr);">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Electric plug with chip -->
+                <rect x="16" y="8" width="16" height="20" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                <rect x="20" y="12" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                <line x1="20" y1="6" x2="20" y2="8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="28" y1="6" x2="28" y2="8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <!-- Plug connector -->
+                <rect x="20" y="28" width="8" height="6" fill="currentColor"/>
+                <line x1="22" y1="34" x2="22" y2="42" stroke="currentColor" stroke-width="2.5"/>
+                <line x1="26" y1="34" x2="26" y2="42" stroke="currentColor" stroke-width="2.5"/>
+                <!-- Circuit lines -->
+                <line x1="22" y1="15" x2="26" y2="15" stroke="currentColor" stroke-width="1"/>
+                <line x1="24" y1="13" x2="24" y2="17" stroke="currentColor" stroke-width="1"/>
+              </svg>
+            </span>
             <h3 class="target-title" style="color: var(--mypwr);">Electric Device Manufacturers</h3>
             <p class="target-description">
               Future-Proof Your Devices with Secure Machine Identities! With MYPWR we help you integrate hardware-secured identity modules into your products, enabling verifiable machine-to-machine interactions and secure transactions—essential features for building trusted, next-generation technology services.
@@ -81,7 +239,20 @@
           </div>
 
           <div class="target-card">
-            <span class="target-icon">🏭</span>
+            <span class="target-icon" style="color: var(--mypwr);">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Factory with energy -->
+                <path d="M8 18L18 12V18L28 12V38H8V18Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                <rect x="28" y="22" width="12" height="16" stroke="currentColor" stroke-width="2" fill="none"/>
+                <rect x="12" y="22" width="4" height="5" fill="currentColor"/>
+                <rect x="20" y="22" width="4" height="5" fill="currentColor"/>
+                <rect x="12" y="30" width="4" height="5" fill="currentColor"/>
+                <rect x="20" y="30" width="4" height="5" fill="currentColor"/>
+                <rect x="32" y="27" width="4" height="5" fill="currentColor"/>
+                <!-- Energy bolt -->
+                <path d="M38 12L34 18H36L33 24L39 16H37L38 12Z" fill="currentColor"/>
+              </svg>
+            </span>
             <h3 class="target-title" style="color: var(--mypwr);">Energy Intensive Industry</h3>
             <p class="target-description">
               Hardware-Secured Certificates and Energy Agents provide a hardware-secured, highly auditable data registry for all relevant parties in a supply chain. This ensures the integrity of supply chain data and enables secure collaboration among participants.
@@ -89,7 +260,28 @@
           </div>
 
           <div class="target-card">
-            <span class="target-icon">🏘️</span>
+            <span class="target-icon" style="color: var(--mypwr);">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Three houses with solar -->
+                <g opacity="0.6">
+                  <path d="M4 24L10 20L16 24V32H4V24Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                  <rect x="6" y="18" width="8" height="3" stroke="currentColor" stroke-width="1" fill="none"/>
+                </g>
+                <g>
+                  <path d="M16 20L24 14L32 20V34H16V20Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                  <rect x="18" y="12" width="12" height="4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                  <line x1="20" y1="12" x2="20" y2="16" stroke="currentColor" stroke-width="1"/>
+                  <line x1="24" y1="12" x2="24" y2="16" stroke="currentColor" stroke-width="1"/>
+                  <line x1="28" y1="12" x2="28" y2="16" stroke="currentColor" stroke-width="1"/>
+                </g>
+                <g opacity="0.6">
+                  <path d="M32 24L38 20L44 24V32H32V24Z" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                  <rect x="34" y="18" width="8" height="3" stroke="currentColor" stroke-width="1" fill="none"/>
+                </g>
+                <!-- Ground line -->
+                <line x1="2" y1="36" x2="46" y2="36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
             <h3 class="target-title" style="color: var(--mypwr);">Energy Communities</h3>
             <p class="target-description">
               Energy independence starts with data security! MYPWR helps you make the most of your smart-meter data with verifiable integrity. Connect our hardware-secured identity module to any Smart Meter and receive cryptographically verified production and consumption data in real-time.
@@ -97,7 +289,18 @@
           </div>
 
           <div class="target-card">
-            <span class="target-icon">⚙️</span>
+            <span class="target-icon" style="color: var(--mypwr);">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Transmission tower with grid -->
+                <path d="M24 6L20 14H16L12 38H18L20 24H28L30 38H36L32 14H28L24 6Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                <line x1="16" y1="14" x2="32" y2="14" stroke="currentColor" stroke-width="2"/>
+                <line x1="14" y1="26" x2="34" y2="26" stroke="currentColor" stroke-width="2"/>
+                <!-- Energy lines -->
+                <line x1="8" y1="20" x2="12" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="36" y1="20" x2="40" y2="20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="24" cy="10" r="2" fill="currentColor"/>
+              </svg>
+            </span>
             <h3 class="target-title" style="color: var(--mypwr);">Utilities and Grid Operators</h3>
             <p class="target-description">
               Revolutionize Your Energy Services! Master your digital service game by using the best data interface to the fastest growing customer segment in energy. With MYPWR you can offer innovative services so prosumers can carry their energy around in their pockets.
@@ -105,7 +308,18 @@
           </div>
 
           <div class="target-card">
-            <span class="target-icon">👤</span>
+            <span class="target-icon" style="color: var(--mypwr);">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Person with energy -->
+                <circle cx="24" cy="12" r="6" stroke="currentColor" stroke-width="2" fill="none"/>
+                <path d="M24 18C16 18 12 22 12 28V38H36V28C36 22 32 18 24 18Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                <!-- Energy bolt on chest -->
+                <path d="M26 24L22 30H24L22 36L28 28H26L26 24Z" fill="currentColor"/>
+                <!-- Verification checkmark -->
+                <circle cx="34" cy="14" r="6" fill="currentColor"/>
+                <path d="M31 14L33 16L37 12" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
             <h3 class="target-title" style="color: var(--mypwr);">Prosumers</h3>
             <p class="target-description">
               Unlock Your Energy's Value with Verifiable Data! MYPWR empowers prosumers with the tools to participate successfully in the energy market. Create a hardware-secured digital representation of your clean energy asset with blockchain-enabled verification, making it easy for service providers to trust and discover you.
@@ -122,28 +336,18 @@
 
         <div class="value-grid">
           <div class="value-card">
-            <h3 style="color: var(--mypwr);">Real-Time Energy Insights</h3>
-            <p>Get unprecedented visibility into your energy flows with precise, real-time measurements. Compare grid measurements with your local data to identify discrepancies and optimization opportunities. Make informed decisions based on actual usage patterns and production capacity.</p>
-          </div>
-
-          <div class="value-card">
             <h3 style="color: var(--mypwr);">Smart Asset Control</h3>
             <p>Take command of your energy infrastructure with our Energy Agent technology. This innovative hardware enables bi-directional communication with all your energy assets - from solar inverters to heat pumps. Monitor, control, and automate your devices through a single interface.</p>
           </div>
 
           <div class="value-card">
-            <h3 style="color: var(--mypwr);">Reliable Connectivity Anywhere</h3>
-            <p>Stop wrestling with unreliable connections in challenging environments. Our Mioty-powered solution penetrates thick walls, basement installations, and steel-reinforced concrete. Get dedicated, independent data transfer that just works.</p>
+            <h3 style="color: var(--mypwr);">Real-Time Energy Insights</h3>
+            <p>Get unprecedented visibility into your energy flows with precise, real-time measurements. Compare grid measurements with your local data to identify discrepancies and optimization opportunities. Make informed decisions based on actual usage patterns and production capacity.</p>
           </div>
 
           <div class="value-card">
             <h3 style="color: var(--mypwr);">Intelligent Load Balancing</h3>
             <p>Leverage your connected assets to achieve perfect energy harmony. Our platform's intelligent algorithms coordinate energy production and consumption across your entire community, automatically shifting loads to minimize grid dependency and maximize self-consumption.</p>
-          </div>
-
-          <div class="value-card">
-            <h3 style="color: var(--mypwr);">Future-Proof Investment</h3>
-            <p>Ready to expand your energy infrastructure? Our platform connects you to innovative financing options through the RDDL network's secure, distributed infrastructure, helping your community grow sustainably. Every transaction and data point is cryptographically verified for complete transparency and trust.</p>
           </div>
 
           <div class="value-card">

@@ -32,15 +32,117 @@
       <div id="nav-placeholder"></div>
       <script src="../scripts/load-nav.js"></script>
 
-      <section class="hero">
-        <h1 class="fade-in">
-          <span class="highlight">Key & Identity Management</span><br>
-          Simplified Security for Complex Systems
-        </h1>
-        <p class="hero-subtitle fade-in">
-          Built on top of our security technology, our key and identity management solution provides comprehensive verification, authentication, and certificate management. Streamline your security operations with standardized key derivation, distributed key generation, and hardware wallet compatibility.
-        </p>
+      <section class="hero hero-with-visual">
+        <div class="hero-content">
+          <h1 class="fade-in">
+            <span class="highlight">Key & Identity Management</span><br>
+            Simplified Security for Complex Systems
+          </h1>
+          <p class="hero-subtitle fade-in">
+            Built on top of our security technology, our key and identity management solution provides comprehensive verification, authentication, and certificate management. Streamline your security operations with standardized key derivation, distributed key generation, and hardware wallet compatibility.
+          </p>
+        </div>
+        <div class="hero-visual fade-in">
+          <svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Identity badge outline -->
+            <rect x="75" y="50" width="150" height="200" rx="12" stroke="currentColor" stroke-width="3" fill="none"/>
+            <rect x="75" y="50" width="150" height="60" rx="12" fill="currentColor" opacity="0.1"/>
+            
+            <!-- Avatar/identity circle -->
+            <circle cx="150" cy="110" r="25" stroke="currentColor" stroke-width="2.5" fill="none"/>
+            <path d="M150 95 A15 15 0 0 1 150 125" stroke="currentColor" stroke-width="2.5" fill="none"/>
+            <circle cx="143" cy="105" r="2" fill="currentColor"/>
+            <circle cx="157" cy="105" r="2" fill="currentColor"/>
+            
+            <!-- ID lines -->
+            <line x1="100" y1="155" x2="200" y2="155" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="100" y1="175" x2="200" y2="175" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="100" y1="195" x2="170" y2="195" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            
+            <!-- Key symbol -->
+            <circle cx="90" cy="220" r="18" stroke="currentColor" stroke-width="3" fill="none"/>
+            <circle cx="90" cy="220" r="8" fill="currentColor"/>
+            <line x1="105" y1="220" x2="140" y2="220" stroke="currentColor" stroke-width="3"/>
+            <line x1="125" y1="220" x2="125" y2="230" stroke="currentColor" stroke-width="3"/>
+            <line x1="135" y1="220" x2="135" y2="227" stroke="currentColor" stroke-width="3"/>
+            
+            <!-- QR code representation -->
+            <g opacity="0.6">
+              <rect x="165" y="205" width="8" height="8" fill="currentColor"/>
+              <rect x="175" y="205" width="8" height="8" fill="currentColor"/>
+              <rect x="195" y="205" width="8" height="8" fill="currentColor"/>
+              <rect x="165" y="215" width="8" height="8" fill="currentColor"/>
+              <rect x="185" y="215" width="8" height="8" fill="currentColor"/>
+              <rect x="195" y="215" width="8" height="8" fill="currentColor"/>
+              <rect x="165" y="225" width="8" height="8" fill="currentColor"/>
+              <rect x="175" y="225" width="8" height="8" fill="currentColor"/>
+              <rect x="195" y="225" width="8" height="8" fill="currentColor"/>
+            </g>
+            
+            <!-- Verification checkmark in circle -->
+            <circle cx="200" cy="70" r="20" fill="currentColor"/>
+            <path d="M190 70L197 77L210 64" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            
+            <!-- Security dots around badge -->
+            <circle cx="60" cy="100" r="3" fill="currentColor" opacity="0.4"/>
+            <circle cx="240" cy="100" r="3" fill="currentColor" opacity="0.4"/>
+            <circle cx="60" cy="150" r="3" fill="currentColor" opacity="0.4"/>
+            <circle cx="240" cy="150" r="3" fill="currentColor" opacity="0.4"/>
+            <circle cx="60" cy="200" r="3" fill="currentColor" opacity="0.4"/>
+            <circle cx="240" cy="200" r="3" fill="currentColor" opacity="0.4"/>
+          </svg>
+        </div>
       </section>
+
+      <style>
+        .hero-with-visual {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 4rem;
+          align-items: center;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .hero-content {
+          max-width: none;
+        }
+
+        .hero-visual {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--primary-green);
+        }
+
+        .hero-visual svg {
+          width: 100%;
+          height: auto;
+          max-width: 300px;
+          filter: drop-shadow(0 4px 20px rgba(0, 255, 136, 0.3));
+          animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+
+        @media (max-width: 968px) {
+          .hero-with-visual {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+          }
+
+          .hero-visual {
+            order: -1;
+          }
+
+          .hero-visual svg {
+            max-width: 200px;
+          }
+        }
+      </style>
 
       <section class="section">
         <div class="section-header">

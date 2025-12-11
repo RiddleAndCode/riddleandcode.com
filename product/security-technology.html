@@ -32,15 +32,117 @@
       <div id="nav-placeholder"></div>
       <script src="../scripts/load-nav.js"></script>
 
-      <section class="hero">
-        <h1 class="fade-in">
-          <span class="highlight">Security Technology</span><br>
-          Bridging Physical and Digital Worlds
-        </h1>
-        <p class="hero-subtitle fade-in">
-          Our core offering integrates hardware cryptographic chips with specialized software, creating a secure interface between the physical and digital worlds. This technology provides incorruptible digital identities and truly private key storage for the next generation of connected devices.
-        </p>
+      <section class="hero hero-with-visual">
+        <div class="hero-content">
+          <h1 class="fade-in">
+            <span class="highlight">Security Technology</span><br>
+            Bridging Physical and Digital Worlds
+          </h1>
+          <p class="hero-subtitle fade-in">
+            Our core offering integrates hardware cryptographic chips with specialized software, creating a secure interface between the physical and digital worlds. This technology provides incorruptible digital identities and truly private key storage for the next generation of connected devices.
+          </p>
+        </div>
+        <div class="hero-visual fade-in">
+          <svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Outer shield shape -->
+            <path d="M150 20L50 60V120C50 190 90 250 150 280C210 250 250 190 250 120V60L150 20Z" 
+                  stroke="url(#shieldGradient)" stroke-width="4" fill="none" opacity="0.3"/>
+            
+            <!-- Inner security chip -->
+            <rect x="100" y="100" width="100" height="100" rx="8" 
+                  stroke="currentColor" stroke-width="3" fill="none"/>
+            
+            <!-- Chip pins -->
+            <line x1="80" y1="120" x2="100" y2="120" stroke="currentColor" stroke-width="2.5"/>
+            <line x1="80" y1="150" x2="100" y2="150" stroke="currentColor" stroke-width="2.5"/>
+            <line x1="80" y1="180" x2="100" y2="180" stroke="currentColor" stroke-width="2.5"/>
+            <line x1="200" y1="120" x2="220" y2="120" stroke="currentColor" stroke-width="2.5"/>
+            <line x1="200" y1="150" x2="220" y2="150" stroke="currentColor" stroke-width="2.5"/>
+            <line x1="200" y1="180" x2="220" y2="180" stroke="currentColor" stroke-width="2.5"/>
+            <line x1="120" y1="80" x2="120" y2="100" stroke="currentColor" stroke-width="2.5"/>
+            <line x1="150" y1="80" x2="150" y2="100" stroke="currentColor" stroke-width="2.5"/>
+            <line x1="180" y1="80" x2="180" y2="100" stroke="currentColor" stroke-width="2.5"/>
+            <line x1="120" y1="200" x2="120" y2="220" stroke="currentColor" stroke-width="2.5"/>
+            <line x1="150" y1="200" x2="150" y2="220" stroke="currentColor" stroke-width="2.5"/>
+            <line x1="180" y1="200" x2="180" y2="220" stroke="currentColor" stroke-width="2.5"/>
+            
+            <!-- Lock mechanism in center -->
+            <rect x="130" y="140" width="40" height="30" rx="3" fill="currentColor"/>
+            <path d="M138 140V128C138 121.4 143.4 116 150 116C156.6 116 162 121.4 162 128V140" 
+                  stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <circle cx="150" cy="153" r="4" fill="#000"/>
+            <rect x="148" y="153" width="4" height="12" fill="#000"/>
+            
+            <!-- Cryptographic circuit lines -->
+            <path d="M110 110L120 120M190 110L180 120M110 190L120 180M190 190L180 180" 
+                  stroke="currentColor" stroke-width="2" opacity="0.4"/>
+            
+            <!-- Data nodes -->
+            <circle cx="110" cy="110" r="4" fill="currentColor"/>
+            <circle cx="190" cy="110" r="4" fill="currentColor"/>
+            <circle cx="110" cy="190" r="4" fill="currentColor"/>
+            <circle cx="190" cy="190" r="4" fill="currentColor"/>
+            
+            <!-- Gradient definition -->
+            <defs>
+              <linearGradient id="shieldGradient" x1="150" y1="20" x2="150" y2="280">
+                <stop offset="0%" stop-color="var(--primary-blue, #00d4ff)"/>
+                <stop offset="100%" stop-color="var(--primary-green, #00ff88)"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
       </section>
+
+      <style>
+        .hero-with-visual {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 4rem;
+          align-items: center;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+
+        .hero-content {
+          max-width: none;
+        }
+
+        .hero-visual {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--primary-green);
+        }
+
+        .hero-visual svg {
+          width: 100%;
+          height: auto;
+          max-width: 300px;
+          filter: drop-shadow(0 4px 20px rgba(0, 255, 136, 0.3));
+          animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+
+        @media (max-width: 968px) {
+          .hero-with-visual {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+          }
+
+          .hero-visual {
+            order: -1;
+          }
+
+          .hero-visual svg {
+            max-width: 200px;
+          }
+        }
+      </style>
 
       <section class="section">
         <div class="section-header">
@@ -108,7 +210,19 @@
 
         <div class="target-grid">
           <div class="target-card">
-            <span class="target-icon">🔐</span>
+            <span class="target-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- ID badge with lock -->
+                <rect x="8" y="6" width="32" height="36" rx="3" stroke="currentColor" stroke-width="2" fill="none"/>
+                <rect x="8" y="6" width="32" height="12" rx="3" fill="currentColor" opacity="0.2"/>
+                <!-- Avatar -->
+                <circle cx="24" cy="16" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                <!-- ID lines -->
+                <line x1="14" y1="26" x2="34" y2="26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="14" y1="31" x2="34" y2="31" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                <line x1="14" y1="36" x2="28" y2="36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
             <h3 class="target-title">Unique Digital Identity</h3>
             <p class="target-description">
               Each device receives an incorruptible digital identity registered on a ledger, enabling secure autonomous communication. This identity is confirmed even before the device is switched on, providing hardware-level trust.
@@ -116,7 +230,16 @@
           </div>
 
           <div class="target-card">
-            <span class="target-icon">🔑</span>
+            <span class="target-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Key with circular head -->
+                <circle cx="14" cy="24" r="8" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                <circle cx="14" cy="24" r="3.5" fill="currentColor"/>
+                <line x1="22" y1="24" x2="38" y2="24" stroke="currentColor" stroke-width="2.5"/>
+                <line x1="30" y1="24" x2="30" y2="29" stroke="currentColor" stroke-width="2.5"/>
+                <line x1="35" y1="24" x2="35" y2="27" stroke="currentColor" stroke-width="2.5"/>
+              </svg>
+            </span>
             <h3 class="target-title">True Private Key Storage</h3>
             <p class="target-description">
               Private keys stored "off the bus" directly on the chip ensure they remain truly private and cannot be easily accessed, duplicated, or transferred. This prevents cloning and unauthorized access at the hardware level.
@@ -124,7 +247,21 @@
           </div>
 
           <div class="target-card">
-            <span class="target-icon">🏭</span>
+            <span class="target-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Factory building -->
+                <path d="M8 18L18 12V18L28 12V38H8V18Z" stroke="currentColor" stroke-width="2" fill="none"/>
+                <rect x="28" y="22" width="12" height="16" stroke="currentColor" stroke-width="2" fill="none"/>
+                <!-- Windows -->
+                <rect x="12" y="22" width="4" height="5" fill="currentColor"/>
+                <rect x="20" y="22" width="4" height="5" fill="currentColor"/>
+                <rect x="12" y="30" width="4" height="5" fill="currentColor"/>
+                <rect x="20" y="30" width="4" height="5" fill="currentColor"/>
+                <rect x="32" y="27" width="4" height="5" fill="currentColor"/>
+                <!-- Chimney smoke -->
+                <path d="M32 12V8M36 10V6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
             <h3 class="target-title">IoT & Industrial Applications</h3>
             <p class="target-description">
               Perfect for IoT deployments, smart factories, and industrial automation where secure machine-to-machine communication and data integrity are critical. Enables trustless coordination between devices.
@@ -132,7 +269,13 @@
           </div>
 
           <div class="target-card">
-            <span class="target-icon">⚡</span>
+            <span class="target-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Energy bolt -->
+                <path d="M26 6L14 26H22L18 42L34 20H26L26 6Z" stroke="currentColor" stroke-width="2" fill="currentColor" opacity="0.3"/>
+                <path d="M26 6L14 26H22L18 42L34 20H26L26 6Z" stroke="currentColor" stroke-width="2" fill="none"/>
+              </svg>
+            </span>
             <h3 class="target-title">Smart Energy Systems</h3>
             <p class="target-description">
               Secure energy metering, grid management, and peer-to-peer energy trading. Our technology ensures accurate measurements and prevents tampering in critical energy infrastructure.
@@ -140,7 +283,16 @@
           </div>
 
           <div class="target-card">
-            <span class="target-icon">🔗</span>
+            <span class="target-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Chain links -->
+                <circle cx="16" cy="16" r="8" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                <circle cx="32" cy="32" r="8" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                <line x1="22" y1="22" x2="26" y2="26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                <!-- Verification checkmark on second link -->
+                <path d="M28 30L30 32L35 27" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
             <h3 class="target-title">Supply Chain Integrity</h3>
             <p class="target-description">
               Track and verify products throughout the supply chain with hardware-level authentication. Prevent counterfeiting and ensure product authenticity from manufacturing to end consumer.
@@ -148,7 +300,20 @@
           </div>
 
           <div class="target-card">
-            <span class="target-icon">💎</span>
+            <span class="target-icon">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Wallet/vault -->
+                <rect x="8" y="12" width="32" height="24" rx="2" stroke="currentColor" stroke-width="2.5" fill="none"/>
+                <rect x="12" y="8" width="24" height="4" rx="1" fill="currentColor"/>
+                <!-- Lock mechanism -->
+                <circle cx="32" cy="24" r="5" stroke="currentColor" stroke-width="2" fill="none"/>
+                <circle cx="32" cy="24" r="2" fill="currentColor"/>
+                <!-- Secure elements -->
+                <line x1="14" y1="18" x2="22" y2="18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="14" y1="24" x2="22" y2="24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="14" y1="30" x2="22" y2="30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </span>
             <h3 class="target-title">Digital Asset Security</h3>
             <p class="target-description">
               Hardware wallets and secure key management for cryptocurrencies and digital assets. Industry-leading security for protecting high-value digital holdings with multi-signature support.
