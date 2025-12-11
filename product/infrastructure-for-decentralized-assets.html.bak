@@ -75,9 +75,62 @@
       <div id="technology-section-placeholder"></div>
       <script src="../scripts/load-technology-section.js"></script>
 
-      <!-- Capabilities Section -->
-      <div id="capabilities-infrastructure-placeholder"></div>
-      <script src="../scripts/load-capabilities-infrastructure.js"></script>
+      <section class="section">
+        <div class="section-header">
+          <span class="section-tag">KEY CAPABILITIES</span>
+          <h2 class="section-title">Complete Asset Lifecycle Management</h2>
+        </div>
+
+        <div class="target-grid">
+          <div class="target-card">
+            <span class="target-icon">🔐</span>
+            <h3 class="target-title">Secure Provisioning</h3>
+            <p class="target-description">
+              Automated onboarding of new assets with hardware-backed identity assignment. Factory provisioning or field deployment supported with zero-touch enrollment and cryptographic attestation.
+            </p>
+          </div>
+
+          <div class="target-card">
+            <span class="target-icon">��</span>
+            <h3 class="target-title">Real-Time Analytics</h3>
+            <p class="target-description">
+              Comprehensive dashboards providing instant insights into asset health, performance, and utilization. Predictive maintenance alerts based on hardware-verified telemetry data.
+            </p>
+          </div>
+
+          <div class="target-card">
+            <span class="target-icon">⚡</span>
+            <h3 class="target-title">Automated Orchestration</h3>
+            <p class="target-description">
+              Intelligent coordination of distributed assets based on policies and real-time conditions. Load balancing, resource optimization, and automated response to system events.
+            </p>
+          </div>
+
+          <div class="target-card">
+            <span class="target-icon">🔗</span>
+            <h3 class="target-title">Interoperability</h3>
+            <p class="target-description">
+              Standards-based APIs and protocols enable integration with existing systems. Support for industry-standard communication protocols and data formats across sectors.
+            </p>
+          </div>
+
+          <div class="target-card">
+            <span class="target-icon">🛡️</span>
+            <h3 class="target-title">Compliance & Auditing</h3>
+            <p class="target-description">
+              Complete audit trails with cryptographic proof of every action. Regulatory compliance reporting for industries with strict documentation requirements (energy, finance, healthcare).
+            </p>
+          </div>
+
+          <div class="target-card">
+            <span class="target-icon">🔄</span>
+            <h3 class="target-title">Lifecycle Management</h3>
+            <p class="target-description">
+              Track assets from deployment through retirement. Secure firmware updates, configuration management, and secure decommissioning with verified data destruction.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section class="section">
         <div class="section-header">
