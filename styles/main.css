@@ -159,7 +159,25 @@ html {
 .target-icon {
   font-size: 3rem;
   margin-bottom: var(--spacing-sm);
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--primary-green);
+  transition: all 0.3s ease;
+}
+
+.target-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.target-card:hover .target-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 2px 8px rgba(0, 255, 136, 0.4));
 }
 
 .target-title {
@@ -226,6 +244,25 @@ html {
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: var(--spacing-md);
+  transition: all 0.3s ease;
+}
+
+.value-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 0 var(--spacing-sm) 0;
+  color: var(--primary-green);
+  transition: all 0.3s ease;
+}
+
+.value-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.value-card:hover .value-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 2px 8px rgba(0, 255, 136, 0.4));
 }
 
 .value-card h3 {
