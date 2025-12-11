@@ -32,149 +32,15 @@
       <div id="nav-placeholder"></div>
       <script src="../scripts/load-nav.js"></script>
 
-      <section class="hero hero-with-visual">
-        <div class="hero-content">
-          <h1 class="fade-in">
-            <span class="highlight">Infrastructure for Decentralized Assets</span><br>
-            Trust, Control, and Visibility at Scale
-          </h1>
-          <p class="hero-subtitle fade-in">
-            In today's decentralized world, connected assets form the backbone of modern infrastructure across industries. Our platform addresses the critical challenges: maintaining visibility across all assets, ensuring secure control, guaranteeing system availability, and most importantly — establishing trust in the data flowing through your ecosystem by being GDPR, NIS2, CRA, and Data Act compliant.
-          </p>
-        </div>
-        <div class="hero-visual fade-in">
-          <svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Central hub -->
-            <circle cx="150" cy="150" r="25" fill="currentColor"/>
-            <circle cx="150" cy="150" r="35" stroke="currentColor" stroke-width="2" fill="none"/>
-            
-            <!-- Distributed nodes (8 nodes around center) -->
-            <circle cx="150" cy="50" r="15" stroke="currentColor" stroke-width="2.5" fill="none"/>
-            <circle cx="150" cy="50" r="8" fill="currentColor"/>
-            
-            <circle cx="220" cy="80" r="15" stroke="currentColor" stroke-width="2.5" fill="none"/>
-            <circle cx="220" cy="80" r="8" fill="currentColor"/>
-            
-            <circle cx="250" cy="150" r="15" stroke="currentColor" stroke-width="2.5" fill="none"/>
-            <circle cx="250" cy="150" r="8" fill="currentColor"/>
-            
-            <circle cx="220" cy="220" r="15" stroke="currentColor" stroke-width="2.5" fill="none"/>
-            <circle cx="220" cy="220" r="8" fill="currentColor"/>
-            
-            <circle cx="150" cy="250" r="15" stroke="currentColor" stroke-width="2.5" fill="none"/>
-            <circle cx="150" cy="250" r="8" fill="currentColor"/>
-            
-            <circle cx="80" cy="220" r="15" stroke="currentColor" stroke-width="2.5" fill="none"/>
-            <circle cx="80" cy="220" r="8" fill="currentColor"/>
-            
-            <circle cx="50" cy="150" r="15" stroke="currentColor" stroke-width="2.5" fill="none"/>
-            <circle cx="50" cy="150" r="8" fill="currentColor"/>
-            
-            <circle cx="80" cy="80" r="15" stroke="currentColor" stroke-width="2.5" fill="none"/>
-            <circle cx="80" cy="80" r="8" fill="currentColor"/>
-            
-            <!-- Connection lines -->
-            <line x1="150" y1="125" x2="150" y2="65" stroke="currentColor" stroke-width="2" opacity="0.5"/>
-            <line x1="168" y1="132" x2="205" y2="95" stroke="currentColor" stroke-width="2" opacity="0.5"/>
-            <line x1="175" y1="150" x2="235" y2="150" stroke="currentColor" stroke-width="2" opacity="0.5"/>
-            <line x1="168" y1="168" x2="205" y2="205" stroke="currentColor" stroke-width="2" opacity="0.5"/>
-            <line x1="150" y1="175" x2="150" y2="235" stroke="currentColor" stroke-width="2" opacity="0.5"/>
-            <line x1="132" y1="168" x2="95" y2="205" stroke="currentColor" stroke-width="2" opacity="0.5"/>
-            <line x1="125" y1="150" x2="65" y2="150" stroke="currentColor" stroke-width="2" opacity="0.5"/>
-            <line x1="132" y1="132" x2="95" y2="95" stroke="currentColor" stroke-width="2" opacity="0.5"/>
-            
-            <!-- Data flow indicators -->
-            <circle cx="150" cy="95" r="3" fill="currentColor" opacity="0.7"/>
-            <circle cx="186" cy="114" r="3" fill="currentColor" opacity="0.7"/>
-            <circle cx="205" cy="150" r="3" fill="currentColor" opacity="0.7"/>
-            <circle cx="186" cy="186" r="3" fill="currentColor" opacity="0.7"/>
-            <circle cx="150" cy="205" r="3" fill="currentColor" opacity="0.7"/>
-            <circle cx="114" cy="186" r="3" fill="currentColor" opacity="0.7"/>
-            <circle cx="95" cy="150" r="3" fill="currentColor" opacity="0.7"/>
-            <circle cx="114" cy="114" r="3" fill="currentColor" opacity="0.7"/>
-            
-            <!-- Shield overlay for security -->
-            <path d="M150 30L100 50V90C100 120 120 145 150 160C180 145 200 120 200 90V50L150 30Z" 
-                  stroke="currentColor" stroke-width="2" fill="none" opacity="0.3"/>
-          </svg>
-        </div>
+      <section class="hero">
+        <h1 class="fade-in">
+          <span class="highlight">Infrastructure for Decentralized Assets</span><br>
+          Trust, Control, and Visibility at Scale
+        </h1>
+        <p class="hero-subtitle fade-in">
+          In today's decentralized world, connected assets form the backbone of modern infrastructure across industries. Our platform addresses the critical challenges: maintaining visibility across all assets, ensuring secure control, guaranteeing system availability, and most importantly — establishing trust in the data flowing through your ecosystem by being GDPR, NIS2, CRA, and Data Act compliant.
+        </p>
       </section>
-
-      <style>
-        /* Infrastructure for Decentralized Assets Page Overrides - Cyan Theme */
-        h2, h3, h4 {
-          color: #00d4ff !important;
-        }
-
-        .section-tag {
-          color: #00d4ff !important;
-        }
-
-        .highlight {
-          color: #00d4ff !important;
-        }
-
-        .value-icon {
-          color: #00d4ff !important;
-        }
-
-        .btn-primary {
-          background: #00d4ff !important;
-          color: #000 !important;
-        }
-
-        .btn-primary:hover {
-          background: #33ddff !important;
-        }
-
-        .hero-with-visual {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 4rem;
-          align-items: center;
-          max-width: 1200px;
-          margin: 0 auto;
-        }
-
-        .hero-content {
-          max-width: none;
-        }
-
-        .hero-visual {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: #00d4ff;
-        }
-
-        .hero-visual svg {
-          width: 100%;
-          height: auto;
-          max-width: 300px;
-          filter: drop-shadow(0 4px 20px rgba(0, 212, 255, 0.3));
-          animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
-        }
-
-        @media (max-width: 968px) {
-          .hero-with-visual {
-            grid-template-columns: 1fr;
-            gap: 2rem;
-          }
-
-          .hero-visual {
-            order: -1;
-          }
-
-          .hero-visual svg {
-            max-width: 200px;
-          }
-        }
-      </style>
 
       <section class="section">
         <div class="section-header">
@@ -209,9 +75,62 @@
       <div id="technology-section-placeholder"></div>
       <script src="../scripts/load-technology-section.js"></script>
 
-      <!-- Capabilities Section -->
-      <div id="capabilities-infrastructure-placeholder"></div>
-      <script src="../scripts/load-capabilities-infrastructure.js"></script>
+      <section class="section">
+        <div class="section-header">
+          <span class="section-tag">KEY CAPABILITIES</span>
+          <h2 class="section-title">Complete Asset Lifecycle Management</h2>
+        </div>
+
+        <div class="target-grid">
+          <div class="target-card">
+            <span class="target-icon">🔐</span>
+            <h3 class="target-title">Secure Provisioning</h3>
+            <p class="target-description">
+              Automated onboarding of new assets with hardware-backed identity assignment. Factory provisioning or field deployment supported with zero-touch enrollment and cryptographic attestation.
+            </p>
+          </div>
+
+          <div class="target-card">
+            <span class="target-icon">��</span>
+            <h3 class="target-title">Real-Time Analytics</h3>
+            <p class="target-description">
+              Comprehensive dashboards providing instant insights into asset health, performance, and utilization. Predictive maintenance alerts based on hardware-verified telemetry data.
+            </p>
+          </div>
+
+          <div class="target-card">
+            <span class="target-icon">⚡</span>
+            <h3 class="target-title">Automated Orchestration</h3>
+            <p class="target-description">
+              Intelligent coordination of distributed assets based on policies and real-time conditions. Load balancing, resource optimization, and automated response to system events.
+            </p>
+          </div>
+
+          <div class="target-card">
+            <span class="target-icon">🔗</span>
+            <h3 class="target-title">Interoperability</h3>
+            <p class="target-description">
+              Standards-based APIs and protocols enable integration with existing systems. Support for industry-standard communication protocols and data formats across sectors.
+            </p>
+          </div>
+
+          <div class="target-card">
+            <span class="target-icon">🛡️</span>
+            <h3 class="target-title">Compliance & Auditing</h3>
+            <p class="target-description">
+              Complete audit trails with cryptographic proof of every action. Regulatory compliance reporting for industries with strict documentation requirements (energy, finance, healthcare).
+            </p>
+          </div>
+
+          <div class="target-card">
+            <span class="target-icon">🔄</span>
+            <h3 class="target-title">Lifecycle Management</h3>
+            <p class="target-description">
+              Track assets from deployment through retirement. Secure firmware updates, configuration management, and secure decommissioning with verified data destruction.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section class="section">
         <div class="section-header">

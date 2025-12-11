@@ -1,0 +1,166 @@
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary-green: #00ff88;
+    --primary-blue: #00d4ff;
+    --dark-bg: #0a0a0a;
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #999999;
+    --border-color: #333333;
+  }
+  
+  /* Navigation */
+  .nav {
+    position: relative;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+  }
+  
+  .nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .nav-logo img {
+    height: 32px;
+    width: auto;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .nav-link:hover {
+    color: var(--primary-green);
+  }
+  
+  .nav-cta {
+    background: var(--primary-green);
+    color: var(--dark-bg);
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 255, 136, 0.3);
+  }
+  
+  /* Mobile menu toggle */
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: rgba(10, 10, 10, 0.98);
+      flex-direction: column;
+      padding: 1rem;
+      border-bottom: 1px solid var(--border-color);
+      gap: 1rem;
+    }
+    
+    .nav-menu.active {
+      display: flex;
+    }
+    
+    .nav-toggle {
+      display: block;
+    }
+    
+    .nav-container {
+      flex-wrap: wrap;
+    }
+  }
+</style>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-container">
+    <a href="/" class="nav-logo">
+      <img src="/images/640eb41653155cff97638680_RIDDLE&CODE_SHORTLOGO_OPTION_C_POS_grey.png" alt="Riddle&Code Logo">
+      <span>Riddle&Code</span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      ☰
+    </button>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="/#solutions" class="nav-link">Solutions</a></li>
+      <li><a href="/#capabilities" class="nav-link">Capabilities</a></li>
+      <li><a href="/#technology" class="nav-link">Technology</a></li>
+      <li><a href="/#products" class="nav-link">Products</a></li>
+      <li><a href="/company/about-us.html" class="nav-link">Company</a></li>
+      <li><a href="/company/news.html" class="nav-link">News</a></li>
+      <li><a href="/company/get-in-touch.html" class="nav-cta">Get in Touch</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  // Mobile menu toggle
+  (function() {
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('navMenu');
+    
+    if (toggle && menu) {
+      toggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+          menu.classList.remove('active');
+        }
+      });
+    }
+  })();
+</script>
