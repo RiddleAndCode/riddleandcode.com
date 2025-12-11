@@ -87,7 +87,7 @@
             <defs>
               <linearGradient id="shieldGradient" x1="150" y1="20" x2="150" y2="280">
                 <stop offset="0%" stop-color="var(--primary-blue, #00d4ff)"/>
-                <stop offset="100%" stop-color="var(--primary-green, #00ff88)"/>
+                <stop offset="100%" stop-color="#ffd700"/>
               </linearGradient>
             </defs>
           </svg>
@@ -95,6 +95,32 @@
       </section>
 
       <style>
+        /* Security Technology Page Overrides - Gold Theme */
+        h2, h3, h4 {
+          color: #ffd700 !important;
+        }
+
+        .section-tag {
+          color: #ffd700 !important;
+        }
+
+        .highlight {
+          color: #ffd700 !important;
+        }
+
+        .target-icon {
+          color: #ffd700 !important;
+        }
+
+        .btn-primary {
+          background: #ffd700 !important;
+          color: #000 !important;
+        }
+
+        .btn-primary:hover {
+          background: #ffed4e !important;
+        }
+
         .hero-with-visual {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -112,14 +138,14 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          color: var(--primary-green);
+          color: #ffd700;
         }
 
         .hero-visual svg {
           width: 100%;
           height: auto;
           max-width: 300px;
-          filter: drop-shadow(0 4px 20px rgba(0, 255, 136, 0.3));
+          filter: drop-shadow(0 4px 20px rgba(255, 215, 0, 0.3));
           animation: float 6s ease-in-out infinite;
         }
 
