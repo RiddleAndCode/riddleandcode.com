@@ -143,24 +143,3 @@
     </ul>
   </div>
 </nav>
-
-<script>
-  // Mobile menu toggle
-  (function() {
-    const toggle = document.getElementById('navToggle');
-    const menu = document.getElementById('navMenu');
-    
-    if (toggle && menu) {
-      toggle.addEventListener('click', function() {
-        menu.classList.toggle('active');
-      });
-      
-      // Close menu when clicking outside
-      document.addEventListener('click', function(event) {
-        if (!toggle.contains(event.target) && !menu.contains(event.target)) {
-          menu.classList.remove('active');
-        }
-      });
-    }
-  })();
-</script>

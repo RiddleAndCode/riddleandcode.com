@@ -29,6 +29,32 @@
             }
           });
         }
+        
+        // Initialize mobile menu toggle after navigation is loaded
+        const toggle = document.getElementById('navToggle');
+        const menu = document.getElementById('navMenu');
+        
+        if (toggle && menu) {
+          toggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            menu.classList.toggle('active');
+          });
+          
+          // Close menu when clicking outside
+          document.addEventListener('click', function(event) {
+            if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+              menu.classList.remove('active');
+            }
+          });
+          
+          // Close menu when clicking on a link
+          const menuLinks = menu.querySelectorAll('a');
+          menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+              menu.classList.remove('active');
+            });
+          });
+        }
       })
       .catch(error => console.error('Error loading navigation:', error));
   }
