@@ -27,6 +27,13 @@
     <script async="" fs-cc-mode="opt-in" src="https://cdn.jsdelivr.net/npm/@finsweet/cookie-consent@1/fs-cc.js"></script>
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-T2VR79F');</script>
     <style>
+      .content-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      
       .news-card {
         background: rgba(255, 255, 255, 0.03);
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -37,16 +44,19 @@
         display: block;
         height: 100%;
       }
+      
       .news-card:hover {
         background: rgba(255, 255, 255, 0.05);
         border-color: var(--primary-green);
         transform: translateY(-4px);
       }
+      
       .news-card h3 {
         color: var(--text-primary);
         margin-bottom: 0.5rem;
         font-size: 1.25rem;
       }
+      
       .news-card .news-tag {
         color: var(--primary-green);
         font-size: 0.875rem;
@@ -54,11 +64,98 @@
         margin-bottom: 0.5rem;
         display: block;
       }
+      
       .news-card p {
         color: var(--text-secondary);
         font-size: 0.95rem;
         line-height: 1.6;
       }
+      
+      .news-card img {
+        width: 100%;
+        max-height: 180px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+      
+      .medium-card {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      .medium-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+        flex-shrink: 0;
+      }
+      
+      .medium-card h3 {
+        font-size: 1rem;
+        line-height: 1.3;
+        margin-bottom: 0.5rem;
+        color: var(--text-primary);
+      }
+      
+      .medium-card p {
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 0.5rem;
+        flex-grow: 1;
+      }
+      
+      .medium-card .read-more {
+        color: var(--primary-green);
+        font-size: 0.875rem;
+        margin-top: auto;
+        padding-top: 0.5rem;
+      }
+      
+      .embed-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        padding: 1rem;
+        overflow: hidden;
+      }
+      
+      .embed-card iframe {
+        width: 100%;
+        border-radius: 8px;
+      }
+      
+      .platform-badge {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 6px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      
+      .badge-linkedin {
+        background: rgba(0, 119, 181, 0.2);
+        color: #0077b5;
+        border: 1px solid rgba(0, 119, 181, 0.4);
+      }
+      
+      .badge-medium {
+        background: rgba(0, 0, 0, 0.3);
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      
+      .badge-news {
+        background: rgba(0, 255, 136, 0.1);
+        color: var(--primary-green);
+        border: 1px solid rgba(0, 255, 136, 0.3);
+      }
+      
       .newsletter-card {
         background: rgba(0, 255, 136, 0.05);
         border: 2px solid var(--primary-green);
@@ -66,19 +163,23 @@
         padding: 2rem;
         margin-bottom: 3rem;
       }
+      
       .newsletter-card h3 {
         color: var(--text-primary);
         margin-bottom: 0.5rem;
       }
+      
       .newsletter-card p {
         color: var(--text-secondary);
         margin-bottom: 1.5rem;
       }
+      
       .newsletter-form {
         display: flex;
         gap: 1rem;
         flex-wrap: wrap;
       }
+      
       .newsletter-form input[type="email"] {
         flex: 1;
         min-width: 250px;
@@ -89,9 +190,42 @@
         color: var(--text-primary);
         font-size: 1rem;
       }
+      
       .newsletter-form input[type="email"]:focus {
         outline: none;
         border-color: var(--primary-green);
+      }
+      
+      .filter-tabs {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .filter-tab {
+        padding: 0.75rem 1.5rem;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        color: var(--text-secondary);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 500;
+      }
+      
+      .filter-tab:hover,
+      .filter-tab.active {
+        background: var(--primary-green);
+        color: var(--dark-bg);
+        border-color: var(--primary-green);
+      }
+      
+      @media (max-width: 768px) {
+        .content-grid {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
@@ -103,77 +237,154 @@
       <section class="hero">
         <h1 class="fade-in">
           <span class="highlight">News & Insights</span><br>
-          Industry Research & Updates
+          Articles, Updates & Community
         </h1>
         <p class="hero-subtitle fade-in">
-          Riddle&Code frequently conducts and participates in industry-related research studies, where our experts reveal insights on topics that range from tokenization in the financial and energy sector to decentralized solutions in the industry sector. Stay up-to-date with the latest studies, news and trends.
+          Follow our journey through industry research, LinkedIn updates, Medium articles, and press releases. Stay connected with the latest developments in Web3, energy tokenization, and decentralized infrastructure.
         </p>
       </section>
 
       <section class="section">
+        <!--
         <div class="newsletter-card">
           <h3>Become an Insider</h3>
-          <p>Subscribe to our newsletter for the latest updates, insights, and industry trends.</p>
+          <p>Subscribe to our newsletter for the latest updates, insights, and industry trends delivered directly to your inbox.</p>
           <form action="https://riddleandcode.us17.list-manage.com/subscribe/post?u=6bbe708abce949d6a8bc7a0db&id=336a75474f" method="post" class="newsletter-form">
             <input type="email" name="Email" placeholder="your@email.com" required/>
             <button type="submit" class="btn btn-primary">Subscribe</button>
           </form>
         </div>
-
+        -->
         <div class="section-header">
-          <span class="section-tag">LATEST</span>
-          <h2 class="section-title">Recent Articles</h2>
+          <span class="section-tag">CONTENT HUB</span>
+          <h2 class="section-title">Latest Content</h2>
         </div>
 
-        <div class="target-grid">
-          <a href="../news/low-power-networks-the-backbone-of-profitable-energy-communities.html" class="news-card">
-            <span class="news-tag">The foundation of profitable Power Plants</span>
-            <h3>Low Power Networks: The Backbone of Profitable Energy Communities</h3>
-            <p>Exploring how low power networks enable sustainable and profitable energy communities.</p>
-          </a>
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">All</button>
+          <button class="filter-tab" data-filter="linkedin">LinkedIn</button>
+          <button class="filter-tab" data-filter="medium">Medium</button>
+          <button class="filter-tab" data-filter="news">Press Releases</button>
+        </div>
 
-          <a href="../news/press-release-energy-community-stanzertal-eu-showcase-project.html" class="news-card">
-            <span class="news-tag">Press Release: Energy Community Stanzertal</span>
-            <h3>EU Showcase Project Stanz im Mürztal</h3>
-            <p>When citizens get together and produce their own green energy, trading it among themselves - there's beer for kilowatts.</p>
-          </a>
-
-          <a href="../news/revolutionizing-business-models-with-a-blockchain-for-machines.html" class="news-card">
-            <span class="news-tag">R&C transforms traditional machines into trustworthy assets</span>
-            <h3>Revolutionizing Business Models with a Blockchain for Machines</h3>
-            <p>Solving the Oracle Problem with Smart Hardware Wallets and Tokenization.</p>
-          </a>
-
-          <a href="../news/riddle-code-introduces-the-hw-03-community-program-for-developers.html" class="news-card">
-            <span class="news-tag">Every Piece of Code Tells a Story</span>
-            <h3>Riddle&Code introduces the HW-03 Community Program for Developers</h3>
-            <p>Empowering developers with our hardware wallet community program.</p>
-          </a>
-
-          <a href="../news/riddle-code-ignites-the-fourth-industrial-revolution-by-onboarding-machines-onto-web3.html" class="news-card">
-            <span class="news-tag">R&C meets 4th Industrial Revolution</span>
-            <h3>Riddle&Code ignites the fourth industrial revolution by onboarding machines onto blockchain</h3>
-            <p>How we're bringing industrial machines into the ecosystem.</p>
-          </a>
-
-          <a href="../news/riddle-code-is-attending-web-summit-in-lisbon.html" class="news-card">
-            <span class="news-tag">R&C meets Web Summit</span>
-            <h3>Riddle&Code is attending Web Summit in Lisbon</h3>
-            <p>Join us at one of the world's largest tech conferences.</p>
-          </a>
+        <div class="content-grid" id="content-container">
+          <!-- All content loaded dynamically from JSON -->
         </div>
       </section>
 
       <section class="section">
         <div class="cta-section">
           <h2>Want to Learn More?</h2>
-          <p>Explore our products, partnerships, and the technology driving us.</p>
+          <p>Explore our products, partnerships, and the technology driving the future of decentralized energy.</p>
           <div class="cta-buttons">
             <a href="about-us.html" class="btn btn-primary">About Us</a>
             <a href="get-in-touch.html" class="btn btn-secondary">Get in Touch</a>
           </div>
         </div>
       </section>
+
+      <script>
+        // Load content from JSON
+        async function loadContent() {
+          try {
+            const response = await fetch('../data/content-feed.json');
+            const data = await response.json();
+            const container = document.getElementById('content-container');
+            
+            // Sort posts by date (newest first)
+            const sortedPosts = data.posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+            
+            let dynamicHTML = '';
+            
+            sortedPosts.forEach(post => {
+              if (post.type === 'linkedin' && post.embedUrl) {
+                // LinkedIn embedded post
+                dynamicHTML += `
+                  <div class="embed-card" data-category="linkedin">
+                    <span class="platform-badge badge-linkedin">LinkedIn</span>
+                    <iframe src="${post.embedUrl}" height="600" width="100%" frameborder="0" allowfullscreen="" title="${post.title}"></iframe>
+                  </div>
+                `;
+              } else if (post.type === 'linkedin') {
+                // LinkedIn link card (no embed)
+                dynamicHTML += `
+                  <a href="${post.url}" target="_blank" class="news-card" data-category="linkedin">
+                    <span class="platform-badge badge-linkedin">LinkedIn</span>
+                    <h3>${post.title}</h3>
+                    <p>${post.description}</p>
+                    <p style="color: var(--primary-green); font-size: 0.875rem; margin-top: 1rem;">View on LinkedIn →</p>
+                  </a>
+                `;
+              } else if (post.type === 'medium') {
+                // Medium article card
+                const truncatedDesc = post.description.length > 120 ? post.description.substring(0, 120) + '...' : post.description;
+                dynamicHTML += `
+                  <a href="${post.url}" target="_blank" class="news-card medium-card" data-category="medium">
+                    <span class="platform-badge badge-medium">Medium</span>
+                    ${post.image ? `<img src="${post.image}" alt="${post.title}">` : ''}
+                    <h3>${post.title}</h3>
+                    <p>${truncatedDesc}</p>
+                    <p class="read-more">Read on Medium →</p>
+                  </a>
+                `;
+              } else if (post.type === 'press') {
+                // Press release card
+                dynamicHTML += `
+                  <a href="${post.url}" class="news-card" data-category="news">
+                    <span class="platform-badge badge-news">Press Release</span>
+                    ${post.image ? `<img src="${post.image}" alt="${post.title}">` : ''}
+                    <h3>${post.title}</h3>
+                    <p>${post.description}</p>
+                  </a>
+                `;
+              }
+            });
+            
+            // Insert dynamic content at the beginning of the grid
+            container.insertAdjacentHTML('afterbegin', dynamicHTML);
+            
+            // Initialize filter after content is loaded
+            initializeFilters();
+            
+          } catch (error) {
+            console.error('Error loading content:', error);
+            const container = document.getElementById('content-container');
+            container.insertAdjacentHTML('afterbegin', `
+              <div style="grid-column: 1/-1; text-align: center; padding: 2rem; color: var(--text-muted);">
+                <p>Unable to load dynamic content. Please check back later.</p>
+              </div>
+            `);
+          }
+        }
+        
+        // Filter functionality
+        function initializeFilters() {
+          const filterTabs = document.querySelectorAll('.filter-tab');
+          const contentItems = document.querySelectorAll('[data-category]');
+          
+          filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+              const filter = tab.dataset.filter;
+              
+              // Update active tab
+              filterTabs.forEach(t => t.classList.remove('active'));
+              tab.classList.add('active');
+              
+              // Filter content
+              contentItems.forEach(item => {
+                if (filter === 'all' || item.dataset.category === filter) {
+                  item.style.display = 'block';
+                } else {
+                  item.style.display = 'none';
+                }
+              });
+            });
+          });
+        }
+        
+        // Load content when page loads
+        document.addEventListener('DOMContentLoaded', loadContent);
+      </script>
 
       <div id="footer-modern-placeholder"></div>
       <script src="../scripts/load-footer-modern.js"></script>

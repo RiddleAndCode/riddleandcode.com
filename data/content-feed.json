@@ -1,0 +1,161 @@
+{
+  "posts": [
+
+    {
+      "type": "linkedin",
+      "title": "Bitcoin and Energy",
+      "description": "We talk a lot about “Bitcoin and energy”. We talk much less about the simpler question: what happens when energy itself becomes money?",
+      "url": "https://www.linkedin.com/posts/thomas-fuerstner-0797592_activity-7392880274092662785-XF0i",
+      "embedUrl": "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7392880273534898176",
+      "date": "2024-11-08",
+      "featured": true
+    },
+
+    {
+      "type": "linkedin",
+      "title": "The Future of Bitcoin: From Active Currency to Passive Gold 2.0 – And Why Energy Innovation Will Be Its Greatest Legacy",
+      "description": "As we stand on the cusp of a new era in digital finance, Bitcoin is poised for a profound transformation. Once hailed as a revolutionary peer-to-peer electronic cash system, BTC is increasingly evolving into something more akin to digital gold: a completely passive, value-accruing asset.",
+      "url": "https://www.linkedin.com/posts/thomas-fuerstner-0797592_as-bitcoin-evolves-from-a-transactional-currency-activity-7354191060375420928-qcCw",
+      "embedUrl": "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7354191059733692416",
+      "date": "2025-11-22",
+      "featured": true
+    },
+
+    {
+      "type": "linkedin",
+      "title": "Why the Energy System of the Future Needs Deep-Time Technology — and How RDDL Builds the Foundation for It",
+      "description": "The energy transition has many technical challenges, but one of them is rarely addressed directly: the role of time.",
+      "url": "https://www.linkedin.com/pulse/why-energy-system-future-needs-deep-time-technology-how-fuerstner-coupf",
+      "embedUrl": "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7397928090770939904",
+      "date": "2025-07-24",
+      "featured": true
+    },
+
+    {
+      "type": "linkedin",
+      "title": "🌍 Inside the RDDLnetwork: Where Critical Infrastructure Becomes Investable, Intelligent, and Sovereign - The Hardware Side of Things",
+      "description": "As the world transitions to decentralized energy systems, many platforms talk about turning infrastructure into assets or data into value. But very few deliver the full stack required to make this real—from hardware, to protocol, to finance layer.",
+      "url": "https://www.linkedin.com/pulse/inside-rddlnetwork-where-critical-infrastructure-side-fuerstner-o8ozf",
+      "embedUrl": "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7353012031010070529",
+      "date": "2025-07-21",
+      "featured": true
+    },
+    {
+      "type": "medium",
+      "title": "Regional Energy Communities By Us, For Us: Empowered by MYPWR",
+      "description": "In the face of climate change, the energy sector is undergoing a significant transformation. Traditional, centralized energy systems, once the backbone of our power infrastructure, are increasingly being challenged for their inefficiency and inability to address the unique needs of local communities.",
+      "url": "https://blog.riddleandcode.com/regional-energy-communities-by-us-for-us-empowered-by-mypwr-0073d681c3f2",
+      "image": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*guVWCYyMaGa4A6TUbQiBug.png",
+      "date": "2024-08-16",
+      "featured": false
+    },
+    {
+      "type": "medium",
+      "title": "The Crucial Role of Energy Storage in the Transition to Clean Energy",
+      "description": "As the world intensifies its efforts to combat climate change, the transition to renewable energy has never been more critical. Solar and wind power are at the forefront of this shift.",
+      "url": "https://blog.riddleandcode.com/the-crucial-role-of-energy-storage-in-the-transition-to-clean-energy",
+      "image": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*FY_TOOP4MKQNrZkLOhlHGw.png",
+      "date": "2024-08-21",
+      "featured": false
+    },
+    {
+      "type": "medium",
+      "title": "How DePINs solve the interoperability challenge in zero carbon power grids",
+      "description": "A case study exploring how Decentralized Physical Infrastructure Networks address interoperability challenges in zero carbon power grids.",
+      "url": "https://blog.riddleandcode.com/how-depins-solve-the-interoperability-challenge-in-zero-carbon-power-grids",
+      "image": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*WvP_DbGSSVW5-ezrnsKcOQ.jpeg",
+      "date": "2023-09-26",
+      "featured": false
+    },
+    {
+      "type": "medium",
+      "title": "Data You Can Count On: Navigating Trust in the Future of Information",
+      "description": "As we enter the blockchain era, the need for secure, real-time data aggregation and transmission becomes vital. This is where the Trust Machine comes into play.",
+      "url": "https://blog.riddleandcode.com/data-you-can-count-on-navigating-trust-in-the-future-of-information",
+      "image": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*jK3AubZg9MXMrYcM-XzM0g.png",
+      "date": "2023-06-12",
+      "featured": false
+    },
+    {
+      "type": "medium",
+      "title": "Sustainable Sourcing: Tackling Carbon Emissions from Raw Materials to Finished Goods",
+      "description": "As the world becomes more aware of the environmental impact of human activities, businesses are beginning to shift towards sustainable practices.",
+      "url": "https://blog.riddleandcode.com/sustainable-sourcing-tackling-carbon-emissions-from-raw-materials-to-finished-goods",
+      "image": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*YgGrJ48JUmMmX-323TBZKg.jpeg",
+      "date": "2023-04-26",
+      "featured": false
+    },
+    {
+      "type": "medium",
+      "title": "Renewable Energy Investing: A Sustainable Opportunity for Everyone",
+      "description": "The renewable energy sector has been rapidly progressing in recent years due to a number of factors, including technological advancements and increasing awareness of climate change.",
+      "url": "https://blog.riddleandcode.com/renewable-energy-investing-a-sustainable-opportunity-for-everyone",
+      "image": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*8NZMXk1YzrlafJqa7td1UQ.jpeg",
+      "date": "2023-04-11",
+      "featured": false
+    },
+    {
+      "type": "medium",
+      "title": "The Emergence of Energy Communities: A New Path Towards Sustainable Energy Management",
+      "description": "As the world grapples with the effects of climate change and the urgent need for sustainable energy solutions, the concept of energy communities is gaining momentum.",
+      "url": "https://blog.riddleandcode.com/the-emergence-of-energy-communities-a-new-path-towards-sustainable-energy-management",
+      "image": "https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&q=80",
+      "date": "2023-03-30",
+      "featured": false
+    },
+    {
+      "type": "medium",
+      "title": "Understanding the Regenerative Finance Movement and Why it Matters",
+      "description": "Regenerative finance, also known as ReFi, is a new economic paradigm that prioritizes the well-being of our planet and all its inhabitants over short-term profits.",
+      "url": "https://blog.riddleandcode.com/understanding-the-regenerative-finance-movement-and-why-it-matters",
+      "image": "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&q=80",
+      "date": "2023-02-23",
+      "featured": false
+    },
+    {
+      "type": "medium",
+      "title": "The Power of Decentralization: How Blockchain is Driving Energy Innovation",
+      "description": "Renewable energy is produced from renewable resources, such as wind, sunlight photovoltaics (PV), biomass, biogas, hydropower, and geothermal energy.",
+      "url": "https://blog.riddleandcode.com/the-power-of-decentralization-how-blockchain-is-driving-energy-innovation",
+      "image": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&q=80",
+      "date": "2023-02-13",
+      "featured": false
+    },
+    {
+      "type": "medium",
+      "title": "Why do we need to dedicate more attention to the energy industry?",
+      "description": "With the development of different technologies, environmental challenges are now in the spotlight. Investors, stakeholders, consumers and policymakers are all paying attention.",
+      "url": "https://blog.riddleandcode.com/why-do-we-need-to-dedicate-more-attention-to-the-energy-industry",
+      "image": "https://miro.medium.com/v2/resize:fit:720/format:webp/1*1Wwi86XaO8Ztm881Iy0XSA.jpeg",
+      "date": "2023-01-30",
+      "featured": false
+    },
+    {
+      "type": "press",
+      "title": "Low Power Networks: The Backbone of Profitable Energy Communities",
+      "description": "Exploring how low power networks enable sustainable and profitable energy communities through decentralized infrastructure.",
+      "url": "../news/low-power-networks-the-backbone-of-profitable-energy-communities.html",
+      "image": "../images/67c5c35db7879dc09010d86a_IMG-20250228-WA0001.jpg",
+      "date": "2025-02-28",
+      "featured": false
+    },
+    {
+      "type": "press",
+      "title": "EU Showcase Project Stanz im Mürztal",
+      "description": "When citizens get together and produce their own green energy, trading it among themselves - there's beer for kilowatts.",
+      "url": "../news/press-release-energy-community-stanzertal-eu-showcase-project.html",
+      "image": "../images/645e4c94cdc5c707267bf5fc_Stanz Roll-up (900 × 900px)-12.png",
+      "date": "2023-05-11",
+      "featured": false
+    },
+    {
+      "type": "press",
+      "title": "Revolutionizing Business Models with a Blockchain for Machines",
+      "description": "Solving the Oracle Problem with Smart Hardware Wallets and Tokenization to bring traditional machines to Web3.",
+      "url": "../news/revolutionizing-business-models-with-a-blockchain-for-machines.html",
+      "image": "../images/642c2b6c6585b9f96bfe17ab_Visuals for social media -5.jpg",
+      "date": "2023-04-04",
+      "featured": false
+    }
+  ]
+}

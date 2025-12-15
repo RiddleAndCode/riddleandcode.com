@@ -186,28 +186,39 @@
     <p>To meet this ambitious purpose, the company has now launched programs to help enterprises and trailblazing developers alike capitalize on their own innovation. Called <a href="https://www.riddleandcode.com/enterprise" target="_blank">HW-03 Enterprise</a> and <a href="https://www.riddleandcode.com/community" target="_blank">HW-03 Community</a>, the two programs from Riddle&Code focus on hardware wallet adoption that will accelerate not only Web3 knowledge but also create new business opportunities for a sustainable future.</p>
 
     <h3>Not every blockchain is suitable</h3>
-
-    <p>Since its incorporation in 2016, Riddle&Code has been developing blockchain solutions for various industrial sectors, mainly energy production and electric vehicle manufacturing. Working with such companies as Wien Energie, Deutsche Telekom and Daimler Mobility, the team at Riddle&Code knows that not every blockchain has the necessary features to meet the specific needs of each industry. In order to push its clients into the fourth industrial age, Riddle&Code has enabled the launch of the RDDL Network, a blockchain based protocol tailor made for security, scalability and decentralisation in the energy systems sector. The HW-03 programs are built around usage of the RDDL Network, and require a physical connection via hardware wallets.</p>
-
-    <p><em>"The long experience in the field of cryptographic encryption on special hardware has inspired us to find a suitable solution for the industrial sector"</em> says Riddle&Code's founder Tom Fürstner, who recently released the <a href="http://www.rddl.io" target="_blank">whitepaper of the RDDL Network</a>.</p>
-
-    <p>The RDDL Network utilizes a unique consensus mechanism called "Proof-of-Productivity", which makes machines tamper-proof and enables a new kind of trust and traceability for the generated machine data. With a cryptographic hardware wallet connected to a machine, the machine turns into a decentralised identifier on the network – an Industrial Machine NFT. Therefore, the machine itself becomes a part of the network. In the upcoming years, Riddle&Code anticipates over 50 million machines operating as nodes on the RDDL Network, powering the energy sector of the future.</p>
-
-    <h3>About Riddle&Code</h3>
-
-    <p>Riddle&Code is a product-led services company specialising in onboarding industries to Web3. The company is the main driver for a world of interconnected token economies by enabling sustainable, green, and resilient machine industries. Riddle&Code offers various solutions to tailor industry-specific hardware wallets and Software-as-a-Service Products to build on decentralised blockchains, mainly contributing to the RDDL Network blockchain protocol.</p>
-
-    <div class="media-contact">
-      <p><strong>More information:</strong> <a href="http://www.riddleandcode.com" target="_blank">www.riddleandcode.com</a> / <a href="http://www.rddl.io" target="_blank">www.rddl.io</a></p>
-      <p><strong>Media contact:</strong> <a href="mailto:christiane.rinke@riddleandcode.com">Christiane Rinke</a></p>
-      <p><a href="https://drive.google.com/file/d/1IWU0xfMJ9R71KiDwZ8Dw6O1X9_Z_diZf/view" target="_blank"><strong>Download the full press release</strong></a></p>
-    </div>
-
-    <a class="back-to-news" href="../company/news.html">← Back to All News</a>
-  </div>
-
-  <--read-inspelnings Footer loaded dynamically -->
-  <div id="footer-modern-placeholder"></div>
-  <script src="../scripts/load-footer-modern.js"></script>
+                                <p>Since its incorporation in 2016, Riddle&amp;Code has been developing blockchain solutions for various industrial sectors, mainly energy production and electric vehicle manufacturing. Working with such companies as Wien Energie, Deutsche Telekom and Daimler Mobility, the team at Riddle&amp;Code knows that not every blockchain has the necessary features to meet the specific needs of each industry. In order to push its clients into the fourth industrial age, Riddle&amp;Code has enabled the launch of the RDDL Network, a blockchain based protocol tailor made for security, scalability and decentralisation in the energy systems sector. The HW-03 programs are built around usage of the RDDL Network, and require a physical connection via hardware wallets.</p>
+                                <p>“The long experience in the field of cryptographic encryption on special hardware has inspired us to find a suitable solution for the industrial sector” says Riddle&amp;Code’s founder Tom Fürstner, who recently released the
+                                  <a href="http://www.rddl.io">whitepaper of the RDDL Network</a>
+                                  .</p>
+                                    <p>The RDDL Network utilizes a unique consensus mechanism called “Proof-of-Productivity”, which makes machines tamper-proof and enables a new kind of trust and traceability for the generated machine data. With a cryptographic hardware wallet connected to a machine, the machine turns into a decentralised identifier on the network – an Industrial Machine NFT. Therefore, the machine itself becomes a part of the network. In the upcoming years, Riddle&amp;Code anticipates over 50 million machines operating as nodes on the RDDL Network, powering the energy sector of the future. </p>
+                                    <p>
+                                      <strong>About Riddle&amp;Code </strong>
+                                    </p>
+                                    <p>Riddle&amp;Code is a product-led services company specialising in onboarding industries to Web3. The company is the main driver for a world of interconnected token economies by enabling sustainable, green, and resilient machine industries. Riddle&amp;Code offers various solutions to tailor industry-specific hardware wallets and Software-as-a-Service Products to build on decentralised blockchains, mainly contributing to the RDDL Network blockchain protocol.</p>
+                                    <p>
+                                      <strong>More information:</strong>
+                                      <a href="http://www.riddleandcode.com">www.riddleandcode.com</a>
+                                      /
+                                      <a href="http://www.rddl.io">www.rddl.io</a>
+                                    </p>
+                                    <p>
+                                      <strong>Media contact:</strong>
+                                      <a href="http://christiane.rinke@riddleandcode.com">Christiane Rinke </a>
+                                    </p>
+                                    <p>
+                                      <a href="https://drive.google.com/file/d/1IWU0xfMJ9R71KiDwZ8Dw6O1X9_Z_diZf/view" target="_blank">DOWNLOAD THE WHOLE PRESS RELEASE</a>
+                                    </p>
+                                    <p>‍</p>
+                                  </div>
+                                  <a class="link margin-top w-inline-block" href="../company/news.html" id="w-node-_9c8a0fac-44ba-e0f6-56bf-552160991862-e1c54c23">
+                                    <div class="button">
+                                      <p class="no-margin">All News</p>
+                                    </div>
+                                  </a>
+                                </div>
+                              </div>
+                              <!-- Footer loaded dynamically -->
+<div id="footer-modern-placeholder"></div>
+<script src="../scripts/load-footer-modern.js"></script>
 </body>
 </html>
