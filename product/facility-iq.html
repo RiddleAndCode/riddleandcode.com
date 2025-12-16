@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Facility IQ² - Next-Generation Facility Energy Management | Riddle &amp; Code</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="The only CRA and NIS 2 ready facility management solution combining open IoT standards with secure, user-owned data architecture for grid intelligence." name="description"/>
+  <link href="../css/webflow.css" rel="stylesheet" type="text/css"/>
+  <link href="../styles/main.css" rel="stylesheet" type="text/css"/>
+  <link href="../images/641436b897f1d137d2d2845d_fav_icon.png" rel="shortcut icon" type="image/x-icon"/>
+  <link href="../images/641437162f7f81829faa8c24_webclip.png" rel="apple-touch-icon"/>
+  <style>
+    :root {
+      --dark-bg: #0a0a0a;
+      --dark-card: #141414;
+      --text-primary: #ffffff;
+      --text-secondary: #b0b0b0;
+      --primary-green: #00ff88;
+      --border-subtle: #2a2a2a;
+    }
+    
+    body {
+      background: var(--dark-bg);
+      color: var(--text-primary);
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+    }
+    
+    .hero-section {
+      padding: 8rem 2rem 4rem;
+      text-align: center;
+      background: linear-gradient(180deg, #0a0a0a 0%, #141414 100%);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    
+    .hero-tag {
+      display: inline-block;
+      color: var(--primary-green);
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 1.5rem;
+    }
+    
+    .product-logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .logo-icon {
+      width: 160px;
+      height: 160px;
+      position: relative;
+    }
+    
+    .logo-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .logo-text {
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -1px;
+    }
+    
+    .logo-text .iq-super {
+      color: var(--product-purple);
+      font-size: 2rem;
+      vertical-align: super;
+      font-weight: 800;
+    }
+    
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.1;
+      margin: 0 0 1.5rem 0;
+      background: linear-gradient(135deg, #ffffff 0%, #b0b0b0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.5rem;
+      color: var(--text-secondary);
+      max-width: 900px;
+      margin: 0 auto 3rem;
+      line-height: 1.6;
+    }
+    
+    .hero-cta {
+      display: inline-flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .btn-primary {
+      padding: 1rem 2.5rem;
+      background: var(--primary-green);
+      color: #0a0a0a;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      border: 2px solid var(--primary-green);
+    }
+    
+    .btn-primary:hover {
+      background: transparent;
+      color: var(--primary-green);
+      transform: translateY(-2px);
+    }
+    
+    .btn-secondary {
+      padding: 1rem 2.5rem;
+      background: transparent;
+      color: var(--text-primary);
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      border: 2px solid var(--border-subtle);
+    }
+    
+    .btn-secondary:hover {
+      border-color: var(--primary-green);
+      color: var(--primary-green);
+      transform: translateY(-2px);
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    .section {
+      padding: 6rem 2rem;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    
+    .section-tag {
+      color: var(--primary-green);
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0 0 1rem 0;
+    }
+    
+    .section-description {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .positioning-banner {
+      background: var(--dark-card);
+      border: 2px solid var(--primary-green);
+      border-radius: 16px;
+      padding: 3rem;
+      margin: 4rem auto;
+      max-width: 1000px;
+      text-align: center;
+    }
+    
+    .positioning-banner h3 {
+      font-size: 1.75rem;
+      margin: 0 0 1rem 0;
+      color: var(--primary-green);
+    }
+    
+    .positioning-banner p {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin: 0;
+    }
+    
+    .usps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .usp-card {
+      background: var(--dark-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .usp-card:hover {
+      border-color: var(--primary-green);
+      transform: translateY(-4px);
+    }
+    
+    .usp-icon {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    
+    .usp-icon svg {
+      width: 100%;
+      height: 100%;
+      stroke: var(--primary-green);
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    
+    .usp-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 0 1rem 0;
+      color: var(--text-primary);
+    }
+    
+    .usp-description {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin: 0;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .feature-item {
+      background: var(--dark-card);
+      border-left: 3px solid var(--product-purple);
+      padding: 2rem;
+      border-radius: 8px;
+    }
+    
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 1rem;
+      display: block;
+      stroke: #9945ff;
+      fill: none;
+    }
+    
+    .feature-item .feature-icon path,
+    .feature-item .feature-icon line,
+    .feature-item .feature-icon circle:not([fill]),
+    .feature-item .feature-icon rect,
+    .feature-item .feature-icon polyline {
+      stroke: #9945ff !important;
+      fill: none !important;
+      stroke-width: 2 !important;
+      stroke-linecap: round !important;
+      stroke-linejoin: round !important;
+    }
+    
+    .feature-item .feature-icon circle[fill="9945ff"],
+    .feature-item .feature-icon circle[fill="#9945ff"] {
+      fill: #9945ff !important;
+      stroke: none !important;
+    }
+    
+    .feature-item h4 {
+      font-size: 1.25rem;
+      margin: 0 0 0.75rem 0;
+      color: var(--product-purple);
+    }
+    
+    .feature-item p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.6;
+    }
+    
+    .comparison-section {
+      background: var(--dark-card);
+      border-radius: 16px;
+      padding: 3rem;
+      margin: 4rem auto;
+    }
+    
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+    }
+    
+    .comparison-table th {
+      background: #0a0a0a;
+      color: var(--primary-green);
+      padding: 1.25rem;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 2px solid var(--primary-green);
+    }
+    
+    .comparison-table td {
+      padding: 1.25rem;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+    }
+    
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .comparison-table td:first-child {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    
+    .highlight {
+      color: var(--primary-green);
+      font-weight: 600;
+    }
+    
+    .certifications-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .cert-card {
+      background: var(--dark-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    .cert-badge {
+      width: 80px;
+      height: 80px;
+      background: var(--primary-green);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      padding: 20px;
+    }
+    
+    .cert-badge svg {
+      width: 100%;
+      height: 100%;
+      stroke: #0a0a0a;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    
+    .cert-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+      color: var(--text-primary);
+    }
+    
+    .cert-description {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    
+    .tech-stack-section {
+      background: linear-gradient(180deg, #0a0a0a 0%, #141414 100%);
+    }
+    
+    .tech-stack-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    
+    .tech-item {
+      background: var(--dark-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    
+    .tech-item:hover {
+      border-color: var(--primary-green);
+      transform: translateY(-2px);
+    }
+    
+    .tech-item h5 {
+      font-size: 1rem;
+      margin: 0;
+      color: var(--text-primary);
+    }
+    
+    .cta-section {
+      text-align: center;
+      padding: 6rem 2rem;
+      background: var(--dark-card);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+    
+    .cta-section h2 {
+      font-size: 2.5rem;
+      margin: 0 0 1.5rem 0;
+    }
+    
+    .cta-section p {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+    }
+    
+    @media (max-width: 768px) {
+      .logo-icon {
+        width: 100px;
+        height: 100px;
+      }
+      
+      .logo-text {
+        font-size: 2.75rem;
+      }
+      
+      .logo-text .iq-super {
+        font-size: 1.5rem;
+      }
+      
+      .product-logo {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+      .hero-title {
+        font-size: 1.75rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.125rem;
+      }
+      
+      .section-title {
+        font-size: 1.875rem;
+      }
+      
+      .hero-cta {
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+        text-align: center;
+      }
+      
+      .comparison-table {
+        font-size: 0.875rem;
+      }
+      
+      .comparison-table th,
+      .comparison-table td {
+        padding: 0.75rem;
+      }
+    }
+    
+    /* Purple Theme Overrides - Apply to entire page */
+    h1, h2, h3, h4, h5, h6 {
+      color: #9945ff !important;
+    }
+
+    .section-tag,
+    .hero-tag {
+      color: #9945ff !important;
+    }
+
+    .highlight {
+      color: #9945ff !important;
+    }
+
+    .btn-primary,
+    .cta-btn {
+      background: #9945ff !important;
+      color: #fff !important;
+      border-color: #9945ff !important;
+    }
+
+    .btn-primary:hover,
+    .cta-btn:hover {
+      background: #b366ff !important;
+      border-color: #b366ff !important;
+    }
+
+    .btn-secondary {
+      border-color: #9945ff !important;
+      color: #9945ff !important;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(153, 69, 255, 0.1) !important;
+      border-color: #b366ff !important;
+      color: #b366ff !important;
+    }
+
+    .positioning-banner {
+      background: linear-gradient(135deg, rgba(153, 69, 255, 0.1) 0%, rgba(153, 69, 255, 0.05) 100%) !important;
+      border-color: rgba(153, 69, 255, 0.3) !important;
+    }
+
+    .usp-card svg,
+    .cert-card svg,
+    .feature-icon {
+      stroke: #9945ff !important;
+      color: #9945ff !important;
+    }
+
+    .comparison-table .highlight {
+      background: rgba(153, 69, 255, 0.15) !important;
+      color: #9945ff !important;
+    }
+
+    .cert-badge {
+      background: rgba(153, 69, 255, 0.1) !important;
+    }
+
+    .product-logo svg {
+      stroke: #9945ff !important;
+      color: #9945ff !important;
+    }
+
+    .logo-text .iq-super {
+      color: #9945ff !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header loaded dynamically -->
+  <div id="nav-placeholder"></div>
+  <script src="../scripts/load-nav.js"></script>
+  
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="product-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Left Tower - Castle Style with Turrets -->
+            <rect x="10" y="55" width="20" height="40" fill="none" stroke="#9945ff" stroke-width="2.5"/>
+            <!-- Castle battlements -->
+            <path d="M10 55 L10 50 L13 50 L13 55 L17 55 L17 50 L20 50 L20 55 L23 55 L23 50 L27 50 L27 55 L30 55" fill="none" stroke="#9945ff" stroke-width="2.5"/>
+            <path d="M10 50 L15 45 L20 50" fill="none" stroke="#9945ff" stroke-width="2"/>
+            <rect x="15" y="70" width="10" height="12" fill="none" stroke="#9945ff" stroke-width="2"/>
+            <rect x="16" y="80" width="3" height="5" fill="none" stroke="#9945ff" stroke-width="1.5"/>
+            <rect x="21" y="80" width="3" height="5" fill="none" stroke="#9945ff" stroke-width="1.5"/>
+            
+            <!-- Center Skyscraper - Modern High-Rise -->
+            <rect x="42" y="20" width="36" height="75" fill="none" stroke="#9945ff" stroke-width="3"/>
+            <!-- Top crown -->
+            <path d="M42 20 L52 10 L60 5 L68 10 L78 20" fill="none" stroke="#9945ff" stroke-width="2.5"/>
+            <!-- Window grid pattern -->
+            <line x1="50" y1="20" x2="50" y2="95" stroke="#9945ff" stroke-width="1.5" opacity="0.4"/>
+            <line x1="60" y1="20" x2="60" y2="95" stroke="#9945ff" stroke-width="1.5" opacity="0.4"/>
+            <line x1="70" y1="20" x2="70" y2="95" stroke="#9945ff" stroke-width="1.5" opacity="0.4"/>
+            <line x1="42" y1="35" x2="78" y2="35" stroke="#9945ff" stroke-width="1.5" opacity="0.4"/>
+            <line x1="42" y1="50" x2="78" y2="50" stroke="#9945ff" stroke-width="1.5" opacity="0.4"/>
+            <line x1="42" y1="65" x2="78" y2="65" stroke="#9945ff" stroke-width="1.5" opacity="0.4"/>
+            <line x1="42" y1="80" x2="78" y2="80" stroke="#9945ff" stroke-width="1.5" opacity="0.4"/>
+            <!-- Entrance -->
+            <rect x="54" y="85" width="12" height="10" fill="none" stroke="#9945ff" stroke-width="2.5"/>
+            
+            <!-- Right Tower - Complex/Industrial -->
+            <rect x="90" y="45" width="20" height="50" fill="none" stroke="#9945ff" stroke-width="2.5"/>
+            <!-- Angled roof -->
+            <path d="M88 45 L100 35 L112 45" fill="none" stroke="#9945ff" stroke-width="2.5"/>
+            <rect x="95" y="60" width="4" height="5" fill="none" stroke="#9945ff" stroke-width="1.5"/>
+            <rect x="101" y="60" width="4" height="5" fill="none" stroke="#9945ff" stroke-width="1.5"/>
+            <rect x="95" y="72" width="4" height="5" fill="none" stroke="#9945ff" stroke-width="1.5"/>
+            <rect x="101" y="72" width="4" height="5" fill="none" stroke="#9945ff" stroke-width="1.5"/>
+            <rect x="95" y="84" width="10" height="8" fill="none" stroke="#9945ff" stroke-width="2"/>
+            
+            <!-- IoT Network Connections -->
+            <circle cx="20" cy="65" r="3" fill="#9945ff" opacity="0.7">
+              <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="60" cy="50" r="3" fill="#9945ff" opacity="0.7">
+              <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="100" cy="60" r="3" fill="#9945ff" opacity="0.7">
+              <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1s" repeatCount="indefinite"/>
+            </circle>
+            
+            <!-- Connecting data lines -->
+            <line x1="23" y1="65" x2="57" y2="55" stroke="#9945ff" stroke-width="1.5" stroke-dasharray="2,2" opacity="0.5"/>
+            <line x1="63" y1="50" x2="97" y2="60" stroke="#9945ff" stroke-width="1.5" stroke-dasharray="2,2" opacity="0.5"/>
+            
+            <!-- Ground/Base line -->
+            <line x1="5" y1="95" x2="115" y2="95" stroke="#9945ff" stroke-width="3"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          Facility IQ<span class="iq-super">²</span>
+        </div>
+      </div>
+      <h1 class="hero-title">Next-Generation Facility Energy Management</h1>
+      <p class="hero-subtitle">CRA-Ready by Design with Hardware Root of Trust. NIS 2 Resilience Architecture. The only solution combining open IoT standards with a Data Sovereign Platform for intelligent grid collaboration.</p>
+      <div class="hero-cta">
+        <a href="../company/get-in-touch.html" class="btn-primary">Request Demo</a>
+        <a href="#features" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Positioning Statement -->
+  <section class="section">
+    <div class="container">
+      <div class="positioning-banner">
+        <h3>The Agile, Digital Native Alternative</h3>
+        <p>We deliver the next generation of facility energy management by unifying the simplicity and cost-effectiveness of global IoT standards (Zigbee/Matter) with a high-speed, security-first industrial data architecture (Fiber & MQTT). We are the only solution in the Austrian market with CRA-Ready by Design architecture and NIS 2 Resilience implementation, providing a future-proof investment that protects you from compliance risk and technical debt while enabling high-value, real-time collaboration with grid operators.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Core USPs -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Unique Value Proposition</span>
+        <h2 class="section-title">Three Powerful USPs That Set Us Apart</h2>
+        <p class="section-description">Unlike traditional FM providers who offer security as an expensive add-on, we provide a fundamentally different approach built on data sovereignty, regulatory resilience, and grid intelligence.</p>
+      </div>
+      
+      <div class="usps-grid">
+        <div class="usp-card">
+          <span class="usp-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+            </svg>
+          </span>
+          <h3 class="usp-title">Secure Data Sovereignty</h3>
+          <p class="usp-description">User-centric data management where data is stored and owned by the operator. Only essential information is transferred to grid/utilities based on the "need to know" principle. Complete privacy and control with local data storage, ensuring low-latency processing and resilience against external outages.</p>
+        </div>
+        
+        <div class="usp-card">
+          <span class="usp-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M6 9H4.5C3.83696 9 3.20107 9.26339 2.73223 9.73223C2.26339 10.2011 2 10.837 2 11.5C2 12.163 2.26339 12.7989 2.73223 13.2678C3.20107 13.7366 3.83696 14 4.5 14H6"/>
+              <path d="M18 9H19.5C20.163 9 20.7989 9.26339 21.2678 9.73223C21.7366 10.2011 22 10.837 22 11.5C22 12.163 21.7366 12.7989 21.2678 13.2678C20.7989 13.7366 20.163 14 19.5 14H18"/>
+              <path d="M6 9C6 7.4087 6.63214 5.88258 7.75736 4.75736C8.88258 3.63214 10.4087 3 12 3C13.5913 3 15.1174 3.63214 16.2426 4.75736C17.3679 5.88258 18 7.4087 18 9V17C18 18.0609 17.5786 19.0783 16.8284 19.8284C16.0783 20.5786 15.0609 21 14 21H10C8.93913 21 7.92172 20.5786 7.17157 19.8284C6.42143 19.0783 6 18.0609 6 17V9Z"/>
+            </svg>
+          </span>
+          <h3 class="usp-title">Low-Cost, High-Density Retrofit Champion</h3>
+          <p class="usp-description">Cost-effective retrofitting using open-standard Zigbee hardware (including IKEA Dirigera) with Optical Fiber Network backbone. Scalable mesh networking allows high sensor density without control wires to every device—perfect for luxury facilities where aesthetic disruption is unacceptable.</p>
+        </div>
+        
+        <div class="usp-card">
+          <span class="usp-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"/>
+            </svg>
+          </span>
+          <h3 class="usp-title">Deep Grid Integration & Participation</h3>
+          <p class="usp-description">MQTT bridge enables seamless M2M communication with utility DSM systems for real-time load balancing and peak shaving. Transform your facility from passive consumer to active grid partner, participating in aggregators or energy communities and creating new revenue streams.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Technology Stack -->
+  <section class="section tech-stack-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technology</span>
+        <h2 class="section-title">Open Standards, Secure Integration</h2>
+        <p class="section-description">Modern, cost-effective IoT leveraged for professional use with industrial-grade security.</p>
+      </div>
+      
+      <div class="tech-stack-grid">
+        <div class="tech-item">
+          <h5>Zigbee Protocol</h5>
+        </div>
+        <div class="tech-item">
+          <h5>IKEA Dirigera Hub</h5>
+        </div>
+        <div class="tech-item">
+          <h5>Matter Bridge</h5>
+        </div>
+        <div class="tech-item">
+          <h5>Optical Fiber Network</h5>
+        </div>
+        <div class="tech-item">
+          <h5>MQTT Bridge</h5>
+        </div>
+        <div class="tech-item">
+          <h5>Secure Element Integration</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Key Features -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Features</span>
+        <h2 class="section-title">Comprehensive Facility Intelligence</h2>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#9945ff" fill="none" stroke-width="2">
+            <circle cx="12" cy="5" r="2"/>
+            <circle cx="5" cy="12" r="2"/>
+            <circle cx="19" cy="12" r="2"/>
+            <circle cx="12" cy="19" r="2"/>
+            <line x1="12" y1="7" x2="12" y2="17"/>
+            <line x1="7" y1="12" x2="17" y2="12"/>
+            <line x1="10.5" y1="7.5" x2="7" y2="10"/>
+            <line x1="13.5" y1="7.5" x2="17" y2="10"/>
+            <line x1="7" y1="14" x2="10.5" y2="16.5"/>
+            <line x1="17" y1="14" x2="13.5" y2="16.5"/>
+          </svg>
+          <h4>Zigbee Mesh Network</h4>
+          <p>High-density sensor deployment without complex wiring, perfect for retrofit applications.</p>
+        </div>
+        
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#9945ff" fill="none" stroke-width="2">
+            <rect x="3" y="11" width="18" height="2" rx="1"/>
+            <circle cx="6" cy="12" r="1.5" fill="#9945ff"/>
+            <circle cx="12" cy="12" r="1.5" fill="#9945ff"/>
+            <circle cx="18" cy="12" r="1.5" fill="#9945ff"/>
+            <path d="M3 8 L21 8" stroke-dasharray="2,2" opacity="0.5"/>
+            <path d="M3 16 L21 16" stroke-dasharray="2,2" opacity="0.5"/>
+          </svg>
+          <h4>Fiber Backbone</h4>
+          <p>High-speed, long-distance data transport eliminating latency and distance limitations.</p>
+        </div>
+        
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#9945ff" fill="none" stroke-width="2">
+            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+            <path d="M8 12l2 2 4-4"/>
+          </svg>
+          <h4>MQTT Integration</h4>
+          <p>Lightweight, vendor-agnostic, near-real-time data sharing with grid operators.</p>
+        </div>
+        
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#9945ff" fill="none" stroke-width="2">
+            <path d="M3 12h4l3-9 4 18 3-9h4"/>
+            <circle cx="12" cy="12" r="2" fill="#9945ff" opacity="0.3"/>
+          </svg>
+          <h4>Load Balancing</h4>
+          <p>Real-time synchronization with grid demands for optimal energy distribution.</p>
+        </div>
+        
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#9945ff" fill="none" stroke-width="2">
+            <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+            <path d="M21 19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v1z"/>
+            <line x1="8" y1="12" x2="8" y2="18"/>
+            <line x1="16" y1="12" x2="16" y2="18"/>
+          </svg>
+          <h4>Peak Shaving</h4>
+          <p>Intelligent demand management to reduce peak consumption and costs.</p>
+        </div>
+        
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#9945ff" fill="none" stroke-width="2">
+            <rect x="3" y="8" width="18" height="11" rx="2"/>
+            <path d="M7 8V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/>
+            <circle cx="12" cy="13" r="2"/>
+            <path d="M12 15v2"/>
+          </svg>
+          <h4>Grid Operator Connectivity</h4>
+          <p>Direct integration with your local Grid provider for balancing and peak-shaving services.</p>
+        </div>
+        
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#9945ff" fill="none" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <rect x="7" y="7" width="10" height="10" rx="1"/>
+            <circle cx="12" cy="12" r="2" fill="#9945ff"/>
+          </svg>
+          <h4>Local Data Control</h4>
+          <p>All data stored on-premises under owner control, transferred only as needed.</p>
+        </div>
+        
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#9945ff" fill="none" stroke-width="2">
+            <rect x="5" y="2" width="14" height="20" rx="2"/>
+            <circle cx="12" cy="18" r="1" fill="#9945ff"/>
+            <path d="M9 7h6"/>
+            <path d="M9 11h6"/>
+          </svg>
+          <h4>Secure Element</h4>
+          <p>Hardware Root of Trust ensuring cryptographic integrity and secure boot.</p>
+        </div>
+        
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="#9945ff" fill="none" stroke-width="2">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            <polyline points="7.5 4.21 12 6.81 16.5 4.21"/>
+            <polyline points="7.5 19.79 7.5 14.6 3 12"/>
+            <polyline points="21 12 16.5 14.6 16.5 19.79"/>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+            <line x1="12" y1="22.08" x2="12" y2="12"/>
+          </svg>
+          <h4>FOTA Updates</h4>
+          <p>Secure, verified Firmware Over-The-Air updates throughout system lifecycle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Comparison Table -->
+  <section class="section">
+    <div class="container">
+      <div class="comparison-section">
+        <div class="section-header">
+          <span class="section-tag">Competitive Advantage</span>
+          <h2 class="section-title">Facility IQ² vs Traditional FM Providers</h2>
+        </div>
+        
+        <div style="overflow-x: auto;">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Traditional FM (Apleona, EQUANS, etc.)</th>
+                <th class="highlight">Facility IQ²</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><svg style="width:20px;height:20px;vertical-align:middle;margin-right:8px;stroke:#9945ff;fill:none;stroke-width:2" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="12" r="2"/><circle cx="19" cy="12" r="2"/><circle cx="12" cy="19" r="2"/><line x1="12" y1="7" x2="12" y2="17"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="10" y1="7" x2="7" y2="10"/><line x1="14" y1="7" x2="17" y2="10"/></svg>Hardware & Protocol</td>
+                <td>Expensive, proprietary industrial sensors (KNX, BACnet)</td>
+                <td class="highlight">Cost-effective, open-standard Zigbee/Matter via Dirigera</td>
+              </tr>
+              <tr>
+                <td><svg style="width:20px;height:20px;vertical-align:middle;margin-right:8px;stroke:#9945ff;fill:none;stroke-width:2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="2" rx="1"/><circle cx="6" cy="12" r="1.5" fill="#9945ff"/><circle cx="12" cy="12" r="1.5" fill="#9945ff"/><circle cx="18" cy="12" r="1.5" fill="#9945ff"/></svg>Data Backbone</td>
+                <td>Legacy Ethernet/fieldbus systems; complex integration</td>
+                <td class="highlight">Modern Optical Fiber Network for high-speed, secure transport</td>
+              </tr>
+              <tr>
+                <td><svg style="width:20px;height:20px;vertical-align:middle;margin-right:8px;stroke:#9945ff;fill:none;stroke-width:2" viewBox="0 0 24 24"><path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/><path d="M8 12l2 2 4-4"/></svg>Data Interoperability</td>
+                <td>Siloed data; expensive license fees for access</td>
+                <td class="highlight">MQTT Bridge for lightweight, vendor-agnostic data sharing</td>
+              </tr>
+              <tr>
+                <td><svg style="width:20px;height:20px;vertical-align:middle;margin-right:8px;stroke:#9945ff;fill:none;stroke-width:2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M12 14v8"/><path d="M8.5 20h7"/></svg>Regulatory Compliance</td>
+                <td>Achieved through expensive, custom security overlays</td>
+                <td class="highlight">CRA-Ready by Design, NIS 2 Resilience Architecture, GDPR/Data Act Compliant Architecture</td>
+              </tr>
+              <tr>
+                <td><svg style="width:20px;height:20px;vertical-align:middle;margin-right:8px;stroke:#9945ff;fill:none;stroke-width:2" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="11" rx="2"/><path d="M7 8V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/><circle cx="12" cy="13" r="2"/></svg>Grid Collaboration</td>
+                <td>Proprietary utility interfaces (limited)</td>
+                <td class="highlight">Direct, real-time sync via MQTT for load balancing & peak shaving</td>
+              </tr>
+              <tr>
+                <td><svg style="width:20px;height:20px;vertical-align:middle;margin-right:8px;stroke:#9945ff;fill:none;stroke-width:2" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><circle cx="12" cy="18" r="1" fill="#9945ff"/><path d="M9 7h6"/><path d="M9 11h6"/></svg>Security Model</td>
+                <td>Security by Addition (software layer on legacy hardware)</td>
+                <td class="highlight">Security by Design (over 7 years expertise)</td>
+              </tr>
+              <tr>
+                <td><svg style="width:20px;height:20px;vertical-align:middle;margin-right:8px;stroke:#9945ff;fill:none;stroke-width:2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><rect x="7" y="7" width="10" height="10" rx="1"/><circle cx="12" cy="12" r="2" fill="#9945ff"/></svg>Data Ownership</td>
+                <td>Custody ambiguous (cloud/third-party processing)</td>
+                <td class="highlight">Guaranteed Data Sovereignty (local control, "Need to Know")</td>
+              </tr>
+              <tr>
+                <td><svg style="width:20px;height:20px;vertical-align:middle;margin-right:8px;stroke:#9945ff;fill:none;stroke-width:2" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>Value Proposition</td>
+                <td>Focus on Opex Reduction</td>
+                <td class="highlight">Opex Reduction + Revenue Generation (via Grid Services)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Certifications & Compliance -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Compliance & Risk Mitigation</span>
+        <h2 class="section-title">Built Secure-by-Design, Verified by Experts</h2>
+        <p class="section-description">Unlike proprietary systems requiring costly overhauls to comply with upcoming EU regulations, Facility IQ² is architected from the foundation for CRA and NIS 2 readiness. Our ongoing third-party audit process provides transparent verification of our security claims.</p>
+      </div>
+      
+      <div class="certifications-grid">
+        <div class="cert-card">
+          <div class="cert-badge">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h4 class="cert-title">NIS 2 Resilience Architecture</h4>
+          <p class="cert-description">ISO 27001-Aligned ISMS with ongoing third-party audit process. ISO 22301-Aligned Business Continuity Management ensuring service resilience and incident response capabilities.</p>
+        </div>
+        
+        <div class="cert-card">
+          <div class="cert-badge">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <h4 class="cert-title">CRA-Ready by Design</h4>
+          <p class="cert-description">Hardware Root of Trust implemented with Secure Element integration (7 years expertise). IEC 62443-Aligned secure development lifecycle with FOTA update capability and vulnerability management built-in.</p>
+        </div>
+        
+        <div class="cert-card">
+          <div class="cert-badge">
+            <svg viewBox="0 0 24 24">
+              <line x1="12" y1="3" x2="12" y2="21"/>
+              <path d="M5 9a7 7 0 1 0 14 0"/>
+              <circle cx="5" cy="9" r="2"/>
+              <circle cx="19" cy="9" r="2"/>
+            </svg>
+          </div>
+          <h4 class="cert-title">Data Sovereign Platform</h4>
+          <p class="cert-description">ISO 27701-Aligned Privacy Information Management System. GDPR/Data Act Compliant Architecture with local data ownership, "need-to-know" principle for grid transfers, and complete data governance documentation.</p>
+        </div>
+        
+        <div class="cert-card">
+          <div class="cert-badge">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="8" r="6"/>
+              <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+            </svg>
+          </div>
+          <h4 class="cert-title">Third-Party Verification</h4>
+          <p class="cert-description">Ongoing certification audit process with Austrian Qualified Bodies. Supply chain security assessment and technical documentation available for review demonstrating our Secure-by-Design implementation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Transform Your Facility?</h2>
+      <p>Protect your investment from compliance risk and technical debt. Get CRA-ready architecture, data sovereignty, and grid intelligence in one future-proof solution backed by rigorous security documentation.</p>
+      <div class="hero-cta">
+        <a href="../company/get-in-touch.html" class="btn-primary">Schedule Consultation</a>
+        <a href="../company/overview.html" class="btn-secondary">About Riddle & Code</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer loaded dynamically -->
+  <div id="footer-modern-placeholder"></div>
+  <script src="../scripts/load-footer-modern.js"></script>
+</body>
+</html>
