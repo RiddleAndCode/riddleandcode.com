@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-ga-id="G-6PKLPEVZNF">
 <head>
   <meta charset="utf-8"/>
   <title>Riddle&Code — Energy Infrastructure for the Future</title>
@@ -12,30 +12,16 @@
   <meta content="images/6414afea39e2ec1d18d1ff32_open_graph.jpg" property="og:image"/>
   <meta content="website" property="og:type"/>
   
-  <!-- Favicon -->
-  <link href="images/641436b897f1d137d2d2845d_fav_icon.png" rel="shortcut icon" type="image/x-icon"/>
-  <link href="images/641437162f7f81829faa8c24_webclip.png" rel="apple-touch-icon"/>
-  
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6PKLPEVZNF"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-6PKLPEVZNF');
-  </script>
-  
-  <!-- Cookie Consent -->
-  <script async="" fs-cc-mode="opt-in" src="https://cdn.jsdelivr.net/npm/@finsweet/cookie-consent@1/fs-cc.js"></script>
-  
   <!-- Main Styles -->
   <link rel="stylesheet" href="styles/main.css">
+
+  <!-- Main Application Script -->
+  <script src="scripts/main.js" defer></script>
 </head>
 <body>
   
   <!-- Navigation -->
   <div id="nav-placeholder"></div>
-  <script src="scripts/load-nav.js"></script>
   
   <!-- Hero Section -->
   <section class="hero">
@@ -64,23 +50,18 @@
   
   <!-- Solutions Section -->
   <div id="solutions-section-placeholder"></div>
-  <script src="scripts/load-solutions-section.js"></script>
   
   <!-- Capabilities Section -->
   <div id="capabilities-section-placeholder"></div>
-  <script src="scripts/load-capabilities-section.js"></script>
   
   <!-- Technology Section -->
   <div id="technology-section-placeholder"></div>
-  <script src="scripts/load-technology-section.js"></script>
   
   <!-- Products Section -->
   <div id="products-section-placeholder"></div>
-  <script src="scripts/load-products-section.js"></script>
   
 
   <div id="partners-section-placeholder"></div>
-  <script src="scripts/load-partners-section.js"></script>
 
   <!-- CTA Section -->
   <section class="section">
@@ -98,26 +79,5 @@
   
   <!-- Footer -->
   <div id="footer-modern-placeholder"></div>
-  <script src="scripts/load-footer-modern.js"></script>
-  
-  <script>
-    // Simple fade-in animation on scroll
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in');
-        }
-      });
-    }, observerOptions);
-    
-    document.querySelectorAll('.target-card, .value-card, .tech-layer').forEach(el => {
-      observer.observe(el);
-    });
-  </script>
 </body>
 </html>

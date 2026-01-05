@@ -1,0 +1,54 @@
+/* Legal Content Styles (Privacy Policy, Terms, etc.) */
+.privacy-content,
+.terms-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.privacy-content h3,
+.terms-content h3 {
+  color: var(--primary-green);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.privacy-content p,
+.terms-content p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.privacy-content a,
+.terms-content a {
+  color: var(--primary-green);
+  text-decoration: none;
+}
+
+.privacy-content a:hover,
+.terms-content a:hover {
+  text-decoration: underline;
+}
+
+.terms-section {
+  margin-bottom: 2rem;
+}
+
+.cookie-settings-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid var(--primary-green);
+  border-radius: 8px;
+  color: var(--primary-green);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 2rem;
+}
+
+.cookie-settings-btn:hover {
+  background: rgba(0, 255, 136, 0.2);
+}
+

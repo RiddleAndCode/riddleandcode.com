@@ -1,0 +1,52 @@
+/* Article Styles for News and Showcase Pages */
+.article-hero {
+  padding: 100px 20px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.article-hero .section-tag {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--primary-green);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.article-hero h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--text-dark);
+}
+
+.article-hero .highlight {
+  color: var(--primary-green);
+}
+
+.article-date {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 40px;
+}
+
+.featured-image {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+.featured-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 255, 136, 0.15);
+}
+
+.article-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+
