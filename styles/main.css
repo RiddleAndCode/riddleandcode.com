@@ -1,3 +1,7 @@
+/* Component Imports */
+@import 'components/technology-section.css';
+@import 'components/products-section.css';
+
 /* Global Styles */
 * {
   margin: 0;
