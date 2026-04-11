@@ -152,7 +152,7 @@ html {
 .target-card:hover {
   transform: translateY(-4px);
   border-color: var(--primary-green);
-  box-shadow: 0 8px 24px rgba(0, 255, 136, 0.15);
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15);
 }
 
 .target-icon {
@@ -176,7 +176,7 @@ html {
 
 .target-card:hover .target-icon {
   transform: scale(1.1);
-  filter: drop-shadow(0 2px 8px rgba(0, 255, 136, 0.4));
+  filter: drop-shadow(0 2px 8px rgba(245, 158, 11, 0.4));
 }
 
 .target-title {
@@ -222,12 +222,12 @@ html {
 }
 
 .benefit-tag {
-  background: rgba(0, 255, 136, 0.1);
+  background: rgba(245, 158, 11, 0.1);
   color: var(--primary-green);
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
   font-size: 0.875rem;
-  border: 1px solid rgba(0, 255, 136, 0.2);
+  border: 1px solid rgba(245, 158, 11, 0.2);
 }
 
 /* Value Proposition */
@@ -261,7 +261,7 @@ html {
 
 .value-card:hover .value-icon {
   transform: scale(1.1);
-  filter: drop-shadow(0 2px 8px rgba(0, 255, 136, 0.4));
+  filter: drop-shadow(0 2px 8px rgba(245, 158, 11, 0.4));
 }
 
 .value-card h3 {
@@ -293,7 +293,7 @@ html {
 }
 
 .tech-layer {
-  background: rgba(0, 255, 136, 0.05);
+  background: rgba(245, 158, 11, 0.05);
   border-left: 4px solid var(--primary-green);
   padding: 1rem 1.25rem;
   border-radius: 8px;
@@ -331,7 +331,7 @@ html {
 /* CTA Section */
 .cta-section {
   text-align: center;
-  background: linear-gradient(135deg, rgba(0, 255, 136, 0.1), rgba(0, 212, 255, 0.1));
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.1), rgba(0, 212, 255, 0.1));
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: var(--spacing-lg);
@@ -369,7 +369,7 @@ html {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 255, 136, 0.4);
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
 }
 
 .btn-secondary {
@@ -379,7 +379,7 @@ html {
 }
 
 .btn-secondary:hover {
-  background: rgba(0, 255, 136, 0.1);
+  background: rgba(245, 158, 11, 0.1);
   transform: translateY(-2px);
 }
 
