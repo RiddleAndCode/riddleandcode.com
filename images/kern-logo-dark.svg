@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 96" width="330" height="96">
+  <title>KERN by Riddle&amp;Code — dark background</title>
+
+  <!-- Dark background -->
+  <rect width="330" height="96" fill="#1C2333"/>
+
+  <!-- Symbol: rings, opacity increasing toward center -->
+  <circle cx="38" cy="38" r="34" fill="none" stroke="#FFFFFF" stroke-width="1"   opacity="0.18"/>
+  <circle cx="38" cy="38" r="24" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.42"/>
+  <circle cx="38" cy="38" r="14" fill="none" stroke="#FFFFFF" stroke-width="2"   opacity="0.75"/>
+
+  <!-- Core — warm amber gold -->
+  <circle cx="38" cy="38" r="5.5" fill="#F59E0B"/>
+
+  <!-- Wordmark -->
+  <text
+    x="88" y="50"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="32"
+    font-weight="500"
+    letter-spacing="9"
+    fill="#FFFFFF">KERN</text>
+
+  <!-- Tagline -->
+  <text
+    x="90" y="70"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="9"
+    font-weight="400"
+    letter-spacing="0.5"
+    fill="#FFFFFF"
+    opacity="0.5">Infrastructure for distributed energy.</text>
+
+</svg>

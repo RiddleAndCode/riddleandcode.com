@@ -6,7 +6,8 @@
 }
 
 :root {
-  --primary-green: #00ff88;
+  --kern-accent: #F59E0B;       /* warm amber gold — primary brand accent */
+  --primary-green: #F59E0B;     /* legacy alias → kern-accent */
   --primary-blue: #00d4ff;
   --dark-bg: #0a0a0a;
   --card-bg: #111111;
@@ -19,8 +20,6 @@
   --spacing-md: 2rem;
   --spacing-lg: 4rem;
   --spacing-xl: 6rem;
-  --mypwr: #fc4c02;
-  --black: black;
 }
 
 body {

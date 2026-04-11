@@ -39,8 +39,8 @@
     })(window,document);
 
     // 2.2 Favicons
-    addLinkTag({ rel: 'shortcut icon', type: 'image/x-icon', href: prefix + 'images/641436b897f1d137d2d2845d_fav_icon.png' });
-    addLinkTag({ rel: 'apple-touch-icon', href: prefix + 'images/641437162f7f81829faa8c24_webclip.png' });
+    addLinkTag({ rel: 'shortcut icon', type: 'image/svg+xml', href: prefix + 'images/kern-symbol.svg' });
+    addLinkTag({ rel: 'apple-touch-icon', href: prefix + 'images/kern-symbol.svg' });
 
     // 2.3 Analytics & Scripts
     const gaId = document.documentElement.getAttribute('data-ga-id') || 'G-K86LPV2ZGE';

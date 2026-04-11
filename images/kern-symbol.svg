@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76 76" width="76" height="76">
+  <title>KERN symbol</title>
+
+  <!--
+    KERN symbol only — for favicon, app icon, stamp use
+    Centered in 76×76 square
+  -->
+
+  <circle cx="38" cy="38" r="34" fill="none" stroke="#1C2333" stroke-width="1"   opacity="0.22"/>
+  <circle cx="38" cy="38" r="24" fill="none" stroke="#1C2333" stroke-width="1.5" opacity="0.50"/>
+  <circle cx="38" cy="38" r="14" fill="none" stroke="#1C2333" stroke-width="2"   opacity="0.82"/>
+  <circle cx="38" cy="38" r="5.5" fill="#F59E0B"/>
+
+</svg>

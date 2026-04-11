@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-ga-id="G-6PKLPEVZNF">
+<head>
+  <meta charset="utf-8"/>
+  <title>KERN for Energy Communities — Riddle&Code</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="Maximise shared self-consumption automatically. KERN optimises every asset in the community and connects collective flexibility to markets."/>
+  <link rel="stylesheet" href="../styles/main.css">
+  <script src="../scripts/main.js" defer></script>
+  <style>
+    .page-hero { max-width:1100px; margin:0 auto; padding:var(--spacing-xl) 2rem var(--spacing-lg); }
+    .page-eyebrow { font-size:0.78rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--primary-green); margin-bottom:1rem; display:block; }
+    .page-hero h1 { font-size:clamp(2.2rem,4.5vw,3.8rem); font-weight:300; color:var(--text-primary); line-height:1.1; margin-bottom:1.25rem; letter-spacing:-0.02em; }
+    .page-hero h1 strong { font-weight:600; }
+    .page-hero .lead { font-size:1.1rem; color:var(--text-muted); max-width:600px; line-height:1.7; margin-bottom:2rem; }
+    .content-section { max-width:1100px; margin:0 auto; padding:var(--spacing-md) 2rem; }
+    .section-heading { font-size:clamp(1.4rem,2.8vw,2rem); font-weight:300; color:var(--text-primary); margin-bottom:2rem; }
+    .section-heading strong { font-weight:600; }
+    .pain-grid { display:grid; gap:1rem; margin-bottom:var(--spacing-lg); }
+    .pain-card { background:var(--card-bg); border:1px solid #1e1e1e; border-left:3px solid var(--primary-green); border-radius:10px; padding:1.5rem; }
+    .pain-title { font-weight:600; color:var(--text-primary); margin-bottom:0.4rem; font-size:0.95rem; }
+    .pain-desc { color:var(--text-muted); font-size:0.875rem; line-height:1.6; }
+    .pain-solution { margin-top:0.75rem; padding-top:0.75rem; border-top:1px solid #222; color:var(--text-secondary); font-size:0.875rem; }
+    .pain-solution::before { content:'→ '; color:var(--primary-green); font-weight:600; }
+    .loop-block { background:#080808; border:1px solid #1a1a1a; border-radius:14px; padding:2.5rem; margin-bottom:var(--spacing-lg); font-family:monospace; }
+    .loop-block pre { color:var(--text-secondary); font-size:0.85rem; line-height:2; white-space:pre-wrap; }
+    .loop-block .highlight { color:var(--primary-green); font-weight:600; }
+    .feature-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.25rem; margin-bottom:var(--spacing-lg); }
+    .feature-card { background:var(--card-bg); border:1px solid #1e1e1e; border-radius:10px; padding:1.5rem; }
+    .feature-card h3 { font-size:0.95rem; font-weight:600; color:var(--text-primary); margin-bottom:0.5rem; }
+    .feature-card p { font-size:0.85rem; color:var(--text-muted); line-height:1.6; }
+    .partner-box { background:rgba(0,255,136,0.04); border:1px solid rgba(0,255,136,0.15); border-radius:12px; padding:2rem; margin-bottom:var(--spacing-lg); }
+    .partner-box h3 { font-size:1rem; font-weight:600; color:var(--primary-green); margin-bottom:0.75rem; }
+    .partner-box p { font-size:0.9rem; color:var(--text-muted); line-height:1.7; }
+    .cta-strip { text-align:center; padding:var(--spacing-lg) 2rem; }
+    .cta-strip h2 { font-size:clamp(1.6rem,3vw,2.2rem); font-weight:300; color:var(--text-primary); margin-bottom:0.75rem; }
+    .cta-strip p { color:var(--text-muted); margin-bottom:2rem; }
+    .btn-row { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+    hr.divider { border:none; border-top:1px solid #1a1a1a; margin:var(--spacing-md) 0; }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <div class="page-hero">
+    <span class="page-eyebrow">KERN — For Energy Communities</span>
+    <h1>Your community generates energy.<br><strong>KERN keeps it in the community.</strong></h1>
+    <p class="lead">KERN autonomously optimises storage, controllable loads and generation across all community members — maximising shared self-consumption and forecasting the collective flexibility that can be offered to markets or grid operators.</p>
+    <a href="../company/get-in-touch.html" class="btn btn-primary">Book a Demo</a>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Pains -->
+  <section class="content-section">
+    <h2 class="section-heading">What holds energy communities <strong>back today</strong></h2>
+    <div class="pain-grid">
+
+      <div class="pain-card">
+        <div class="pain-title">Self-consumption is measured, not optimised</div>
+        <div class="pain-desc">Without real-time optimisation, energy is exported to the grid even when members have demand — the community's potential stays largely untapped.</div>
+        <div class="pain-solution">KERN forecasts generation and consumption per member (24h ahead) and steers assets to maximise what stays in the community.</div>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-title">No real-time visibility across the community</div>
+        <div class="pain-desc">Operators don't know how much is being generated, consumed and shared right now — optimisation and steering are impossible without this view.</div>
+        <div class="pain-solution">Real-time telemetry from every asset, aggregated into a community dashboard. Full visibility, per member and as a whole.</div>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-title">Storage and loads are not coordinated</div>
+        <div class="pain-desc">Community storage and controllable loads are managed manually or not at all — no automatic charging when PV surplus is available, no discharging when members need it.</div>
+        <div class="pain-solution">KERN steers shared storage and controllable loads autonomously — aligning generation, storage and consumption in real-time.</div>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-title">Connectivity across multiple sites is unsolved</div>
+        <div class="pain-desc">Members at different buildings or locations are hard to reliably connect — LTE drops out, WiFi doesn't reach far enough.</div>
+        <div class="pain-solution">Zigbee Mesh for contiguous sites, MIOTY for distributed members (10km, independent of LTE/WiFi) — both managed as one unified layer.</div>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-title">Collective flexibility potential goes unused</div>
+        <div class="pain-desc">An active community with PV and storage has real collective flexibility — but without a platform it can neither be forecasted nor offered to aggregators or grid operators.</div>
+        <div class="pain-solution">KERN provides rolling 24h flexibility forecasts for the whole community and connects to aggregators or grid operators on request.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Loop -->
+  <section class="content-section">
+    <h2 class="section-heading">How KERN <strong>operates the community</strong></h2>
+    <div class="loop-block">
+<pre><span class="highlight">1. REAL-TIME MONITORING</span>
+   KERN tracks generation and consumption of all members
+   continuously — at meter level, in real-time.
+
+<span class="highlight">2. COMMUNITY OPTIMISATION</span>  (24h forecast + real-time)
+   KERN forecasts generation (PV) and consumption per member.
+   Goal: maximise shared self-consumption —
+   who needs what, when, and what is available right now?
+
+<span class="highlight">3. AUTONOMOUS CONTROL</span>
+   KERN steers shared storage, controllable loads and feed-in
+   points to keep as much energy within the community as possible.
+   No manual intervention required.
+
+<span class="highlight">4. FLEXIBILITY</span>  (optional)
+   Surplus or forecastable flexibility can be offered as a 24h
+   forecast to an aggregator or grid operator and dispatched
+   on demand — confirmed back to the requesting party.</pre>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Features -->
+  <section class="content-section">
+    <h2 class="section-heading">What KERN <strong>does for communities</strong></h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Community optimisation</h3>
+        <p>Maximises collective self-consumption across all members — in real-time and with a 24h forecast.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Storage and load control</h3>
+        <p>Autonomous steering of shared storage and controllable loads to align supply and demand within the community.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Real-time dashboard</h3>
+        <p>Community generation, consumption, self-consumption rate and flexibility potential — for operators and optionally for members.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Flexibility forecast</h3>
+        <p>Rolling 24h forecast of available community flexibility — the basis for aggregator or grid operator integration.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Multi-site connectivity</h3>
+        <p>Zigbee Mesh for contiguous sites, MIOTY for distributed members — every participant reliably connected.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Aggregator connection</h3>
+        <p>Community flexibility dispatched on demand — with confirmed execution back to the requesting party.</p>
+      </div>
+    </div>
+
+    <!-- Partner box -->
+    <div class="partner-box">
+      <h3>Already handling ESC billing or member management?</h3>
+      <p>KERN is the optimisation and control layer — not a billing platform. We integrate with your existing billing infrastructure to add autonomous asset management and flexibility forecasting on top of what you already offer your ESC clients. Together you give communities the complete package: billing from you, optimisation from KERN.</p>
+      <a href="../company/get-in-touch.html" style="display:inline-block;margin-top:1rem;" class="btn btn-secondary">Discuss a partnership →</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-strip">
+    <h2>More energy stays in the community.</h2>
+    <p>30 minutes to show how KERN optimises a live energy community — from real-time control to flexibility markets.</p>
+    <div class="btn-row">
+      <a href="../company/get-in-touch.html" class="btn btn-primary">Book a Demo</a>
+      <a href="../technology/" class="btn btn-secondary">Explore the Technology</a>
+    </div>
+  </section>
+
+  <div id="footer-modern-placeholder"></div>
+</body>
+</html>
