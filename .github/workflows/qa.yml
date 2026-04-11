@@ -1,0 +1,87 @@
+name: QA
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+
+  # ── 1. Typos ────────────────────────────────────────────────────────────────
+  typos:
+    name: Typo check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: crate-ci/typos-action@v1
+
+  # ── 2. HTML validity ────────────────────────────────────────────────────────
+  html:
+    name: HTML validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install -g html-validate
+      - name: Validate HTML
+        run: |
+          html-validate \
+            index.html \
+            kern/ \
+            technology/ \
+            references/ \
+            includes/nav.html \
+            includes/footer.html
+
+  # ── 3. Meta descriptions ────────────────────────────────────────────────────
+  meta:
+    name: Meta descriptions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Every KERN page must have a meta description
+        run: |
+          missing=0
+          while IFS= read -r file; do
+            if ! grep -qi '<meta name="description"' "$file"; then
+              echo "::error file=$file::Missing meta description"
+              missing=$((missing + 1))
+            fi
+          done < <(find index.html kern/ technology/ references/ -name "*.html")
+
+          if [ "$missing" -gt 0 ]; then
+            echo "::error::$missing page(s) missing <meta name=\"description\">"
+            exit 1
+          fi
+          echo "All KERN pages have meta descriptions ✓"
+
+  # ── 4. Image size budget ────────────────────────────────────────────────────
+  images:
+    name: Image size budget
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Warn on images > 500 KB
+        run: |
+          limit=$((500 * 1024))
+          oversized=0
+          while IFS= read -r img; do
+            size=$(stat -c%s "$img")
+            if [ "$size" -gt "$limit" ]; then
+              kb=$((size / 1024))
+              echo "::warning file=$img::${kb} KB — consider compressing (budget: 500 KB)"
+              oversized=$((oversized + 1))
+            fi
+          done < <(find images/ -type f \( \
+            -iname "*.jpg" -o -iname "*.jpeg" \
+            -o -iname "*.png" -o -iname "*.gif" \
+            -o -iname "*.webp" \))
+
+          if [ "$oversized" -gt 0 ]; then
+            echo "$oversized image(s) over budget — see warnings above"
+          else
+            echo "All images within 500 KB budget ✓"
+          fi

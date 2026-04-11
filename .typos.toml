@@ -1,0 +1,52 @@
+[files]
+extend-exclude = [
+  # Binary / generated / legacy directories
+  "images/**",
+  "archive/**",
+  "slides/**",
+  "ttf/**",
+  "csv/**",
+  "data/**",
+  "showcase/**",
+  "media/**",
+  "news/**",
+  # Old Webflow CSS/JS
+  "company/css/**",
+  "company/js/**",
+  # Backup files
+  "*.bak",
+  "*.min.js",
+]
+
+[default.extend-words]
+# Energy sector protocols and standards
+MIOTY    = "MIOTY"
+EEBUS    = "EEBUS"
+SunSpec  = "SunSpec"
+aFRR     = "aFRR"
+FCR      = "FCR"
+SCADA    = "SCADA"
+OCPP     = "OCPP"
+BESS     = "BESS"
+HEMS     = "HEMS"
+
+# Austrian / German regulatory terms
+EnFG     = "EnFG"
+EAG      = "EAG"
+
+# Brands and product names
+KERN     = "KERN"
+Lumenaza = "Lumenaza"
+cybergrid = "cybergrid"
+VERBUND  = "VERBUND"
+TTTech   = "TTTech"
+joulie   = "joulie"
+egon     = "egon"
+
+# Place names
+Heiligenkreuz = "Heiligenkreuz"
+Wetzlas       = "Wetzlas"
+Steiermark    = "Steiermark"
+
+# German words used in content
+Stadtwerke    = "Stadtwerke"

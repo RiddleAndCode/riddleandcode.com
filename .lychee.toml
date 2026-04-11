@@ -1,0 +1,39 @@
+# Lychee link checker configuration
+# Docs: https://lychee.cli.rs/usage/configuration/
+
+timeout        = 20
+max_retries    = 3
+retry_wait_time = 3
+threads        = 8
+
+# 429 = Too Many Requests (rate-limited, not a dead link)
+accept = ["200..=299", "429"]
+
+exclude_loopback = true
+include_mail     = false
+
+exclude = [
+  # JavaScript pseudo-links
+  "^javascript:",
+  "^#$",
+
+  # Google services — blocked in CI environments
+  "googletagmanager\\.com",
+  "googleapis\\.com",
+  "google\\.com/maps",
+  "google\\.com/recaptcha",
+
+  # Social platforms — aggressively rate-limit CI IPs
+  "linkedin\\.com",
+  "twitter\\.com",
+  "x\\.com",
+  "instagram\\.com",
+  "facebook\\.com",
+
+  # Localhost and staging
+  "localhost",
+  "127\\.0\\.0\\.1",
+]
+
+# Output dead links to a file so the scheduled issue workflow can attach it
+output = "lychee/out.md"
