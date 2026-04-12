@@ -20,31 +20,21 @@
   .nav-logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
     text-decoration: none;
     color: var(--text-primary);
     flex-shrink: 0;
   }
 
-  .nav-logo-symbol { display: block; height: 28px; width: auto; }
-
-  .nav-logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-  }
-
-  .nav-logo-kern {
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 0.15em;
+  .nav-logo-wordmark {
+    font-size: 1.15rem;
+    font-weight: 500;
     color: var(--text-primary);
+    letter-spacing: 0.01em;
   }
 
-  .nav-logo-by {
-    font-size: 0.7rem;
-    color: var(--text-secondary);
-    letter-spacing: 0.05em;
+  .nav-logo-amp {
+    color: var(--kern-accent);
+    font-weight: 700;
   }
 
   .nav-menu {
@@ -218,31 +208,20 @@
 <nav class="nav">
   <div class="nav-container">
     <a href="/index.html" class="nav-logo">
-      <!-- KERN symbol: 3 concentric rings + copper core -->
-      <svg class="nav-logo-symbol" viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <circle cx="38" cy="38" r="34" fill="none" stroke="#ffffff" stroke-width="1"   opacity="0.18"/>
-        <circle cx="38" cy="38" r="24" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.42"/>
-        <circle cx="38" cy="38" r="14" fill="none" stroke="#ffffff" stroke-width="2"   opacity="0.75"/>
-        <circle cx="38" cy="38" r="5.5" fill="#F59E0B"/>
-      </svg>
-      <div class="nav-logo-text">
-        <span class="nav-logo-kern">KERN</span>
-        <span class="nav-logo-by">by <strong style="color: var(--kern-accent); font-weight: 600;">Riddle&amp;Code</strong></span>
-      </div>
+      <span class="nav-logo-wordmark">Riddle<span class="nav-logo-amp">&amp;</span>Code</span>
     </a>
 
     <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
 
     <ul class="nav-menu" id="navMenu">
 
-      <!-- KERN dropdown -->
+      <!-- Products dropdown -->
       <li class="nav-item" id="kernDropdown">
-        <a href="/kern/" class="nav-link">KERN</a>
+        <a href="/kern/" class="nav-link">Products</a>
         <div class="nav-dropdown">
-          <div class="dropdown-label">Platform</div>
+          <div class="dropdown-label">KERN — Autonomous Energy Platform</div>
           <a href="/kern/" class="kern-link">KERN Overview</a>
           <div class="dropdown-divider"></div>
-          <div class="dropdown-label">Solutions</div>
           <a href="/kern/for-utilities.html">For Utilities</a>
           <a href="/kern/for-aggregators.html">For Aggregators</a>
           <a href="/kern/for-communities.html">For Energy Communities</a>

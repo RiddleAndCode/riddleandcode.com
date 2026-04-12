@@ -1,0 +1,58 @@
+<style>
+  .kern-product-bar {
+    border-bottom: 1px solid #1a1a1a;
+    background: rgba(245,158,11,0.04);
+  }
+  .kern-product-bar-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.75rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+  }
+  .kern-product-bar svg { flex-shrink: 0; }
+  .kern-product-bar-name {
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  .kern-product-bar-sep {
+    color: #333;
+    font-size: 0.9rem;
+  }
+  .kern-product-bar-by {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+  }
+  .kern-product-bar-by strong {
+    color: #F59E0B;
+    font-weight: 600;
+  }
+  .kern-product-bar-tagline {
+    margin-left: auto;
+    font-size: 0.75rem;
+    color: #444;
+    letter-spacing: 0.04em;
+    font-style: italic;
+  }
+  @media (max-width: 600px) { .kern-product-bar-tagline { display: none; } }
+</style>
+
+<div class="kern-product-bar">
+  <div class="kern-product-bar-inner">
+    <svg viewBox="0 0 40 40" width="22" height="22" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="20" cy="20" r="18" fill="none" stroke="#ffffff" stroke-width="0.8" opacity="0.18"/>
+      <circle cx="20" cy="20" r="12" fill="none" stroke="#ffffff" stroke-width="1"   opacity="0.42"/>
+      <circle cx="20" cy="20" r="7"  fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.75"/>
+      <circle cx="20" cy="20" r="3"  fill="#F59E0B"/>
+    </svg>
+    <span class="kern-product-bar-name">KERN</span>
+    <span class="kern-product-bar-sep">·</span>
+    <span class="kern-product-bar-by">a product by <strong>Riddle&amp;Code</strong></span>
+    <span class="kern-product-bar-tagline">Infrastructure for distributed energy.</span>
+  </div>
+</div>
