@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-ga-id="G-6PKLPEVZNF">
+<html lang="{{ lang }}" data-ga-id="G-6PKLPEVZNF">
 <head>
   <meta charset="utf-8"/>
-  <title>Technology — KERN by Riddle&Code</title>
+  <title>{{ tech_meta_title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="description" content="MIOTY, Zigbee Mesh, 24h flexibility forecasting and autonomous dispatch — the technology behind KERN."/>
+  <meta name="description" content="{{ tech_meta_desc }}"/>
   <link rel="alternate" hreflang="en" href="https://riddleandcode.com/technology/"/>
   <link rel="alternate" hreflang="de" href="https://riddleandcode.com/de/technology/"/>
   <link rel="alternate" hreflang="x-default" href="https://riddleandcode.com/technology/"/>
@@ -64,9 +64,9 @@
   <div id="nav-placeholder"></div>
 
   <div class="page-hero">
-    <span class="page-eyebrow">Technology</span>
-    <h1>Built for energy infrastructure.<br><strong>Not adapted from IoT.</strong></h1>
-    <p class="lead">MIOTY, Zigbee Mesh, a 24h autonomous forecast loop and confirmed dispatch — purpose-built for the demands of flexibility management behind the meter.</p>
+    <span class="page-eyebrow">{{ tech_eyebrow }}</span>
+    <h1>{{ tech_h1 }}</h1>
+    <p class="lead">{{ tech_lead }}</p>
   </div>
 
   <hr class="divider">
@@ -84,14 +84,14 @@
 
   <!-- Connectivity -->
   <section class="content-section">
-    <h2 class="section-heading">Connectivity <strong>by topology</strong></h2>
-    <p class="section-sub">The technology choice follows the asset topology — not the other way around.</p>
+    <h2 class="section-heading">{{ tech_conn_h2 }}</h2>
+    <p class="section-sub">{{ tech_conn_sub }}</p>
 
     <div class="conn-compare">
       <div class="conn-card">
-        <div class="conn-badge">Contiguous sites</div>
-        <h3>Zigbee Mesh</h3>
-        <p class="conn-use">Buildings, campuses, industrial premises, microgrids on one site</p>
+        <div class="conn-badge">{{ tech_zigbee_badge }}</div>
+        <h3>{{ tech_zigbee_h3 }}</h3>
+        <p class="conn-use">{{ tech_zigbee_use }}</p>
         <ul class="spec-list">
           <li><span class="spec-key">Range</span><span class="spec-val">Up to 100m per node, mesh extends coverage</span></li>
           <li><span class="spec-key">Deployment</span><span class="spec-val">No gateway per room — mesh self-organises</span></li>
@@ -101,9 +101,9 @@
         </ul>
       </div>
       <div class="conn-card primary">
-        <div class="conn-badge">Distributed assets</div>
-        <h3>MIOTY</h3>
-        <p class="conn-use">Geographically dispersed assets — rural PV, MV BESS, multiple remote sites</p>
+        <div class="conn-badge">{{ tech_mioty_badge }}</div>
+        <h3>{{ tech_mioty_h3 }}</h3>
+        <p class="conn-use">{{ tech_mioty_use }}</p>
         <ul class="spec-list">
           <li><span class="spec-key">Range</span><span class="spec-val"><strong>10 km</strong> per gateway</span></li>
           <li><span class="spec-key">Capacity</span><span class="spec-val"><strong>1.5M messages/day</strong> per gateway</span></li>
@@ -114,7 +114,7 @@
       </div>
     </div>
 
-    <h3 style="font-size:1rem; font-weight:600; color:var(--text-primary); margin-bottom:1rem;">MIOTY vs. LoRaWAN</h3>
+    <h3 style="font-size:1rem; font-weight:600; color:var(--text-primary); margin-bottom:1rem;">{{ tech_vs_h3 }}</h3>
     <table class="vs-table">
       <thead>
         <tr>
@@ -138,8 +138,8 @@
 
   <!-- Autonomous loop -->
   <section class="content-section">
-    <h2 class="section-heading">The <strong>autonomous loop</strong></h2>
-    <p class="section-sub">KERN operates continuously — forecasting, reacting and dispatching without manual intervention.</p>
+    <h2 class="section-heading">{{ tech_loop_h2 }}</h2>
+    <p class="section-sub">{{ tech_loop_sub }}</p>
     <div class="loop-full">
 <pre><span class="hl">1. FORECAST</span>  (rolling, 24h ahead)
    Per asset: state of charge, PV forecast (weather-based),
@@ -172,10 +172,10 @@
 
   <!-- Asset protocols -->
   <section class="content-section">
-    <h2 class="section-heading">Supported <strong>assets and protocols</strong></h2>
-    <p class="section-sub">KERN normalises all asset types to a single data model — regardless of manufacturer or protocol.</p>
+    <h2 class="section-heading">{{ tech_assets_h2 }}</h2>
+    <p class="section-sub">{{ tech_assets_sub }}</p>
 
-    <p style="font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted); margin-bottom:0.75rem;">Asset types</p>
+    <p style="font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted); margin-bottom:0.75rem;">{{ tech_assets_label1 }}</p>
     <div class="protocol-grid" style="margin-bottom:1.5rem;">
       <div class="protocol-pill">PV (residential)</div>
       <div class="protocol-pill">PV (commercial)</div>
@@ -189,7 +189,7 @@
       <div class="protocol-pill">MV-connected assets</div>
     </div>
 
-    <p style="font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted); margin-bottom:0.75rem;">Communication protocols</p>
+    <p style="font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted); margin-bottom:0.75rem;">{{ tech_assets_label2 }}</p>
     <div class="protocol-grid">
       <div class="protocol-pill">Modbus TCP/RTU</div>
       <div class="protocol-pill">SunSpec</div>
@@ -204,26 +204,26 @@
 
   <!-- Security & compliance -->
   <section class="content-section">
-    <h2 class="section-heading">Security <strong>&amp; compliance</strong></h2>
+    <h2 class="section-heading">{{ tech_security_h2 }}</h2>
     <div class="security-grid">
       <div class="security-item">
-        <h4>End-to-end encryption</h4>
-        <p>All asset communication encrypted end-to-end — from sensor to platform.</p>
+        <h4>{{ tech_sec1_h4 }}</h4>
+        <p>{{ tech_sec1_p }}</p>
       </div>
       <div class="security-item">
-        <h4>Certificate-based authentication</h4>
-        <p>Every asset authenticated by certificate — no unauthorised control possible.</p>
+        <h4>{{ tech_sec2_h4 }}</h4>
+        <p>{{ tech_sec2_p }}</p>
       </div>
       <div class="security-item">
-        <h4>Redispatch 2.0</h4>
-        <p>Compliant with Redispatch 2.0 requirements for distributed generation control.</p>
+        <h4>{{ tech_sec3_h4 }}</h4>
+        <p>{{ tech_sec3_p }}</p>
       </div>
       <div class="security-item">
-        <h4>§14a / EAG / EnFG</h4>
-        <p>Compatible with controllable load regulations in Germany and Austria.</p>
+        <h4>{{ tech_sec4_h4 }}</h4>
+        <p>{{ tech_sec4_p }}</p>
       </div>
     </div>
-    <a href="/company/get-in-touch.html" class="btn btn-primary">Book a Technical Demo</a>
+    <a href="/company/get-in-touch.html" class="btn btn-primary">{{ tech_cta }}</a>
   </section>
 
   <div id="footer-modern-placeholder"></div>

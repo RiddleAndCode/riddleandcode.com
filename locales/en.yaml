@@ -1,0 +1,549 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Riddle&Code website — English locale
+# HTML is allowed in values; use YAML double-quoted strings for safety.
+# ──────────────────────────────────────────────────────────────────────────────
+
+# ── Meta ──────────────────────────────────────────────────────────────────────
+meta_title: "Riddle&Code — Autonomous Energy. Behind the Meter."
+meta_description: "R&C KERN autonomously forecasts, dispatches and delivers flexibility behind the meter — for aggregators, utilities and energy communities."
+meta_og_title: "Riddle&Code — Autonomous Energy. Behind the Meter."
+meta_og_description: "R&C KERN autonomously forecasts, dispatches and delivers flexibility behind the meter."
+
+# ── Hero ──────────────────────────────────────────────────────────────────────
+hero_location: Vienna
+hero_h1: "Infrastructure for<br><strong>distributed energy.</strong>"
+hero_sub: "We build the platform utilities and aggregators use to connect, dispatch and monetise distributed energy assets at scale. Our product is <strong style=\"color: var(--text-primary);\">KERN</strong>."
+hero_cta_primary: "Discover KERN →"
+hero_cta_secondary: "Book a Demo"
+
+# ── Audience cards ────────────────────────────────────────────────────────────
+audience_label: "Who KERN is built for"
+
+aggregators_h3: Aggregators
+aggregators_p: "Secure your bids every time. KERN dispatches behind the meter and confirms execution — no manual intervention, no penalties."
+aggregators_link: "For aggregators →"
+
+utilities_h3: Utilities
+utilities_p: "Turn your customer base into a steerable flexibility portfolio. From HEMS fleet to energy communities — one platform, one autonomous layer."
+utilities_link: "For utilities →"
+
+communities_h3: "Energy Communities"
+communities_p: "Maximize shared self-consumption automatically. KERN optimizes every asset in the community — and connects collective flexibility to markets."
+communities_link: "For communities →"
+
+platforms_h3: "VPP Platforms"
+platforms_p: "Close the gap below your platform. KERN delivers a normalised API feed, confirmed dispatch and 24h forecasts — for every asset your clients have."
+platforms_link: "For platforms →"
+
+# ── Autonomous loop ───────────────────────────────────────────────────────────
+loop_h2: "The <strong>autonomous loop</strong>"
+loop_sub: "You send a signal. KERN delivers. What happens behind the meter is our job."
+
+loop_step1_label: Forecast
+loop_step1_desc: "Rolling 24h flexibility profile per asset and portfolio"
+
+loop_step2_label: Demand
+loop_step2_desc: "Flexibility signal from aggregator, utility or market"
+
+loop_step3_label: Rebalance
+loop_step3_desc: "Real-time comparison of signal vs. actual asset state"
+
+loop_step4_label: Dispatch
+loop_step4_desc: "Autonomous asset control via MIOTY or Zigbee Mesh"
+
+loop_step5_label: Confirm
+loop_step5_desc: "Execution confirmed back to aggregator in real-time"
+
+loop_callout: "<strong>KERN interacts with your platform at step 1 and 2.</strong><br>Steps 3–5 are fully autonomous — no manual intervention required."
+
+# ── Reference block ───────────────────────────────────────────────────────────
+ref_tag: "Live Reference"
+ref_h2: "A leading utility built their flexibility stack on R&amp;C KERN"
+ref_proof1: "Live MV/LV microgrid — production system"
+ref_proof2: "Utility-owned aggregator securing market bids via KERN"
+ref_proof3: "Energy community platform — KERN optimization layer"
+ref_visit: "Live system — visitable on request."
+ref_cta: "See the full reference →"
+
+# ── Final CTA ─────────────────────────────────────────────────────────────────
+cta_h2: "Stop managing assets.<br>Let KERN deliver."
+cta_p: "30 minutes to show you how the autonomous loop works — on a live system."
+cta_primary: "Book a Demo"
+cta_secondary: "Explore the Technology"
+
+# ── Shared CTAs (reused across pages) ─────────────────────────────────────────
+shared_book_demo: "Book a Demo"
+shared_explore_tech: "Explore the Technology"
+shared_see_ref: "See full reference →"
+
+# ══════════════════════════════════════════════════════════════════════════════
+# KERN Overview page (kern/index.html)
+# ══════════════════════════════════════════════════════════════════════════════
+ki_meta_title: "KERN by Riddle&Code — Autonomous Energy Platform"
+ki_meta_desc: "KERN is the autonomous energy management platform behind the meter — forecasting, dispatching and delivering flexibility for aggregators, utilities and energy communities."
+
+ki_eyebrow: "Riddle&Code — Autonomous Energy Platform"
+ki_h1: "<strong>Autonomous</strong> energy<br>behind the meter."
+ki_lead: "KERN is the platform that sits behind the meter — autonomously optimising, forecasting and dispatching flexibility from households, facilities, microgrids and energy communities."
+
+ki_concept_stmt: "You send a signal.<br><strong>KERN delivers.</strong><br>What happens behind the meter is our job."
+ki_concept_sub: "Aggregators, utilities and platforms interact with KERN through a clean API — forecast in, demand signal in, flexibility confirmed out. KERN handles everything in between: rebalancing, asset selection, dispatch, confirmation."
+
+ki_contexts_h2: "Optimising <strong>behind the meter</strong>"
+ki_contexts_sub: "KERN works across four asset contexts — all on one platform."
+ki_ctx_household_h3: Households
+ki_ctx_household_p: "PV + home storage + heat pump + EV charger — optimised as a unit. HEMS fleet management for utilities."
+ki_ctx_ci_h3: "Commercial &amp; Industrial"
+ki_ctx_ci_p: "Commercial PV, BESS, CHP, controllable loads on MV/LV level. Peak shaving, load management, flexibility dispatch."
+ki_ctx_micro_h3: Microgrids
+ki_ctx_micro_p: "Multiple assets behind a shared grid connection point. Coordinated optimisation, island-mode capable."
+ki_ctx_esc_h3: "Energy Communities (ESC)"
+ki_ctx_esc_p: "Community optimisation across multiple members and meters. Shared self-consumption maximised, collective flexibility aggregated."
+
+ki_modes_h2: "Three <strong>optimisation modes</strong>"
+ki_modes_sub: "Configurable per asset or portfolio — combinable."
+ki_mode1_num: "Mode 01"
+ki_mode1_h3: Self-consumption
+ki_mode1_p: "Maximise local self-consumption. Minimise grid import and export. Default mode for households and small C&amp;I."
+ki_mode2_num: "Mode 02"
+ki_mode2_h3: "Economic optimisation"
+ki_mode2_p: "Maximise monetary yield — intraday arbitrage, FCR/aFRR bids, peak shaving, demand charge reduction. Default for aggregators and C&amp;I flexibility."
+ki_mode3_num: "Mode 03"
+ki_mode3_h3: "Community optimisation"
+ki_mode3_p: "Maximise shared self-consumption across multiple members. Fair allocation by share. Default for ESC and microgrids."
+
+ki_conn_h2: "Connectivity <strong>by topology</strong>"
+ki_conn_sub: "The right technology for every asset configuration — both managed as one unified layer in KERN."
+ki_zigbee_use: "Contiguous sites"
+ki_zigbee_h3: "Zigbee Mesh"
+ki_zigbee_p: "For assets on the same premises — buildings, campuses, industrial sites. Low-cost, easy to deploy, self-healing mesh network. No complex gateway infrastructure required."
+ki_mioty_use: "Distributed assets"
+ki_mioty_h3: MIOTY
+ki_mioty_p: "IEC-standard LPWAN for geographically dispersed assets — rural PV, MV-connected BESS, distributed sites. 10km range, 1.5M messages/day, independent of LTE and WiFi."
+ki_tech_link: "Full technology overview →"
+
+ki_forwhom_h2: "KERN <strong>for your role</strong>"
+ki_role_agg_h3: Aggregators
+ki_role_agg_p: "Secure bids with confirmed dispatch and 24h forecasts."
+ki_role_agg_link: "For aggregators →"
+ki_role_util_h3: Utilities
+ki_role_util_p: "Turn your customer base into a monetisable flexibility portfolio."
+ki_role_util_link: "For utilities →"
+ki_role_comm_h3: "Energy Communities"
+ki_role_comm_p: "Autonomous self-consumption optimisation and flexibility aggregation."
+ki_role_comm_link: "For communities →"
+ki_role_vpp_h3: "VPP Platforms"
+ki_role_vpp_p: "Close the asset layer gap below your platform with a clean API."
+ki_role_vpp_link: "For platforms →"
+
+# ══════════════════════════════════════════════════════════════════════════════
+# KERN for Utilities page (kern/for-utilities.html)
+# ══════════════════════════════════════════════════════════════════════════════
+ku_meta_title: "KERN for Utilities — Riddle&Code"
+ku_meta_desc: "Turn your customer base into a steerable flexibility portfolio. KERN manages HEMS fleets, energy communities and C&I assets — autonomously, on one platform."
+
+ku_eyebrow: "KERN — For Utilities"
+ku_h1: "You have the customers.<br>You have the assets.<br><strong>KERN connects them.</strong>"
+ku_lead: "Your customers have PV, storage, heat pumps and EV chargers. Your grid has flexibility requirements. KERN is the autonomous platform layer that turns your customer base into a steerable, monetisable flexibility portfolio — without building an operations team for it."
+
+ku_pains_h2: "Where utilities are <strong>leaving value on the table</strong>"
+ku_pain1_title: "Controllable assets without an optimisation platform"
+ku_pain1_desc: "Smart meters and CLS switches are rolling out — but there is no platform above them. No optimisation, no aggregation, no market access. The potential stays untapped."
+ku_pain1_sol: "KERN sits above the meter as the autonomous management layer — real-time optimisation, fleet control, market-ready aggregation."
+ku_pain2_title: "Redispatch 2.0 is manual and costly"
+ku_pain2_desc: "Grid congestion management requires coordinated control of distributed generation — without a platform this is operationally complex, error-prone and doesn't scale."
+ku_pain2_sol: "KERN handles Redispatch 2.0-compliant dispatch autonomously, with confirmation per asset."
+ku_pain3_title: "Customers leaving for smarter energy providers"
+ku_pain3_desc: "New energy players offer HEMS, community tariffs and flexibility revenues. Utilities without smart services lose the customers who want to actively participate."
+ku_pain3_sol: "KERN is your behind-the-meter product — branded as your service, delivered by KERN. Customers stay and engage."
+ku_pain4_title: "No access to flexibility markets from your own customer base"
+ku_pain4_desc: "You have the customer relationships and the assets — but without an aggregation platform you can't monetise that flexibility."
+ku_pain4_sol: "KERN aggregates your customer base into a marketable portfolio. You can run your own aggregator subsidiary — or partner with an external one."
+
+ku_cases_h2: "Three ways to <strong>deploy KERN</strong>"
+ku_case1_num: "Use case 01"
+ku_case1_h3: "HEMS Fleet — Customer Base as Flexible Resource"
+ku_case1_p: "Deploy KERN HEMS with household customers who have PV and storage. Customers benefit from self-consumption optimisation and lower bills. You gain a steerable fleet for Redispatch or flexibility monetisation — without operational load per customer."
+ku_case2_num: "Use case 02"
+ku_case2_h3: "Energy Communities — Compliant, Automatic"
+ku_case2_p: "KERN ESC manages optimisation and autonomous asset control for energy communities. You can offer energy communities as a service — no custom development, no manual billing processes needed from KERN's side."
+ku_case3_num: "Use case 03"
+ku_case3_h3: "Flexibility Monetisation — From Your Customer Base"
+ku_case3_p: "The aggregated flexibility from HEMS fleet, C&amp;I customers and ESC becomes a marketable portfolio via KERN. Route it through your own aggregator subsidiary or an external partner to FCR, aFRR or intraday markets."
+
+ku_ref_h2: "The <strong>reference model</strong> — running in production"
+ku_ref_intro: "A leading regional utility built their complete flexibility stack on KERN:"
+ku_ref_grid_label: Grid
+ku_ref_grid_value: "Live MV/LV microgrid — production system, Austria"
+ku_ref_agg_label: Aggregator
+ku_ref_agg_value: "Utility-owned aggregator securing bids on Austrian energy markets via KERN"
+ku_ref_comm_label: Communities
+ku_ref_comm_value: "Energy community platform — KERN as optimisation layer"
+ku_ref_note: "Live system — visitable on request in Austria."
+
+ku_cta_h2: "Ready to monetise your customer base?"
+ku_cta_p: "30 minutes to map which assets in your network are ready for KERN — and what the flexibility revenue potential looks like."
+
+# ══════════════════════════════════════════════════════════════════════════════
+# KERN for Aggregators page (kern/for-aggregators.html)
+# ══════════════════════════════════════════════════════════════════════════════
+ka_meta_title: "KERN for Aggregators — Riddle&Code"
+ka_meta_desc: "Secure your flexibility bids every time. KERN autonomously dispatches and confirms execution behind the meter — no manual intervention, no penalties."
+ka_eyebrow: "KERN — For Aggregators"
+ka_h1: "Your bids are only as good as<br><strong>what's behind the meter.</strong>"
+ka_lead: "KERN acts as an autonomous sub-aggregator behind the meter. You send a flexibility signal — KERN decides which assets to dispatch, executes via MIOTY or Zigbee, and confirms delivery back to you. No manual intervention. No missed bids."
+ka_pains_h2: "The five pains <strong>KERN solves</strong>"
+ka_pain1_title: "Unreliable connectivity to distributed assets"
+ka_pain1_desc: "Rural BESS sites, industrial premises, basements — LTE drops, WiFi is unstable. Assets can't be committed to bids. Portfolio size is limited by infrastructure, not by availability."
+ka_pain1_sol: "MIOTY (10km, 1.5M msg/day, IEC standard) and Zigbee Mesh connect every asset — independent of LTE and WiFi."
+ka_pain2_title: "No dispatch confirmation"
+ka_pain2_desc: "Bid placed, dispatch sent — whether the asset responded remains unknown until the next meter reading. Deviations are detected too late."
+ka_pain2_sol: "Every dispatch is confirmed at asset level and reported back in real-time. You know immediately whether the bid is being fulfilled."
+ka_pain3_title: "Manual response to forecast deviations"
+ka_pain3_desc: "Weather change, load shift, asset failure — someone has to notice, decide and intervene. This doesn't scale."
+ka_pain3_sol: "KERN continuously compares actual asset state against bid position and rebalances autonomously — before the deviation becomes critical."
+ka_pain4_title: "Poor forecast quality without asset visibility"
+ka_pain4_desc: "Without real-time telemetry at asset level, flexibility forecasts are estimates. Overbidding means penalties. Underbidding means lost revenue."
+ka_pain4_sol: "Rolling 24h flexibility forecast per asset and portfolio — based on live telemetry, state of charge, weather data and historical patterns."
+ka_pain5_title: "Operational overhead scales with portfolio"
+ka_pain5_desc: "Every new asset, every new site, every new asset class adds complexity. Growth requires more team, more monitoring, more manual dispatch management."
+ka_pain5_sol: "New assets are onboarded into KERN — the aggregator gets more flexibility capacity, not more operational burden."
+ka_loop_h2: "The <strong>operative loop</strong>"
+ka_loop_note: "You interact with steps 1 and 2. Everything else is KERN."
+ka_ref_h2: "Proven in <strong>production</strong>"
+ka_ref_quote: "A leading regional utility uses KERN to power their flexibility aggregator — securing bids on energy markets with confirmed dispatch from MV/LV assets."
+ka_ref_meta: "Live system · MV/LV microgrid · Visitable on request"
+ka_cta_h2: "Ready to secure every bid?"
+ka_cta_p: "30 minutes to show you how KERN fits into your existing dispatch stack — and which assets you can add to your portfolio today."
+
+# ══════════════════════════════════════════════════════════════════════════════
+# KERN for Communities page (kern/for-communities.html)
+# ══════════════════════════════════════════════════════════════════════════════
+kc_meta_title: "KERN for Energy Communities — Riddle&Code"
+kc_meta_desc: "Maximise shared self-consumption automatically. KERN optimises every asset in the community and connects collective flexibility to markets."
+kc_eyebrow: "KERN — For Energy Communities"
+kc_h1: "Your community generates energy.<br><strong>KERN keeps it in the community.</strong>"
+kc_lead: "KERN autonomously optimises storage, controllable loads and generation across all community members — maximising shared self-consumption and forecasting the collective flexibility that can be offered to markets or grid operators."
+kc_pains_h2: "What holds energy communities <strong>back today</strong>"
+kc_pain1_title: "Self-consumption is measured, not optimised"
+kc_pain1_desc: "Without real-time optimisation, energy is exported to the grid even when members have demand — the community's potential stays largely untapped."
+kc_pain1_sol: "KERN forecasts generation and consumption per member (24h ahead) and steers assets to maximise what stays in the community."
+kc_pain2_title: "No real-time visibility across the community"
+kc_pain2_desc: "Operators don't know how much is being generated, consumed and shared right now — optimisation and steering are impossible without this view."
+kc_pain2_sol: "Real-time telemetry from every asset, aggregated into a community dashboard. Full visibility, per member and as a whole."
+kc_pain3_title: "Storage and loads are not coordinated"
+kc_pain3_desc: "Community storage and controllable loads are managed manually or not at all — no automatic charging when PV surplus is available, no discharging when members need it."
+kc_pain3_sol: "KERN steers shared storage and controllable loads autonomously — aligning generation, storage and consumption in real-time."
+kc_pain4_title: "Connectivity across multiple sites is unsolved"
+kc_pain4_desc: "Members at different buildings or locations are hard to reliably connect — LTE drops out, WiFi doesn't reach far enough."
+kc_pain4_sol: "Zigbee Mesh for contiguous sites, MIOTY for distributed members (10km, independent of LTE/WiFi) — both managed as one unified layer."
+kc_pain5_title: "Collective flexibility potential goes unused"
+kc_pain5_desc: "An active community with PV and storage has real collective flexibility — but without a platform it can neither be forecasted nor offered to aggregators or grid operators."
+kc_pain5_sol: "KERN provides rolling 24h flexibility forecasts for the whole community and connects to aggregators or grid operators on request."
+kc_loop_h2: "How KERN <strong>operates the community</strong>"
+kc_features_h2: "What KERN <strong>does for communities</strong>"
+kc_feat1_h3: Community optimisation
+kc_feat1_p: "Maximises collective self-consumption across all members — in real-time and with a 24h forecast."
+kc_feat2_h3: Storage and load control
+kc_feat2_p: "Autonomous steering of shared storage and controllable loads to align supply and demand within the community."
+kc_feat3_h3: Real-time dashboard
+kc_feat3_p: "Community generation, consumption, self-consumption rate and flexibility potential — for operators and optionally for members."
+kc_feat4_h3: Flexibility forecast
+kc_feat4_p: "Rolling 24h forecast of available community flexibility — the basis for aggregator or grid operator integration."
+kc_feat5_h3: Multi-site connectivity
+kc_feat5_p: "Zigbee Mesh for contiguous sites, MIOTY for distributed members — every participant reliably connected."
+kc_feat6_h3: Aggregator connection
+kc_feat6_p: "Community flexibility dispatched on demand — with confirmed execution back to the requesting party."
+kc_partner_h3: "Already handling ESC billing or member management?"
+kc_partner_p: "KERN is the optimisation and control layer — not a billing platform. We integrate with your existing billing infrastructure to add autonomous asset management and flexibility forecasting on top of what you already offer your ESC clients. Together you give communities the complete package: billing from you, optimisation from KERN."
+kc_partner_cta: "Discuss a partnership →"
+kc_cta_h2: "More energy stays in the community."
+kc_cta_p: "30 minutes to show how KERN optimises a live energy community — from real-time control to flexibility markets."
+
+# ══════════════════════════════════════════════════════════════════════════════
+# KERN for Platforms page (kern/for-platforms.html)
+# ══════════════════════════════════════════════════════════════════════════════
+kp_meta_title: "KERN for VPP Platforms — Riddle&Code"
+kp_meta_desc: "Close the gap below your VPP platform. KERN delivers normalised telemetry, confirmed dispatch and 24h forecasts for every asset your clients have."
+kp_eyebrow: "KERN — For VPP Platforms"
+kp_h1: "Your platform is strong<br><strong>above the asset layer.</strong><br>KERN closes the gap below."
+kp_lead: "KERN integrates below your VPP as the asset management and connectivity layer. Your platform gets a clean, normalised API feed, confirmed dispatch and 24h flexibility forecasts — for every asset your clients have, including those currently unreachable."
+kp_hero_cta: "Discuss API Integration"
+kp_stack_h2: "Where KERN <strong>fits in your stack</strong>"
+kp_pains_h2: "Three gaps <strong>KERN fills</strong>"
+kp_pain1_title: "Assets with unreliable connectivity stay out of the portfolio"
+kp_pain1_desc: "Rural sites, industrial premises, basements — LTE drops, WiFi is unstable. Your clients can't bring these assets into your platform. Potential stays on the table."
+kp_pain1_sol: "MIOTY (10km, IEC standard) and Zigbee Mesh make every asset reachable — your clients grow their portfolio without infrastructure investment."
+kp_pain2_title: "No dispatch feedback — the loop is open"
+kp_pain2_desc: "Your platform sends commands — but whether the asset responded stays unknown until the next meter reading. Deviations are detected too late, penalties hit your clients."
+kp_pain2_sol: "KERN confirms every dispatch at asset level and reports back in real-time. Your platform knows immediately whether the flexibility commitment is being met."
+kp_pain3_title: "Heterogeneous assets increase integration overhead"
+kp_pain3_desc: "Every new asset type, every new manufacturer, every new protocol means integration effort — for you or your clients. This slows onboarding and limits scale."
+kp_pain3_sol: "KERN normalises all asset types to a single data model. Your platform speaks to KERN — not to every asset individually."
+kp_what_h2: "What your platform <strong>gets from KERN</strong>"
+kp_what1_h3: "Clean, normalised API feed"
+kp_what1_p: "Unified telemetry regardless of how many asset types, manufacturers or protocols are behind it. One integration, all assets."
+kp_what2_h3: "Dispatch with confirmation"
+kp_what2_p: "KERN receives your dispatch command, executes at asset level and reports back whether and how it was fulfilled."
+kp_what3_h3: "24h flexibility forecast"
+kp_what3_p: "Rolling forecast per asset and portfolio — what flexibility is genuinely available, when. More precise bids, better outcomes for your clients."
+kp_what4_h3: "More assets in the portfolio"
+kp_what4_p: "Assets currently excluded due to connectivity become available. Your clients grow their dispatchable portfolio without CAPEX."
+kp_integ_h2: "Integration <strong>options</strong>"
+kp_integ_th1: Model
+kp_integ_th2: Description
+kp_integ_th3: Effort
+kp_integ1_model: API integration
+kp_integ1_desc: "KERN delivers normalised telemetry and accepts dispatch commands via REST/WebSocket. Your platform remains primary."
+kp_integ2_model: White-label
+kp_integ2_desc: "KERN runs under your brand as an \"Asset Connectivity Module\" for your clients."
+kp_integ3_model: Pilot
+kp_integ3_desc: "One client, one asset class, defined scope — fast to start, low risk."
+kp_cta_h2: "Let's discuss the API."
+kp_cta_p: "30 minutes to go through the spec and identify which of your clients' assets are currently excluded — and how quickly that changes with KERN."
+kp_cta_primary: "Discuss API Integration"
+
+# ══════════════════════════════════════════════════════════════════════════════
+# References page (references/index.html)
+# ══════════════════════════════════════════════════════════════════════════════
+rp_meta_title: "References — KERN by Riddle&Code"
+rp_meta_desc: "R&C KERN running in production — live MV/LV microgrid, utility-owned aggregator, energy community platform. Visitable on request."
+rp_eyebrow: References
+rp_h1: "Not a pilot.<br><strong>Running in production.</strong>"
+rp_lead: "R&amp;C KERN is live — managing a real MV/LV grid, powering a flexibility aggregator and running an energy community platform. Visitable on request."
+rp_ref_tag: "Live Reference — Austria"
+rp_ref_h2: "A leading regional utility built their <strong>complete flexibility stack</strong> on R&amp;C KERN"
+rp_item1_label: Grid
+rp_item1_title: "Live MV/LV Microgrid"
+rp_item1_desc: "Real medium and low-voltage grid in production. KERN managing all assets behind the meter — generation, storage, controllable loads."
+rp_item2_label: Aggregator
+rp_item2_title: "Utility-owned Flexibility Aggregator"
+rp_item2_desc: "Utility subsidiary securing bids on Austrian energy markets. KERN provides autonomous dispatch with confirmed execution — enabling reliable bid fulfilment."
+rp_item3_label: Community
+rp_item3_title: "Energy Community Platform"
+rp_item3_desc: "Energy community management running on KERN as the optimisation and control layer — autonomous asset coordination, collective self-consumption maximisation."
+rp_visit_strong: "The system is visitable."
+rp_visit_p: "The live installation can be visited on request — a real microgrid, running KERN in production. Contact us to arrange a visit."
+rp_visit_cta: "Request a Visit"
+rp_soon_h3: "More references coming"
+rp_soon_p: "Additional customer references are in preparation. We are currently seeking approval to publish by name."
+rp_soon_link: "Contact us"
+rp_soon_suffix: "to speak directly with a reference customer."
+rp_cta_h2: "See it running."
+rp_cta_p: "A 30-minute call or an on-site visit — whichever is more useful for you."
+rp_cta_primary: "Book a Demo or Visit"
+rp_cta_secondary: "Back to KERN →"
+
+# ══════════════════════════════════════════════════════════════════════════════
+# Technology page (technology/index.html)
+# ══════════════════════════════════════════════════════════════════════════════
+tech_meta_title: "Technology — KERN by Riddle&Code"
+tech_meta_desc: "MIOTY, Zigbee Mesh, 24h flexibility forecasting and autonomous dispatch — the technology behind KERN."
+tech_eyebrow: Technology
+tech_h1: "Built for energy infrastructure.<br><strong>Not adapted from IoT.</strong>"
+tech_lead: "MIOTY, Zigbee Mesh, a 24h autonomous forecast loop and confirmed dispatch — purpose-built for the demands of flexibility management behind the meter."
+tech_conn_h2: "Connectivity <strong>by topology</strong>"
+tech_conn_sub: "The technology choice follows the asset topology — not the other way around."
+tech_zigbee_badge: "Contiguous sites"
+tech_zigbee_h3: Zigbee Mesh
+tech_zigbee_use: "Buildings, campuses, industrial premises, microgrids on one site"
+tech_mioty_badge: "Distributed assets"
+tech_mioty_h3: MIOTY
+tech_mioty_use: "Geographically dispersed assets — rural PV, MV BESS, multiple remote sites"
+tech_vs_h3: "MIOTY vs. LoRaWAN"
+tech_loop_h2: "The <strong>autonomous loop</strong>"
+tech_loop_sub: "KERN operates continuously — forecasting, reacting and dispatching without manual intervention."
+tech_assets_h2: "Supported <strong>assets and protocols</strong>"
+tech_assets_sub: "KERN normalises all asset types to a single data model — regardless of manufacturer or protocol."
+tech_assets_label1: "Asset types"
+tech_assets_label2: "Communication protocols"
+tech_security_h2: "Security <strong>&amp; compliance</strong>"
+tech_sec1_h4: "End-to-end encryption"
+tech_sec1_p: "All asset communication encrypted end-to-end — from sensor to platform."
+tech_sec2_h4: "Certificate-based authentication"
+tech_sec2_p: "Every asset authenticated by certificate — no unauthorised control possible."
+tech_sec3_h4: "Redispatch 2.0"
+tech_sec3_p: "Compliant with Redispatch 2.0 requirements for distributed generation control."
+tech_sec4_h4: "§14a / EAG / EnFG"
+tech_sec4_p: "Compatible with controllable load regulations in Germany and Austria."
+tech_cta: "Book a Technical Demo"
+
+# ══════════════════════════════════════════════════════════════════════════════
+# About Us page (company/about-us.html)
+# ══════════════════════════════════════════════════════════════════════════════
+au_meta_title: "About Riddle&Code — Infrastructure for Distributed Energy"
+au_meta_desc: "Riddle&Code builds KERN — the infrastructure platform for distributed energy management. Serving utilities, aggregators, and communities across Europe."
+au_eyebrow: "Vienna, Austria"
+au_h1: "Infrastructure for<br><span class=\"highlight\">distributed energy.</span>"
+au_sub: "Riddle&Code builds KERN — the platform utilities and aggregators use to connect, manage, and monetise distributed energy assets at scale. We own the full stack: hardware, connectivity, platform, and market access."
+au_why_tag: "WHY WE EXIST"
+au_why_h2: "The infrastructure gap in the energy transition"
+au_why_desc: "Distributed energy resources are multiplying — rooftop solar, batteries, heat pumps, EV chargers. Utilities face flexibility obligations. Aggregators need scale. Nobody wanted to build the connectivity and compliance layer from scratch.<br><br>We did."
+au_val1_h3: "Infrastructure, not apps"
+au_val1_p: "KERN is the layer that sits between physical assets and energy markets. We're not a consumer app or a meter-reading service. We're the platform your operations team runs — reliably, at scale, without depending on consumer devices or WiFi."
+au_val2_h3: "Full stack ownership"
+au_val2_p: "Hardware, MIOTY wireless connectivity, HEMS/ESC/LSP platform, and direct market access in a single integration. Partners deploy once — they don't stitch together three separate vendor relationships to get an asset to market."
+au_val3_h3: "Regulatory complexity absorbed"
+au_val3_p: "ESC compliance, flexibility reporting, and audit documentation are built into KERN — not a manual process your team maintains. We carry the technical and regulatory complexity so you carry the customer relationship."
+au_what_h3: "What KERN delivers"
+au_what_sub: "One platform. Three asset classes. One integration."
+au_tech1_h4: "MIOTY wireless connectivity"
+au_tech1_p: "10km range, 1.5 million messages per day, ultra-low power. No WiFi, no consumer app dependency — works in basements, rural areas, and industrial sites. One gateway covers an entire neighbourhood or industrial zone."
+au_tech2_h4: "HEMS — residential assets"
+au_tech2_p: "Manage residential PV and battery portfolios. Optimise intraday trading, flexibility dispatch, and curtailment prevention — automatically, across thousands of homes."
+au_tech3_h4: "ESC — energy sharing communities"
+au_tech3_p: "Community energy pooling built for Austrian and EU regulatory frameworks. Compliance is auditable and automated — not a spreadsheet your legal team reviews quarterly."
+au_tech4_h4: "LSP — grid-scale flexibility"
+au_tech4_p: "Large Scale Plant management for grid-scale assets: BESS, industrial loads, and aggregated portfolios. Direct access to ancillary service and flexibility markets — no third-party aggregator required."
+au_proof_tag: "TRACK RECORD"
+au_proof_h2: "Validated, not promised"
+au_proof1_h3: "Leading regional utility"
+au_proof1_p: "Validated with a leading regional utility. The deployment model, regulatory alignment, and economics are validated at regional scale — the same playbook applies to any regional utility territory."
+au_proof2_h3: "MIOTY at scale"
+au_proof2_p: "1.5 million messages per day demonstrated capacity. IEC standardised — not proprietary lock-in. Partners aren't betting on a single vendor's survival; they're adopting a published standard."
+au_proof3_h3: "Unit economics that work"
+au_proof3_p: "Hardware at €239 sell / €100 COGS — 58% margin. Platform ARR of €114 per HEMS household per year. The economics support utility bundle pricing and operator margin at scale."
+au_founders_tag: FOUNDERS
+au_founders_h2: "The team behind KERN"
+au_cta_h2: "Talk to the team"
+au_cta_p: "Executive briefing, technical deep-dive, or partner conversation — we'll match the format to where you are."
+au_cta_primary: "Get in Touch"
+au_cta_secondary: "Explore KERN"
+
+# ══════════════════════════════════════════════════════════════════════════════
+# Get in Touch page (company/get-in-touch.html)
+# ══════════════════════════════════════════════════════════════════════════════
+git_meta_title: "Contact — KERN by Riddle&Code"
+git_meta_desc: "Book a demo, arrange a site visit, or discuss how KERN fits into your infrastructure. We're here to help."
+git_h1: "Let's talk.<br><strong>Get in Touch</strong>"
+git_sub: "Book a demo, arrange an on-site visit to our live reference installation, or discuss how KERN fits into your utility or aggregator stack."
+git_contact_tag: CONTACT
+git_contact_h2: "Ways to Reach Us"
+git_inq_h3: "General Inquiries"
+git_inq_p: "For general questions about KERN, our technology and partnership options:"
+git_inq_email: "office@riddleandcode.com"
+git_demo_h3: "Book a Demo"
+git_demo_p: "30 minutes — live system, real assets. We'll show you the autonomous loop in action and map which assets in your portfolio are ready for KERN."
+git_visit_h3: "Request a Site Visit"
+git_visit_p: "Our reference installation in Austria is visitable on request — a live MV/LV microgrid with KERN running in production."
+git_loc_tag: LOCATION
+git_loc_h2: Headquarters
+git_why_tag: "WHY CONNECT"
+git_why_h2: "What We Can Help With"
+git_why1_h3: "Executive Briefing"
+git_why1_p: "Strategic overview of KERN, the market opportunity and how we fit into your flexibility strategy. 45 minutes, C-level format."
+git_why2_h3: "Technical Deep Dive"
+git_why2_p: "API specs, connectivity architecture, integration approach for your specific asset mix. For your technical team."
+git_why3_h3: "Live Reference"
+git_why3_p: "Visit our production installation in Austria — a real utility deployment with MV/LV microgrid, aggregator and energy community platform."
+git_why4_h3: Partnership
+git_why4_p: "Utility partnerships, aggregator relationships, platform integrations — let's discuss the right commercial model."
+git_cta_h2: "Ready to Connect?"
+git_cta_p: "Reach out to us at office@riddleandcode.com or book a demo directly."
+git_cta_primary: "Send us an Email"
+git_cta_secondary: "Learn About KERN"
+
+# ══════════════════════════════════════════════════════════════════════════════
+# Media page (company/media.html)
+# ══════════════════════════════════════════════════════════════════════════════
+med_meta_title: "Media — Riddle&Code"
+med_meta_desc: "Press kit, brand logos, image materials and media contact for Riddle&Code and KERN."
+med_h1: "Media Hub.<br><strong>Press Kit &amp; Brand Resources</strong>"
+med_sub: "Welcome to Riddle&Code's Media Hub. Here you can find our press kit, brand logos, image materials, and information about our media activities."
+med_who_tag: "ABOUT US"
+med_who_h2: "Who We Are"
+med_who_p1: "Riddle&Code builds KERN — the infrastructure platform for distributed energy management. We serve utilities, aggregators and energy communities across Europe, providing autonomous asset connectivity, flexibility forecasting and dispatch."
+med_who_p2: "Our technology, including MIOTY wireless connectivity and autonomous dispatch, is deployed in production with a leading regional utility in Austria — managing a live MV/LV microgrid, flexibility aggregator and energy community platform."
+med_dl_tag: DOWNLOADS
+med_dl_h2: "Press Materials"
+med_logo_h3: "Brand Logo"
+med_logo_p: "Download our official brand logos in various formats. Includes light and dark versions, horizontal and vertical layouts."
+med_logo_cta: "Download Logo Pack"
+med_press_h3: "Press Kit"
+med_press_p: "Complete press kit including company information, product details, leadership bios, and high-resolution images."
+med_press_cta: "Download Press Kit"
+med_partner_h3: "Media Partner Logos"
+med_partner_p: "Logos showing Riddle&Code alongside our press partners and media mentions. Ready for publication use."
+med_partner_cta: "Download Partner Logos"
+med_media_tag: "MEDIA INQUIRIES"
+med_media_h2: "For Journalists &amp; Media"
+med_pr_h3: "Press Releases"
+med_pr_p: "Access our latest press releases, announcements, and company news. Stay up to date with our developments."
+med_contact_h3: "Media Contact"
+med_contact_p: "For media inquiries, interviews, or additional information, please contact us at office@riddleandcode.com"
+med_interview_h3: "Interview Requests"
+med_interview_p: "We're available for expert commentary on distributed energy management, flexibility markets, MIOTY technology and the energy transition."
+med_usage_h3: "Usage Guidelines"
+med_usage_p: "Please respect our brand guidelines when using Riddle&Code and KERN assets. Contact us if you have questions."
+med_cta_h2: "Need More Information?"
+med_cta_p: "Contact our media team for additional resources, interview opportunities, or press inquiries."
+med_cta_primary: "Contact Media Team"
+med_cta_secondary: "View Latest News"
+
+# ══════════════════════════════════════════════════════════════════════════════
+# Career page (company/career.html)
+# ══════════════════════════════════════════════════════════════════════════════
+car_meta_title: "Career — Riddle&Code"
+car_meta_desc: "Join the team building KERN — the infrastructure platform for distributed energy. Work on hard problems that matter for the energy transition."
+car_h1: "<span class=\"highlight\">Join Our Team</span><br>Build the Infrastructure for the Energy Transition"
+car_sub: "Riddle&Code builds KERN — the platform utilities and aggregators use to connect, dispatch and monetise distributed energy assets at scale. We work on hard problems in energy infrastructure, wireless connectivity and autonomous systems."
+car_purpose_tag: "OUR PURPOSE"
+car_purpose_h2: "The Riddle&Code Spirit"
+car_purpose1_h3: "Purpose: Why do we exist?"
+car_purpose1_strong: "Building infrastructure for the energy transition."
+car_purpose1_p: "We provide the connectivity and autonomy layer that turns distributed energy assets into manageable, monetisable infrastructure — for utilities and aggregators across Europe."
+car_purpose2_h3: "Vision: Where are we headed?"
+car_purpose2_strong: "A Europe where every distributed energy asset contributes to grid stability."
+car_purpose2_p: "We envision a grid where flexibility behind the meter is continuously forecasted, dispatched and confirmed — without manual intervention, at any scale."
+car_purpose3_h3: "Mission: How will we get there?"
+car_purpose3_strong: "KERN in every utility flexibility stack in Europe by 2030."
+car_purpose3_p: "Our commitment is to deliver the autonomous energy management layer that makes distributed flexibility reliable, monetisable and scalable."
+car_values_h3: "Our Core Values"
+car_values_sub: "The principles that guide everything we do"
+car_val1_label: Curiosity
+car_val1_desc: "We're constantly exploring, questioning, and learning. Curiosity drives innovation and helps us push boundaries in building energy infrastructure."
+car_val2_label: Empathy
+car_val2_desc: "Understanding our colleagues, partners, and customers allows us to build solutions that truly matter and make a difference."
+car_val3_label: Listening
+car_val3_desc: "Active listening helps us understand needs, collaborate effectively, and build better products together."
+car_val4_label: Grit
+car_val4_desc: "Solving hard problems requires perseverance. We embrace challenges and persist until we achieve our goals."
+car_val5_label: Fun
+car_val5_desc: "We believe in enjoying the journey. A positive, engaging workplace culture brings out our best work."
+car_val6_label: Commitment
+car_val6_desc: "We're dedicated to our mission, our team, and our partners. Commitment drives excellence in everything we deliver."
+car_benefits_tag: BENEFITS
+car_benefits_h2: "Why Join Riddle&Code"
+car_ben1_h3: "Real infrastructure impact"
+car_ben1_p: "Work on a production system managing live energy assets. Your code controls real hardware behind real meters — not a simulation."
+car_ben2_h3: "Vienna &amp; Remote"
+car_ben2_p: "Vienna was ranked the most liveable city for the tenth time in a row, and we know there are other nice places too. Work where you're most productive."
+car_ben3_h3: "Flexible Environment"
+car_ben3_p: "A modern office or working remotely — enjoy a flexible working environment that adapts to your needs and lifestyle."
+car_ben4_h3: "European Energy Market"
+car_ben4_p: "Work at the intersection of wireless technology, energy markets and regulatory frameworks across Austria, Germany and the EU."
+car_ben5_h3: "Fair Compensation"
+car_ben5_p: "Receive fair compensation that corresponds to your qualifications and experience."
+car_ben6_h3: "Work-Life Balance"
+car_ben6_p: "A refreshed you is a happy you. We ensure you have enough time for work-life balance and offer various perks to support your wellbeing."
+car_cta_h2: "Ready to Join Us?"
+car_cta_p: "We're always looking for talented people who share our passion for building infrastructure for the energy transition."
+car_cta_primary: "View Open Positions"
+car_cta_secondary: "Learn More About Us"
+
+# ══════════════════════════════════════════════════════════════════════════════
+# News page (company/news.html)
+# ══════════════════════════════════════════════════════════════════════════════
+news_meta_title: "News — Riddle&Code"
+news_meta_desc: "Latest news, research and updates from Riddle&Code and the KERN team."
+news_h1: "<span class=\"highlight\">News &amp; Insights</span><br>From Riddle&Code"
+news_sub: "Stay up to date with our latest product updates, market research and company news."
+news_filter_all: "All"
+news_filter_news: "News"
+news_filter_research: "Research"
+news_filter_updates: "Updates"
+news_load_more: "Load More"
+news_cta_h2: "Want to stay updated?"
+news_cta_p: "Subscribe to our newsletter or follow us on LinkedIn."
+news_cta_primary: "Contact Us"
+news_cta_secondary: "Back to Home"

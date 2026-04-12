@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}">
   <head>
     <meta charset="utf-8"/>
-    <title>About Riddle&Code — Infrastructure for Distributed Energy</title>
-    <meta name="description" content="Riddle&Code builds KERN — the infrastructure platform for distributed energy management. Serving utilities, aggregators, and communities across Europe."/>
-    <meta property="og:title" content="About Riddle&Code — Infrastructure for Distributed Energy"/>
-    <meta property="og:description" content="Riddle&Code builds KERN — the infrastructure platform for distributed energy management. Serving utilities, aggregators, and communities across Europe."/>
+    <title>{{ au_meta_title }}</title>
+    <meta name="description" content="{{ au_meta_desc }}"/>
+    <meta property="og:title" content="{{ au_meta_title }}"/>
+    <meta property="og:description" content="{{ au_meta_desc }}"/>
     <meta property="og:type" content="website"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -20,39 +20,39 @@
       <div id="nav-placeholder"></div>
 
       <section class="hero">
-        <p style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--kern-accent); margin-bottom: 1rem;">Vienna, Austria</p>
+        <p style="font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--kern-accent); margin-bottom: 1rem;">{{ au_eyebrow }}</p>
         <h1 class="fade-in">
-          Infrastructure for<br><span class="highlight">distributed energy.</span>
+          {{ au_h1 }}
         </h1>
         <p class="hero-subtitle fade-in">
-          Riddle&Code builds KERN — the platform utilities and aggregators use to connect, manage, and monetise distributed energy assets at scale. We own the full stack: hardware, connectivity, platform, and market access.
+          {{ au_sub }}
         </p>
       </section>
 
       <!-- Why we exist -->
       <section class="section">
         <div class="section-header">
-          <span class="section-tag">WHY WE EXIST</span>
-          <h2 class="section-title">The infrastructure gap in the energy transition</h2>
+          <span class="section-tag">{{ au_why_tag }}</span>
+          <h2 class="section-title">{{ au_why_h2 }}</h2>
           <p class="section-description">
-            Distributed energy resources are multiplying — rooftop solar, batteries, heat pumps, EV chargers. Utilities face flexibility obligations. Aggregators need scale. Nobody wanted to build the connectivity and compliance layer from scratch.<br><br>We did.
+            {{ au_why_desc }}
           </p>
         </div>
 
         <div class="value-grid">
           <div class="value-card">
-            <h3>Infrastructure, not apps</h3>
-            <p>KERN is the layer that sits between physical assets and energy markets. We're not a consumer app or a meter-reading service. We're the platform your operations team runs — reliably, at scale, without depending on consumer devices or WiFi.</p>
+            <h3>{{ au_val1_h3 }}</h3>
+            <p>{{ au_val1_p }}</p>
           </div>
 
           <div class="value-card">
-            <h3>Full stack ownership</h3>
-            <p>Hardware, MIOTY wireless connectivity, HEMS/ESC/LSP platform, and direct market access in a single integration. Partners deploy once — they don't stitch together three separate vendor relationships to get an asset to market.</p>
+            <h3>{{ au_val2_h3 }}</h3>
+            <p>{{ au_val2_p }}</p>
           </div>
 
           <div class="value-card">
-            <h3>Regulatory complexity absorbed</h3>
-            <p>ESC compliance, flexibility reporting, and audit documentation are built into KERN — not a manual process your team maintains. We carry the technical and regulatory complexity so you carry the customer relationship.</p>
+            <h3>{{ au_val3_h3 }}</h3>
+            <p>{{ au_val3_p }}</p>
           </div>
         </div>
       </section>
@@ -60,13 +60,13 @@
       <!-- What we build -->
       <section class="section">
         <div class="tech-stack">
-          <h3 style="font-size: 2rem; margin-bottom: 0.5rem;">What KERN delivers</h3>
-          <p style="font-size: 1.125rem; color: var(--text-muted); margin-bottom: 2rem;">One platform. Three asset classes. One integration.</p>
+          <h3 style="font-size: 2rem; margin-bottom: 0.5rem;">{{ au_what_h3 }}</h3>
+          <p style="font-size: 1.125rem; color: var(--text-muted); margin-bottom: 2rem;">{{ au_what_sub }}</p>
 
           <div class="tech-layers">
             <div class="tech-layer">
-              <h4>MIOTY wireless connectivity</h4>
-              <p>10km range, 1.5 million messages per day, ultra-low power. No WiFi, no consumer app dependency — works in basements, rural areas, and industrial sites. One gateway covers an entire neighbourhood or industrial zone.</p>
+              <h4>{{ au_tech1_h4 }}</h4>
+              <p>{{ au_tech1_p }}</p>
               <div class="tech-features">
                 <span class="tech-feature">IEC standard</span>
                 <span class="tech-feature">10km range</span>
@@ -76,8 +76,8 @@
             </div>
 
             <div class="tech-layer">
-              <h4>HEMS — residential assets</h4>
-              <p>Manage residential PV and battery portfolios. Optimise intraday trading, flexibility dispatch, and curtailment prevention — automatically, across thousands of homes.</p>
+              <h4>{{ au_tech2_h4 }}</h4>
+              <p>{{ au_tech2_p }}</p>
               <div class="tech-features">
                 <span class="tech-feature">PV + battery</span>
                 <span class="tech-feature">Intraday trading</span>
@@ -86,8 +86,8 @@
             </div>
 
             <div class="tech-layer">
-              <h4>ESC — energy sharing communities</h4>
-              <p>Community energy pooling built for Austrian and EU regulatory frameworks. Compliance is auditable and automated — not a spreadsheet your legal team reviews quarterly.</p>
+              <h4>{{ au_tech3_h4 }}</h4>
+              <p>{{ au_tech3_p }}</p>
               <div class="tech-features">
                 <span class="tech-feature">EU regulatory compliant</span>
                 <span class="tech-feature">Automated reporting</span>
@@ -96,8 +96,8 @@
             </div>
 
             <div class="tech-layer">
-              <h4>LSP — grid-scale flexibility</h4>
-              <p>Large Scale Plant management for grid-scale assets: BESS, industrial loads, and aggregated portfolios. Direct access to ancillary service and flexibility markets — no third-party aggregator required.</p>
+              <h4>{{ au_tech4_h4 }}</h4>
+              <p>{{ au_tech4_p }}</p>
               <div class="tech-features">
                 <span class="tech-feature">aFRR / FCR</span>
                 <span class="tech-feature">Direct market access</span>
@@ -111,24 +111,24 @@
       <!-- Proof points -->
       <section class="section">
         <div class="section-header">
-          <span class="section-tag">TRACK RECORD</span>
-          <h2 class="section-title">Validated, not promised</h2>
+          <span class="section-tag">{{ au_proof_tag }}</span>
+          <h2 class="section-title">{{ au_proof_h2 }}</h2>
         </div>
 
         <div class="value-grid">
           <div class="value-card">
-            <h3>Leading regional utility</h3>
-            <p>Validated with a leading regional utility. The deployment model, regulatory alignment, and economics are validated at regional scale — the same playbook applies to any regional utility territory.</p>
+            <h3>{{ au_proof1_h3 }}</h3>
+            <p>{{ au_proof1_p }}</p>
           </div>
 
           <div class="value-card">
-            <h3>MIOTY at scale</h3>
-            <p>1.5 million messages per day demonstrated capacity. IEC standardised — not proprietary lock-in. Partners aren't betting on a single vendor's survival; they're adopting a published standard.</p>
+            <h3>{{ au_proof2_h3 }}</h3>
+            <p>{{ au_proof2_p }}</p>
           </div>
 
           <div class="value-card">
-            <h3>Unit economics that work</h3>
-            <p>Hardware at €239 sell / €100 COGS — 58% margin. Platform ARR of €114 per HEMS household per year. The economics support utility bundle pricing and operator margin at scale.</p>
+            <h3>{{ au_proof3_h3 }}</h3>
+            <p>{{ au_proof3_p }}</p>
           </div>
         </div>
       </section>
@@ -136,8 +136,8 @@
       <!-- Leadership -->
       <section class="section">
         <div class="section-header">
-          <span class="section-tag">FOUNDERS</span>
-          <h2 class="section-title">The team behind KERN</h2>
+          <span class="section-tag">{{ au_founders_tag }}</span>
+          <h2 class="section-title">{{ au_founders_h2 }}</h2>
         </div>
 
         <div class="target-grid">
@@ -178,11 +178,11 @@
 
       <section class="section">
         <div class="cta-section">
-          <h2>Talk to the team</h2>
-          <p>Executive briefing, technical deep-dive, or partner conversation — we'll match the format to where you are.</p>
+          <h2>{{ au_cta_h2 }}</h2>
+          <p>{{ au_cta_p }}</p>
           <div class="cta-buttons">
-            <a href="/company/get-in-touch.html" class="btn btn-primary">Get in Touch</a>
-            <a href="/kern/" class="btn btn-secondary">Explore KERN</a>
+            <a href="/company/get-in-touch.html" class="btn btn-primary">{{ au_cta_primary }}</a>
+            <a href="/kern/" class="btn btn-secondary">{{ au_cta_secondary }}</a>
           </div>
         </div>
       </section>

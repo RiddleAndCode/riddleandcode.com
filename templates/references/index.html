@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-ga-id="G-6PKLPEVZNF">
+<html lang="{{ lang }}" data-ga-id="G-6PKLPEVZNF">
 <head>
   <meta charset="utf-8"/>
-  <title>References — KERN by Riddle&Code</title>
+  <title>{{ rp_meta_title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="description" content="R&C KERN running in production — live MV/LV microgrid, utility-owned aggregator, energy community platform. Visitable on request."/>
+  <meta name="description" content="{{ rp_meta_desc }}"/>
   <link rel="alternate" hreflang="en" href="https://riddleandcode.com/references/"/>
   <link rel="alternate" hreflang="de" href="https://riddleandcode.com/de/references/"/>
   <link rel="alternate" hreflang="x-default" href="https://riddleandcode.com/references/"/>
@@ -49,9 +49,9 @@
   <div id="nav-placeholder"></div>
 
   <div class="page-hero">
-    <span class="page-eyebrow">References</span>
-    <h1>Not a pilot.<br><strong>Running in production.</strong></h1>
-    <p class="lead">R&amp;C KERN is live — managing a real MV/LV grid, powering a flexibility aggregator and running an energy community platform. Visitable on request.</p>
+    <span class="page-eyebrow">{{ rp_eyebrow }}</span>
+    <h1>{{ rp_h1 }}</h1>
+    <p class="lead">{{ rp_lead }}</p>
   </div>
 
   <hr class="divider">
@@ -67,58 +67,58 @@
     <!-- Main reference -->
     <div class="ref-card">
       <div class="ref-card-header">
-        <span class="ref-tag">Live Reference — Austria</span>
-        <h2>A leading regional utility built their <strong>complete flexibility stack</strong> on R&amp;C KERN</h2>
+        <span class="ref-tag">{{ rp_ref_tag }}</span>
+        <h2>{{ rp_ref_h2 }}</h2>
       </div>
       <div class="ref-card-body">
         <div class="stack-items">
 
           <div class="stack-item">
-            <div class="si-label">Grid</div>
-            <div class="si-title">Live MV/LV Microgrid</div>
-            <div class="si-desc">Real medium and low-voltage grid in production. KERN managing all assets behind the meter — generation, storage, controllable loads.</div>
+            <div class="si-label">{{ rp_item1_label }}</div>
+            <div class="si-title">{{ rp_item1_title }}</div>
+            <div class="si-desc">{{ rp_item1_desc }}</div>
           </div>
 
           <div class="stack-item">
-            <div class="si-label">Aggregator</div>
-            <div class="si-title">Utility-owned Flexibility Aggregator</div>
-            <div class="si-desc">Utility subsidiary securing bids on Austrian energy markets. KERN provides autonomous dispatch with confirmed execution — enabling reliable bid fulfilment.</div>
+            <div class="si-label">{{ rp_item2_label }}</div>
+            <div class="si-title">{{ rp_item2_title }}</div>
+            <div class="si-desc">{{ rp_item2_desc }}</div>
           </div>
 
           <div class="stack-item">
-            <div class="si-label">Community</div>
-            <div class="si-title">Energy Community Platform</div>
-            <div class="si-desc">Energy community management running on KERN as the optimisation and control layer — autonomous asset coordination, collective self-consumption maximisation.</div>
+            <div class="si-label">{{ rp_item3_label }}</div>
+            <div class="si-title">{{ rp_item3_title }}</div>
+            <div class="si-desc">{{ rp_item3_desc }}</div>
           </div>
 
         </div>
 
         <div class="ref-visit">
           <p>
-            <strong style="color:var(--text-primary);">The system is visitable.</strong><br>
-            The live installation can be visited on request — a real microgrid, running KERN in production. Contact us to arrange a visit.
+            <strong style="color:var(--text-primary);">{{ rp_visit_strong }}</strong><br>
+            {{ rp_visit_p }}
           </p>
-          <a href="/company/get-in-touch.html" class="btn btn-primary">Request a Visit</a>
+          <a href="/company/get-in-touch.html" class="btn btn-primary">{{ rp_visit_cta }}</a>
         </div>
       </div>
     </div>
 
     <!-- Coming soon -->
     <div class="coming-soon">
-      <h3>More references coming</h3>
-      <p>Additional customer references are in preparation. We are currently seeking approval to publish by name.<br>
-      <a href="/company/get-in-touch.html" style="color:var(--primary-green);">Contact us</a> to speak directly with a reference customer.</p>
+      <h3>{{ rp_soon_h3 }}</h3>
+      <p>{{ rp_soon_p }}<br>
+      <a href="/company/get-in-touch.html" style="color:var(--primary-green);">{{ rp_soon_link }}</a> {{ rp_soon_suffix }}</p>
     </div>
 
   </section>
 
   <!-- CTA -->
   <section class="cta-strip">
-    <h2>See it running.</h2>
-    <p>A 30-minute call or an on-site visit — whichever is more useful for you.</p>
+    <h2>{{ rp_cta_h2 }}</h2>
+    <p>{{ rp_cta_p }}</p>
     <div class="btn-row">
-      <a href="/company/get-in-touch.html" class="btn btn-primary">Book a Demo or Visit</a>
-      <a href="/kern/" class="btn btn-secondary">Back to KERN →</a>
+      <a href="/company/get-in-touch.html" class="btn btn-primary">{{ rp_cta_primary }}</a>
+      <a href="/kern/" class="btn btn-secondary">{{ rp_cta_secondary }}</a>
     </div>
   </section>
 

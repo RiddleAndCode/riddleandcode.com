@@ -120,22 +120,61 @@
   function initNav(container) {
     const toggle = container.querySelector('#navToggle');
     const menu = container.querySelector('#navMenu');
-    
+
     if (toggle && menu) {
       toggle.addEventListener('click', function(e) {
         e.stopPropagation();
         menu.classList.toggle('active');
       });
-      
+
       document.addEventListener('click', function(event) {
         if (!toggle.contains(event.target) && !menu.contains(event.target)) {
           menu.classList.remove('active');
         }
       });
-      
+
       container.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => menu.classList.remove('active'));
       });
+    }
+
+    initLangToggle(container);
+  }
+
+  function initLangToggle(container) {
+    const path = window.location.pathname;
+    const isDE = path.startsWith('/de/') || path === '/de';
+
+    function altUrl(targetLang) {
+      if (targetLang === 'de') {
+        return '/de' + (path === '/' ? '/' : path);
+      } else {
+        return path.replace(/^\/de/, '') || '/';
+      }
+    }
+
+    const enLink = container.querySelector('#lang-en');
+    const deLink = container.querySelector('#lang-de');
+
+    if (enLink && deLink) {
+      enLink.href = altUrl('en');
+      deLink.href = altUrl('de');
+      (isDE ? deLink : enLink).classList.add('active');
+
+      enLink.addEventListener('click', () => localStorage.setItem('rnc-lang', 'en'));
+      deLink.addEventListener('click', () => localStorage.setItem('rnc-lang', 'de'));
+    }
+  }
+
+  function initAutoRedirect() {
+    // Only redirect on root homepage, not on DE pages or other paths
+    if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') return;
+    const saved = localStorage.getItem('rnc-lang');
+    if (saved) return; // user has explicit preference
+    const browserLang = (navigator.language || '').toLowerCase().slice(0, 2);
+    if (browserLang === 'de') {
+      localStorage.setItem('rnc-lang', 'de');
+      window.location.replace('/de/');
     }
   }
 
@@ -159,6 +198,7 @@
   // --- 5. INITIALIZATION ---
   
   function init() {
+    initAutoRedirect();
     initHead();
     loadComponents();
     initAnimations();

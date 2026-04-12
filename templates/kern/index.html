@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-ga-id="G-6PKLPEVZNF">
+<html lang="{{ lang }}" data-ga-id="G-6PKLPEVZNF">
 <head>
   <meta charset="utf-8"/>
-  <title>KERN by Riddle&Code — Autonomous Energy Platform</title>
+  <title>{{ ki_meta_title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="description" content="KERN is the autonomous energy management platform behind the meter — forecasting, dispatching and delivering flexibility for aggregators, utilities and energy communities."/>
+  <meta name="description" content="{{ ki_meta_desc }}"/>
   <link rel="alternate" hreflang="en" href="https://riddleandcode.com/kern/"/>
   <link rel="alternate" hreflang="de" href="https://riddleandcode.com/de/kern/"/>
   <link rel="alternate" hreflang="x-default" href="https://riddleandcode.com/kern/"/>
@@ -54,10 +54,10 @@
   <script src="/scripts/load-kern-product-bar.js"></script>
 
   <div class="page-hero">
-    <span class="page-eyebrow">Riddle&Code — Autonomous Energy Platform</span>
-    <h1><strong>Autonomous</strong> energy<br>behind the meter.</h1>
-    <p class="lead">KERN is the platform that sits behind the meter — autonomously optimising, forecasting and dispatching flexibility from households, facilities, microgrids and energy communities.</p>
-    <a href="/company/get-in-touch.html" class="btn btn-primary">Book a Demo</a>
+    <span class="page-eyebrow">{{ ki_eyebrow }}</span>
+    <h1>{{ ki_h1 }}</h1>
+    <p class="lead">{{ ki_lead }}</p>
+    <a href="/company/get-in-touch.html" class="btn btn-primary">{{ shared_book_demo }}</a>
   </div>
 
   <hr class="divider">
@@ -65,8 +65,8 @@
   <!-- Core concept -->
   <section class="content-section">
     <div class="concept-box">
-      <div class="big-statement">You send a signal.<br><strong>KERN delivers.</strong><br>What happens behind the meter is our job.</div>
-      <p class="sub">Aggregators, utilities and platforms interact with KERN through a clean API — forecast in, demand signal in, flexibility confirmed out. KERN handles everything in between: rebalancing, asset selection, dispatch, confirmation.</p>
+      <div class="big-statement">{{ ki_concept_stmt }}</div>
+      <p class="sub">{{ ki_concept_sub }}</p>
     </div>
   </section>
 
@@ -74,24 +74,24 @@
 
   <!-- Four contexts -->
   <section class="content-section">
-    <h2 class="section-heading">Optimising <strong>behind the meter</strong></h2>
-    <p class="section-sub">KERN works across four asset contexts — all on one platform.</p>
+    <h2 class="section-heading">{{ ki_contexts_h2 }}</h2>
+    <p class="section-sub">{{ ki_contexts_sub }}</p>
     <div class="context-grid">
       <div class="context-card">
-        <h3>Households</h3>
-        <p>PV + home storage + heat pump + EV charger — optimised as a unit. HEMS fleet management for utilities.</p>
+        <h3>{{ ki_ctx_household_h3 }}</h3>
+        <p>{{ ki_ctx_household_p }}</p>
       </div>
       <div class="context-card">
-        <h3>Commercial &amp; Industrial</h3>
-        <p>Commercial PV, BESS, CHP, controllable loads on MV/LV level. Peak shaving, load management, flexibility dispatch.</p>
+        <h3>{{ ki_ctx_ci_h3 }}</h3>
+        <p>{{ ki_ctx_ci_p }}</p>
       </div>
       <div class="context-card">
-        <h3>Microgrids</h3>
-        <p>Multiple assets behind a shared grid connection point. Coordinated optimisation, island-mode capable.</p>
+        <h3>{{ ki_ctx_micro_h3 }}</h3>
+        <p>{{ ki_ctx_micro_p }}</p>
       </div>
       <div class="context-card">
-        <h3>Energy Communities (ESC)</h3>
-        <p>Community optimisation across multiple members and meters. Shared self-consumption maximised, collective flexibility aggregated.</p>
+        <h3>{{ ki_ctx_esc_h3 }}</h3>
+        <p>{{ ki_ctx_esc_p }}</p>
       </div>
     </div>
   </section>
@@ -100,23 +100,23 @@
 
   <!-- Optimisation modes -->
   <section class="content-section">
-    <h2 class="section-heading">Three <strong>optimisation modes</strong></h2>
-    <p class="section-sub">Configurable per asset or portfolio — combinable.</p>
+    <h2 class="section-heading">{{ ki_modes_h2 }}</h2>
+    <p class="section-sub">{{ ki_modes_sub }}</p>
     <div class="modes-grid">
       <div class="mode-card">
-        <div class="mode-num">Mode 01</div>
-        <h3>Self-consumption</h3>
-        <p>Maximise local self-consumption. Minimise grid import and export. Default mode for households and small C&amp;I.</p>
+        <div class="mode-num">{{ ki_mode1_num }}</div>
+        <h3>{{ ki_mode1_h3 }}</h3>
+        <p>{{ ki_mode1_p }}</p>
       </div>
       <div class="mode-card">
-        <div class="mode-num">Mode 02</div>
-        <h3>Economic optimisation</h3>
-        <p>Maximise monetary yield — intraday arbitrage, FCR/aFRR bids, peak shaving, demand charge reduction. Default for aggregators and C&amp;I flexibility.</p>
+        <div class="mode-num">{{ ki_mode2_num }}</div>
+        <h3>{{ ki_mode2_h3 }}</h3>
+        <p>{{ ki_mode2_p }}</p>
       </div>
       <div class="mode-card">
-        <div class="mode-num">Mode 03</div>
-        <h3>Community optimisation</h3>
-        <p>Maximise shared self-consumption across multiple members. Fair allocation by share. Default for ESC and microgrids.</p>
+        <div class="mode-num">{{ ki_mode3_num }}</div>
+        <h3>{{ ki_mode3_h3 }}</h3>
+        <p>{{ ki_mode3_p }}</p>
       </div>
     </div>
   </section>
@@ -125,48 +125,48 @@
 
   <!-- Connectivity -->
   <section class="content-section">
-    <h2 class="section-heading">Connectivity <strong>by topology</strong></h2>
-    <p class="section-sub">The right technology for every asset configuration — both managed as one unified layer in KERN.</p>
+    <h2 class="section-heading">{{ ki_conn_h2 }}</h2>
+    <p class="section-sub">{{ ki_conn_sub }}</p>
     <div class="conn-grid">
       <div class="conn-card">
-        <div class="conn-use">Contiguous sites</div>
-        <h3>Zigbee Mesh</h3>
-        <p>For assets on the same premises — buildings, campuses, industrial sites. Low-cost, easy to deploy, self-healing mesh network. No complex gateway infrastructure required.</p>
+        <div class="conn-use">{{ ki_zigbee_use }}</div>
+        <h3>{{ ki_zigbee_h3 }}</h3>
+        <p>{{ ki_zigbee_p }}</p>
       </div>
       <div class="conn-card">
-        <div class="conn-use">Distributed assets</div>
-        <h3>MIOTY</h3>
-        <p>IEC-standard LPWAN for geographically dispersed assets — rural PV, MV-connected BESS, distributed sites. 10km range, 1.5M messages/day, independent of LTE and WiFi.</p>
+        <div class="conn-use">{{ ki_mioty_use }}</div>
+        <h3>{{ ki_mioty_h3 }}</h3>
+        <p>{{ ki_mioty_p }}</p>
       </div>
     </div>
-    <a href="/technology/" class="btn btn-secondary">Full technology overview →</a>
+    <a href="/technology/" class="btn btn-secondary">{{ ki_tech_link }}</a>
   </section>
 
   <hr class="divider">
 
   <!-- For whom -->
   <section class="content-section">
-    <h2 class="section-heading">KERN <strong>for your role</strong></h2>
+    <h2 class="section-heading">{{ ki_forwhom_h2 }}</h2>
     <div class="audience-nav">
       <a href="/kern/for-aggregators.html" class="audience-link">
-        <h3>Aggregators</h3>
-        <p>Secure bids with confirmed dispatch and 24h forecasts.</p>
-        <span class="link-cta">For aggregators →</span>
+        <h3>{{ ki_role_agg_h3 }}</h3>
+        <p>{{ ki_role_agg_p }}</p>
+        <span class="link-cta">{{ ki_role_agg_link }}</span>
       </a>
       <a href="/kern/for-utilities.html" class="audience-link">
-        <h3>Utilities</h3>
-        <p>Turn your customer base into a monetisable flexibility portfolio.</p>
-        <span class="link-cta">For utilities →</span>
+        <h3>{{ ki_role_util_h3 }}</h3>
+        <p>{{ ki_role_util_p }}</p>
+        <span class="link-cta">{{ ki_role_util_link }}</span>
       </a>
       <a href="/kern/for-communities.html" class="audience-link">
-        <h3>Energy Communities</h3>
-        <p>Autonomous self-consumption optimisation and flexibility aggregation.</p>
-        <span class="link-cta">For communities →</span>
+        <h3>{{ ki_role_comm_h3 }}</h3>
+        <p>{{ ki_role_comm_p }}</p>
+        <span class="link-cta">{{ ki_role_comm_link }}</span>
       </a>
       <a href="/kern/for-platforms.html" class="audience-link">
-        <h3>VPP Platforms</h3>
-        <p>Close the asset layer gap below your platform with a clean API.</p>
-        <span class="link-cta">For platforms →</span>
+        <h3>{{ ki_role_vpp_h3 }}</h3>
+        <p>{{ ki_role_vpp_p }}</p>
+        <span class="link-cta">{{ ki_role_vpp_link }}</span>
       </a>
     </div>
   </section>

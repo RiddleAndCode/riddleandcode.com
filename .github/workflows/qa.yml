@@ -8,6 +8,17 @@ on:
 
 jobs:
 
+  # ── 0. Build freshness ──────────────────────────────────────────────────────
+  build-fresh:
+    name: Build freshness check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Check generated files match templates
+        run: python3 build.py --check
+
   # ── 1. Typos ────────────────────────────────────────────────────────────────
   typos:
     name: Typo check

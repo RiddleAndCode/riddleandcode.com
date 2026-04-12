@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-ga-id="G-6PKLPEVZNF">
+<html lang="{{ lang }}" data-ga-id="G-6PKLPEVZNF">
 <head>
   <meta charset="utf-8"/>
-  <title>KERN for VPP Platforms — Riddle&Code</title>
+  <title>{{ kp_meta_title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="description" content="Close the gap below your VPP platform. KERN delivers normalised telemetry, confirmed dispatch and 24h forecasts for every asset your clients have."/>
+  <meta name="description" content="{{ kp_meta_desc }}"/>
   <link rel="alternate" hreflang="en" href="https://riddleandcode.com/kern/for-platforms.html"/>
   <link rel="alternate" hreflang="de" href="https://riddleandcode.com/de/kern/for-platforms.html"/>
   <link rel="alternate" hreflang="x-default" href="https://riddleandcode.com/kern/for-platforms.html"/>
@@ -51,17 +51,17 @@
   <script src="/scripts/load-kern-product-bar.js"></script>
 
   <div class="page-hero">
-    <span class="page-eyebrow">KERN — For VPP Platforms</span>
-    <h1>Your platform is strong<br><strong>above the asset layer.</strong><br>KERN closes the gap below.</h1>
-    <p class="lead">KERN integrates below your VPP as the asset management and connectivity layer. Your platform gets a clean, normalised API feed, confirmed dispatch and 24h flexibility forecasts — for every asset your clients have, including those currently unreachable.</p>
-    <a href="/company/get-in-touch.html" class="btn btn-primary">Discuss API Integration</a>
+    <span class="page-eyebrow">{{ kp_eyebrow }}</span>
+    <h1>{{ kp_h1 }}</h1>
+    <p class="lead">{{ kp_lead }}</p>
+    <a href="/company/get-in-touch.html" class="btn btn-primary">{{ kp_hero_cta }}</a>
   </div>
 
   <hr class="divider">
 
   <!-- Stack visual -->
   <section class="content-section">
-    <h2 class="section-heading">Where KERN <strong>fits in your stack</strong></h2>
+    <h2 class="section-heading">{{ kp_stack_h2 }}</h2>
     <div class="stack-visual">
 <pre><span class="dim">Market / TSO / Grid Operator</span>
          ↓
@@ -92,25 +92,25 @@
 
   <!-- Pains -->
   <section class="content-section">
-    <h2 class="section-heading">Three gaps <strong>KERN fills</strong></h2>
+    <h2 class="section-heading">{{ kp_pains_h2 }}</h2>
     <div class="pain-grid">
 
       <div class="pain-card">
-        <div class="pain-title">Assets with unreliable connectivity stay out of the portfolio</div>
-        <div class="pain-desc">Rural sites, industrial premises, basements — LTE drops, WiFi is unstable. Your clients can't bring these assets into your platform. Potential stays on the table.</div>
-        <div class="pain-solution">MIOTY (10km, IEC standard) and Zigbee Mesh make every asset reachable — your clients grow their portfolio without infrastructure investment.</div>
+        <div class="pain-title">{{ kp_pain1_title }}</div>
+        <div class="pain-desc">{{ kp_pain1_desc }}</div>
+        <div class="pain-solution">{{ kp_pain1_sol }}</div>
       </div>
 
       <div class="pain-card">
-        <div class="pain-title">No dispatch feedback — the loop is open</div>
-        <div class="pain-desc">Your platform sends commands — but whether the asset responded stays unknown until the next meter reading. Deviations are detected too late, penalties hit your clients.</div>
-        <div class="pain-solution">KERN confirms every dispatch at asset level and reports back in real-time. Your platform knows immediately whether the flexibility commitment is being met.</div>
+        <div class="pain-title">{{ kp_pain2_title }}</div>
+        <div class="pain-desc">{{ kp_pain2_desc }}</div>
+        <div class="pain-solution">{{ kp_pain2_sol }}</div>
       </div>
 
       <div class="pain-card">
-        <div class="pain-title">Heterogeneous assets increase integration overhead</div>
-        <div class="pain-desc">Every new asset type, every new manufacturer, every new protocol means integration effort — for you or your clients. This slows onboarding and limits scale.</div>
-        <div class="pain-solution">KERN normalises all asset types to a single data model. Your platform speaks to KERN — not to every asset individually.</div>
+        <div class="pain-title">{{ kp_pain3_title }}</div>
+        <div class="pain-desc">{{ kp_pain3_desc }}</div>
+        <div class="pain-solution">{{ kp_pain3_sol }}</div>
       </div>
 
     </div>
@@ -120,49 +120,49 @@
 
   <!-- What KERN delivers -->
   <section class="content-section">
-    <h2 class="section-heading">What your platform <strong>gets from KERN</strong></h2>
+    <h2 class="section-heading">{{ kp_what_h2 }}</h2>
     <div class="what-grid">
       <div class="what-card">
-        <h3>Clean, normalised API feed</h3>
-        <p>Unified telemetry regardless of how many asset types, manufacturers or protocols are behind it. One integration, all assets.</p>
+        <h3>{{ kp_what1_h3 }}</h3>
+        <p>{{ kp_what1_p }}</p>
       </div>
       <div class="what-card">
-        <h3>Dispatch with confirmation</h3>
-        <p>KERN receives your dispatch command, executes at asset level and reports back whether and how it was fulfilled.</p>
+        <h3>{{ kp_what2_h3 }}</h3>
+        <p>{{ kp_what2_p }}</p>
       </div>
       <div class="what-card">
-        <h3>24h flexibility forecast</h3>
-        <p>Rolling forecast per asset and portfolio — what flexibility is genuinely available, when. More precise bids, better outcomes for your clients.</p>
+        <h3>{{ kp_what3_h3 }}</h3>
+        <p>{{ kp_what3_p }}</p>
       </div>
       <div class="what-card">
-        <h3>More assets in the portfolio</h3>
-        <p>Assets currently excluded due to connectivity become available. Your clients grow their dispatchable portfolio without CAPEX.</p>
+        <h3>{{ kp_what4_h3 }}</h3>
+        <p>{{ kp_what4_p }}</p>
       </div>
     </div>
 
-    <h2 class="section-heading" style="margin-top:var(--spacing-md);">Integration <strong>options</strong></h2>
+    <h2 class="section-heading" style="margin-top:var(--spacing-md);">{{ kp_integ_h2 }}</h2>
     <table class="integration-table">
       <thead>
         <tr>
-          <th>Model</th>
-          <th>Description</th>
-          <th>Effort</th>
+          <th>{{ kp_integ_th1 }}</th>
+          <th>{{ kp_integ_th2 }}</th>
+          <th>{{ kp_integ_th3 }}</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td><strong>API integration</strong></td>
-          <td>KERN delivers normalised telemetry and accepts dispatch commands via REST/WebSocket. Your platform remains primary.</td>
+          <td><strong>{{ kp_integ1_model }}</strong></td>
+          <td>{{ kp_integ1_desc }}</td>
           <td><span class="tag">Low</span></td>
         </tr>
         <tr>
-          <td><strong>White-label</strong></td>
-          <td>KERN runs under your brand as an "Asset Connectivity Module" for your clients.</td>
+          <td><strong>{{ kp_integ2_model }}</strong></td>
+          <td>{{ kp_integ2_desc }}</td>
           <td><span class="tag">Medium</span></td>
         </tr>
         <tr>
-          <td><strong>Pilot</strong></td>
-          <td>One client, one asset class, defined scope — fast to start, low risk.</td>
+          <td><strong>{{ kp_integ3_model }}</strong></td>
+          <td>{{ kp_integ3_desc }}</td>
           <td><span class="tag">Minimal</span></td>
         </tr>
       </tbody>
@@ -171,10 +171,10 @@
 
   <!-- CTA -->
   <section class="cta-strip">
-    <h2>Let's discuss the API.</h2>
-    <p>30 minutes to go through the spec and identify which of your clients' assets are currently excluded — and how quickly that changes with KERN.</p>
+    <h2>{{ kp_cta_h2 }}</h2>
+    <p>{{ kp_cta_p }}</p>
     <div class="btn-row">
-      <a href="/company/get-in-touch.html" class="btn btn-primary">Discuss API Integration</a>
+      <a href="/company/get-in-touch.html" class="btn btn-primary">{{ kp_cta_primary }}</a>
       <a href="/technology/" class="btn btn-secondary">Explore the Technology</a>
     </div>
   </section>

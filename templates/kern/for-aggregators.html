@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" data-ga-id="G-6PKLPEVZNF">
+<html lang="{{ lang }}" data-ga-id="G-6PKLPEVZNF">
 <head>
   <meta charset="utf-8"/>
-  <title>KERN for Aggregators — Riddle&Code</title>
+  <title>{{ ka_meta_title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="description" content="Secure your flexibility bids every time. KERN autonomously dispatches and confirms execution behind the meter — no manual intervention, no penalties."/>
+  <meta name="description" content="{{ ka_meta_desc }}"/>
   <link rel="alternate" hreflang="en" href="https://riddleandcode.com/kern/for-aggregators.html"/>
   <link rel="alternate" hreflang="de" href="https://riddleandcode.com/de/kern/for-aggregators.html"/>
   <link rel="alternate" hreflang="x-default" href="https://riddleandcode.com/kern/for-aggregators.html"/>
@@ -48,9 +48,9 @@
   <script src="/scripts/load-kern-product-bar.js"></script>
 
   <div class="page-hero">
-    <span class="page-eyebrow">KERN — For Aggregators</span>
-    <h1>Your bids are only as good as<br><strong>what's behind the meter.</strong></h1>
-    <p class="lead">KERN acts as an autonomous sub-aggregator behind the meter. You send a flexibility signal — KERN decides which assets to dispatch, executes via MIOTY or Zigbee, and confirms delivery back to you. No manual intervention. No missed bids.</p>
+    <span class="page-eyebrow">{{ ka_eyebrow }}</span>
+    <h1>{{ ka_h1 }}</h1>
+    <p class="lead">{{ ka_lead }}</p>
     <a href="/company/get-in-touch.html" class="btn btn-primary">Book a Demo</a>
   </div>
 
@@ -58,37 +58,37 @@
 
   <!-- Pains -->
   <section class="content-section">
-    <h2 class="section-heading">The five pains <strong>KERN solves</strong></h2>
+    <h2 class="section-heading">{{ ka_pains_h2 }}</h2>
     <div class="pain-grid">
 
       <div class="pain-card solved">
-        <div class="pain-title">Unreliable connectivity to distributed assets</div>
-        <div class="pain-desc">Rural BESS sites, industrial premises, basements — LTE drops, WiFi is unstable. Assets can't be committed to bids. Portfolio size is limited by infrastructure, not by availability.</div>
-        <div class="pain-solution">MIOTY (10km, 1.5M msg/day, IEC standard) and Zigbee Mesh connect every asset — independent of LTE and WiFi.</div>
+        <div class="pain-title">{{ ka_pain1_title }}</div>
+        <div class="pain-desc">{{ ka_pain1_desc }}</div>
+        <div class="pain-solution">{{ ka_pain1_sol }}</div>
       </div>
 
       <div class="pain-card solved">
-        <div class="pain-title">No dispatch confirmation</div>
-        <div class="pain-desc">Bid placed, dispatch sent — whether the asset responded remains unknown until the next meter reading. Deviations are detected too late.</div>
-        <div class="pain-solution">Every dispatch is confirmed at asset level and reported back in real-time. You know immediately whether the bid is being fulfilled.</div>
+        <div class="pain-title">{{ ka_pain2_title }}</div>
+        <div class="pain-desc">{{ ka_pain2_desc }}</div>
+        <div class="pain-solution">{{ ka_pain2_sol }}</div>
       </div>
 
       <div class="pain-card solved">
-        <div class="pain-title">Manual response to forecast deviations</div>
-        <div class="pain-desc">Weather change, load shift, asset failure — someone has to notice, decide and intervene. This doesn't scale.</div>
-        <div class="pain-solution">KERN continuously compares actual asset state against bid position and rebalances autonomously — before the deviation becomes critical.</div>
+        <div class="pain-title">{{ ka_pain3_title }}</div>
+        <div class="pain-desc">{{ ka_pain3_desc }}</div>
+        <div class="pain-solution">{{ ka_pain3_sol }}</div>
       </div>
 
       <div class="pain-card solved">
-        <div class="pain-title">Poor forecast quality without asset visibility</div>
-        <div class="pain-desc">Without real-time telemetry at asset level, flexibility forecasts are estimates. Overbidding means penalties. Underbidding means lost revenue.</div>
-        <div class="pain-solution">Rolling 24h flexibility forecast per asset and portfolio — based on live telemetry, state of charge, weather data and historical patterns.</div>
+        <div class="pain-title">{{ ka_pain4_title }}</div>
+        <div class="pain-desc">{{ ka_pain4_desc }}</div>
+        <div class="pain-solution">{{ ka_pain4_sol }}</div>
       </div>
 
       <div class="pain-card solved">
-        <div class="pain-title">Operational overhead scales with portfolio</div>
-        <div class="pain-desc">Every new asset, every new site, every new asset class adds complexity. Growth requires more team, more monitoring, more manual dispatch management.</div>
-        <div class="pain-solution">New assets are onboarded into KERN — the aggregator gets more flexibility capacity, not more operational burden.</div>
+        <div class="pain-title">{{ ka_pain5_title }}</div>
+        <div class="pain-desc">{{ ka_pain5_desc }}</div>
+        <div class="pain-solution">{{ ka_pain5_sol }}</div>
       </div>
 
     </div>
@@ -98,7 +98,7 @@
 
   <!-- Operative loop -->
   <section class="content-section">
-    <h2 class="section-heading">The <strong>operative loop</strong></h2>
+    <h2 class="section-heading">{{ ka_loop_h2 }}</h2>
     <div class="loop-block">
 <pre><span class="highlight">1. FORECAST</span>  (rolling, 24h ahead)
    KERN calculates per asset and portfolio:
@@ -127,7 +127,7 @@
    Next forecast cycle starts.</pre>
     </div>
     <p style="color:var(--text-muted); font-size:0.9rem; text-align:center;">
-      You interact with steps 1 and 2. Everything else is KERN.
+      {{ ka_loop_note }}
     </p>
   </section>
 
@@ -135,12 +135,12 @@
 
   <!-- Reference -->
   <section class="content-section">
-    <h2 class="section-heading">Proven in <strong>production</strong></h2>
+    <h2 class="section-heading">{{ ka_ref_h2 }}</h2>
     <div class="reference-strip">
       <div>
         <div class="reference-quote">
-          "A leading regional utility uses KERN to power their flexibility aggregator — securing bids on energy markets with confirmed dispatch from MV/LV assets."
-          <div class="reference-meta">Live system · MV/LV microgrid · Visitable on request</div>
+          "{{ ka_ref_quote }}"
+          <div class="reference-meta">{{ ka_ref_meta }}</div>
         </div>
       </div>
       <a href="/references/" class="btn btn-secondary" style="flex-shrink:0;align-self:center;">See full reference →</a>
@@ -149,8 +149,8 @@
 
   <!-- CTA -->
   <section class="cta-strip">
-    <h2>Ready to secure every bid?</h2>
-    <p>30 minutes to show you how KERN fits into your existing dispatch stack — and which assets you can add to your portfolio today.</p>
+    <h2>{{ ka_cta_h2 }}</h2>
+    <p>{{ ka_cta_p }}</p>
     <div class="btn-row">
       <a href="/company/get-in-touch.html" class="btn btn-primary">Book a Demo</a>
       <a href="/technology/" class="btn btn-secondary">Explore the Technology</a>
