@@ -14,11 +14,16 @@
   <style>
     /* ── Hero ── */
     .hero-home {
-      max-width: 1400px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: var(--spacing-xl) 2rem var(--spacing-lg);
-      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4rem;
+      align-items: center;
     }
+
+    .hero-text { text-align: left; }
 
     .hero-eyebrow {
       display: inline-block;
@@ -29,7 +34,7 @@
       color: var(--primary-green);
       margin-bottom: 1.5rem;
       padding: 0.35rem 1rem;
-      border: 1px solid rgba(0,255,136,0.3);
+      border: 1px solid rgba(245,158,11,0.3);
       border-radius: 100px;
     }
 
@@ -50,17 +55,51 @@
     .hero-sub {
       font-size: clamp(1rem, 1.8vw, 1.25rem);
       color: var(--text-muted);
-      max-width: 640px;
-      margin: 0 auto 2.5rem;
+      max-width: 560px;
+      margin: 0 0 2.5rem;
       line-height: 1.7;
     }
 
     .hero-actions {
       display: flex;
       gap: 1rem;
-      justify-content: center;
+      justify-content: flex-start;
       flex-wrap: wrap;
-      margin-bottom: var(--spacing-lg);
+      margin-bottom: 0;
+    }
+
+    /* KERN logo column */
+    .hero-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .hero-logo-rings {
+      opacity: 0.9;
+      filter: drop-shadow(0 0 32px rgba(245,158,11,0.2));
+    }
+
+    .hero-logo-wordmark {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.35em;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 860px) {
+      .hero-home {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+      }
+      .hero-text { text-align: center; }
+      .hero-logo { order: -1; }
+      .hero-sub { margin: 0 auto 2.5rem; }
+      .hero-actions { justify-content: center; }
     }
 
     /* ── Stats bar ── */
@@ -337,17 +376,32 @@
 
   <!-- Hero -->
   <section class="hero-home">
-    <div class="hero-eyebrow">Riddle<strong style="color: var(--kern-accent);">&amp;</strong>Code — Vienna</div>
-    <h1>
-      Infrastructure for<br><strong>distributed energy.</strong>
-    </h1>
-    <p class="hero-sub">
-      We build the platform utilities and aggregators use to connect, dispatch and monetise distributed energy assets at scale.
-      Our product is <strong style="color: var(--text-primary);">KERN</strong>.
-    </p>
-    <div class="hero-actions">
-      <a href="/kern/" class="btn btn-primary">Discover KERN →</a>
-      <a href="/company/get-in-touch.html" class="btn btn-secondary">Book a Demo</a>
+    <div class="hero-text">
+      <div class="hero-eyebrow">Riddle<strong style="color: var(--kern-accent);">&amp;</strong>Code — Vienna</div>
+      <h1>
+        Infrastructure for<br><strong>distributed energy.</strong>
+      </h1>
+      <p class="hero-sub">
+        We build the platform utilities and aggregators use to connect, dispatch and monetise distributed energy assets at scale.
+        Our product is <strong style="color: var(--text-primary);">KERN</strong>.
+      </p>
+      <div class="hero-actions">
+        <a href="/kern/" class="btn btn-primary">Discover KERN →</a>
+        <a href="/company/get-in-touch.html" class="btn btn-secondary">Book a Demo</a>
+      </div>
+    </div>
+
+    <!-- KERN logo -->
+    <div class="hero-logo">
+      <svg class="hero-logo-rings" viewBox="0 0 220 220" width="220" height="220" xmlns="http://www.w3.org/2000/svg" aria-label="KERN">
+        <circle cx="110" cy="110" r="100" fill="none" stroke="#ffffff" stroke-width="1"   opacity="0.10"/>
+        <circle cx="110" cy="110" r="76"  fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.22"/>
+        <circle cx="110" cy="110" r="54"  fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.40"/>
+        <circle cx="110" cy="110" r="34"  fill="none" stroke="#F59E0B" stroke-width="1.8" opacity="0.60"/>
+        <circle cx="110" cy="110" r="16"  fill="none" stroke="#F59E0B" stroke-width="2.5" opacity="0.85"/>
+        <circle cx="110" cy="110" r="6"   fill="#F59E0B"/>
+      </svg>
+      <span class="hero-logo-wordmark">KERN</span>
     </div>
   </section>
 
