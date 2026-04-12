@@ -1,13 +1,13 @@
 # ──────────────────────────────────────────────────────────────────────────────
-# Riddle&Code Website — Deutsche Locale
+# Riddle&amp;Code Website — Deutsche Locale
 # HTML ist in Werten erlaubt; YAML-doppelt-gequotete Strings verwenden.
 # ──────────────────────────────────────────────────────────────────────────────
 
 # ── Meta ──────────────────────────────────────────────────────────────────────
-meta_title: "Riddle&Code — Autonome Energie. Hinter dem Zähler."
-meta_description: "R&C KERN prognostiziert, steuert und liefert Flexibilität hinter dem Zähler autonom — für Aggregatoren, Energieversorger und Energiegemeinschaften."
-meta_og_title: "Riddle&Code — Autonome Energie. Hinter dem Zähler."
-meta_og_description: "R&C KERN prognostiziert, steuert und liefert Flexibilität hinter dem Zähler autonom."
+meta_title: "Riddle&amp;Code — Autonome Energie. Hinter dem Zähler."
+meta_description: "R&amp;C KERN prognostiziert, steuert und liefert Flexibilität hinter dem Zähler autonom — für Aggregatoren, Energieversorger und Energiegemeinschaften."
+meta_og_title: "Riddle&amp;Code — Autonome Energie. Hinter dem Zähler."
+meta_og_description: "R&amp;C KERN prognostiziert, steuert und liefert Flexibilität hinter dem Zähler autonom."
 
 # ── Hero ──────────────────────────────────────────────────────────────────────
 hero_location: Wien
@@ -79,10 +79,10 @@ shared_see_ref: "Vollständige Referenz ansehen →"
 # ══════════════════════════════════════════════════════════════════════════════
 # KERN-Übersichtsseite (kern/index.html)
 # ══════════════════════════════════════════════════════════════════════════════
-ki_meta_title: "KERN by Riddle&Code — Autonome Energieplattform"
+ki_meta_title: "KERN by Riddle&amp;Code — Autonome Energieplattform"
 ki_meta_desc: "KERN ist die autonome Energiemanagementplattform hinter dem Zähler — prognostiziert, steuert und liefert Flexibilität für Aggregatoren, Energieversorger und Energiegemeinschaften."
 
-ki_eyebrow: "Riddle&Code — Autonome Energieplattform"
+ki_eyebrow: "Riddle&amp;Code — Autonome Energieplattform"
 ki_h1: "<strong>Autonome</strong> Energie<br>hinter dem Zähler."
 ki_lead: "KERN ist die Plattform hinter dem Zähler — optimiert, prognostiziert und steuert Flexibilität aus Haushalten, Gewerbebetrieben, Microgrids und Energiegemeinschaften autonom."
 
@@ -139,8 +139,8 @@ ki_role_vpp_link: "Für Plattformen →"
 # ══════════════════════════════════════════════════════════════════════════════
 # KERN für Energieversorger (kern/for-utilities.html)
 # ══════════════════════════════════════════════════════════════════════════════
-ku_meta_title: "KERN für Energieversorger — Riddle&Code"
-ku_meta_desc: "Verwandeln Sie Ihren Kundenstamm in ein steuerbares Flexibilitätsportfolio. KERN verwaltet HEMS-Flotten, Energiegemeinschaften und G&I-Anlagen — autonom, auf einer Plattform."
+ku_meta_title: "KERN für Energieversorger — Riddle&amp;Code"
+ku_meta_desc: "Verwandeln Sie Ihren Kundenstamm in ein steuerbares Flexibilitätsportfolio. KERN verwaltet HEMS-Flotten, Energiegemeinschaften und G&amp;I-Anlagen — autonom, auf einer Plattform."
 
 ku_eyebrow: "KERN — Für Energieversorger"
 ku_h1: "Sie haben die Kunden.<br>Sie haben die Anlagen.<br><strong>KERN verbindet sie.</strong>"
@@ -187,7 +187,7 @@ ku_cta_p: "30 Minuten, um zu zeigen, welche Anlagen in Ihrem Netz für KERN bere
 # ══════════════════════════════════════════════════════════════════════════════
 # KERN für Aggregatoren (kern/for-aggregators.html)
 # ══════════════════════════════════════════════════════════════════════════════
-ka_meta_title: "KERN für Aggregatoren — Riddle&Code"
+ka_meta_title: "KERN für Aggregatoren — Riddle&amp;Code"
 ka_meta_desc: "Sichern Sie Ihre Flexibilitätsgebote jedes Mal ab. KERN steuert und bestätigt die Ausführung hinter dem Zähler autonom — ohne manuelle Eingriffe, ohne Pönalen."
 ka_eyebrow: "KERN — Für Aggregatoren"
 ka_h1: "Ihre Gebote sind nur so gut wie<br><strong>was hinter dem Zähler steht.</strong>"
@@ -219,7 +219,7 @@ ka_cta_p: "30 Minuten, um Ihnen zu zeigen, wie KERN in Ihren bestehenden Steueru
 # ══════════════════════════════════════════════════════════════════════════════
 # KERN für Energiegemeinschaften (kern/for-communities.html)
 # ══════════════════════════════════════════════════════════════════════════════
-kc_meta_title: "KERN für Energiegemeinschaften — Riddle&Code"
+kc_meta_title: "KERN für Energiegemeinschaften — Riddle&amp;Code"
 kc_meta_desc: "Maximieren Sie den gemeinsamen Eigenverbrauch automatisch. KERN optimiert jedes Asset in der Gemeinschaft und verbindet kollektive Flexibilität mit Märkten."
 kc_eyebrow: "KERN — Für Energiegemeinschaften"
 kc_h1: "Ihre Gemeinschaft erzeugt Energie.<br><strong>KERN behält sie in der Gemeinschaft.</strong>"
@@ -263,7 +263,7 @@ kc_cta_p: "30 Minuten, um zu zeigen, wie KERN eine Live-Energiegemeinschaft opti
 # ══════════════════════════════════════════════════════════════════════════════
 # KERN für VPP-Plattformen (kern/for-platforms.html)
 # ══════════════════════════════════════════════════════════════════════════════
-kp_meta_title: "KERN für VPP-Plattformen — Riddle&Code"
+kp_meta_title: "KERN für VPP-Plattformen — Riddle&amp;Code"
 kp_meta_desc: "Schließen Sie die Lücke unter Ihrer VPP-Plattform. KERN liefert normalisierte Telemetrie, bestätigte Steuerung und 24-h-Prognosen für alle Assets Ihrer Kunden."
 kp_eyebrow: "KERN — Für VPP-Plattformen"
 kp_h1: "Ihre Plattform ist stark<br><strong>oberhalb der Asset-Ebene.</strong><br>KERN schließt die Lücke darunter."
@@ -306,8 +306,8 @@ kp_cta_primary: "API-Integration besprechen"
 # ══════════════════════════════════════════════════════════════════════════════
 # Referenzen (references/index.html)
 # ══════════════════════════════════════════════════════════════════════════════
-rp_meta_title: "Referenzen — KERN by Riddle&Code"
-rp_meta_desc: "R&C KERN im Produktiveinsatz — Live-MV/LV-Microgrid, versorgereigener Aggregator, Energiegemeinschaftsplattform. Besichtigung auf Anfrage."
+rp_meta_title: "Referenzen — KERN by Riddle&amp;Code"
+rp_meta_desc: "R&amp;C KERN im Produktiveinsatz — Live-MV/LV-Microgrid, versorgereigener Aggregator, Energiegemeinschaftsplattform. Besichtigung auf Anfrage."
 rp_eyebrow: Referenzen
 rp_h1: "Kein Pilotprojekt.<br><strong>Im Produktiveinsatz.</strong>"
 rp_lead: "R&amp;C KERN ist live — verwaltet ein echtes MV/LV-Netz, betreibt einen Flexibilitätsaggregator und führt eine Energiegemeinschaftsplattform. Besichtigung auf Anfrage."
@@ -337,7 +337,7 @@ rp_cta_secondary: "Zurück zu KERN →"
 # ══════════════════════════════════════════════════════════════════════════════
 # Technologie (technology/index.html)
 # ══════════════════════════════════════════════════════════════════════════════
-tech_meta_title: "Technologie — KERN by Riddle&Code"
+tech_meta_title: "Technologie — KERN by Riddle&amp;Code"
 tech_meta_desc: "MIOTY, Zigbee Mesh, 24-h-Flexibilitätsprognosen und autonome Steuerung — die Technologie hinter KERN."
 tech_eyebrow: Technologie
 tech_h1: "Gebaut für Energieinfrastruktur.<br><strong>Nicht aus dem IoT adaptiert.</strong>"
@@ -371,11 +371,11 @@ tech_cta: "Technische Demo buchen"
 # ══════════════════════════════════════════════════════════════════════════════
 # Über uns (company/about-us.html)
 # ══════════════════════════════════════════════════════════════════════════════
-au_meta_title: "Über Riddle&Code — Infrastruktur für verteilte Energie"
-au_meta_desc: "Riddle&Code baut KERN — die Infrastrukturplattform für verteiltes Energiemanagement. Für Energieversorger, Aggregatoren und Gemeinschaften in ganz Europa."
+au_meta_title: "Über Riddle&amp;Code — Infrastruktur für verteilte Energie"
+au_meta_desc: "Riddle&amp;Code baut KERN — die Infrastrukturplattform für verteiltes Energiemanagement. Für Energieversorger, Aggregatoren und Gemeinschaften in ganz Europa."
 au_eyebrow: "Wien, Österreich"
 au_h1: "Infrastruktur für<br><span class=\"highlight\">verteilte Energie.</span>"
-au_sub: "Riddle&Code baut KERN — die Plattform, mit der Energieversorger und Aggregatoren verteilte Energieanlagen verbinden, verwalten und monetarisieren. Wir besitzen den gesamten Stack: Hardware, Konnektivität, Plattform und Marktzugang."
+au_sub: "Riddle&amp;Code baut KERN — die Plattform, mit der Energieversorger und Aggregatoren verteilte Energieanlagen verbinden, verwalten und monetarisieren. Wir besitzen den gesamten Stack: Hardware, Konnektivität, Plattform und Marktzugang."
 au_why_tag: "WARUM WIR EXISTIEREN"
 au_why_h2: "Die Infrastrukturlücke in der Energiewende"
 au_why_desc: "Dezentrale Energiequellen nehmen zu — Dachsolar, Batterien, Wärmepumpen, Ladestationen. Energieversorger stehen vor Flexibilitätsverpflichtungen. Aggregatoren brauchen Skalierung. Niemand wollte die Konnektivitäts- und Compliance-Schicht von Grund auf neu aufbauen.<br><br>Wir haben es getan."
@@ -413,7 +413,7 @@ au_cta_secondary: "KERN entdecken"
 # ══════════════════════════════════════════════════════════════════════════════
 # Kontakt (company/get-in-touch.html)
 # ══════════════════════════════════════════════════════════════════════════════
-git_meta_title: "Kontakt — KERN by Riddle&Code"
+git_meta_title: "Kontakt — KERN by Riddle&amp;Code"
 git_meta_desc: "Demo buchen, Besuch der Live-Referenzanlage vereinbaren oder besprechen, wie KERN in Ihre Infrastruktur passt."
 git_h1: "Sprechen wir.<br><strong>Kontakt aufnehmen</strong>"
 git_sub: "Demo buchen, Besuch unserer Live-Referenzanlage vereinbaren oder besprechen, wie KERN in Ihren Versorger- oder Aggregator-Stack passt."
@@ -446,13 +446,13 @@ git_cta_secondary: "KERN kennenlernen"
 # ══════════════════════════════════════════════════════════════════════════════
 # Medien (company/media.html)
 # ══════════════════════════════════════════════════════════════════════════════
-med_meta_title: "Medien — Riddle&Code"
-med_meta_desc: "Pressemappe, Markenlogos, Bildmaterial und Medienkontakt für Riddle&Code und KERN."
+med_meta_title: "Medien — Riddle&amp;Code"
+med_meta_desc: "Pressemappe, Markenlogos, Bildmaterial und Medienkontakt für Riddle&amp;Code und KERN."
 med_h1: "Media Hub.<br><strong>Pressemappe &amp; Markenressourcen</strong>"
-med_sub: "Willkommen im Media Hub von Riddle&Code. Hier finden Sie unsere Pressemappe, Markenlogos, Bildmaterial und Informationen zu unseren Medienaktivitäten."
+med_sub: "Willkommen im Media Hub von Riddle&amp;Code. Hier finden Sie unsere Pressemappe, Markenlogos, Bildmaterial und Informationen zu unseren Medienaktivitäten."
 med_who_tag: "ÜBER UNS"
 med_who_h2: "Wer wir sind"
-med_who_p1: "Riddle&Code baut KERN — die Infrastrukturplattform für dezentrales Energiemanagement. Wir bedienen Energieversorger, Aggregatoren und Energiegemeinschaften in ganz Europa mit autonomer Asset-Konnektivität, Flexibilitätsprognosen und -steuerung."
+med_who_p1: "Riddle&amp;Code baut KERN — die Infrastrukturplattform für dezentrales Energiemanagement. Wir bedienen Energieversorger, Aggregatoren und Energiegemeinschaften in ganz Europa mit autonomer Asset-Konnektivität, Flexibilitätsprognosen und -steuerung."
 med_who_p2: "Unsere Technologie, einschließlich MIOTY-Funkkonnektivität und autonomer Steuerung, ist im Produktiveinsatz bei einem führenden regionalen Energieversorger in Österreich — mit einem Live-MV/LV-Microgrid, Flexibilitätsaggregator und Energiegemeinschaftsplattform."
 med_dl_tag: DOWNLOADS
 med_dl_h2: Pressmaterialien
@@ -463,7 +463,7 @@ med_press_h3: Pressemappe
 med_press_p: "Vollständige Pressemappe mit Unternehmensinformationen, Produktdetails, Führungsbiografien und hochauflösenden Bildern."
 med_press_cta: "Pressemappe herunterladen"
 med_partner_h3: "Medienpartner-Logos"
-med_partner_p: "Logos von Riddle&Code neben unseren Pressepartnern und Medienerwähnungen. Zur Veröffentlichung geeignet."
+med_partner_p: "Logos von Riddle&amp;Code neben unseren Pressepartnern und Medienerwähnungen. Zur Veröffentlichung geeignet."
 med_partner_cta: "Partner-Logos herunterladen"
 med_media_tag: MEDIENANFRAGEN
 med_media_h2: "Für Journalisten &amp; Medien"
@@ -474,7 +474,7 @@ med_contact_p: "Für Medienanfragen, Interviews oder weitere Informationen wende
 med_interview_h3: Interviewanfragen
 med_interview_p: "Wir stehen als Experten für Kommentare zu dezentralem Energiemanagement, Flexibilitätsmärkten, MIOTY-Technologie und der Energiewende zur Verfügung."
 med_usage_h3: Nutzungsrichtlinien
-med_usage_p: "Bitte respektieren Sie unsere Markenrichtlinien bei der Verwendung von Riddle&Code- und KERN-Assets. Kontaktieren Sie uns bei Fragen."
+med_usage_p: "Bitte respektieren Sie unsere Markenrichtlinien bei der Verwendung von Riddle&amp;Code- und KERN-Assets. Kontaktieren Sie uns bei Fragen."
 med_cta_h2: "Weitere Informationen benötigt?"
 med_cta_p: "Kontaktieren Sie unser Medienteam für zusätzliche Ressourcen, Interviewmöglichkeiten oder Presseanfragen."
 med_cta_primary: "Medienteam kontaktieren"
@@ -483,12 +483,12 @@ med_cta_secondary: "Aktuelle Neuigkeiten anzeigen"
 # ══════════════════════════════════════════════════════════════════════════════
 # Karriere (company/career.html)
 # ══════════════════════════════════════════════════════════════════════════════
-car_meta_title: "Karriere — Riddle&Code"
+car_meta_title: "Karriere — Riddle&amp;Code"
 car_meta_desc: "Werden Sie Teil des Teams, das KERN aufbaut — die Infrastrukturplattform für verteilte Energie."
 car_h1: "<span class=\"highlight\">Werden Sie Teil des Teams</span><br>Bauen Sie Infrastruktur für die Energiewende"
-car_sub: "Riddle&Code baut KERN — die Plattform, mit der Energieversorger und Aggregatoren verteilte Energieanlagen verbinden, steuern und monetarisieren. Wir arbeiten an schwierigen Problemen in der Energieinfrastruktur, Funkkonnektivität und autonomen Systemen."
+car_sub: "Riddle&amp;Code baut KERN — die Plattform, mit der Energieversorger und Aggregatoren verteilte Energieanlagen verbinden, steuern und monetarisieren. Wir arbeiten an schwierigen Problemen in der Energieinfrastruktur, Funkkonnektivität und autonomen Systemen."
 car_purpose_tag: "UNSER ZWECK"
-car_purpose_h2: "Der Riddle&Code-Geist"
+car_purpose_h2: "Der Riddle&amp;Code-Geist"
 car_purpose1_h3: "Zweck: Warum existieren wir?"
 car_purpose1_strong: "Infrastruktur für die Energiewende aufbauen."
 car_purpose1_p: "Wir liefern die Konnektivitäts- und Autonomieschicht, die verteilte Energieanlagen zu verwaltbarer, monetarisierbarer Infrastruktur macht — für Energieversorger und Aggregatoren in ganz Europa."
@@ -513,7 +513,7 @@ car_val5_desc: "Wir glauben daran, den Weg zu genießen. Eine positive, engagier
 car_val6_label: Engagement
 car_val6_desc: "Wir sind unserer Mission, unserem Team und unseren Partnern verpflichtet. Engagement treibt Exzellenz in allem, was wir liefern."
 car_benefits_tag: VORTEILE
-car_benefits_h2: "Warum Riddle&Code?"
+car_benefits_h2: "Warum Riddle&amp;Code?"
 car_ben1_h3: "Echter Infrastruktureinfluss"
 car_ben1_p: "Arbeiten Sie an einem Produktivsystem, das live Energieassets verwaltet. Ihr Code steuert echte Hardware hinter echten Zählern — keine Simulation."
 car_ben2_h3: "Wien &amp; Remote"
@@ -534,9 +534,9 @@ car_cta_secondary: "Mehr über uns erfahren"
 # ══════════════════════════════════════════════════════════════════════════════
 # News (company/news.html)
 # ══════════════════════════════════════════════════════════════════════════════
-news_meta_title: "Neuigkeiten — Riddle&Code"
-news_meta_desc: "Aktuelle Neuigkeiten, Forschung und Updates vom Riddle&Code- und KERN-Team."
-news_h1: "<span class=\"highlight\">Neuigkeiten &amp; Einblicke</span><br>Von Riddle&Code"
+news_meta_title: "Neuigkeiten — Riddle&amp;Code"
+news_meta_desc: "Aktuelle Neuigkeiten, Forschung und Updates vom Riddle&amp;Code- und KERN-Team."
+news_h1: "<span class=\"highlight\">Neuigkeiten &amp; Einblicke</span><br>Von Riddle&amp;Code"
 news_sub: "Bleiben Sie über unsere neuesten Produktupdates, Marktforschung und Unternehmensnachrichten informiert."
 news_filter_all: "Alle"
 news_filter_news: "Neuigkeiten"
