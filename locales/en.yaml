@@ -309,8 +309,8 @@ kp_cta_primary: "Discuss API Integration"
 rp_meta_title: "References — KERN by Riddle&amp;Code"
 rp_meta_desc: "R&amp;C KERN running in production — live MV/LV microgrid, utility-owned aggregator, energy community platform. Visitable on request."
 rp_eyebrow: References
-rp_h1: "Not a pilot.<br><strong>Running in production.</strong>"
-rp_lead: "R&amp;C KERN is live — managing a real MV/LV grid, powering a flexibility aggregator and running an energy community platform. Visitable on request."
+rp_h1: "Grid. Aggregator. Community.<br><strong>All live.</strong>"
+rp_lead: "One leading regional utility. Three production deployments on a single platform. Visitable on request."
 rp_ref_tag: "Live Reference — Austria"
 rp_ref_h2: "A leading regional utility built their <strong>complete flexibility stack</strong> on R&amp;C KERN"
 rp_item1_label: Grid
