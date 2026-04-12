@@ -8,13 +8,12 @@
 :root {
   --kern-accent: #F59E0B;       /* warm amber gold — primary brand accent */
   --primary-green: #F59E0B;     /* legacy alias → kern-accent */
-  --primary-blue: #00d4ff;
-  --dark-bg: #0a0a0a;
-  --card-bg: #111111;
+  --dark-bg: #1C2333;
+  --card-bg: #243048;
   --text-primary: #ffffff;
   --text-secondary: #e0e0e0;
-  --text-muted: #999999;
-  --border-color: #333333;
+  --text-muted: #8899aa;
+  --border-color: #2e3d52;
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 2rem;
@@ -111,7 +110,7 @@ html {
 
 .section-tag {
   display: inline-block;
-  color: var(--primary-blue);
+  color: var(--kern-accent);
   font-size: 0.875rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -181,7 +180,7 @@ html {
 
 .target-title {
   font-size: 1.5rem;
-  color: var(--primary-blue);
+  color: var(--text-primary);
   margin-bottom: var(--spacing-sm);
   font-weight: 600;
 }

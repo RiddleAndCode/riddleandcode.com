@@ -102,27 +102,12 @@
       .hero-actions { justify-content: center; }
     }
 
-    /* ── Stats bar ── */
-    .stats-bar {
-      display: flex;
-      justify-content: center;
-      gap: 3rem;
-      flex-wrap: wrap;
-      padding: 2.5rem 2rem;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-      margin-bottom: var(--spacing-lg);
-    }
-
-    .stat-item { text-align: center; }
-    .stat-value { display: block; font-size: 2rem; font-weight: 600; color: var(--text-primary); letter-spacing: -0.02em; }
-    .stat-label { font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
 
     /* ── Audience cards ── */
     .audience-section {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 2rem var(--spacing-lg);
+      padding: var(--spacing-xl) 2rem var(--spacing-lg);
     }
 
     .section-label {
@@ -143,7 +128,7 @@
 
     .audience-card {
       background: var(--card-bg);
-      border: 1px solid #1e1e1e;
+      border: 1px solid #2e3d52;
       border-radius: 12px;
       padding: 2rem;
       text-decoration: none;
@@ -155,7 +140,7 @@
     }
 
     .audience-card:hover {
-      border-color: rgba(0,255,136,0.3);
+      border-color: rgba(245,158,11,0.35);
       transform: translateY(-3px);
     }
 
@@ -163,7 +148,7 @@
       width: 44px;
       height: 44px;
       border-radius: 10px;
-      background: rgba(0,255,136,0.08);
+      background: rgba(245,158,11,0.10);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -191,9 +176,9 @@
 
     /* ── Operative loop ── */
     .loop-section {
-      background: #080808;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
+      background: #16202f;
+      border-top: 1px solid #2a3850;
+      border-bottom: 1px solid #2a3850;
       padding: var(--spacing-lg) 2rem;
       margin-bottom: var(--spacing-lg);
     }
@@ -244,8 +229,8 @@
       width: 44px;
       height: 44px;
       border-radius: 50%;
-      background: rgba(0,255,136,0.1);
-      border: 1px solid rgba(0,255,136,0.25);
+      background: rgba(245,158,11,0.1);
+      border: 1px solid rgba(245,158,11,0.25);
       color: var(--primary-green);
       font-weight: 600;
       font-size: 0.9rem;
@@ -280,8 +265,8 @@
     .loop-callout {
       margin-top: 2.5rem;
       padding: 1.25rem 2rem;
-      background: rgba(0,255,136,0.05);
-      border: 1px solid rgba(0,255,136,0.15);
+      background: rgba(245,158,11,0.05);
+      border: 1px solid rgba(245,158,11,0.15);
       border-radius: 10px;
       color: var(--text-secondary);
       font-size: 0.95rem;
@@ -300,7 +285,7 @@
 
     .reference-card {
       background: var(--card-bg);
-      border: 1px solid #1e1e1e;
+      border: 1px solid #2e3d52;
       border-radius: 16px;
       padding: 3rem;
     }
@@ -404,26 +389,6 @@
       <span class="hero-logo-wordmark">KERN</span>
     </div>
   </section>
-
-  <!-- Stats bar -->
-  <div class="stats-bar">
-    <div class="stat-item">
-      <span class="stat-value">1.5M</span>
-      <span class="stat-label">Messages / Day</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-value">10 km</span>
-      <span class="stat-label">MIOTY Range</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-value">24 h</span>
-      <span class="stat-label">Flexibility Forecast</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-value">100%</span>
-      <span class="stat-label">Autonomous Dispatch</span>
-    </div>
-  </div>
 
   <!-- Audience cards -->
   <section class="audience-section">
