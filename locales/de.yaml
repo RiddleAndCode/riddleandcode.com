@@ -340,7 +340,7 @@ rp_cta_secondary: "Zurück zu KERN →"
 tech_meta_title: "Technologie — KERN by Riddle&amp;Code"
 tech_meta_desc: "MIOTY, Zigbee Mesh, 24-h-Flexibilitätsprognosen und autonome Steuerung — die Technologie hinter KERN."
 tech_eyebrow: Technologie
-tech_h1: "Gebaut für Energieinfrastruktur.<br><strong>Nicht aus dem IoT adaptiert.</strong>"
+tech_h1: "Gebaut für Energieinfrastruktur.<br><strong>Kein IoT-Umbau.</strong>"
 tech_lead: "MIOTY, Zigbee Mesh, ein autonomer 24-h-Prognose-Regelkreis und bestätigte Steuerung — zweckgebaut für die Anforderungen des Flexibilitätsmanagements hinter dem Zähler."
 tech_conn_h2: "Konnektivität <strong>nach Topologie</strong>"
 tech_conn_sub: "Die Technologiewahl folgt der Asset-Topologie — nicht umgekehrt."
