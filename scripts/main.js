@@ -163,10 +163,11 @@
     const isDE = path.startsWith('/de/') || path === '/de';
 
     function altUrl(targetLang) {
+      const basePath = path.replace(/^\/de/, '') || '/';
       if (targetLang === 'de') {
-        return '/de' + (path === '/' ? '/' : path);
+        return '/de' + basePath;
       } else {
-        return path.replace(/^\/de/, '') || '/';
+        return basePath;
       }
     }
 
