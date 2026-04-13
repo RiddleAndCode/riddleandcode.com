@@ -172,7 +172,7 @@ ku_case3_h3: "Flexibilitätsmonetarisierung — Aus Ihrem Kundenstamm"
 ku_case3_p: "Die aggregierte Flexibilität aus HEMS-Flotte, G&amp;I-Kunden und EEG wird über KERN zu einem vermarktbaren Portfolio. Leiten Sie es über eine eigene Aggregator-Tochter oder einen externen Partner an FCR-, aFRR- oder Intraday-Märkte."
 
 ku_ref_h2: "Das <strong>Referenzmodell</strong> — im Produktionsbetrieb"
-ku_ref_intro: "Ein führender regionaler Energieversorger hat seinen kompletten Flexibilitäts-Stack auf KERN aufgebaut:"
+ku_ref_intro: "Führende Energieversorger haben ihren kompletten Flexibilitäts-Stack auf KERN aufgebaut:"
 ku_ref_grid_label: Netz
 ku_ref_grid_value: "Laufendes MS/NS-Microgrid — Produktivsystem, Österreich"
 ku_ref_agg_label: Aggregator
@@ -211,7 +211,7 @@ ka_pain5_sol: "Neue Assets werden in KERN aufgenommen — der Aggregator gewinnt
 ka_loop_h2: "Der <strong>operative Regelkreis</strong>"
 ka_loop_note: "Sie interagieren mit Schritt 1 und 2. Alles andere übernimmt KERN."
 ka_ref_h2: "Bewährt im <strong>Produktiveinsatz</strong>"
-ka_ref_quote: "Ein führender regionaler Energieversorger setzt KERN ein, um seinen Flexibilitätsaggregator zu betreiben — mit bestätigter Steuerung von MV/LV-Assets für Gebote auf Energiemärkten."
+ka_ref_quote: "Führende Energieversorger setzen KERN ein, um ihren Flexibilitätsaggregator zu betreiben — mit bestätigter Steuerung von MV/LV-Assets für Gebote auf Energiemärkten."
 ka_ref_meta: "Live-System · MV/LV-Microgrid · Besichtigung auf Anfrage"
 ka_cta_h2: "Bereit, jedes Gebot abzusichern?"
 ka_cta_p: "30 Minuten, um Ihnen zu zeigen, wie KERN in Ihren bestehenden Steuerungs-Stack passt — und welche Assets Sie heute zu Ihrem Portfolio hinzufügen können."
@@ -405,8 +405,8 @@ au_tech4_h4: "LSP — Netzskala-Flexibilität"
 au_tech4_p: "Large Scale Plant Management für netzskale Assets: BESS, industrielle Lasten und aggregierte Portfolios. Direktzugang zu Systemdienstleistungs- und Flexibilitätsmärkten."
 au_proof_tag: REFERENZEN
 au_proof_h2: "Validiert, nicht versprochen"
-au_proof1_h3: "Führender regionaler Energieversorger"
-au_proof1_p: "Validiert mit einem führenden regionalen Energieversorger. Das Einsatzmodell, die regulatorische Ausrichtung und die Wirtschaftlichkeit sind auf regionaler Ebene validiert."
+au_proof1_h3: "Führende Energieversorger"
+au_proof1_p: "Validiert mit führenden Energieversorgern. Das Einsatzmodell, die regulatorische Ausrichtung und die Wirtschaftlichkeit sind auf regionaler Ebene validiert."
 au_proof2_h3: "MIOTY im Maßstab"
 au_proof2_p: "1,5 Millionen Nachrichten pro Tag demonstrierte Kapazität. IEC-standardisiert — kein proprietäres Lock-in. Partner übernehmen einen veröffentlichten Standard."
 au_proof3_h3: "Wirtschaftlichkeit, die funktioniert"
@@ -461,7 +461,7 @@ med_sub: "Willkommen im Media Hub von Riddle&amp;Code. Hier finden Sie unsere Pr
 med_who_tag: "ÜBER UNS"
 med_who_h2: "Wer wir sind"
 med_who_p1: "Riddle&amp;Code baut KERN — die Infrastrukturplattform für dezentrales Energiemanagement. Wir bedienen Energieversorger, Aggregatoren und Energiegemeinschaften in ganz Europa mit autonomer Asset-Konnektivität, Flexibilitätsprognosen und -steuerung."
-med_who_p2: "Unsere Technologie, einschließlich MIOTY-Funkkonnektivität und autonomer Steuerung, ist im Produktiveinsatz bei einem führenden regionalen Energieversorger in Österreich — mit einem Live-MV/LV-Microgrid, Flexibilitätsaggregator und Energiegemeinschaftsplattform."
+med_who_p2: "Unsere Technologie, einschließlich MIOTY-Funkkonnektivität und autonomer Steuerung, ist im Produktiveinsatz bei führenden Energieversorgern — mit einem Live-MV/LV-Microgrid, Flexibilitätsaggregator und Energiegemeinschaftsplattform."
 med_dl_tag: DOWNLOADS
 med_dl_h2: Pressmaterialien
 med_logo_h3: Markenlogo
