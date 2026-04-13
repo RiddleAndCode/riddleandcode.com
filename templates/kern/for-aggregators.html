@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" data-ga-id="G-6PKLPEVZNF">
+<head>
+  <meta charset="utf-8"/>
+  <title>{{ ka_meta_title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="{{ ka_meta_desc }}"/>
+  <link rel="alternate" hreflang="en" href="https://riddleandcode.com/kern/for-aggregators.html"/>
+  <link rel="alternate" hreflang="de" href="https://riddleandcode.com/de/kern/for-aggregators.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://riddleandcode.com/kern/for-aggregators.html"/>
+  <link rel="stylesheet" href="/styles/main.css">
+  <script src="/scripts/main.js" defer></script>
+  <style>
+    .page-hero { max-width:1100px; margin:0 auto; padding:var(--spacing-xl) 2rem var(--spacing-lg); }
+    .page-eyebrow { font-size:0.78rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--primary-green); margin-bottom:1rem; display:block; }
+    .page-hero h1 { font-size:clamp(2.2rem,4.5vw,3.8rem); font-weight:300; color:var(--text-primary); line-height:1.1; margin-bottom:1.25rem; letter-spacing:-0.02em; }
+    .page-hero h1 strong { font-weight:600; }
+    .page-hero .lead { font-size:1.1rem; color:var(--text-muted); max-width:600px; line-height:1.7; margin-bottom:2rem; }
+    .content-section { max-width:1100px; margin:0 auto; padding:var(--spacing-md) 2rem; }
+    .section-heading { font-size:clamp(1.4rem,2.8vw,2rem); font-weight:300; color:var(--text-primary); margin-bottom:2rem; }
+    .section-heading strong { font-weight:600; }
+    /* Loop */
+    .loop-block { background:#16202f; border:1px solid #2a3850; border-radius:14px; padding:2.5rem; margin-bottom:var(--spacing-lg); font-family:monospace; }
+    .loop-block pre { color:var(--text-secondary); font-size:0.85rem; line-height:2; white-space:pre-wrap; }
+    .loop-block .highlight { color:var(--primary-green); font-weight:600; }
+    /* Reference */
+    .reference-strip { background:var(--card-bg); border:1px solid #2e3d52; border-radius:12px; padding:2rem; margin-bottom:var(--spacing-lg); display:flex; gap:2rem; align-items:flex-start; flex-wrap:wrap; }
+    .reference-quote { font-size:1rem; color:var(--text-secondary); line-height:1.7; flex:1; min-width:240px; font-style:italic; }
+    .reference-meta { font-size:0.8rem; color:var(--text-muted); margin-top:0.75rem; font-style:normal; }
+    .cta-strip { text-align:center; padding:var(--spacing-lg) 2rem; }
+    .cta-strip h2 { font-size:clamp(1.6rem,3vw,2.2rem); font-weight:300; color:var(--text-primary); margin-bottom:0.75rem; }
+    .cta-strip p { color:var(--text-muted); margin-bottom:2rem; }
+    .btn-row { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+    hr.divider { border:none; border-top:1px solid #2a3850; margin:var(--spacing-md) 0; }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <div id="kern-product-bar-placeholder"></div>
+  <script src="/scripts/load-kern-product-bar.js"></script>
+
+  <div class="page-hero">
+    <span class="page-eyebrow">{{ ka_eyebrow }}</span>
+    <h1>{{ ka_h1 }}</h1>
+    <p class="lead">{{ ka_lead }}</p>
+    <a href="/company/get-in-touch.html" class="btn btn-primary">Book a Demo</a>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Pains -->
+  <section class="content-section">
+    <h2 class="section-heading">{{ ka_pains_h2 }}</h2>
+    <div class="split-list">
+
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">{{ ka_pain1_title }}</div>
+          <div class="split-desc">{{ ka_pain1_desc }}</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">{{ ka_pain1_sol }}</div>
+        </div>
+      </div>
+
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">{{ ka_pain2_title }}</div>
+          <div class="split-desc">{{ ka_pain2_desc }}</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">{{ ka_pain2_sol }}</div>
+        </div>
+      </div>
+
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">{{ ka_pain3_title }}</div>
+          <div class="split-desc">{{ ka_pain3_desc }}</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">{{ ka_pain3_sol }}</div>
+        </div>
+      </div>
+
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">{{ ka_pain4_title }}</div>
+          <div class="split-desc">{{ ka_pain4_desc }}</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">{{ ka_pain4_sol }}</div>
+        </div>
+      </div>
+
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">{{ ka_pain5_title }}</div>
+          <div class="split-desc">{{ ka_pain5_desc }}</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">{{ ka_pain5_sol }}</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Operative loop -->
+  <section class="content-section">
+    <h2 class="section-heading">{{ ka_loop_h2 }}</h2>
+    <div class="loop-block">
+<pre><span class="highlight">1. FORECAST</span>  (rolling, 24h ahead)
+   KERN calculates per asset and portfolio:
+   what flexibility is available, when?
+   → Output: flexibility profile (MW, time window, confidence)
+   → Basis for your bidding strategy
+
+<span class="highlight">2. DEMAND</span>  (flexibility signal from you / market)
+   You place bids based on the forecast.
+   On award, the demand signal comes back:
+   "X kW, time window T, direction reduce/increase"
+
+<span class="highlight">3. REBALANCE</span>  (forecast vs. actual state)
+   KERN compares the demand signal against current
+   asset state in real-time: weather, state of charge,
+   current load, failures.
+   Deviation from forecast → KERN reacts autonomously.
+
+<span class="highlight">4. DISPATCH</span>  (autonomous local control)
+   KERN decides which assets to control — BESS, HVAC,
+   EV chargers, PV curtailment — via Zigbee or MIOTY.
+   Execution confirmed.
+
+<span class="highlight">5. CONFIRMATION</span>
+   Fulfillment status back to you in real-time.
+   Next forecast cycle starts.</pre>
+    </div>
+    <p style="color:var(--text-muted); font-size:0.9rem; text-align:center;">
+      {{ ka_loop_note }}
+    </p>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Reference -->
+  <section class="content-section">
+    <h2 class="section-heading">{{ ka_ref_h2 }}</h2>
+    <div class="reference-strip">
+      <div>
+        <div class="reference-quote">
+          "{{ ka_ref_quote }}"
+          <div class="reference-meta">{{ ka_ref_meta }}</div>
+        </div>
+      </div>
+      <a href="/references/" class="btn btn-secondary" style="flex-shrink:0;align-self:center;">See full reference →</a>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-strip">
+    <h2>{{ ka_cta_h2 }}</h2>
+    <p>{{ ka_cta_p }}</p>
+    <div class="btn-row">
+      <a href="/company/get-in-touch.html" class="btn btn-primary">Book a Demo</a>
+      <a href="/technology/" class="btn btn-secondary">Explore the Technology</a>
+    </div>
+  </section>
+
+  <div id="footer-modern-placeholder"></div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" data-ga-id="G-6PKLPEVZNF">
+<head>
+  <meta charset="utf-8"/>
+  <title>{{ ku_meta_title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="{{ ku_meta_desc }}"/>
+  <link rel="alternate" hreflang="en" href="https://riddleandcode.com/kern/for-utilities.html"/>
+  <link rel="alternate" hreflang="de" href="https://riddleandcode.com/de/kern/for-utilities.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://riddleandcode.com/kern/for-utilities.html"/>
+  <link rel="stylesheet" href="/styles/main.css">
+  <script src="/scripts/main.js" defer></script>
+  <style>
+    .page-hero { max-width:1100px; margin:0 auto; padding:var(--spacing-xl) 2rem var(--spacing-lg); }
+    .page-eyebrow { font-size:0.78rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--primary-green); margin-bottom:1rem; display:block; }
+    .page-hero h1 { font-size:clamp(2.2rem,4.5vw,3.8rem); font-weight:300; color:var(--text-primary); line-height:1.1; margin-bottom:1.25rem; letter-spacing:-0.02em; }
+    .page-hero h1 strong { font-weight:600; }
+    .page-hero .lead { font-size:1.1rem; color:var(--text-muted); max-width:600px; line-height:1.7; margin-bottom:2rem; }
+    .content-section { max-width:1100px; margin:0 auto; padding:var(--spacing-md) 2rem; }
+    .section-heading { font-size:clamp(1.4rem,2.8vw,2rem); font-weight:300; color:var(--text-primary); margin-bottom:2rem; }
+    .section-heading strong { font-weight:600; }
+    .usecase-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; margin-bottom:var(--spacing-lg); }
+    .usecase-card { background:var(--card-bg); border:1px solid #2e3d52; border-radius:12px; padding:2rem; }
+    .usecase-num { font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--primary-green); margin-bottom:0.75rem; }
+    .usecase-card h3 { font-size:1rem; font-weight:600; color:var(--text-primary); margin-bottom:0.75rem; }
+    .usecase-card p { font-size:0.875rem; color:var(--text-muted); line-height:1.6; }
+    .reference-strip { background:var(--card-bg); border:1px solid #2e3d52; border-radius:12px; padding:2rem; margin-bottom:var(--spacing-lg); }
+    .reference-stack { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; margin-top:1.5rem; }
+    .stack-item { background:#16202f; border:1px solid #222; border-radius:8px; padding:1rem 1.25rem; }
+    .stack-item .stack-label { font-size:0.7rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted); margin-bottom:0.25rem; }
+    .stack-item .stack-value { font-size:0.9rem; color:var(--text-secondary); }
+    .cta-strip { text-align:center; padding:var(--spacing-lg) 2rem; }
+    .cta-strip h2 { font-size:clamp(1.6rem,3vw,2.2rem); font-weight:300; color:var(--text-primary); margin-bottom:0.75rem; }
+    .cta-strip p { color:var(--text-muted); margin-bottom:2rem; }
+    .btn-row { display:flex; gap:1rem; justify-content:center; flex-wrap:wrap; }
+    hr.divider { border:none; border-top:1px solid #2a3850; margin:var(--spacing-md) 0; }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <div id="kern-product-bar-placeholder"></div>
+  <script src="/scripts/load-kern-product-bar.js"></script>
+
+  <div class="page-hero">
+    <span class="page-eyebrow">{{ ku_eyebrow }}</span>
+    <h1>{{ ku_h1 }}</h1>
+    <p class="lead">{{ ku_lead }}</p>
+    <a href="/company/get-in-touch.html" class="btn btn-primary">{{ shared_book_demo }}</a>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Pains -->
+  <section class="content-section">
+    <h2 class="section-heading">{{ ku_pains_h2 }}</h2>
+    <div class="split-list">
+
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">{{ ku_pain1_title }}</div>
+          <div class="split-desc">{{ ku_pain1_desc }}</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">{{ ku_pain1_sol }}</div>
+        </div>
+      </div>
+
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">{{ ku_pain2_title }}</div>
+          <div class="split-desc">{{ ku_pain2_desc }}</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">{{ ku_pain2_sol }}</div>
+        </div>
+      </div>
+
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">{{ ku_pain3_title }}</div>
+          <div class="split-desc">{{ ku_pain3_desc }}</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">{{ ku_pain3_sol }}</div>
+        </div>
+      </div>
+
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">{{ ku_pain4_title }}</div>
+          <div class="split-desc">{{ ku_pain4_desc }}</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">{{ ku_pain4_sol }}</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Use cases -->
+  <section class="content-section">
+    <h2 class="section-heading">{{ ku_cases_h2 }}</h2>
+    <div class="usecase-grid">
+
+      <div class="usecase-card">
+        <div class="usecase-num">{{ ku_case1_num }}</div>
+        <h3>{{ ku_case1_h3 }}</h3>
+        <p>{{ ku_case1_p }}</p>
+      </div>
+
+      <div class="usecase-card">
+        <div class="usecase-num">{{ ku_case2_num }}</div>
+        <h3>{{ ku_case2_h3 }}</h3>
+        <p>{{ ku_case2_p }}</p>
+      </div>
+
+      <div class="usecase-card">
+        <div class="usecase-num">{{ ku_case3_num }}</div>
+        <h3>{{ ku_case3_h3 }}</h3>
+        <p>{{ ku_case3_p }}</p>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Reference -->
+  <section class="content-section">
+    <h2 class="section-heading">{{ ku_ref_h2 }}</h2>
+    <div class="reference-strip">
+      <p style="color:var(--text-muted); font-size:0.95rem; margin-bottom:1.25rem;">
+        {{ ku_ref_intro }}
+      </p>
+      <div class="reference-stack">
+        <div class="stack-item">
+          <div class="stack-label">{{ ku_ref_grid_label }}</div>
+          <div class="stack-value">{{ ku_ref_grid_value }}</div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-label">{{ ku_ref_agg_label }}</div>
+          <div class="stack-value">{{ ku_ref_agg_value }}</div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-label">{{ ku_ref_comm_label }}</div>
+          <div class="stack-value">{{ ku_ref_comm_value }}</div>
+        </div>
+      </div>
+      <p style="color:var(--text-muted); font-size:0.85rem; margin-top:1.25rem;">{{ ku_ref_note }}</p>
+    </div>
+    <a href="/references/" class="btn btn-secondary">{{ shared_see_ref }}</a>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-strip">
+    <h2>{{ ku_cta_h2 }}</h2>
+    <p>{{ ku_cta_p }}</p>
+    <div class="btn-row">
+      <a href="/company/get-in-touch.html" class="btn btn-primary">{{ shared_book_demo }}</a>
+      <a href="/technology/" class="btn btn-secondary">{{ shared_explore_tech }}</a>
+    </div>
+  </section>
+
+  <div id="footer-modern-placeholder"></div>
+</body>
+</html>

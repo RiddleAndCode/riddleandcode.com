@@ -1,12 +1,12 @@
 <style>
   :root {
-    --primary-green: #00ff88;
-    --dark-bg: #0a0a0a;
+    --primary-green: #F59E0B;
+    --dark-bg: #1C2333;
     --text-primary: #ffffff;
     --text-muted: #999999;
     --border-color: #333333;
   }
-  
+
   .footer-modern {
     max-width: 1400px;
     margin: 0 auto;
@@ -14,42 +14,42 @@
     border-top: 1px solid var(--border-color);
     margin-top: 4rem;
   }
-  
+
   .footer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 3rem;
     margin-bottom: 3rem;
   }
-  
+
   .footer-column h4 {
     color: var(--text-primary);
     font-size: 1rem;
     margin-bottom: 1rem;
     font-weight: 600;
   }
-  
+
   .footer-links {
     list-style: none;
     margin: 0;
     padding: 0;
   }
-  
+
   .footer-links li {
     margin-bottom: 0.5rem;
   }
-  
+
   .footer-links a {
     color: var(--text-muted);
     text-decoration: none;
     font-size: 0.95rem;
     transition: color 0.3s ease;
   }
-  
+
   .footer-links a:hover {
     color: var(--primary-green);
   }
-  
+
   .footer-bottom {
     text-align: center;
     padding-top: 2rem;
@@ -57,23 +57,23 @@
     color: var(--text-muted);
     font-size: 0.875rem;
   }
-  
+
   .footer-bottom a {
     color: var(--text-muted);
     text-decoration: none;
   }
-  
+
   .footer-bottom a:hover {
     color: var(--primary-green);
   }
-  
+
   .footer-social {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
   }
-  
+
   .footer-social a {
     color: var(--text-muted);
     font-size: 1.5rem;
@@ -86,36 +86,51 @@
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.03);
   }
-  
+
   .footer-social a:hover {
     color: var(--primary-green);
-    background: rgba(0, 255, 136, 0.1);
+    background: rgba(245, 158, 11, 0.1);
     transform: translateY(-2px);
   }
 </style>
 
 <footer class="footer-modern">
+
+  <!-- Brand block -->
+  <div style="margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; gap: 1rem;">
+    <svg viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg" style="width: 36px; height: 36px; flex-shrink: 0;" aria-hidden="true">
+      <circle cx="38" cy="38" r="34" fill="none" stroke="#ffffff" stroke-width="1"   opacity="0.18"/>
+      <circle cx="38" cy="38" r="24" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.42"/>
+      <circle cx="38" cy="38" r="14" fill="none" stroke="#ffffff" stroke-width="2"   opacity="0.75"/>
+      <circle cx="38" cy="38" r="5.5" fill="#F59E0B"/>
+    </svg>
+    <div>
+      <div style="font-size: 1rem; font-weight: 600; letter-spacing: 0.12em; color: #fff;">KERN <span style="font-weight: 400; letter-spacing: 0; color: var(--text-muted);">by</span> <span style="color: #F59E0B;">Riddle&amp;Code</span></div>
+      <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">Infrastructure for distributed energy.</div>
+    </div>
+  </div>
+
   <div class="footer-grid">
     <div class="footer-column">
-      <h4>Products</h4>
+      <h4>KERN</h4>
       <ul class="footer-links">
-        <li><a href="/product/pwr-trust.html">PWR Trust</a></li>
-        <li><a href="/product/iq-actor-id.html">IQ Actor ID</a></li>
-        <li><a href="/product/infrastructure-iq.html">Infrastructure IQ</a></li>
-        <li><a href="/product/facility-iq.html">Facility IQ</a></li>
-        <li><a href="/product/mypwr.html">MYPWR</a></li>
+        <li><a href="/kern/">Platform Overview</a></li>
+        <li><a href="/kern/for-utilities.html">For Utilities</a></li>
+        <li><a href="/kern/for-aggregators.html">For Aggregators</a></li>
+        <li><a href="/kern/for-communities.html">For Energy Communities</a></li>
+        <li><a href="/kern/for-platforms.html">For Platforms</a></li>
       </ul>
     </div>
-    
+
     <div class="footer-column">
-      <h4>Resources</h4>
+      <h4>More</h4>
       <ul class="footer-links">
-        <li><a href="/company/news.html" target="_blank">News</a></li>
-        <li><a href="https://rddl.io" target="_blank">RDDL Network</a></li>
-        <li><a href="/sustainability.html">Sustainability</a></li>
+        <li><a href="/technology/">Technology</a></li>
+        <li><a href="/references/">References</a></li>
+        <li><a href="/company/news.html">News</a></li>
       </ul>
     </div>
-    
+
     <div class="footer-column">
       <h4>Company</h4>
       <ul class="footer-links">
@@ -125,7 +140,7 @@
         <li><a href="/company/get-in-touch.html">Contact</a></li>
       </ul>
     </div>
-    
+
     <div class="footer-column">
       <h4>Legal</h4>
       <ul class="footer-links">
@@ -135,7 +150,7 @@
       </ul>
     </div>
   </div>
-  
+
   <div class="footer-bottom">
     <div class="footer-social">
       <a href="https://at.linkedin.com/company/riddle-&-code" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
@@ -159,6 +174,6 @@
         </svg>
       </a>
     </div>
-    <p>© 2025 Riddle&Code GmbH. All rights reserved.</p>
+    <p>© 2025 Riddle&amp;Code GmbH. All rights reserved.</p>
   </div>
 </footer>

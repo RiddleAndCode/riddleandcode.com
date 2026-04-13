@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de" data-ga-id="G-6PKLPEVZNF">
+<head>
+  <meta charset="utf-8"/>
+  <title>KERN by Riddle&amp;Code — Autonome Energieplattform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="KERN ist die autonome Energiemanagementplattform hinter dem Zähler — prognostiziert, steuert und liefert Flexibilität für Aggregatoren, Energieversorger und Energiegemeinschaften."/>
+  <link rel="alternate" hreflang="en" href="https://riddleandcode.com/kern/"/>
+  <link rel="alternate" hreflang="de" href="https://riddleandcode.com/de/kern/"/>
+  <link rel="alternate" hreflang="x-default" href="https://riddleandcode.com/kern/"/>
+  <link rel="stylesheet" href="/styles/main.css">
+  <script src="/scripts/main.js" defer></script>
+  <style>
+    .page-hero { max-width:1100px; margin:0 auto; padding:var(--spacing-xl) 2rem var(--spacing-lg); text-align:center; }
+    .page-eyebrow { font-size:0.78rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--primary-green); margin-bottom:1rem; display:block; }
+    .page-hero h1 { font-size:clamp(2.5rem,5vw,4rem); font-weight:300; color:var(--text-primary); line-height:1.1; margin-bottom:1.25rem; letter-spacing:-0.02em; }
+    .page-hero h1 strong { font-weight:600; }
+    .page-hero .lead { font-size:1.1rem; color:var(--text-muted); max-width:620px; margin:0 auto 2.5rem; line-height:1.7; }
+    .content-section { max-width:1100px; margin:0 auto; padding:var(--spacing-md) 2rem; }
+    .section-heading { font-size:clamp(1.4rem,2.8vw,2rem); font-weight:300; color:var(--text-primary); margin-bottom:0.5rem; }
+    .section-heading strong { font-weight:600; }
+    .section-sub { color:var(--text-muted); font-size:0.95rem; margin-bottom:2rem; }
+    .concept-box { background:#16202f; border:1px solid #2a3850; border-radius:14px; padding:2.5rem; margin-bottom:var(--spacing-lg); text-align:center; }
+    .concept-box .big-statement { font-size:clamp(1.3rem,2.5vw,1.8rem); font-weight:300; color:var(--text-primary); line-height:1.4; margin-bottom:1.5rem; }
+    .concept-box .big-statement strong { font-weight:600; color:var(--primary-green); }
+    .concept-box .sub { color:var(--text-muted); font-size:0.95rem; max-width:560px; margin:0 auto; }
+    .context-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-bottom:var(--spacing-lg); }
+    .context-card { background:var(--card-bg); border:1px solid #2e3d52; border-radius:10px; padding:1.5rem; }
+    .context-card h3 { font-size:0.9rem; font-weight:600; color:var(--text-primary); margin-bottom:0.5rem; }
+    .context-card p { font-size:0.82rem; color:var(--text-muted); line-height:1.6; }
+    .modes-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.25rem; margin-bottom:var(--spacing-lg); }
+    .mode-card { background:var(--card-bg); border:1px solid #2e3d52; border-radius:10px; padding:1.75rem; }
+    .mode-num { font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--primary-green); margin-bottom:0.5rem; }
+    .mode-card h3 { font-size:1rem; font-weight:600; color:var(--text-primary); margin-bottom:0.5rem; }
+    .mode-card p { font-size:0.875rem; color:var(--text-muted); line-height:1.6; }
+    .conn-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:var(--spacing-lg); }
+    @media(max-width:600px){ .conn-grid { grid-template-columns:1fr; } }
+    .conn-card { background:var(--card-bg); border:1px solid #2e3d52; border-radius:12px; padding:2rem; }
+    .conn-card h3 { font-size:1rem; font-weight:600; color:var(--text-primary); margin-bottom:0.5rem; }
+    .conn-card .conn-use { font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.06em; color:var(--primary-green); margin-bottom:0.75rem; }
+    .conn-card p { font-size:0.875rem; color:var(--text-muted); line-height:1.6; }
+    .audience-nav { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-bottom:var(--spacing-lg); }
+    .audience-link { background:var(--card-bg); border:1px solid #2e3d52; border-radius:10px; padding:1.5rem; text-decoration:none; color:inherit; transition:border-color 0.2s, transform 0.2s; display:flex; flex-direction:column; gap:0.5rem; }
+    .audience-link:hover { border-color:rgba(245,158,11,0.3); transform:translateY(-2px); }
+    .audience-link h3 { font-size:0.95rem; font-weight:600; color:var(--text-primary); }
+    .audience-link p { font-size:0.82rem; color:var(--text-muted); line-height:1.5; }
+    .audience-link .link-cta { font-size:0.8rem; color:var(--primary-green); font-weight:500; margin-top:auto; }
+    hr.divider { border:none; border-top:1px solid #2a3850; margin:var(--spacing-md) 0; }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <div id="kern-product-bar-placeholder"></div>
+  <script src="/scripts/load-kern-product-bar.js"></script>
+
+  <div class="page-hero">
+    <span class="page-eyebrow">Riddle&amp;Code — Autonome Energieplattform</span>
+    <h1><strong>Autonome</strong> Energie<br>hinter dem Zähler.</h1>
+    <p class="lead">KERN ist die Plattform hinter dem Zähler — optimiert, prognostiziert und steuert Flexibilität aus Haushalten, Gewerbebetrieben, Microgrids und Energiegemeinschaften autonom.</p>
+    <a href="/company/get-in-touch.html" class="btn btn-primary">Demo buchen</a>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Core concept -->
+  <section class="content-section">
+    <div class="concept-box">
+      <div class="big-statement">Sie senden ein Signal.<br><strong>KERN liefert.</strong><br>Was hinter dem Zähler passiert, ist unsere Aufgabe.</div>
+      <p class="sub">Aggregatoren, Energieversorger und Plattformen interagieren mit KERN über eine saubere API — Prognose eingehend, Flexibilitätssignal eingehend, Bestätigung ausgehend. KERN übernimmt alles dazwischen: Neuausgleich, Anlagenauswahl, Steuerung, Bestätigung.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Four contexts -->
+  <section class="content-section">
+    <h2 class="section-heading">Optimierung <strong>hinter dem Zähler</strong></h2>
+    <p class="section-sub">KERN arbeitet in vier Anlagenkontexten — alle auf einer Plattform.</p>
+    <div class="context-grid">
+      <div class="context-card">
+        <h3>Haushalte</h3>
+        <p>PV + Hausspeicher + Wärmepumpe + Ladestation — als Einheit optimiert. HEMS-Flottenmanagement für Energieversorger.</p>
+      </div>
+      <div class="context-card">
+        <h3>Gewerbe &amp; Industrie</h3>
+        <p>Gewerbe-PV, BESS, BHKW, steuerbare Lasten auf MS/NS-Ebene. Lastspitzenkappung, Lastmanagement, Flexibilitätssteuerung.</p>
+      </div>
+      <div class="context-card">
+        <h3>Microgrids</h3>
+        <p>Mehrere Anlagen hinter einem gemeinsamen Netzverknüpfungspunkt. Koordinierte Optimierung, inselbetriebsfähig.</p>
+      </div>
+      <div class="context-card">
+        <h3>Energiegemeinschaften (EEG)</h3>
+        <p>Gemeinschaftsoptimierung über mehrere Mitglieder und Zähler. Gemeinsamer Eigenverbrauch maximiert, kollektive Flexibilität aggregiert.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Optimisation modes -->
+  <section class="content-section">
+    <h2 class="section-heading">Drei <strong>Optimierungsmodi</strong></h2>
+    <p class="section-sub">Pro Anlage oder Portfolio konfigurierbar — kombinierbar.</p>
+    <div class="modes-grid">
+      <div class="mode-card">
+        <div class="mode-num">Modus 01</div>
+        <h3>Eigenverbrauchsoptimierung</h3>
+        <p>Lokalen Eigenverbrauch maximieren. Netzeinspeisung und -bezug minimieren. Standardmodus für Haushalte und kleinere G&amp;I-Anlagen.</p>
+      </div>
+      <div class="mode-card">
+        <div class="mode-num">Modus 02</div>
+        <h3>Wirtschaftliche Optimierung</h3>
+        <p>Monetären Ertrag maximieren — Intraday-Arbitrage, FCR/aFRR-Gebote, Lastspitzenkappung, Reduzierung der Leistungspreise. Dispatch gesteuert durch Echtzeit-Day-Ahead- und Intradaypreissignale. Standard für Aggregatoren und G&amp;I-Flexibilität.</p>
+      </div>
+      <div class="mode-card">
+        <div class="mode-num">Modus 03</div>
+        <h3>Gemeinschaftsoptimierung</h3>
+        <p>Gemeinsamen Eigenverbrauch über mehrere Mitglieder maximieren. Faire Zuteilung nach Anteil. Standard für EEG und Microgrids.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Connectivity -->
+  <section class="content-section">
+    <h2 class="section-heading">Konnektivität <strong>nach Topologie</strong></h2>
+    <p class="section-sub">Die richtige Technologie für jede Anlagenkonfiguration — beide in KERN als einheitliche Schicht verwaltet.</p>
+    <div class="conn-grid">
+      <div class="conn-card">
+        <div class="conn-use">Zusammenhängende Standorte</div>
+        <h3>Zigbee-Mesh</h3>
+        <p>Für Anlagen am selben Standort — Gebäude, Campusse, Industriegeländer. Kostengünstig, einfach zu installieren, selbstheilendes Mesh-Netz. Keine komplexe Gateway-Infrastruktur erforderlich.</p>
+      </div>
+      <div class="conn-card">
+        <div class="conn-use">Verteilte Anlagen</div>
+        <h3>MIOTY</h3>
+        <p>IEC-Standard-LPWAN für geografisch verteilte Anlagen — ländliche PV-Anlagen, MS-angeschlossene BESS, verteilte Standorte. 10 km Reichweite, 1,5 Mio. Nachrichten/Tag, unabhängig von LTE und WLAN.</p>
+      </div>
+    </div>
+    <a href="/technology/" class="btn btn-secondary">Vollständige Technologieübersicht →</a>
+  </section>
+
+  <hr class="divider">
+
+  <!-- For whom -->
+  <section class="content-section">
+    <h2 class="section-heading">KERN <strong>für Ihre Rolle</strong></h2>
+    <div class="audience-nav">
+      <a href="/kern/for-aggregators.html" class="audience-link">
+        <h3>Aggregatoren</h3>
+        <p>Gebote mit bestätigter Steuerung und 24h-Prognosen absichern.</p>
+        <span class="link-cta">Für Aggregatoren →</span>
+      </a>
+      <a href="/kern/for-utilities.html" class="audience-link">
+        <h3>Energieversorger</h3>
+        <p>Ihren Kundenstamm in ein monetarisierbares Flexibilitätsportfolio umwandeln.</p>
+        <span class="link-cta">Für Energieversorger →</span>
+      </a>
+      <a href="/kern/for-communities.html" class="audience-link">
+        <h3>Energiegemeinschaften</h3>
+        <p>Autonome Eigenverbrauchsoptimierung und Flexibilitätsaggregation.</p>
+        <span class="link-cta">Für Gemeinschaften →</span>
+      </a>
+      <a href="/kern/for-platforms.html" class="audience-link">
+        <h3>VPP-Plattformen</h3>
+        <p>Die Lücke in der Anlagenschicht unterhalb Ihrer Plattform mit einer sauberen API schließen.</p>
+        <span class="link-cta">Für Plattformen →</span>
+      </a>
+    </div>
+  </section>
+
+  <div id="footer-modern-placeholder"></div>
+</body>
+</html>

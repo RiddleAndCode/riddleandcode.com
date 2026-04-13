@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" data-ga-id="G-6PKLPEVZNF">
+<head>
+  <meta charset="utf-8"/>
+  <title>{{ tech_meta_title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="{{ tech_meta_desc }}"/>
+  <link rel="alternate" hreflang="en" href="https://riddleandcode.com/technology/"/>
+  <link rel="alternate" hreflang="de" href="https://riddleandcode.com/de/technology/"/>
+  <link rel="alternate" hreflang="x-default" href="https://riddleandcode.com/technology/"/>
+  <link rel="stylesheet" href="/styles/main.css">
+  <script src="/scripts/main.js" defer></script>
+  <style>
+    .page-hero { max-width:1100px; margin:0 auto; padding:var(--spacing-xl) 2rem var(--spacing-lg); text-align:center; }
+    .page-eyebrow { font-size:0.78rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--primary-green); margin-bottom:1rem; display:block; }
+    .page-hero h1 { font-size:clamp(2.2rem,4.5vw,3.5rem); font-weight:300; color:var(--text-primary); line-height:1.1; margin-bottom:1rem; letter-spacing:-0.02em; }
+    .page-hero h1 strong { font-weight:600; }
+    .page-hero .lead { font-size:1rem; color:var(--text-muted); max-width:580px; margin:0 auto; line-height:1.7; }
+    .content-section { max-width:1100px; margin:0 auto; padding:var(--spacing-md) 2rem; }
+    .section-heading { font-size:clamp(1.4rem,2.8vw,2rem); font-weight:300; color:var(--text-primary); margin-bottom:0.5rem; }
+    .section-heading strong { font-weight:600; }
+    .section-sub { color:var(--text-muted); font-size:0.9rem; margin-bottom:2rem; }
+    /* Connectivity compare */
+    .conn-compare { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; margin-bottom:2rem; }
+    @media(max-width:600px){ .conn-compare { grid-template-columns:1fr; } }
+    .conn-card { border:1px solid #2e3d52; border-radius:12px; padding:2rem; }
+    .conn-card.primary { background:rgba(245,158,11,0.04); border-color:rgba(245,158,11,0.2); }
+    .conn-card .conn-badge { font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--primary-green); margin-bottom:0.75rem; }
+    .conn-card h3 { font-size:1.1rem; font-weight:600; color:var(--text-primary); margin-bottom:0.5rem; }
+    .conn-card .conn-use { font-size:0.85rem; color:var(--text-muted); margin-bottom:1.25rem; font-style:italic; }
+    .spec-list { list-style:none; display:flex; flex-direction:column; gap:0.5rem; }
+    .spec-list li { display:flex; justify-content:space-between; align-items:baseline; font-size:0.85rem; padding-bottom:0.5rem; border-bottom:1px solid #2a3850; }
+    .spec-list li:last-child { border-bottom:none; }
+    .spec-key { color:var(--text-muted); }
+    .spec-val { color:var(--text-secondary); font-weight:500; text-align:right; }
+    /* vs table */
+    .vs-table { width:100%; border-collapse:collapse; margin-bottom:var(--spacing-lg); font-size:0.875rem; }
+    .vs-table th { text-align:left; padding:0.75rem 1rem; font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:0.07em; color:var(--text-muted); border-bottom:1px solid #222; }
+    .vs-table th.highlight { color:var(--primary-green); }
+    .vs-table td { padding:0.85rem 1rem; border-bottom:1px solid #2a3850; color:var(--text-secondary); vertical-align:top; }
+    .vs-table td.highlight { color:var(--text-primary); font-weight:500; }
+    .vs-table tr:last-child td { border-bottom:none; }
+    .check { color:var(--primary-green); }
+    .cross { color:#555; }
+    /* Loop */
+    .loop-full { background:#16202f; border:1px solid #2a3850; border-radius:14px; padding:2.5rem; margin-bottom:var(--spacing-lg); font-family:monospace; }
+    .loop-full pre { color:var(--text-secondary); font-size:0.85rem; line-height:2; white-space:pre-wrap; }
+    .loop-full .hl { color:var(--primary-green); font-weight:600; }
+    /* Asset protocols */
+    .protocol-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:0.75rem; margin-bottom:var(--spacing-lg); }
+    .protocol-pill { background:var(--card-bg); border:1px solid #2e3d52; border-radius:8px; padding:0.75rem 1rem; font-size:0.82rem; color:var(--text-secondary); text-align:center; }
+    /* Security */
+    .security-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:1rem; margin-bottom:var(--spacing-lg); }
+    .security-item { background:var(--card-bg); border:1px solid #2e3d52; border-radius:10px; padding:1.25rem; }
+    .security-item h4 { font-size:0.875rem; font-weight:600; color:var(--text-primary); margin-bottom:0.35rem; }
+    .security-item p { font-size:0.8rem; color:var(--text-muted); line-height:1.5; }
+    hr.divider { border:none; border-top:1px solid #2a3850; margin:var(--spacing-md) 0; }
+    /* Hardware image */
+    .hw-image-wrap { border-radius:12px; overflow:hidden; border:1px solid #2e3d52; margin-bottom:var(--spacing-lg); }
+    .hw-image-wrap img { display:block; width:100%; height:auto; }
+  </style>
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <div class="page-hero">
+    <span class="page-eyebrow">{{ tech_eyebrow }}</span>
+    <h1>{{ tech_h1 }}</h1>
+    <p class="lead">{{ tech_lead }}</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- Hardware image -->
+  <section class="content-section" style="padding-bottom:0;">
+    <div class="hw-image-wrap">
+      <img src="/images/6422963c3fc26ce623d62f21_Hardware_manufacture.jpg"
+           srcset="/images/6422963c3fc26ce623d62f21_Hardware_manufacture-p-500.jpg 500w,
+                   /images/6422963c3fc26ce623d62f21_Hardware_manufacture.jpg 800w"
+           sizes="(max-width:1100px) 100vw, 1100px"
+           alt="KERN hardware device" loading="lazy">
+    </div>
+  </section>
+
+  <!-- Connectivity -->
+  <section class="content-section">
+    <h2 class="section-heading">{{ tech_conn_h2 }}</h2>
+    <p class="section-sub">{{ tech_conn_sub }}</p>
+
+    <div class="conn-compare">
+      <div class="conn-card">
+        <div class="conn-badge">{{ tech_zigbee_badge }}</div>
+        <h3>{{ tech_zigbee_h3 }}</h3>
+        <p class="conn-use">{{ tech_zigbee_use }}</p>
+        <ul class="spec-list">
+          <li><span class="spec-key">Range</span><span class="spec-val">Up to 100m per node, mesh extends coverage</span></li>
+          <li><span class="spec-key">Deployment</span><span class="spec-val">No gateway per room — mesh self-organises</span></li>
+          <li><span class="spec-key">Cost</span><span class="spec-val">Low hardware cost per node</span></li>
+          <li><span class="spec-key">Topology</span><span class="spec-val">Self-healing mesh — resilient to node failure</span></li>
+          <li><span class="spec-key">Use case</span><span class="spec-val">HEMS, C&amp;I facilities, ESC on one campus</span></li>
+        </ul>
+      </div>
+      <div class="conn-card primary">
+        <div class="conn-badge">{{ tech_mioty_badge }}</div>
+        <h3>{{ tech_mioty_h3 }}</h3>
+        <p class="conn-use">{{ tech_mioty_use }}</p>
+        <ul class="spec-list">
+          <li><span class="spec-key">Range</span><span class="spec-val"><strong>10 km</strong> per gateway</span></li>
+          <li><span class="spec-key">Capacity</span><span class="spec-val"><strong>1.5M messages/day</strong> per gateway</span></li>
+          <li><span class="spec-key">Standard</span><span class="spec-val">IEC 62657-1 — purpose-built for energy</span></li>
+          <li><span class="spec-key">Independence</span><span class="spec-val">No LTE, no WiFi required</span></li>
+          <li><span class="spec-key">Latency</span><span class="spec-val">&lt;1 second for dispatch commands</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="font-size:1rem; font-weight:600; color:var(--text-primary); margin-bottom:1rem;">{{ tech_vs_h3 }}</h3>
+    <table class="vs-table">
+      <thead>
+        <tr>
+          <th>Capability</th>
+          <th class="highlight">MIOTY</th>
+          <th>LoRaWAN</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Standard</td><td class="highlight">IEC 62657-1 (international)</td><td>LoRa Alliance proprietary</td></tr>
+        <tr><td>Range</td><td class="highlight">Up to 10 km</td><td>Up to 5 km</td></tr>
+        <tr><td>Messages/day/gateway</td><td class="highlight">1,500,000</td><td>~50,000</td></tr>
+        <tr><td>Designed for</td><td class="highlight">Energy infrastructure, utility grade</td><td>General IoT sensing</td></tr>
+        <tr><td>Dispatch latency</td><td class="highlight">&lt;1 second</td><td>Seconds to minutes</td></tr>
+        <tr><td>LTE independence</td><td class="highlight"><span class="check">✓</span></td><td><span class="check">✓</span></td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Autonomous loop -->
+  <section class="content-section">
+    <h2 class="section-heading">{{ tech_loop_h2 }}</h2>
+    <p class="section-sub">{{ tech_loop_sub }}</p>
+    <div class="loop-full">
+<pre><span class="hl">1. FORECAST</span>  (rolling, 24h ahead)
+   Per asset: state of charge, PV forecast (weather-based),
+   load forecast (historical patterns), available flexibility window.
+   Per portfolio: aggregated flexibility profile (MW, time, confidence).
+   → Delivered to aggregator / platform as API feed.
+
+<span class="hl">2. DEMAND</span>  (inbound signal)
+   Flexibility signal received from aggregator, utility or market:
+   volume (kW), time window, direction (increase/decrease).
+
+<span class="hl">3. REBALANCE</span>  (real-time delta)
+   KERN compares demand signal against current actual asset state.
+   Detects deviations: weather change, load shift, asset failure.
+   Adjusts dispatch plan autonomously — before deviation becomes critical.
+
+<span class="hl">4. DISPATCH</span>  (autonomous asset control)
+   KERN selects assets, determines control sequence, sends commands.
+   Execution via Zigbee Mesh (contiguous) or MIOTY (distributed).
+   Asset protocols: Modbus, SunSpec, EEBUS, proprietary inverter APIs.
+
+<span class="hl">5. CONFIRMATION</span>
+   Asset-level execution confirmed back to KERN.
+   Fulfillment status reported to aggregator / platform in real-time.
+   Next forecast cycle starts immediately.</pre>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Optimization engine -->
+  <section class="content-section">
+    <h2 class="section-heading">{{ tech_optim_h2 }}</h2>
+    <p class="section-sub">{{ tech_optim_sub }}</p>
+    <div class="security-grid">
+      <div class="security-item">
+        <h4>{{ tech_optim1_h4 }}</h4>
+        <p>{{ tech_optim1_p }}</p>
+      </div>
+      <div class="security-item">
+        <h4>{{ tech_optim2_h4 }}</h4>
+        <p>{{ tech_optim2_p }}</p>
+      </div>
+      <div class="security-item">
+        <h4>{{ tech_optim3_h4 }}</h4>
+        <p>{{ tech_optim3_p }}</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Asset protocols -->
+  <section class="content-section">
+    <h2 class="section-heading">{{ tech_assets_h2 }}</h2>
+    <p class="section-sub">{{ tech_assets_sub }}</p>
+
+    <p style="font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted); margin-bottom:0.75rem;">{{ tech_assets_label1 }}</p>
+    <div class="protocol-grid" style="margin-bottom:1.5rem;">
+      <div class="protocol-pill">PV (residential)</div>
+      <div class="protocol-pill">PV (commercial)</div>
+      <div class="protocol-pill">Home storage</div>
+      <div class="protocol-pill">Commercial BESS</div>
+      <div class="protocol-pill">Heat pumps</div>
+      <div class="protocol-pill">EV chargers</div>
+      <div class="protocol-pill">CHP</div>
+      <div class="protocol-pill">Biogas</div>
+      <div class="protocol-pill">Controllable loads</div>
+      <div class="protocol-pill">MV-connected assets</div>
+    </div>
+
+    <p style="font-size:0.8rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted); margin-bottom:0.75rem;">{{ tech_assets_label2 }}</p>
+    <div class="protocol-grid">
+      <div class="protocol-pill">Modbus TCP/RTU</div>
+      <div class="protocol-pill">SunSpec</div>
+      <div class="protocol-pill">EEBUS</div>
+      <div class="protocol-pill">REST API</div>
+      <div class="protocol-pill">OCPP (EV)</div>
+      <div class="protocol-pill">Proprietary inverter APIs</div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- Security & compliance -->
+  <section class="content-section">
+    <h2 class="section-heading">{{ tech_security_h2 }}</h2>
+    <div class="security-grid">
+      <div class="security-item">
+        <h4>{{ tech_sec1_h4 }}</h4>
+        <p>{{ tech_sec1_p }}</p>
+      </div>
+      <div class="security-item">
+        <h4>{{ tech_sec2_h4 }}</h4>
+        <p>{{ tech_sec2_p }}</p>
+      </div>
+      <div class="security-item">
+        <h4>{{ tech_sec3_h4 }}</h4>
+        <p>{{ tech_sec3_p }}</p>
+      </div>
+      <div class="security-item">
+        <h4>{{ tech_sec4_h4 }}</h4>
+        <p>{{ tech_sec4_p }}</p>
+      </div>
+    </div>
+    <a href="/company/get-in-touch.html" class="btn btn-primary">{{ tech_cta }}</a>
+  </section>
+
+  <div id="footer-modern-placeholder"></div>
+</body>
+</html>

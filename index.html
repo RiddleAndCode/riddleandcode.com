@@ -2,82 +2,525 @@
 <html lang="en" data-ga-id="G-6PKLPEVZNF">
 <head>
   <meta charset="utf-8"/>
-  <title>Riddle&Code — Energy Infrastructure for the Future</title>
+  <title>Riddle&amp;Code — Autonomous Energy. Behind the Meter.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta content="Transform energy assets into intelligent, coordinated power plants through secure connectivity and real-time optimization." name="description"/>
-  
-  <!-- Open Graph / Social -->
-  <meta content="Riddle&Code — Energy Infrastructure for the Future" property="og:title"/>
-  <meta content="Transform energy assets into intelligent, coordinated power plants through secure connectivity and real-time optimization." property="og:description"/>
-  <meta content="images/6414afea39e2ec1d18d1ff32_open_graph.jpg" property="og:image"/>
-  <meta content="website" property="og:type"/>
-  
-  <!-- Main Styles -->
-  <link rel="stylesheet" href="styles/main.css">
+  <meta name="description" content="R&amp;C KERN autonomously forecasts, dispatches and delivers flexibility behind the meter — for aggregators, utilities and energy communities."/>
+  <meta property="og:title" content="Riddle&amp;Code — Autonomous Energy. Behind the Meter."/>
+  <meta property="og:description" content="R&amp;C KERN autonomously forecasts, dispatches and delivers flexibility behind the meter."/>
+  <meta property="og:image" content="/images/6401f477a5a79419a904f904_r&amp;c_mypwr.jpg"/>
+  <meta property="og:type" content="website"/>
+  <link rel="alternate" hreflang="en" href="https://riddleandcode.com/"/>
+  <link rel="alternate" hreflang="de" href="https://riddleandcode.com/de/"/>
+  <link rel="alternate" hreflang="x-default" href="https://riddleandcode.com/"/>
+  <link rel="stylesheet" href="/styles/main.css">
+  <script src="/scripts/main.js" defer></script>
+  <style>
+    /* ── Hero ── */
+    .hero-home {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--spacing-xl) 2rem var(--spacing-lg);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4rem;
+      align-items: center;
+    }
 
-  <!-- Main Application Script -->
-  <script src="scripts/main.js" defer></script>
+    .hero-text { text-align: left; }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--primary-green);
+      margin-bottom: 1.5rem;
+      padding: 0.35rem 1rem;
+      border: 1px solid rgba(245,158,11,0.3);
+      border-radius: 100px;
+    }
+
+    .hero-home h1 {
+      font-size: clamp(2.8rem, 5.5vw, 5rem);
+      font-weight: 300;
+      color: var(--text-primary);
+      line-height: 1.08;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-home h1 strong {
+      font-weight: 600;
+      color: var(--primary-green);
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+      color: var(--text-muted);
+      max-width: 560px;
+      margin: 0 0 2.5rem;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+    }
+
+    /* KERN logo column */
+    .hero-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .hero-logo-rings {
+      opacity: 0.9;
+      filter: drop-shadow(0 0 32px rgba(245,158,11,0.2));
+    }
+
+    .hero-logo-wordmark {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.35em;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 860px) {
+      .hero-home {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+      }
+      .hero-text { text-align: center; }
+      .hero-logo { order: -1; }
+      .hero-sub { margin: 0 auto 2.5rem; }
+      .hero-actions { justify-content: center; }
+    }
+
+
+    /* ── Audience cards ── */
+    .audience-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--spacing-xl) 2rem var(--spacing-lg);
+    }
+
+    .section-label {
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .audience-card {
+      background: var(--card-bg);
+      border: 1px solid #2e3d52;
+      border-radius: 12px;
+      padding: 2rem;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .audience-card:hover {
+      border-color: rgba(245,158,11,0.35);
+      transform: translateY(-3px);
+    }
+
+    .audience-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(245,158,11,0.10);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-green);
+    }
+
+    .audience-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .audience-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .audience-card .card-link {
+      font-size: 0.85rem;
+      color: var(--primary-green);
+      font-weight: 500;
+    }
+
+    /* ── Operative loop ── */
+    .loop-section {
+      background: #16202f;
+      border-top: 1px solid #2a3850;
+      border-bottom: 1px solid #2a3850;
+      padding: var(--spacing-lg) 2rem;
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .loop-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .loop-inner h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 300;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+    }
+
+    .loop-inner h2 strong { font-weight: 600; }
+
+    .loop-inner .loop-sub {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 3rem;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .loop-steps {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+
+    .loop-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      min-width: 130px;
+      flex: 1;
+      max-width: 180px;
+    }
+
+    .loop-num {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(245,158,11,0.1);
+      border: 1px solid rgba(245,158,11,0.25);
+      color: var(--primary-green);
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .loop-step-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      text-align: center;
+    }
+
+    .loop-step-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .loop-arrow {
+      color: #333;
+      font-size: 1.2rem;
+      padding-top: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .loop-callout {
+      margin-top: 2.5rem;
+      padding: 1.25rem 2rem;
+      background: rgba(245,158,11,0.05);
+      border: 1px solid rgba(245,158,11,0.15);
+      border-radius: 10px;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      display: inline-block;
+    }
+
+    .loop-callout strong { color: var(--primary-green); }
+
+    /* ── Reference block ── */
+    .reference-section {
+      max-width: 900px;
+      margin: 0 auto var(--spacing-lg);
+      padding: 0 2rem;
+      text-align: center;
+    }
+
+    .reference-card {
+      background: var(--card-bg);
+      border: 1px solid #2e3d52;
+      border-radius: 16px;
+      padding: 3rem;
+    }
+
+    .reference-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--primary-green);
+      margin-bottom: 1.25rem;
+    }
+
+    .reference-card h2 {
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 300;
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+    }
+
+    .reference-proof {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+
+    .proof-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--primary-green);
+      flex-shrink: 0;
+    }
+
+    /* ── Final CTA ── */
+    .cta-home {
+      text-align: center;
+      padding: var(--spacing-lg) 2rem var(--spacing-xl);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cta-home h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 300;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .cta-home p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+  </style>
 </head>
 <body>
-  
-  <!-- Navigation -->
+
   <div id="nav-placeholder"></div>
-  
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1 class="fade-in">
-      <span class="highlight">Connect. See. Control.</span><br>
-      Distributed Energy Assets
-    </h1>
-    <p class="hero-subtitle fade-in">
-      Take control of your energy infrastructure with secure connectivity that reaches every asset, real-time visibility into every kilowatt, and intelligent control that optimizes every decision — turning fragmented resources into a unified, intelligent system.
-    </p>
-    <div class="hero-stats fade-in">
-      <div class="stat">
-        <span class="stat-value">1.5M</span>
-        <span class="stat-label">Messages/Day per Node</span>
-      </div>
-      <div class="stat">
-        <span class="stat-value">10km</span>
-        <span class="stat-label">Coverage Range</span>
-      </div>
-      <div class="stat">
-        <span class="stat-value">99.9%</span>
-        <span class="stat-label">Uptime Reliability</span>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Solutions Section -->
-  <div id="solutions-section-placeholder"></div>
-  
-  <!-- Capabilities Section -->
-  <div id="capabilities-section-placeholder"></div>
-  
-  <!-- Technology Section -->
-  <div id="technology-section-placeholder"></div>
-  
-  <!-- Products Section -->
-  <div id="products-section-placeholder"></div>
-  
 
-  <div id="partners-section-placeholder"></div>
-
-  <!-- CTA Section -->
-  <section class="section">
-    <div class="cta-section">
-      <h2>Ready to Transform Your Energy Assets?</h2>
-      <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: var(--spacing-md);">
-        Whether you're managing a single building or an entire distribution network, we have the infrastructure and expertise to help you succeed.
+  <!-- Hero -->
+  <section class="hero-home">
+    <div class="hero-text">
+      <div class="hero-eyebrow">Riddle<strong style="color: var(--kern-accent);">&amp;</strong>Code — Vienna</div>
+      <h1>
+        Infrastructure for<br><strong>distributed energy.</strong>
+      </h1>
+      <p class="hero-sub">
+        We build the platform utilities and aggregators use to connect, dispatch and monetise distributed energy assets at scale. Our product is <strong style="color: var(--text-primary);">KERN</strong>.
       </p>
-      <div class="cta-buttons">
-        <a href="company/get-in-touch.html" class="btn btn-primary">Request a Demo</a>
-        <a href="product/mypwr.html" class="btn btn-secondary">Explore MYPWR</a>
+      <div class="hero-actions">
+        <a href="/kern/" class="btn btn-primary">Discover KERN →</a>
+        <a href="/company/get-in-touch.html" class="btn btn-secondary">Book a Demo</a>
+      </div>
+    </div>
+
+    <!-- KERN logo -->
+    <div class="hero-logo">
+      <svg class="hero-logo-rings" viewBox="0 0 220 220" width="220" height="220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="KERN">
+        <circle cx="110" cy="110" r="100" fill="none" stroke="#ffffff" stroke-width="1"   opacity="0.10"/>
+        <circle cx="110" cy="110" r="76"  fill="none" stroke="#ffffff" stroke-width="1.2" opacity="0.22"/>
+        <circle cx="110" cy="110" r="54"  fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.40"/>
+        <circle cx="110" cy="110" r="34"  fill="none" stroke="#F59E0B" stroke-width="1.8" opacity="0.60"/>
+        <circle cx="110" cy="110" r="16"  fill="none" stroke="#F59E0B" stroke-width="2.5" opacity="0.85"/>
+        <circle cx="110" cy="110" r="6"   fill="#F59E0B"/>
+      </svg>
+      <span class="hero-logo-wordmark">KERN</span>
+    </div>
+  </section>
+
+  <!-- Audience cards -->
+  <section class="audience-section">
+    <p class="section-label">Who KERN is built for</p>
+    <div class="audience-grid">
+
+      <a href="/kern/for-aggregators.html" class="audience-card">
+        <div class="audience-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+          </svg>
+        </div>
+        <h3>Aggregators</h3>
+        <p>Secure your bids every time. KERN dispatches behind the meter and confirms execution — no manual intervention, no penalties.</p>
+        <span class="card-link">For aggregators →</span>
+      </a>
+
+      <a href="/kern/for-utilities.html" class="audience-card">
+        <div class="audience-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <h3>Utilities</h3>
+        <p>Turn your customer base into a steerable flexibility portfolio. From HEMS fleet to energy communities — one platform, one autonomous layer.</p>
+        <span class="card-link">For utilities →</span>
+      </a>
+
+      <a href="/kern/for-communities.html" class="audience-card">
+        <div class="audience-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <h3>Energy Communities</h3>
+        <p>Maximize shared self-consumption automatically. KERN optimizes every asset in the community — and connects collective flexibility to markets.</p>
+        <span class="card-link">For communities →</span>
+      </a>
+
+      <a href="/kern/for-platforms.html" class="audience-card">
+        <div class="audience-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <h3>VPP Platforms</h3>
+        <p>Close the gap below your platform. KERN delivers a normalised API feed, confirmed dispatch and 24h forecasts — for every asset your clients have.</p>
+        <span class="card-link">For platforms →</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Operative loop -->
+  <section class="loop-section">
+    <div class="loop-inner">
+      <h2>The <strong>autonomous loop</strong></h2>
+      <p class="loop-sub">You send a signal. KERN delivers. What happens behind the meter is our job.</p>
+
+      <div class="loop-steps">
+        <div class="loop-step">
+          <div class="loop-num">1</div>
+          <div class="loop-step-label">Forecast</div>
+          <div class="loop-step-desc">Rolling 24h flexibility profile per asset and portfolio</div>
+        </div>
+        <div class="loop-arrow">→</div>
+        <div class="loop-step">
+          <div class="loop-num">2</div>
+          <div class="loop-step-label">Demand</div>
+          <div class="loop-step-desc">Flexibility signal from aggregator, utility or market</div>
+        </div>
+        <div class="loop-arrow">→</div>
+        <div class="loop-step">
+          <div class="loop-num">3</div>
+          <div class="loop-step-label">Rebalance</div>
+          <div class="loop-step-desc">Real-time comparison of signal vs. actual asset state</div>
+        </div>
+        <div class="loop-arrow">→</div>
+        <div class="loop-step">
+          <div class="loop-num">4</div>
+          <div class="loop-step-label">Dispatch</div>
+          <div class="loop-step-desc">Autonomous asset control via MIOTY or Zigbee Mesh</div>
+        </div>
+        <div class="loop-arrow">→</div>
+        <div class="loop-step">
+          <div class="loop-num">5</div>
+          <div class="loop-step-label">Confirm</div>
+          <div class="loop-step-desc">Execution confirmed back to aggregator in real-time</div>
+        </div>
+      </div>
+
+      <div class="loop-callout">
+        <strong>KERN interacts with your platform at step 1 and 2.</strong><br>Steps 3–5 are fully autonomous — no manual intervention required.
       </div>
     </div>
   </section>
-  
-  <!-- Footer -->
+
+  <!-- Reference -->
+  <section class="reference-section">
+    <div class="reference-card">
+      <span class="reference-tag">Live Reference</span>
+      <h2>Leading utilities built their flexibility stack on R&amp;C KERN</h2>
+      <div class="reference-proof">
+        <div class="proof-item"><div class="proof-dot"></div> Live MV/LV microgrid — production system</div>
+        <div class="proof-item"><div class="proof-dot"></div> Utility-owned aggregator securing market bids via KERN</div>
+        <div class="proof-item"><div class="proof-dot"></div> Energy community platform — KERN optimization layer</div>
+      </div>
+      <p style="color: var(--text-muted); font-size:0.9rem; margin-bottom:1.5rem;">
+        Live system — visitable on request.
+      </p>
+      <a href="/references/" class="btn btn-secondary">See the full reference →</a>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="cta-home">
+    <h2>Stop managing assets.<br>Let KERN deliver.</h2>
+    <p>30 minutes to show you how the autonomous loop works — on a live system.</p>
+    <div class="hero-actions">
+      <a href="/company/get-in-touch.html" class="btn btn-primary">Book a Demo</a>
+      <a href="/technology/" class="btn btn-secondary">Explore the Technology</a>
+    </div>
+  </section>
+
   <div id="footer-modern-placeholder"></div>
+
 </body>
 </html>

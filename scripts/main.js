@@ -12,10 +12,12 @@
   const isFile = window.location.pathname.includes('.');
   const depth = isFile ? pathParts.length - 1 : pathParts.length;
   const prefix = depth > 0 ? '../'.repeat(depth) : '';
+  const isDE = window.location.pathname.startsWith('/de/') || window.location.pathname === '/de';
+  const includesDir = isDE ? 'de/includes/' : 'includes/';
 
   const components = [
-    { id: 'nav-placeholder', file: 'includes/nav.html', init: initNav },
-    { id: 'footer-modern-placeholder', file: 'includes/footer.html' },
+    { id: 'nav-placeholder', file: includesDir + 'nav.html', init: initNav },
+    { id: 'footer-modern-placeholder', file: includesDir + 'footer.html' },
     { id: 'solutions-section-placeholder', file: 'includes/solutions-section.html' },
     { id: 'capabilities-section-placeholder', file: 'includes/capabilities-section.html' },
     { id: 'technology-section-placeholder', file: 'includes/technology-section.html' },
@@ -39,8 +41,8 @@
     })(window,document);
 
     // 2.2 Favicons
-    addLinkTag({ rel: 'shortcut icon', type: 'image/x-icon', href: prefix + 'images/641436b897f1d137d2d2845d_fav_icon.png' });
-    addLinkTag({ rel: 'apple-touch-icon', href: prefix + 'images/641437162f7f81829faa8c24_webclip.png' });
+    addLinkTag({ rel: 'shortcut icon', type: 'image/svg+xml', href: prefix + 'images/kern-symbol.svg' });
+    addLinkTag({ rel: 'apple-touch-icon', href: prefix + 'images/kern-symbol.svg' });
 
     // 2.3 Analytics & Scripts
     const gaId = document.documentElement.getAttribute('data-ga-id') || 'G-K86LPV2ZGE';
@@ -120,22 +122,77 @@
   function initNav(container) {
     const toggle = container.querySelector('#navToggle');
     const menu = container.querySelector('#navMenu');
-    
+
     if (toggle && menu) {
       toggle.addEventListener('click', function(e) {
         e.stopPropagation();
         menu.classList.toggle('active');
       });
-      
+
       document.addEventListener('click', function(event) {
         if (!toggle.contains(event.target) && !menu.contains(event.target)) {
           menu.classList.remove('active');
         }
       });
-      
-      container.querySelectorAll('a').forEach(link => {
+
+      // Mobile: tap parent items to open/close dropdowns
+      container.querySelectorAll('.nav-item > .nav-link').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          if (window.innerWidth <= 900) {
+            e.preventDefault();
+            const item = this.closest('.nav-item');
+            container.querySelectorAll('.nav-item.open').forEach(other => {
+              if (other !== item) other.classList.remove('open');
+            });
+            item.classList.toggle('open');
+          }
+        });
+      });
+
+      // Close menu when leaf links are clicked
+      container.querySelectorAll('.nav-dropdown a, .nav-cta').forEach(link => {
         link.addEventListener('click', () => menu.classList.remove('active'));
       });
+    }
+
+    initLangToggle(container);
+  }
+
+  function initLangToggle(container) {
+    const path = window.location.pathname;
+    const isDE = path.startsWith('/de/') || path === '/de';
+
+    function altUrl(targetLang) {
+      const basePath = path.replace(/^\/de/, '') || '/';
+      if (targetLang === 'de') {
+        return '/de' + basePath;
+      } else {
+        return basePath;
+      }
+    }
+
+    const enLink = container.querySelector('#lang-en');
+    const deLink = container.querySelector('#lang-de');
+
+    if (enLink && deLink) {
+      enLink.href = altUrl('en');
+      deLink.href = altUrl('de');
+      (isDE ? deLink : enLink).classList.add('active');
+
+      enLink.addEventListener('click', () => localStorage.setItem('rnc-lang', 'en'));
+      deLink.addEventListener('click', () => localStorage.setItem('rnc-lang', 'de'));
+    }
+  }
+
+  function initAutoRedirect() {
+    // Only redirect on root homepage, not on DE pages or other paths
+    if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') return;
+    const saved = localStorage.getItem('rnc-lang');
+    if (saved) return; // user has explicit preference
+    const browserLang = (navigator.language || '').toLowerCase().slice(0, 2);
+    if (browserLang === 'de') {
+      localStorage.setItem('rnc-lang', 'de');
+      window.location.replace('/de/');
     }
   }
 
@@ -159,6 +216,7 @@
   // --- 5. INITIALIZATION ---
   
   function init() {
+    initAutoRedirect();
     initHead();
     loadComponents();
     initAnimations();

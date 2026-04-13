@@ -1,26 +1,19 @@
 <!DOCTYPE html>
-<html data-wf-domain="www.riddleandcode.com" data-wf-page="651eafbae761a2b4e1c54c6a" data-wf-site="63eb258eae57fdd13c41eaff" lang="en">
+<html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Riddle&Code News</title>
-    <link href="https://www.riddleandcode.com/company/news" hreflang="x-default" rel="alternate"/>
-    <link href="https://www.riddleandcode.com/company/news" hreflang="en" rel="alternate"/>
-    <link href="https://www.riddleandcode.com/de/company/news" hreflang="de" rel="alternate"/>
-    <meta content="Dive into Riddle&Code's extensive industry research, where experts shed light on subjects spanning from tokenization in energy and supply chain sectors, to decentralized solutions in the industrial field. Keep abreast with the latest studies, news, and evolving trends." name="description"/>
-    <meta content="Riddle&Code News" property="og:title"/>
-    <meta content="Dive into Riddle&Code's extensive industry research, where experts shed light on subjects spanning from tokenization in energy and supply chain sectors, to decentralized solutions in the industrial field. Keep abreast with the latest studies, news, and evolving trends." property="og:description"/>
-    <meta content="../images/641396f2cc997d3e6da5892b_r&c_news.jpg" property="og:image"/>
-    <meta content="Riddle&Code News" property="twitter:title"/>
-    <meta content="Riddle&Code's extensive industry research, where experts shed light on subjects spanning from tokenization in energy and supply chain sectors, to decentralized solutions in the industrial field. Keep abreast with the latest studies, news, and evolving trends." property="twitter:description"/>
-    <meta content="../images/641396f2cc997d3e6da5892b_r&c_news.jpg" property="twitter:image"/>
-    <meta content="website" property="og:type"/>
-    <meta content="summary_large_image" name="twitter:card"/>
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    
-    <link href="../styles/main.css" rel="stylesheet" type="text/css"/>
-
-    <!-- Common Head Elements -->
-    <script src="../scripts/load-head-common.js"></script>
+    <title>News — Riddle&amp;Code</title>
+    <meta name="description" content="Latest news, research and updates from Riddle&amp;Code and the KERN team."/>
+    <meta property="og:title" content="News — Riddle&amp;Code"/>
+    <meta property="og:description" content="Latest news, research and updates from Riddle&amp;Code and the KERN team."/>
+    <meta property="og:type" content="website"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="alternate" hreflang="en" href="https://riddleandcode.com/company/news.html"/>
+    <link rel="alternate" hreflang="de" href="https://riddleandcode.com/de/company/news.html"/>
+    <link rel="alternate" hreflang="x-default" href="https://riddleandcode.com/company/news.html"/>
+    <link href="/styles/main.css" rel="stylesheet" type="text/css"/>
+    <script src="/scripts/main.js" defer></script>
     <style>
       .content-grid {
         display: grid;
@@ -28,7 +21,7 @@
         gap: 2rem;
         margin-top: 2rem;
       }
-      
+
       .news-card {
         background: rgba(255, 255, 255, 0.03);
         border: 1px solid rgba(255, 255, 255, 0.1);
@@ -39,19 +32,20 @@
         display: block;
         height: 100%;
       }
-      
-      .news-card:hover {
+
+      .news-card:hover,
+      .embed-card:hover {
         background: rgba(255, 255, 255, 0.05);
         border-color: var(--primary-green);
         transform: translateY(-4px);
       }
-      
+
       .news-card h3 {
         color: var(--text-primary);
         margin-bottom: 0.5rem;
         font-size: 1.25rem;
       }
-      
+
       .news-card .news-tag {
         color: var(--primary-green);
         font-size: 0.875rem;
@@ -59,13 +53,13 @@
         margin-bottom: 0.5rem;
         display: block;
       }
-      
+
       .news-card p {
         color: var(--text-secondary);
         font-size: 0.95rem;
         line-height: 1.6;
       }
-      
+
       .news-card img {
         width: 100%;
         max-height: 180px;
@@ -73,12 +67,12 @@
         border-radius: 8px;
         margin-bottom: 1rem;
       }
-      
+
       .medium-card {
         display: flex;
         flex-direction: column;
       }
-      
+
       .medium-card img {
         width: 100%;
         height: 150px;
@@ -87,43 +81,45 @@
         margin-bottom: 1rem;
         flex-shrink: 0;
       }
-      
+
       .medium-card h3 {
         font-size: 1rem;
         line-height: 1.3;
         margin-bottom: 0.5rem;
         color: var(--text-primary);
       }
-      
+
       .medium-card p {
         font-size: 0.875rem;
         line-height: 1.5;
         margin-bottom: 0.5rem;
         flex-grow: 1;
       }
-      
+
       .medium-card .read-more {
         color: var(--primary-green);
         font-size: 0.875rem;
         margin-top: auto;
         padding-top: 0.5rem;
       }
-      
+
       .embed-card {
         background: rgba(255, 255, 255, 0.03);
         border: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 12px;
-        padding: 1rem;
+        padding: 1.5rem;
         overflow: hidden;
+        transition: all 0.3s ease;
       }
-      
+
       .embed-card iframe {
         width: 100%;
         border-radius: 8px;
       }
-      
+
       .platform-badge {
         display: inline-block;
+        align-self: flex-start;
         padding: 0.25rem 0.75rem;
         border-radius: 6px;
         font-size: 0.75rem;
@@ -132,49 +128,49 @@
         text-transform: uppercase;
         letter-spacing: 0.5px;
       }
-      
+
       .badge-linkedin {
-        background: rgba(0, 119, 181, 0.2);
-        color: #0077b5;
-        border: 1px solid rgba(0, 119, 181, 0.4);
-      }
-      
-      .badge-medium {
-        background: rgba(0, 0, 0, 0.3);
-        color: #ffffff;
+        background: rgba(255, 255, 255, 0.06);
+        color: var(--text-primary);
         border: 1px solid rgba(255, 255, 255, 0.2);
       }
-      
-      .badge-news {
-        background: rgba(0, 255, 136, 0.1);
-        color: var(--primary-green);
-        border: 1px solid rgba(0, 255, 136, 0.3);
+
+      .badge-medium {
+        background: rgba(46, 61, 82, 0.6);
+        color: var(--text-secondary);
+        border: 1px solid #2e3d52;
       }
-      
+
+      .badge-news {
+        background: rgba(245, 158, 11, 0.1);
+        color: var(--primary-green);
+        border: 1px solid rgba(245, 158, 11, 0.3);
+      }
+
       .newsletter-card {
-        background: rgba(0, 255, 136, 0.05);
+        background: rgba(245, 158, 11, 0.05);
         border: 2px solid var(--primary-green);
         border-radius: 12px;
         padding: 2rem;
         margin-bottom: 3rem;
       }
-      
+
       .newsletter-card h3 {
         color: var(--text-primary);
         margin-bottom: 0.5rem;
       }
-      
+
       .newsletter-card p {
         color: var(--text-secondary);
         margin-bottom: 1.5rem;
       }
-      
+
       .newsletter-form {
         display: flex;
         gap: 1rem;
         flex-wrap: wrap;
       }
-      
+
       .newsletter-form input[type="email"] {
         flex: 1;
         min-width: 250px;
@@ -185,12 +181,12 @@
         color: var(--text-primary);
         font-size: 1rem;
       }
-      
+
       .newsletter-form input[type="email"]:focus {
         outline: none;
         border-color: var(--primary-green);
       }
-      
+
       .filter-tabs {
         display: flex;
         gap: 1rem;
@@ -198,7 +194,7 @@
         flex-wrap: wrap;
         justify-content: center;
       }
-      
+
       .filter-tab {
         padding: 0.75rem 1.5rem;
         background: rgba(255, 255, 255, 0.05);
@@ -209,14 +205,14 @@
         transition: all 0.3s ease;
         font-weight: 500;
       }
-      
+
       .filter-tab:hover,
       .filter-tab.active {
         background: var(--primary-green);
         color: var(--dark-bg);
         border-color: var(--primary-green);
       }
-      
+
       @media (max-width: 768px) {
         .content-grid {
           grid-template-columns: 1fr;
@@ -227,39 +223,27 @@
   <body>
     <div class="wrapper">
       <div id="nav-placeholder"></div>
-      <script src="../scripts/load-nav.js"></script>
 
       <section class="hero">
         <h1 class="fade-in">
-          <span class="highlight">News & Insights</span><br>
-          Articles, Updates & Community
+          <span class="highlight">News &amp; Insights</span><br>From Riddle&amp;Code
         </h1>
         <p class="hero-subtitle fade-in">
-          Follow our journey through industry research, LinkedIn updates, Medium articles, and press releases. Stay connected with the latest developments in Web3, energy tokenization, and decentralized infrastructure.
+          Stay up to date with our latest product updates, market research and company news.
         </p>
       </section>
 
       <section class="section">
-        <!--
-        <div class="newsletter-card">
-          <h3>Become an Insider</h3>
-          <p>Subscribe to our newsletter for the latest updates, insights, and industry trends delivered directly to your inbox.</p>
-          <form action="https://riddleandcode.us17.list-manage.com/subscribe/post?u=6bbe708abce949d6a8bc7a0db&id=336a75474f" method="post" class="newsletter-form">
-            <input type="email" name="Email" placeholder="your@email.com" required/>
-            <button type="submit" class="btn btn-primary">Subscribe</button>
-          </form>
-        </div>
-        -->
         <div class="section-header">
           <span class="section-tag">CONTENT HUB</span>
           <h2 class="section-title">Latest Content</h2>
         </div>
 
         <div class="filter-tabs">
-          <button class="filter-tab active" data-filter="all">All</button>
-          <button class="filter-tab" data-filter="linkedin">LinkedIn</button>
-          <button class="filter-tab" data-filter="medium">Medium</button>
-          <button class="filter-tab" data-filter="news">Press Releases</button>
+          <button type="button" class="filter-tab active" data-filter="all">All</button>
+          <button type="button" class="filter-tab" data-filter="linkedin">LinkedIn</button>
+          <button type="button" class="filter-tab" data-filter="medium">Medium</button>
+          <button type="button" class="filter-tab" data-filter="news">Press Releases</button>
         </div>
 
         <div class="content-grid" id="content-container">
@@ -269,11 +253,11 @@
 
       <section class="section">
         <div class="cta-section">
-          <h2>Want to Learn More?</h2>
-          <p>Explore our products, partnerships, and the technology driving the future of decentralized energy.</p>
+          <h2>Want to stay updated?</h2>
+          <p>Subscribe to our newsletter or follow us on LinkedIn.</p>
           <div class="cta-buttons">
-            <a href="about-us.html" class="btn btn-primary">About Us</a>
-            <a href="get-in-touch.html" class="btn btn-secondary">Get in Touch</a>
+            <a href="/company/get-in-touch.html" class="btn btn-primary">Contact Us</a>
+            <a href="/" class="btn btn-secondary">Back to Home</a>
           </div>
         </div>
       </section>
@@ -282,15 +266,15 @@
         // Load content from JSON
         async function loadContent() {
           try {
-            const response = await fetch('../data/content-feed.json');
+            const response = await fetch('/data/content-feed.json');
             const data = await response.json();
             const container = document.getElementById('content-container');
-            
+
             // Sort posts by date (newest first)
             const sortedPosts = data.posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-            
+
             let dynamicHTML = '';
-            
+
             sortedPosts.forEach(post => {
               if (post.type === 'linkedin' && post.embedUrl) {
                 // LinkedIn embedded post
@@ -334,13 +318,13 @@
                 `;
               }
             });
-            
+
             // Insert dynamic content at the beginning of the grid
             container.insertAdjacentHTML('afterbegin', dynamicHTML);
-            
+
             // Initialize filter after content is loaded
             initializeFilters();
-            
+
           } catch (error) {
             console.error('Error loading content:', error);
             const container = document.getElementById('content-container');
@@ -351,20 +335,20 @@
             `);
           }
         }
-        
+
         // Filter functionality
         function initializeFilters() {
           const filterTabs = document.querySelectorAll('.filter-tab');
           const contentItems = document.querySelectorAll('[data-category]');
-          
+
           filterTabs.forEach(tab => {
             tab.addEventListener('click', () => {
               const filter = tab.dataset.filter;
-              
+
               // Update active tab
               filterTabs.forEach(t => t.classList.remove('active'));
               tab.classList.add('active');
-              
+
               // Filter content
               contentItems.forEach(item => {
                 if (filter === 'all' || item.dataset.category === filter) {
@@ -376,14 +360,12 @@
             });
           });
         }
-        
+
         // Load content when page loads
         document.addEventListener('DOMContentLoaded', loadContent);
       </script>
 
       <div id="footer-modern-placeholder"></div>
-      <script src="../scripts/load-footer-modern.js"></script>
-      <script src="../scripts/fade-in-animations.js"></script>
     </div>
   </body>
 </html>

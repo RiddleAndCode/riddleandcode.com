@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 96" width="330" height="96">
+  <title>KERN by Riddle&amp;Code</title>
+
+  <!--
+    KERN logo — primary horizontal lockup, light background
+    Symbol: concentric rings (nucleus / cross-section motif) + amber core
+    Palette: #1C2333 charcoal-slate | #F59E0B warm amber gold
+    Typography: geometric sans-serif wordmark, wide tracking
+    Tagline: "Infrastructure for distributed energy."
+  -->
+
+  <!-- Symbol: cross-section rings, opacity decreasing outward -->
+  <circle cx="38" cy="38" r="34" fill="none" stroke="#1C2333" stroke-width="1"   opacity="0.22"/>
+  <circle cx="38" cy="38" r="24" fill="none" stroke="#1C2333" stroke-width="1.5" opacity="0.50"/>
+  <circle cx="38" cy="38" r="14" fill="none" stroke="#1C2333" stroke-width="2"   opacity="0.82"/>
+
+  <!-- Core — warm amber gold -->
+  <circle cx="38" cy="38" r="5.5" fill="#F59E0B"/>
+
+  <!-- Wordmark — wide tracking, medium weight -->
+  <text
+    x="88" y="50"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="32"
+    font-weight="500"
+    letter-spacing="9"
+    fill="#1C2333">KERN</text>
+
+  <!-- Tagline -->
+  <text
+    x="90" y="70"
+    font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+    font-size="9"
+    font-weight="400"
+    letter-spacing="0.5"
+    fill="#1C2333"
+    opacity="0.45">Infrastructure for distributed energy.</text>
+
+</svg>

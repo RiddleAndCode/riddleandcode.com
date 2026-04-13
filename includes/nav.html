@@ -1,28 +1,10 @@
 <style>
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  :root {
-    --primary-green: #00ff88;
-    --primary-blue: #00d4ff;
-    --dark-bg: #0a0a0a;
-    --text-primary: #ffffff;
-    --text-secondary: #e0e0e0;
-    --text-muted: #999999;
-    --border-color: #333333;
-  }
-  
-  /* Navigation */
   .nav {
     position: relative;
     z-index: 1000;
-    background: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(10px);
+    background: #1C2333;
+    border-bottom: 1px solid #2a3850;
   }
-  
   .nav-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -32,114 +14,211 @@
     align-items: center;
     gap: 2rem;
   }
-  
   .nav-logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
     text-decoration: none;
     color: var(--text-primary);
-    font-size: 1.25rem;
-    font-weight: 600;
+    flex-shrink: 0;
   }
-  
-  .nav-logo img {
-    height: 32px;
-    width: auto;
+  .nav-logo-wordmark {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    letter-spacing: 0.01em;
   }
-  
+  .nav-logo-amp {
+    color: var(--kern-accent);
+    font-weight: 700;
+  }
   .nav-menu {
     display: flex;
-    gap: 2rem;
+    gap: 0.25rem;
     align-items: center;
     list-style: none;
+    flex: 1;
+    justify-content: flex-end;
   }
-  
+  /* Base nav link */
   .nav-link {
     color: var(--text-secondary);
     text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
+    font-size: 0.9rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    transition: color 0.2s ease, background 0.2s ease;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .nav-link:hover { color: var(--text-primary); background: rgba(255,255,255,0.05); }
+  /* Dropdown parent */
+  .nav-item { position: relative; list-style: none; }
+  .nav-item > .nav-link::after {
+    content: '▾';
+    font-size: 0.7rem;
+    opacity: 0.6;
+    transition: transform 0.2s ease;
+  }
+  .nav-item:hover > .nav-link::after { transform: rotate(180deg); }
+  /* Dropdown menu */
+  .nav-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    background: #16202f;
+    border: 1px solid #2a3850;
+    border-radius: 10px;
+    padding: 0.5rem;
+    min-width: 220px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+    z-index: 100;
+  }
+  .nav-item:hover .nav-dropdown { display: block; }
+  .nav-dropdown a {
+    display: block;
+    padding: 0.6rem 0.9rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    border-radius: 6px;
+    transition: color 0.2s ease, background 0.2s ease;
     white-space: nowrap;
   }
-  
-  .nav-link:hover {
-    color: var(--primary-green);
+  .nav-dropdown a:hover { color: var(--text-primary); background: rgba(255,255,255,0.06); }
+  .nav-dropdown .dropdown-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    padding: 0.5rem 0.9rem 0.25rem;
   }
-  
-  .nav-cta {
-    background: var(--primary-green);
-    color: var(--dark-bg);
-    padding: 0.6rem 1.5rem;
-    border-radius: 8px;
+  .nav-dropdown .dropdown-divider {
+    height: 1px;
+    background: #2a3850;
+    margin: 0.4rem 0.5rem;
+  }
+  /* KERN highlight in dropdown */
+  .nav-dropdown .kern-link {
+    color: var(--kern-accent);
+    font-weight: 500;
+  }
+  .nav-dropdown .kern-link:hover { background: rgba(196,123,43,0.1); }
+  /* Language toggle */
+  .nav-lang {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-left: 0.5rem;
+  }
+  .nav-lang a {
+    color: var(--text-muted);
     text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 0.25rem 0.4rem;
+    border-radius: 4px;
+    transition: color 0.2s ease;
   }
-  
+  .nav-lang a:hover, .nav-lang a.active { color: var(--text-primary); }
+  .nav-lang span { opacity: 0.3; }
+  /* CTA */
+  .nav-cta {
+    background: var(--kern-accent) !important;
+    color: #1C2333 !important;
+    padding: 0.55rem 1.25rem !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+    transition: opacity 0.2s ease, transform 0.2s ease !important;
+    margin-left: 0.5rem;
+    white-space: nowrap;
+  }
   .nav-cta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 255, 136, 0.3);
+    opacity: 0.88 !important;
+    transform: translateY(-1px) !important;
+    background: var(--kern-accent) !important;
   }
-  
-  /* Mobile menu toggle */
+  /* Mobile toggle */
   .nav-toggle {
     display: none;
     background: none;
     border: none;
     color: var(--text-primary);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     cursor: pointer;
-    padding: 0.5rem;
+    padding: 0.4rem;
   }
-  
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     .nav-menu {
       display: none;
       position: absolute;
       top: 100%;
       left: 0;
       right: 0;
-      background: rgba(10, 10, 10, 0.98);
+      background: #1a2438;
       flex-direction: column;
+      align-items: flex-start;
       padding: 1rem;
-      border-bottom: 1px solid var(--border-color);
-      gap: 1rem;
+      border-bottom: 1px solid #222;
+      gap: 0.25rem;
     }
-    
-    .nav-menu.active {
-      display: flex;
-    }
-    
-    .nav-toggle {
-      display: block;
-    }
-    
-    .nav-container {
-      flex-wrap: wrap;
-    }
+    .nav-menu.active { display: flex; }
+    .nav-toggle { display: block; }
+    .nav-container { flex-wrap: wrap; }
+    .nav-item { width: 100%; }
+    .nav-dropdown { position: static; box-shadow: none; border: none; background: #16202f; border-radius: 6px; margin-top: 0.25rem; }
+    .nav-item:hover .nav-dropdown { display: none; }
+    .nav-item.open .nav-dropdown { display: block; }
+    .nav-item > .nav-link { width: 100%; justify-content: space-between; }
+    .nav-lang { margin-left: 0; padding: 0.5rem 0.75rem; }
+    .nav-cta { margin-left: 0; width: 100%; text-align: center; margin-top: 0.5rem; }
   }
 </style>
-
-<!-- Navigation -->
 <nav class="nav">
   <div class="nav-container">
     <a href="/" class="nav-logo">
-      <img src="/images/640eb41653155cff97638680_RIDDLE&CODE_SHORTLOGO_OPTION_C_POS_grey.png" alt="Riddle&Code Logo">
-      <span>Riddle&Code</span>
+      <span class="nav-logo-wordmark">Riddle<span class="nav-logo-amp">&amp;</span>Code</span>
     </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-      ☰
-    </button>
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
     <ul class="nav-menu" id="navMenu">
-      <li><a href="/#solutions" class="nav-link">Solutions</a></li>
-      <li><a href="/#capabilities" class="nav-link">Capabilities</a></li>
-      <li><a href="/#technology" class="nav-link">Technology</a></li>
-      <li><a href="/#products" class="nav-link">Products</a></li>
-      <li><a href="/company/about-us.html" class="nav-link">Company</a></li>
-      <li><a href="/company/news.html" class="nav-link">News</a></li>
-      <li><a href="/company/get-in-touch.html" class="nav-cta">Get in Touch</a></li>
+      <!-- Products dropdown -->
+      <li class="nav-item" id="kernDropdown">
+        <a href="/kern/" class="nav-link">Products</a>
+        <div class="nav-dropdown">
+          <div class="dropdown-label">KERN — Autonomous Energy Platform</div>
+          <a href="/kern/" class="kern-link">KERN Overview</a>
+          <div class="dropdown-divider"></div>
+          <a href="/kern/for-utilities.html">For Utilities</a>
+          <a href="/kern/for-aggregators.html">For Aggregators</a>
+          <a href="/kern/for-communities.html">For Energy Communities</a>
+          <a href="/kern/for-platforms.html">For Platforms</a>
+        </div>
+      </li>
+      <li><a href="/technology/" class="nav-link">Technology</a></li>
+      <li><a href="/references/" class="nav-link">References</a></li>
+      <!-- Company dropdown -->
+      <li class="nav-item">
+        <a href="/company/about-us.html" class="nav-link">Company</a>
+        <div class="nav-dropdown">
+          <a href="/company/about-us.html">About Us</a>
+          <a href="/company/news.html">News</a>
+          <a href="/company/media.html">Media</a>
+          <a href="/company/career.html">Careers</a>
+        </div>
+      </li>
+      <!-- Language toggle -->
+      <li>
+        <div class="nav-lang">
+          <a href="#" id="lang-en">EN</a>
+          <span>|</span>
+          <a href="#" id="lang-de">DE</a>
+        </div>
+      </li>
+      <!-- CTA -->
+      <li><a href="/company/get-in-touch.html" class="nav-link nav-cta">Book a Demo</a></li>
     </ul>
   </div>
 </nav>
