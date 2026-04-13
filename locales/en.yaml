@@ -58,7 +58,7 @@ loop_callout: "<strong>KERN interacts with your platform at step 1 and 2.</stron
 
 # ── Reference block ───────────────────────────────────────────────────────────
 ref_tag: "Live Reference"
-ref_h2: "A leading utility built their flexibility stack on R&amp;C KERN"
+ref_h2: "Leading utilities built their flexibility stack on R&amp;C KERN"
 ref_proof1: "Live MV/LV microgrid — production system"
 ref_proof2: "Utility-owned aggregator securing market bids via KERN"
 ref_proof3: "Energy community platform — KERN optimization layer"
@@ -310,9 +310,9 @@ rp_meta_title: "References — KERN by Riddle&amp;Code"
 rp_meta_desc: "R&amp;C KERN running in production — live MV/LV microgrid, utility-owned aggregator, energy community platform. Visitable on request."
 rp_eyebrow: References
 rp_h1: "Grid. Aggregator. Community.<br><strong>All live.</strong>"
-rp_lead: "One leading regional utility. Three production deployments on a single platform. Visitable on request."
+rp_lead: "Leading utilities. Three production deployments on a single platform. Visitable on request."
 rp_ref_tag: "Live Reference — Austria"
-rp_ref_h2: "A leading regional utility built their <strong>complete flexibility stack</strong> on R&amp;C KERN"
+rp_ref_h2: "Leading utilities built their <strong>complete flexibility stack</strong> on R&amp;C KERN"
 rp_item1_label: Grid
 rp_item1_title: "Live MV/LV Microgrid"
 rp_item1_desc: "Real medium and low-voltage grid in production. KERN managing all assets behind the meter — generation, storage, controllable loads."

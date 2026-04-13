@@ -58,7 +58,7 @@ loop_callout: "<strong>KERN interagiert mit Ihrer Plattform in Schritt 1 und 2.<
 
 # ── Referenzblock ─────────────────────────────────────────────────────────────
 ref_tag: "Live-Referenz"
-ref_h2: "Ein führender Energieversorger hat seinen Flexibilitäts-Stack auf R&amp;C KERN aufgebaut"
+ref_h2: "Führende Energieversorger haben ihren Flexibilitäts-Stack auf R&amp;C KERN aufgebaut"
 ref_proof1: "Laufendes MS/NS-Microgrid — Produktivsystem"
 ref_proof2: "Versorger-eigener Aggregator sichert Marktgebote über KERN"
 ref_proof3: "Energiegemeinschaftsplattform — KERN-Optimierungsschicht"
@@ -310,9 +310,9 @@ rp_meta_title: "Referenzen — KERN by Riddle&amp;Code"
 rp_meta_desc: "R&amp;C KERN im Produktiveinsatz — Live-MV/LV-Microgrid, versorgereigener Aggregator, Energiegemeinschaftsplattform. Besichtigung auf Anfrage."
 rp_eyebrow: Referenzen
 rp_h1: "Netz. Aggregator. Gemeinschaft.<br><strong>Alles live.</strong>"
-rp_lead: "Ein führender regionaler Energieversorger. Drei Produktiv-Deployments auf einer Plattform. Besichtigung auf Anfrage."
+rp_lead: "Führende Energieversorger. Drei Produktiv-Deployments auf einer Plattform. Besichtigung auf Anfrage."
 rp_ref_tag: "Live-Referenz — Österreich"
-rp_ref_h2: "Ein führender regionaler Energieversorger hat seinen <strong>kompletten Flexibilitäts-Stack</strong> auf R&amp;C KERN aufgebaut"
+rp_ref_h2: "Führende Energieversorger haben ihren <strong>kompletten Flexibilitäts-Stack</strong> auf R&amp;C KERN aufgebaut"
 rp_item1_label: Netz
 rp_item1_title: "Live-MV/LV-Microgrid"
 rp_item1_desc: "Echtes Mittel- und Niederspannungsnetz im Produktiveinsatz. KERN verwaltet alle Assets hinter dem Zähler — Erzeugung, Speicher, steuerbare Lasten."
