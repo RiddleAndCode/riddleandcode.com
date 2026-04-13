@@ -106,47 +106,47 @@
     </svg>
     <div>
       <div style="font-size: 1rem; font-weight: 600; letter-spacing: 0.12em; color: #fff;">KERN <span style="font-weight: 400; letter-spacing: 0; color: var(--text-muted);">by</span> <span style="color: #F59E0B;">Riddle&amp;Code</span></div>
-      <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">Infrastructure for distributed energy.</div>
+      <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem;">{{ footer_tagline }}</div>
     </div>
   </div>
 
   <div class="footer-grid">
     <div class="footer-column">
-      <h4>KERN</h4>
+      <h4>{{ footer_col_kern }}</h4>
       <ul class="footer-links">
-        <li><a href="/kern/">Platform Overview</a></li>
-        <li><a href="/kern/for-utilities.html">For Utilities</a></li>
-        <li><a href="/kern/for-aggregators.html">For Aggregators</a></li>
-        <li><a href="/kern/for-communities.html">For Energy Communities</a></li>
-        <li><a href="/kern/for-platforms.html">For Platforms</a></li>
+        <li><a href="{{ nav_prefix }}kern/">{{ footer_platform_overview }}</a></li>
+        <li><a href="{{ nav_prefix }}kern/for-utilities.html">{{ footer_for_utilities }}</a></li>
+        <li><a href="{{ nav_prefix }}kern/for-aggregators.html">{{ footer_for_aggregators }}</a></li>
+        <li><a href="{{ nav_prefix }}kern/for-communities.html">{{ footer_for_communities }}</a></li>
+        <li><a href="{{ nav_prefix }}kern/for-platforms.html">{{ footer_for_platforms }}</a></li>
       </ul>
     </div>
 
     <div class="footer-column">
-      <h4>More</h4>
+      <h4>{{ footer_col_more }}</h4>
       <ul class="footer-links">
-        <li><a href="/technology/">Technology</a></li>
-        <li><a href="/references/">References</a></li>
-        <li><a href="/company/news.html">News</a></li>
+        <li><a href="{{ nav_prefix }}technology/">{{ footer_technology }}</a></li>
+        <li><a href="{{ nav_prefix }}references/">{{ footer_references }}</a></li>
+        <li><a href="{{ nav_prefix }}company/news.html">{{ footer_news }}</a></li>
       </ul>
     </div>
 
     <div class="footer-column">
-      <h4>Company</h4>
+      <h4>{{ footer_col_company }}</h4>
       <ul class="footer-links">
-        <li><a href="/company/about-us.html">About Us</a></li>
-        <li><a href="/company/career.html">Careers</a></li>
-        <li><a href="/company/media.html">Media</a></li>
-        <li><a href="/company/get-in-touch.html">Contact</a></li>
+        <li><a href="{{ nav_prefix }}company/about-us.html">{{ footer_about_us }}</a></li>
+        <li><a href="{{ nav_prefix }}company/career.html">{{ footer_careers }}</a></li>
+        <li><a href="{{ nav_prefix }}company/media.html">{{ footer_media }}</a></li>
+        <li><a href="{{ nav_prefix }}company/get-in-touch.html">{{ footer_contact }}</a></li>
       </ul>
     </div>
 
     <div class="footer-column">
-      <h4>Legal</h4>
+      <h4>{{ footer_col_legal }}</h4>
       <ul class="footer-links">
-        <li><a href="/legal.html">Imprint</a></li>
-        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="/terms.html">Terms of Service</a></li>
+        <li><a href="/legal.html">{{ footer_imprint }}</a></li>
+        <li><a href="/privacy-policy.html">{{ footer_privacy }}</a></li>
+        <li><a href="/terms.html">{{ footer_terms }}</a></li>
       </ul>
     </div>
   </div>
@@ -174,6 +174,6 @@
         </svg>
       </a>
     </div>
-    <p>© 2025 Riddle&amp;Code GmbH. All rights reserved.</p>
+    <p>{{ footer_copyright }}</p>
   </div>
 </footer>

@@ -179,34 +179,34 @@
 </style>
 <nav class="nav">
   <div class="nav-container">
-    <a href="/" class="nav-logo">
+    <a href="{{ nav_prefix }}" class="nav-logo">
       <span class="nav-logo-wordmark">Riddle<span class="nav-logo-amp">&amp;</span>Code</span>
     </a>
     <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
     <ul class="nav-menu" id="navMenu">
       <!-- Products dropdown -->
       <li class="nav-item" id="kernDropdown">
-        <a href="/kern/" class="nav-link">Products</a>
+        <a href="{{ nav_prefix }}kern/" class="nav-link">{{ nav_products }}</a>
         <div class="nav-dropdown">
-          <div class="dropdown-label">KERN — Autonomous Energy Platform</div>
-          <a href="/kern/" class="kern-link">KERN Overview</a>
+          <div class="dropdown-label">{{ nav_kern_label }}</div>
+          <a href="{{ nav_prefix }}kern/" class="kern-link">{{ nav_kern_overview }}</a>
           <div class="dropdown-divider"></div>
-          <a href="/kern/for-utilities.html">For Utilities</a>
-          <a href="/kern/for-aggregators.html">For Aggregators</a>
-          <a href="/kern/for-communities.html">For Energy Communities</a>
-          <a href="/kern/for-platforms.html">For Platforms</a>
+          <a href="{{ nav_prefix }}kern/for-utilities.html">{{ nav_for_utilities }}</a>
+          <a href="{{ nav_prefix }}kern/for-aggregators.html">{{ nav_for_aggregators }}</a>
+          <a href="{{ nav_prefix }}kern/for-communities.html">{{ nav_for_communities }}</a>
+          <a href="{{ nav_prefix }}kern/for-platforms.html">{{ nav_for_platforms }}</a>
         </div>
       </li>
-      <li><a href="/technology/" class="nav-link">Technology</a></li>
-      <li><a href="/references/" class="nav-link">References</a></li>
+      <li><a href="{{ nav_prefix }}technology/" class="nav-link">{{ nav_technology }}</a></li>
+      <li><a href="{{ nav_prefix }}references/" class="nav-link">{{ nav_references }}</a></li>
       <!-- Company dropdown -->
       <li class="nav-item">
-        <a href="/company/about-us.html" class="nav-link">Company</a>
+        <a href="{{ nav_prefix }}company/about-us.html" class="nav-link">{{ nav_company }}</a>
         <div class="nav-dropdown">
-          <a href="/company/about-us.html">About Us</a>
-          <a href="/company/news.html">News</a>
-          <a href="/company/media.html">Media</a>
-          <a href="/company/career.html">Careers</a>
+          <a href="{{ nav_prefix }}company/about-us.html">{{ nav_about_us }}</a>
+          <a href="{{ nav_prefix }}company/news.html">{{ nav_news }}</a>
+          <a href="{{ nav_prefix }}company/media.html">{{ nav_media }}</a>
+          <a href="{{ nav_prefix }}company/career.html">{{ nav_careers }}</a>
         </div>
       </li>
       <!-- Language toggle -->
@@ -218,7 +218,7 @@
         </div>
       </li>
       <!-- CTA -->
-      <li><a href="/company/get-in-touch.html" class="nav-link nav-cta">Book a Demo</a></li>
+      <li><a href="{{ nav_prefix }}company/get-in-touch.html" class="nav-link nav-cta">{{ nav_book_demo }}</a></li>
     </ul>
   </div>
 </nav>

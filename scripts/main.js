@@ -12,10 +12,12 @@
   const isFile = window.location.pathname.includes('.');
   const depth = isFile ? pathParts.length - 1 : pathParts.length;
   const prefix = depth > 0 ? '../'.repeat(depth) : '';
+  const isDE = window.location.pathname.startsWith('/de/') || window.location.pathname === '/de';
+  const includesDir = isDE ? 'de/includes/' : 'includes/';
 
   const components = [
-    { id: 'nav-placeholder', file: 'includes/nav.html', init: initNav },
-    { id: 'footer-modern-placeholder', file: 'includes/footer.html' },
+    { id: 'nav-placeholder', file: includesDir + 'nav.html', init: initNav },
+    { id: 'footer-modern-placeholder', file: includesDir + 'footer.html' },
     { id: 'solutions-section-placeholder', file: 'includes/solutions-section.html' },
     { id: 'capabilities-section-placeholder', file: 'includes/capabilities-section.html' },
     { id: 'technology-section-placeholder', file: 'includes/technology-section.html' },
@@ -133,7 +135,22 @@
         }
       });
 
-      container.querySelectorAll('a').forEach(link => {
+      // Mobile: tap parent items to open/close dropdowns
+      container.querySelectorAll('.nav-item > .nav-link').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          if (window.innerWidth <= 900) {
+            e.preventDefault();
+            const item = this.closest('.nav-item');
+            container.querySelectorAll('.nav-item.open').forEach(other => {
+              if (other !== item) other.classList.remove('open');
+            });
+            item.classList.toggle('open');
+          }
+        });
+      });
+
+      // Close menu when leaf links are clicked
+      container.querySelectorAll('.nav-dropdown a, .nav-cta').forEach(link => {
         link.addEventListener('click', () => menu.classList.remove('active'));
       });
     }
