@@ -418,3 +418,68 @@ html {
   animation: fadeInUp 0.8s ease forwards;
 }
 
+
+/* ── Split problem / solution rows ─────────────────────────────────────── */
+.split-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.split-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #2e3d52;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.split-problem {
+  padding: 1.75rem 2rem;
+  background: var(--card-bg);
+  border-right: 1px solid #2e3d52;
+}
+
+.split-solution {
+  padding: 1.75rem 2rem;
+  background: #16202f;
+  border-left: 3px solid var(--primary-green);
+}
+
+.split-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  display: block;
+}
+
+.split-problem .split-label { color: var(--text-muted); }
+.split-solution .split-label { color: var(--primary-green); }
+
+.split-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.split-desc {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.split-answer {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 680px) {
+  .split-row { grid-template-columns: 1fr; }
+  .split-problem { border-right: none; border-bottom: 1px solid #2e3d52; }
+  .split-solution { border-left: none; border-top: 3px solid var(--primary-green); }
+}

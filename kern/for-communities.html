@@ -19,12 +19,6 @@
     .content-section { max-width:1100px; margin:0 auto; padding:var(--spacing-md) 2rem; }
     .section-heading { font-size:clamp(1.4rem,2.8vw,2rem); font-weight:300; color:var(--text-primary); margin-bottom:2rem; }
     .section-heading strong { font-weight:600; }
-    .pain-grid { display:grid; gap:1rem; margin-bottom:var(--spacing-lg); }
-    .pain-card { background:var(--card-bg); border:1px solid #2e3d52; border-left:3px solid var(--primary-green); border-radius:10px; padding:1.5rem; }
-    .pain-title { font-weight:600; color:var(--text-primary); margin-bottom:0.4rem; font-size:0.95rem; }
-    .pain-desc { color:var(--text-muted); font-size:0.875rem; line-height:1.6; }
-    .pain-solution { margin-top:0.75rem; padding-top:0.75rem; border-top:1px solid #222; color:var(--text-secondary); font-size:0.875rem; }
-    .pain-solution::before { content:'→ '; color:var(--primary-green); font-weight:600; }
     .loop-block { background:#16202f; border:1px solid #2a3850; border-radius:14px; padding:2.5rem; margin-bottom:var(--spacing-lg); font-family:monospace; }
     .loop-block pre { color:var(--text-secondary); font-size:0.85rem; line-height:2; white-space:pre-wrap; }
     .loop-block .highlight { color:var(--primary-green); font-weight:600; }
@@ -59,36 +53,66 @@
   <!-- Pains -->
   <section class="content-section">
     <h2 class="section-heading">What holds energy communities <strong>back today</strong></h2>
-    <div class="pain-grid">
+    <div class="split-list">
 
-      <div class="pain-card">
-        <div class="pain-title">Self-consumption is measured, not optimised</div>
-        <div class="pain-desc">Without real-time optimisation, energy is exported to the grid even when members have demand — the community's potential stays largely untapped.</div>
-        <div class="pain-solution">KERN forecasts generation and consumption per member (24h ahead) and steers assets to maximise what stays in the community.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">Self-consumption is measured, not optimised</div>
+          <div class="split-desc">Without real-time optimisation, energy is exported to the grid even when members have demand — the community's potential stays largely untapped.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">KERN forecasts generation and consumption per member (24h ahead) and steers assets to maximise what stays in the community.</div>
+        </div>
       </div>
 
-      <div class="pain-card">
-        <div class="pain-title">No real-time visibility across the community</div>
-        <div class="pain-desc">Operators don't know how much is being generated, consumed and shared right now — optimisation and steering are impossible without this view.</div>
-        <div class="pain-solution">Real-time telemetry from every asset, aggregated into a community dashboard. Full visibility, per member and as a whole.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">No real-time visibility across the community</div>
+          <div class="split-desc">Operators don't know how much is being generated, consumed and shared right now — optimisation and steering are impossible without this view.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">Real-time telemetry from every asset, aggregated into a community dashboard. Full visibility, per member and as a whole.</div>
+        </div>
       </div>
 
-      <div class="pain-card">
-        <div class="pain-title">Storage and loads are not coordinated</div>
-        <div class="pain-desc">Community storage and controllable loads are managed manually or not at all — no automatic charging when PV surplus is available, no discharging when members need it.</div>
-        <div class="pain-solution">KERN steers shared storage and controllable loads autonomously — aligning generation, storage and consumption in real-time.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">Storage and loads are not coordinated</div>
+          <div class="split-desc">Community storage and controllable loads are managed manually or not at all — no automatic charging when PV surplus is available, no discharging when members need it.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">KERN steers shared storage and controllable loads autonomously — aligning generation, storage and consumption in real-time.</div>
+        </div>
       </div>
 
-      <div class="pain-card">
-        <div class="pain-title">Connectivity across multiple sites is unsolved</div>
-        <div class="pain-desc">Members at different buildings or locations are hard to reliably connect — LTE drops out, WiFi doesn't reach far enough.</div>
-        <div class="pain-solution">Zigbee Mesh for contiguous sites, MIOTY for distributed members (10km, independent of LTE/WiFi) — both managed as one unified layer.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">Connectivity across multiple sites is unsolved</div>
+          <div class="split-desc">Members at different buildings or locations are hard to reliably connect — LTE drops out, WiFi doesn't reach far enough.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">Zigbee Mesh for contiguous sites, MIOTY for distributed members (10km, independent of LTE/WiFi) — both managed as one unified layer.</div>
+        </div>
       </div>
 
-      <div class="pain-card">
-        <div class="pain-title">Collective flexibility potential goes unused</div>
-        <div class="pain-desc">An active community with PV and storage has real collective flexibility — but without a platform it can neither be forecasted nor offered to aggregators or grid operators.</div>
-        <div class="pain-solution">KERN provides rolling 24h flexibility forecasts for the whole community and connects to aggregators or grid operators on request.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">Collective flexibility potential goes unused</div>
+          <div class="split-desc">An active community with PV and storage has real collective flexibility — but without a platform it can neither be forecasted nor offered to aggregators or grid operators.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">KERN provides rolling 24h flexibility forecasts for the whole community and connects to aggregators or grid operators on request.</div>
+        </div>
       </div>
 
     </div>

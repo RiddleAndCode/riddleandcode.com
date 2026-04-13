@@ -19,12 +19,6 @@
     .content-section { max-width:1100px; margin:0 auto; padding:var(--spacing-md) 2rem; }
     .section-heading { font-size:clamp(1.4rem,2.8vw,2rem); font-weight:300; color:var(--text-primary); margin-bottom:2rem; }
     .section-heading strong { font-weight:600; }
-    .pain-grid { display:grid; gap:1rem; margin-bottom:var(--spacing-lg); }
-    .pain-card { background:var(--card-bg); border:1px solid #2e3d52; border-left:3px solid var(--primary-green); border-radius:10px; padding:1.5rem; }
-    .pain-title { font-weight:600; color:var(--text-primary); margin-bottom:0.4rem; font-size:0.95rem; }
-    .pain-desc { color:var(--text-muted); font-size:0.875rem; line-height:1.6; }
-    .pain-solution { margin-top:0.75rem; padding-top:0.75rem; border-top:1px solid #222; color:var(--text-secondary); font-size:0.875rem; }
-    .pain-solution::before { content:'→ '; color:var(--primary-green); font-weight:600; }
     .loop-block { background:#16202f; border:1px solid #2a3850; border-radius:14px; padding:2.5rem; margin-bottom:var(--spacing-lg); font-family:monospace; }
     .loop-block pre { color:var(--text-secondary); font-size:0.85rem; line-height:2; white-space:pre-wrap; }
     .loop-block .highlight { color:var(--primary-green); font-weight:600; }
@@ -59,36 +53,66 @@
   <!-- Pains -->
   <section class="content-section">
     <h2 class="section-heading">Was Energiegemeinschaften <strong>heute zurückhält</strong></h2>
-    <div class="pain-grid">
+    <div class="split-list">
 
-      <div class="pain-card">
-        <div class="pain-title">Eigenverbrauch wird gemessen, nicht optimiert</div>
-        <div class="pain-desc">Ohne Echtzeit-Optimierung wird Energie ins Netz eingespeist, obwohl Mitglieder Bedarf haben — das Potenzial der Gemeinschaft bleibt weitgehend ungenutzt.</div>
-        <div class="pain-solution">KERN prognostiziert Erzeugung und Verbrauch pro Mitglied (24 h voraus) und steuert Assets, um den Eigenverbrauch zu maximieren.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">Eigenverbrauch wird gemessen, nicht optimiert</div>
+          <div class="split-desc">Ohne Echtzeit-Optimierung wird Energie ins Netz eingespeist, obwohl Mitglieder Bedarf haben — das Potenzial der Gemeinschaft bleibt weitgehend ungenutzt.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">KERN prognostiziert Erzeugung und Verbrauch pro Mitglied (24 h voraus) und steuert Assets, um den Eigenverbrauch zu maximieren.</div>
+        </div>
       </div>
 
-      <div class="pain-card">
-        <div class="pain-title">Keine Echtzeit-Transparenz über die Gemeinschaft</div>
-        <div class="pain-desc">Betreiber wissen nicht, wie viel gerade erzeugt, verbraucht und geteilt wird — ohne diese Sicht sind Optimierung und Steuerung unmöglich.</div>
-        <div class="pain-solution">Echtzeit-Telemetrie von jedem Asset, aggregiert in einem Gemeinschafts-Dashboard. Vollständige Transparenz, pro Mitglied und insgesamt.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">Keine Echtzeit-Transparenz über die Gemeinschaft</div>
+          <div class="split-desc">Betreiber wissen nicht, wie viel gerade erzeugt, verbraucht und geteilt wird — ohne diese Sicht sind Optimierung und Steuerung unmöglich.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">Echtzeit-Telemetrie von jedem Asset, aggregiert in einem Gemeinschafts-Dashboard. Vollständige Transparenz, pro Mitglied und insgesamt.</div>
+        </div>
       </div>
 
-      <div class="pain-card">
-        <div class="pain-title">Speicher und Lasten werden nicht koordiniert</div>
-        <div class="pain-desc">Gemeinschaftsspeicher und steuerbare Lasten werden manuell oder gar nicht verwaltet — kein automatisches Laden bei PV-Überschuss, kein Entladen bei Mitgliederbedarf.</div>
-        <div class="pain-solution">KERN steuert gemeinsame Speicher und steuerbare Lasten autonom — gleicht Erzeugung, Speicherung und Verbrauch in Echtzeit ab.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">Speicher und Lasten werden nicht koordiniert</div>
+          <div class="split-desc">Gemeinschaftsspeicher und steuerbare Lasten werden manuell oder gar nicht verwaltet — kein automatisches Laden bei PV-Überschuss, kein Entladen bei Mitgliederbedarf.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">KERN steuert gemeinsame Speicher und steuerbare Lasten autonom — gleicht Erzeugung, Speicherung und Verbrauch in Echtzeit ab.</div>
+        </div>
       </div>
 
-      <div class="pain-card">
-        <div class="pain-title">Konnektivität über mehrere Standorte ist ungelöst</div>
-        <div class="pain-desc">Mitglieder an verschiedenen Gebäuden oder Standorten sind schwer zuverlässig zu verbinden — LTE bricht ab, WLAN reicht nicht weit genug.</div>
-        <div class="pain-solution">Zigbee Mesh für zusammenhängende Standorte, MIOTY für verteilte Mitglieder (10 km, unabhängig von LTE/WLAN) — beide als eine einheitliche Schicht verwaltet.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">Konnektivität über mehrere Standorte ist ungelöst</div>
+          <div class="split-desc">Mitglieder an verschiedenen Gebäuden oder Standorten sind schwer zuverlässig zu verbinden — LTE bricht ab, WLAN reicht nicht weit genug.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">Zigbee Mesh für zusammenhängende Standorte, MIOTY für verteilte Mitglieder (10 km, unabhängig von LTE/WLAN) — beide als eine einheitliche Schicht verwaltet.</div>
+        </div>
       </div>
 
-      <div class="pain-card">
-        <div class="pain-title">Kollektives Flexibilitätspotenzial bleibt ungenutzt</div>
-        <div class="pain-desc">Eine aktive Gemeinschaft mit PV und Speicher verfügt über echte kollektive Flexibilität — ohne Plattform kann sie weder prognostiziert noch angeboten werden.</div>
-        <div class="pain-solution">KERN erstellt rollierende 24-h-Flexibilitätsprognosen für die gesamte Gemeinschaft und verbindet auf Anfrage mit Aggregatoren oder Netzbetreibern.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">Kollektives Flexibilitätspotenzial bleibt ungenutzt</div>
+          <div class="split-desc">Eine aktive Gemeinschaft mit PV und Speicher verfügt über echte kollektive Flexibilität — ohne Plattform kann sie weder prognostiziert noch angeboten werden.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">KERN erstellt rollierende 24-h-Flexibilitätsprognosen für die gesamte Gemeinschaft und verbindet auf Anfrage mit Aggregatoren oder Netzbetreibern.</div>
+        </div>
       </div>
 
     </div>

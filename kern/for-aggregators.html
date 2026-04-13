@@ -19,14 +19,6 @@
     .content-section { max-width:1100px; margin:0 auto; padding:var(--spacing-md) 2rem; }
     .section-heading { font-size:clamp(1.4rem,2.8vw,2rem); font-weight:300; color:var(--text-primary); margin-bottom:2rem; }
     .section-heading strong { font-weight:600; }
-    /* Pain table */
-    .pain-grid { display:grid; gap:1rem; margin-bottom:var(--spacing-lg); }
-    .pain-card { background:var(--card-bg); border:1px solid #2e3d52; border-left:3px solid #333; border-radius:10px; padding:1.5rem; }
-    .pain-card.solved { border-left-color:var(--primary-green); }
-    .pain-title { font-weight:600; color:var(--text-primary); margin-bottom:0.4rem; font-size:0.95rem; }
-    .pain-desc { color:var(--text-muted); font-size:0.875rem; line-height:1.6; }
-    .pain-solution { margin-top:0.75rem; padding-top:0.75rem; border-top:1px solid #222; color:var(--text-secondary); font-size:0.875rem; }
-    .pain-solution::before { content:'→ '; color:var(--primary-green); font-weight:600; }
     /* Loop */
     .loop-block { background:#16202f; border:1px solid #2a3850; border-radius:14px; padding:2.5rem; margin-bottom:var(--spacing-lg); font-family:monospace; }
     .loop-block pre { color:var(--text-secondary); font-size:0.85rem; line-height:2; white-space:pre-wrap; }
@@ -59,36 +51,66 @@
   <!-- Pains -->
   <section class="content-section">
     <h2 class="section-heading">The five pains <strong>KERN solves</strong></h2>
-    <div class="pain-grid">
+    <div class="split-list">
 
-      <div class="pain-card solved">
-        <div class="pain-title">Unreliable connectivity to distributed assets</div>
-        <div class="pain-desc">Rural BESS sites, industrial premises, basements — LTE drops, WiFi is unstable. Assets can't be committed to bids. Portfolio size is limited by infrastructure, not by availability.</div>
-        <div class="pain-solution">MIOTY (10km, 1.5M msg/day, IEC standard) and Zigbee Mesh connect every asset — independent of LTE and WiFi.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">Unreliable connectivity to distributed assets</div>
+          <div class="split-desc">Rural BESS sites, industrial premises, basements — LTE drops, WiFi is unstable. Assets can't be committed to bids. Portfolio size is limited by infrastructure, not by availability.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">MIOTY (10km, 1.5M msg/day, IEC standard) and Zigbee Mesh connect every asset — independent of LTE and WiFi.</div>
+        </div>
       </div>
 
-      <div class="pain-card solved">
-        <div class="pain-title">No dispatch confirmation</div>
-        <div class="pain-desc">Bid placed, dispatch sent — whether the asset responded remains unknown until the next meter reading. Deviations are detected too late.</div>
-        <div class="pain-solution">Every dispatch is confirmed at asset level and reported back in real-time. You know immediately whether the bid is being fulfilled.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">No dispatch confirmation</div>
+          <div class="split-desc">Bid placed, dispatch sent — whether the asset responded remains unknown until the next meter reading. Deviations are detected too late.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">Every dispatch is confirmed at asset level and reported back in real-time. You know immediately whether the bid is being fulfilled.</div>
+        </div>
       </div>
 
-      <div class="pain-card solved">
-        <div class="pain-title">Manual response to forecast deviations</div>
-        <div class="pain-desc">Weather change, load shift, asset failure — someone has to notice, decide and intervene. This doesn't scale.</div>
-        <div class="pain-solution">KERN continuously compares actual asset state against bid position and rebalances autonomously — before the deviation becomes critical.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">Manual response to forecast deviations</div>
+          <div class="split-desc">Weather change, load shift, asset failure — someone has to notice, decide and intervene. This doesn't scale.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">KERN continuously compares actual asset state against bid position and rebalances autonomously — before the deviation becomes critical.</div>
+        </div>
       </div>
 
-      <div class="pain-card solved">
-        <div class="pain-title">Poor forecast quality without asset visibility</div>
-        <div class="pain-desc">Without real-time telemetry at asset level, flexibility forecasts are estimates. Overbidding means penalties. Underbidding means lost revenue.</div>
-        <div class="pain-solution">Rolling 24h flexibility forecast per asset and portfolio — driven by live state of charge, weather-based PV models and historical load patterns. Continuously refined as the delivery window approaches.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">Poor forecast quality without asset visibility</div>
+          <div class="split-desc">Without real-time telemetry at asset level, flexibility forecasts are estimates. Overbidding means penalties. Underbidding means lost revenue.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">Rolling 24h flexibility forecast per asset and portfolio — driven by live state of charge, weather-based PV models and historical load patterns. Continuously refined as the delivery window approaches.</div>
+        </div>
       </div>
 
-      <div class="pain-card solved">
-        <div class="pain-title">Operational overhead scales with portfolio</div>
-        <div class="pain-desc">Every new asset, every new site, every new asset class adds complexity. Growth requires more team, more monitoring, more manual dispatch management.</div>
-        <div class="pain-solution">New assets are onboarded into KERN — the aggregator gets more flexibility capacity, not more operational burden.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">Operational overhead scales with portfolio</div>
+          <div class="split-desc">Every new asset, every new site, every new asset class adds complexity. Growth requires more team, more monitoring, more manual dispatch management.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">New assets are onboarded into KERN — the aggregator gets more flexibility capacity, not more operational burden.</div>
+        </div>
       </div>
 
     </div>

@@ -19,12 +19,6 @@
     .content-section { max-width:1100px; margin:0 auto; padding:var(--spacing-md) 2rem; }
     .section-heading { font-size:clamp(1.4rem,2.8vw,2rem); font-weight:300; color:var(--text-primary); margin-bottom:2rem; }
     .section-heading strong { font-weight:600; }
-    .pain-grid { display:grid; gap:1rem; margin-bottom:var(--spacing-lg); }
-    .pain-card { background:var(--card-bg); border:1px solid #2e3d52; border-left:3px solid var(--primary-green); border-radius:10px; padding:1.5rem; }
-    .pain-title { font-weight:600; color:var(--text-primary); margin-bottom:0.4rem; font-size:0.95rem; }
-    .pain-desc { color:var(--text-muted); font-size:0.875rem; line-height:1.6; }
-    .pain-solution { margin-top:0.75rem; padding-top:0.75rem; border-top:1px solid #222; color:var(--text-secondary); font-size:0.875rem; }
-    .pain-solution::before { content:'→ '; color:var(--primary-green); font-weight:600; }
     .usecase-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1.5rem; margin-bottom:var(--spacing-lg); }
     .usecase-card { background:var(--card-bg); border:1px solid #2e3d52; border-radius:12px; padding:2rem; }
     .usecase-num { font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--primary-green); margin-bottom:0.75rem; }
@@ -59,30 +53,54 @@
   <!-- Pains -->
   <section class="content-section">
     <h2 class="section-heading">Wo Energieversorger <strong>Potenzial ungenutzt lassen</strong></h2>
-    <div class="pain-grid">
+    <div class="split-list">
 
-      <div class="pain-card">
-        <div class="pain-title">Steuerbare Anlagen ohne Optimierungsplattform</div>
-        <div class="pain-desc">Smart Meter und CLS-Schalter werden ausgerollt — aber es gibt keine Plattform darüber. Keine Optimierung, keine Aggregation, kein Marktzugang. Das Potenzial bleibt ungenutzt.</div>
-        <div class="pain-solution">KERN sitzt als autonome Managementschicht über dem Zähler — Echtzeit-Optimierung, Flottensteuerung, marktreife Aggregation.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">Steuerbare Anlagen ohne Optimierungsplattform</div>
+          <div class="split-desc">Smart Meter und CLS-Schalter werden ausgerollt — aber es gibt keine Plattform darüber. Keine Optimierung, keine Aggregation, kein Marktzugang. Das Potenzial bleibt ungenutzt.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">KERN sitzt als autonome Managementschicht über dem Zähler — Echtzeit-Optimierung, Flottensteuerung, marktreife Aggregation.</div>
+        </div>
       </div>
 
-      <div class="pain-card">
-        <div class="pain-title">Redispatch 2.0 ist manuell und kostspielig</div>
-        <div class="pain-desc">Netzengpassmanagement erfordert koordinierte Steuerung verteilter Einspeiser — ohne Plattform ist das operativ komplex, fehleranfällig und nicht skalierbar.</div>
-        <div class="pain-solution">KERN übernimmt Redispatch-2.0-konformes Dispatch autonom, mit Bestätigung pro Anlage.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">Redispatch 2.0 ist manuell und kostspielig</div>
+          <div class="split-desc">Netzengpassmanagement erfordert koordinierte Steuerung verteilter Einspeiser — ohne Plattform ist das operativ komplex, fehleranfällig und nicht skalierbar.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">KERN übernimmt Redispatch-2.0-konformes Dispatch autonom, mit Bestätigung pro Anlage.</div>
+        </div>
       </div>
 
-      <div class="pain-card">
-        <div class="pain-title">Kunden wechseln zu intelligenteren Energieanbietern</div>
-        <div class="pain-desc">Neue Energieanbieter bieten HEMS, Gemeinschaftstarife und Flexibilitätserlöse an. Versorger ohne smarte Services verlieren die Kunden, die aktiv teilnehmen wollen.</div>
-        <div class="pain-solution">KERN ist Ihr Behind-the-Meter-Produkt — gebrandmarkt als Ihr Service, geliefert von KERN. Kunden bleiben und engagieren sich.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">Kunden wechseln zu intelligenteren Energieanbietern</div>
+          <div class="split-desc">Neue Energieanbieter bieten HEMS, Gemeinschaftstarife und Flexibilitätserlöse an. Versorger ohne smarte Services verlieren die Kunden, die aktiv teilnehmen wollen.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">KERN ist Ihr Behind-the-Meter-Produkt — gebrandmarkt als Ihr Service, geliefert von KERN. Kunden bleiben und engagieren sich.</div>
+        </div>
       </div>
 
-      <div class="pain-card">
-        <div class="pain-title">Kein Zugang zu Flexibilitätsmärkten aus dem eigenen Kundenstamm</div>
-        <div class="pain-desc">Sie haben die Kundenbeziehungen und die Anlagen — aber ohne Aggregationsplattform können Sie diese Flexibilität nicht monetarisieren.</div>
-        <div class="pain-solution">KERN aggregiert Ihren Kundenstamm zu einem vermarktbaren Portfolio. Sie können einen eigenen Aggregator-Tochter betreiben — oder mit einem externen Partner zusammenarbeiten.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">Kein Zugang zu Flexibilitätsmärkten aus dem eigenen Kundenstamm</div>
+          <div class="split-desc">Sie haben die Kundenbeziehungen und die Anlagen — aber ohne Aggregationsplattform können Sie diese Flexibilität nicht monetarisieren.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">KERN aggregiert Ihren Kundenstamm zu einem vermarktbaren Portfolio. Sie können einen eigenen Aggregator-Tochter betreiben — oder mit einem externen Partner zusammenarbeiten.</div>
+        </div>
       </div>
 
     </div>

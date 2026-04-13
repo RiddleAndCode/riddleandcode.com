@@ -23,12 +23,6 @@
     .stack-visual pre { color:var(--text-secondary); font-size:0.85rem; line-height:1.9; white-space:pre-wrap; }
     .stack-visual .highlight { color:var(--primary-green); font-weight:600; }
     .stack-visual .dim { color:#444; }
-    .pain-grid { display:grid; gap:1rem; margin-bottom:var(--spacing-lg); }
-    .pain-card { background:var(--card-bg); border:1px solid #2e3d52; border-left:3px solid var(--primary-green); border-radius:10px; padding:1.5rem; }
-    .pain-title { font-weight:600; color:var(--text-primary); margin-bottom:0.4rem; font-size:0.95rem; }
-    .pain-desc { color:var(--text-muted); font-size:0.875rem; line-height:1.6; }
-    .pain-solution { margin-top:0.75rem; padding-top:0.75rem; border-top:1px solid #222; color:var(--text-secondary); font-size:0.875rem; }
-    .pain-solution::before { content:'→ '; color:var(--primary-green); font-weight:600; }
     .what-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.25rem; margin-bottom:var(--spacing-lg); }
     .what-card { background:var(--card-bg); border:1px solid #2e3d52; border-radius:10px; padding:1.5rem; }
     .what-card h3 { font-size:0.95rem; font-weight:600; color:var(--text-primary); margin-bottom:0.5rem; }
@@ -93,24 +87,42 @@
   <!-- Pains -->
   <section class="content-section">
     <h2 class="section-heading">{{ kp_pains_h2 }}</h2>
-    <div class="pain-grid">
+    <div class="split-list">
 
-      <div class="pain-card">
-        <div class="pain-title">{{ kp_pain1_title }}</div>
-        <div class="pain-desc">{{ kp_pain1_desc }}</div>
-        <div class="pain-solution">{{ kp_pain1_sol }}</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">{{ kp_pain1_title }}</div>
+          <div class="split-desc">{{ kp_pain1_desc }}</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">{{ kp_pain1_sol }}</div>
+        </div>
       </div>
 
-      <div class="pain-card">
-        <div class="pain-title">{{ kp_pain2_title }}</div>
-        <div class="pain-desc">{{ kp_pain2_desc }}</div>
-        <div class="pain-solution">{{ kp_pain2_sol }}</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">{{ kp_pain2_title }}</div>
+          <div class="split-desc">{{ kp_pain2_desc }}</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">{{ kp_pain2_sol }}</div>
+        </div>
       </div>
 
-      <div class="pain-card">
-        <div class="pain-title">{{ kp_pain3_title }}</div>
-        <div class="pain-desc">{{ kp_pain3_desc }}</div>
-        <div class="pain-solution">{{ kp_pain3_sol }}</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">{{ kp_pain3_title }}</div>
+          <div class="split-desc">{{ kp_pain3_desc }}</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">{{ kp_pain3_sol }}</div>
+        </div>
       </div>
 
     </div>

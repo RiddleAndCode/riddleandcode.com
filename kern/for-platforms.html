@@ -23,12 +23,6 @@
     .stack-visual pre { color:var(--text-secondary); font-size:0.85rem; line-height:1.9; white-space:pre-wrap; }
     .stack-visual .highlight { color:var(--primary-green); font-weight:600; }
     .stack-visual .dim { color:#444; }
-    .pain-grid { display:grid; gap:1rem; margin-bottom:var(--spacing-lg); }
-    .pain-card { background:var(--card-bg); border:1px solid #2e3d52; border-left:3px solid var(--primary-green); border-radius:10px; padding:1.5rem; }
-    .pain-title { font-weight:600; color:var(--text-primary); margin-bottom:0.4rem; font-size:0.95rem; }
-    .pain-desc { color:var(--text-muted); font-size:0.875rem; line-height:1.6; }
-    .pain-solution { margin-top:0.75rem; padding-top:0.75rem; border-top:1px solid #222; color:var(--text-secondary); font-size:0.875rem; }
-    .pain-solution::before { content:'→ '; color:var(--primary-green); font-weight:600; }
     .what-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.25rem; margin-bottom:var(--spacing-lg); }
     .what-card { background:var(--card-bg); border:1px solid #2e3d52; border-radius:10px; padding:1.5rem; }
     .what-card h3 { font-size:0.95rem; font-weight:600; color:var(--text-primary); margin-bottom:0.5rem; }
@@ -93,24 +87,42 @@
   <!-- Pains -->
   <section class="content-section">
     <h2 class="section-heading">Three gaps <strong>KERN fills</strong></h2>
-    <div class="pain-grid">
+    <div class="split-list">
 
-      <div class="pain-card">
-        <div class="pain-title">Assets with unreliable connectivity stay out of the portfolio</div>
-        <div class="pain-desc">Rural sites, industrial premises, basements — LTE drops, WiFi is unstable. Your clients can't bring these assets into your platform. Potential stays on the table.</div>
-        <div class="pain-solution">MIOTY (10km, IEC standard) and Zigbee Mesh make every asset reachable — your clients grow their portfolio without infrastructure investment.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">Assets with unreliable connectivity stay out of the portfolio</div>
+          <div class="split-desc">Rural sites, industrial premises, basements — LTE drops, WiFi is unstable. Your clients can't bring these assets into your platform. Potential stays on the table.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">MIOTY (10km, IEC standard) and Zigbee Mesh make every asset reachable — your clients grow their portfolio without infrastructure investment.</div>
+        </div>
       </div>
 
-      <div class="pain-card">
-        <div class="pain-title">No dispatch feedback — the loop is open</div>
-        <div class="pain-desc">Your platform sends commands — but whether the asset responded stays unknown until the next meter reading. Deviations are detected too late, penalties hit your clients.</div>
-        <div class="pain-solution">KERN confirms every dispatch at asset level and reports back in real-time. Your platform knows immediately whether the flexibility commitment is being met.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">No dispatch feedback — the loop is open</div>
+          <div class="split-desc">Your platform sends commands — but whether the asset responded stays unknown until the next meter reading. Deviations are detected too late, penalties hit your clients.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">KERN confirms every dispatch at asset level and reports back in real-time. Your platform knows immediately whether the flexibility commitment is being met.</div>
+        </div>
       </div>
 
-      <div class="pain-card">
-        <div class="pain-title">Heterogeneous assets increase integration overhead</div>
-        <div class="pain-desc">Every new asset type, every new manufacturer, every new protocol means integration effort — for you or your clients. This slows onboarding and limits scale.</div>
-        <div class="pain-solution">KERN normalises all asset types to a single data model. Your platform speaks to KERN — not to every asset individually.</div>
+      <div class="split-row">
+        <div class="split-problem">
+          <span class="split-label">Problem</span>
+          <div class="split-title">Heterogeneous assets increase integration overhead</div>
+          <div class="split-desc">Every new asset type, every new manufacturer, every new protocol means integration effort — for you or your clients. This slows onboarding and limits scale.</div>
+        </div>
+        <div class="split-solution">
+          <span class="split-label">KERN</span>
+          <div class="split-answer">KERN normalises all asset types to a single data model. Your platform speaks to KERN — not to every asset individually.</div>
+        </div>
       </div>
 
     </div>
