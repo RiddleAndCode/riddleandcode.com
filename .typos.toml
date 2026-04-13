@@ -10,6 +10,9 @@ extend-exclude = [
   "showcase/**",
   "media/**",
   "news/**",
+  # German content pages are checked by cspell-de
+  "de/**/*.html",
+  "locales/de.yaml",
   # Old Webflow CSS/JS
   "company/css/**",
   "company/js/**",
