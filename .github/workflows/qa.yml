@@ -27,7 +27,39 @@ jobs:
       - uses: actions/checkout@v4
       - uses: crate-ci/typos@v1
 
-  # ── 2. HTML validity ────────────────────────────────────────────────────────
+  # ── 2. German spelling ─────────────────────────────────────────────────────
+  cspell-de:
+    name: German pages spelling
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Spell-check German pages
+        run: |
+          npx --yes \
+            -p cspell \
+            -p @cspell/dict-de-de \
+            -p @cspell/dict-de-at \
+            cspell lint --config cspell.de.json
+
+  # ── 3. English spelling ────────────────────────────────────────────────────
+  cspell-en:
+    name: English pages spelling
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Spell-check English pages
+        run: |
+          npx --yes \
+            -p cspell \
+            cspell lint --config cspell.en.json
+
+  # ── 4. HTML validity ────────────────────────────────────────────────────────
   html:
     name: HTML validation
     runs-on: ubuntu-latest
@@ -47,7 +79,7 @@ jobs:
             includes/nav.html \
             includes/footer.html
 
-  # ── 3. Meta descriptions ────────────────────────────────────────────────────
+  # ── 5. Meta descriptions ────────────────────────────────────────────────────
   meta:
     name: Meta descriptions
     runs-on: ubuntu-latest
@@ -69,7 +101,7 @@ jobs:
           fi
           echo "All KERN pages have meta descriptions ✓"
 
-  # ── 4. Image size budget ────────────────────────────────────────────────────
+  # ── 6. Image size budget ────────────────────────────────────────────────────
   images:
     name: Image size budget
     runs-on: ubuntu-latest
