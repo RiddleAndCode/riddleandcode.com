@@ -342,6 +342,9 @@ tech_meta_desc: "MIOTY, Zigbee Mesh, 24h flexibility forecasting and autonomous 
 tech_eyebrow: Technology
 tech_h1: "Built for energy infrastructure.<br><strong>Not adapted from IoT.</strong>"
 tech_lead: "MIOTY, Zigbee Mesh, a 24h autonomous forecast loop and confirmed dispatch — purpose-built for the demands of flexibility management behind the meter."
+tech_hw_h2: "NODE ZERO — <strong>purpose-built hardware</strong>"
+tech_hw_sub_pre: "Developed in partnership with "
+tech_hw_sub_post: " — designed from the ground up for energy infrastructure, not adapted from general IoT."
 tech_conn_h2: "Connectivity <strong>by topology</strong>"
 tech_conn_sub: "The technology choice follows the asset topology — not the other way around."
 tech_zigbee_badge: "Contiguous sites"

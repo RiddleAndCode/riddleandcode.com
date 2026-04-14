@@ -342,6 +342,9 @@ tech_meta_desc: "MIOTY, Zigbee Mesh, 24-h-Flexibilitätsprognosen und autonome S
 tech_eyebrow: Technologie
 tech_h1: "Gebaut für Energieinfrastruktur.<br><strong>Kein IoT-Umbau.</strong>"
 tech_lead: "MIOTY, Zigbee Mesh, ein autonomer 24-h-Prognose-Regelkreis und bestätigte Steuerung — zweckgebaut für die Anforderungen des Flexibilitätsmanagements hinter dem Zähler."
+tech_hw_h2: "NODE ZERO — <strong>zweckentwickelte Hardware</strong>"
+tech_hw_sub_pre: "Entwickelt in Partnerschaft mit "
+tech_hw_sub_post: " — von Grund auf für Energieinfrastruktur konzipiert, kein umgebautes IoT-Produkt."
 tech_conn_h2: "Konnektivität <strong>nach Topologie</strong>"
 tech_conn_sub: "Die Technologiewahl folgt der Asset-Topologie — nicht umgekehrt."
 tech_zigbee_badge: "Zusammenhängende Standorte"
