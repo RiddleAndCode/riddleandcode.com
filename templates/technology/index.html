@@ -55,9 +55,14 @@
     .security-item h4 { font-size:0.875rem; font-weight:600; color:var(--text-primary); margin-bottom:0.35rem; }
     .security-item p { font-size:0.8rem; color:var(--text-muted); line-height:1.5; }
     hr.divider { border:none; border-top:1px solid #2a3850; margin:var(--spacing-md) 0; }
-    /* Hardware image */
-    .hw-image-wrap { border-radius:12px; overflow:hidden; border:1px solid #2e3d52; margin-bottom:var(--spacing-lg); }
-    .hw-image-wrap img { display:block; width:100%; height:auto; }
+    /* NODE ZERO product grid */
+    .hw-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:var(--spacing-lg); }
+    @media(max-width:600px){ .hw-grid { grid-template-columns:1fr; } }
+    .hw-product { border:1px solid #2e3d52; border-radius:12px; overflow:hidden; }
+    .hw-product img { display:block; width:100%; height:auto; }
+    .hw-product-label { padding:0.875rem 1.25rem; background:var(--card-bg); }
+    .hw-product-name { display:block; font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--primary-green); margin-bottom:0.2rem; }
+    .hw-product-role { display:block; font-size:0.9rem; font-weight:500; color:var(--text-primary); }
   </style>
 </head>
 <body>
@@ -71,14 +76,39 @@
 
   <hr class="divider">
 
-  <!-- Hardware image -->
+  <!-- NODE ZERO Hardware -->
   <section class="content-section" style="padding-bottom:0;">
-    <div class="hw-image-wrap">
-      <img src="/images/6422963c3fc26ce623d62f21_Hardware_manufacture.jpg"
-           srcset="/images/6422963c3fc26ce623d62f21_Hardware_manufacture-p-500.jpg 500w,
-                   /images/6422963c3fc26ce623d62f21_Hardware_manufacture.jpg 800w"
-           sizes="(max-width:1100px) 100vw, 1100px"
-           alt="KERN hardware device" loading="lazy">
+    <h2 class="section-heading">{{ tech_hw_h2 }}</h2>
+    <p class="section-sub">{{ tech_hw_sub_pre }}<a href="https://rddl.io" target="_blank" rel="noopener" style="color:var(--primary-green);">RDDL Foundation</a>{{ tech_hw_sub_post }}</p>
+    <div class="hw-grid">
+      <div class="hw-product">
+        <img src="/images/bridge-edge-device.jpeg" alt="NODE ZERO local-first intelligence — edge hub" loading="lazy">
+        <div class="hw-product-label">
+          <span class="hw-product-name">NODE ZERO</span>
+          <span class="hw-product-role">local-first intelligence</span>
+        </div>
+      </div>
+      <div class="hw-product">
+        <img src="/images/sidecar.jpeg" alt="NODE ZERO relay — Zigbee relay module" loading="lazy">
+        <div class="hw-product-label">
+          <span class="hw-product-name">NODE ZERO</span>
+          <span class="hw-product-role">relay</span>
+        </div>
+      </div>
+      <div class="hw-product">
+        <img src="/images/3-phase-reader.jpeg" alt="NODE ZERO meter link — 3-phase optical meter reader" loading="lazy">
+        <div class="hw-product-label">
+          <span class="hw-product-name">NODE ZERO</span>
+          <span class="hw-product-role">meter link</span>
+        </div>
+      </div>
+      <div class="hw-product">
+        <img src="/images/zigbee-dongle.jpeg" alt="NODE ZERO ZIGBEE³ — USB Zigbee coordinator" loading="lazy">
+        <div class="hw-product-label">
+          <span class="hw-product-name">NODE ZERO</span>
+          <span class="hw-product-role">ZIGBEE³</span>
+        </div>
+      </div>
     </div>
   </section>
 
