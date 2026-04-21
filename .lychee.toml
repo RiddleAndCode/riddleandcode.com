@@ -48,6 +48,14 @@ exclude = [
   # Localhost and staging
   "localhost",
   "127\\.0\\.0\\.1",
+
+  # Our blog — returns 403 to CI bots (anti-scraping)
+  "blog\\.riddleandcode\\.com",
+
+  # EU project sites — down or unreachable from CI
+  "smartrural21\\.eu",
+  "smarturural27\\.eu",
+  "ec\\.europa\\.eu/odr",
 ]
 
 # Output dead links to a file so the scheduled issue workflow can attach it
