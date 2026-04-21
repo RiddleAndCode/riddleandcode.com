@@ -76,6 +76,7 @@ jobs:
             kern/ \
             technology/ \
             references/ \
+            company/ \
             includes/nav.html \
             includes/footer.html
 
@@ -93,13 +94,16 @@ jobs:
               echo "::error file=$file::Missing meta description"
               missing=$((missing + 1))
             fi
-          done < <(find index.html kern/ technology/ references/ -name "*.html")
+          done < <(find index.html kern/ technology/ references/ \
+            company/about-us.html company/career.html \
+            company/get-in-touch.html company/media.html company/news.html \
+            -name "*.html" 2>/dev/null)
 
           if [ "$missing" -gt 0 ]; then
             echo "::error::$missing page(s) missing <meta name=\"description\">"
             exit 1
           fi
-          echo "All KERN pages have meta descriptions ✓"
+          echo "All pages have meta descriptions ✓"
 
   # ── 6. Image size budget ────────────────────────────────────────────────────
   images:
