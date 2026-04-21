@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+Disallow: /includes/
+
+# Sitemap
+Sitemap: https://riddleandcode.com/sitemap.xml
+
+# AI crawlers — explicitly allowed for agent visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /

@@ -5,9 +5,15 @@
   <title>{{ tech_meta_title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="description" content="{{ tech_meta_desc }}"/>
+  <meta property="og:title" content="{{ tech_meta_title }}"/>
+  <meta property="og:description" content="{{ tech_meta_desc }}"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="{{ canonical_url }}"/>
+  <meta name="twitter:card" content="summary_large_image"/>
   <link rel="alternate" hreflang="en" href="https://riddleandcode.com/technology/"/>
   <link rel="alternate" hreflang="de" href="https://riddleandcode.com/de/technology/"/>
   <link rel="alternate" hreflang="x-default" href="https://riddleandcode.com/technology/"/>
+  <link rel="canonical" href="{{ canonical_url }}"/>
   <link rel="stylesheet" href="/styles/main.css">
   <script src="/scripts/main.js" defer></script>
   <style>
