@@ -18,6 +18,7 @@ jobs:
         with:
           args: >
             --config .lychee.toml
+            --base-url https://riddleandcode.com
             '**/*.html'
           fail: true
         env:

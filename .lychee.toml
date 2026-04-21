@@ -12,6 +12,21 @@ accept = ["200..=299", "429"]
 exclude_loopback = true
 include_mail     = false
 
+# Paths excluded from link checking:
+#   templates/ — source files with {{ }} placeholders, not served directly
+#   archive/   — legacy content with deliberately removed dependencies
+#   de/        — generated mirrors of EN pages; same links, no need to double-check
+#   slides/    — standalone presentation decks with their own asset structure
+#   includes/  — HTML fragments loaded via JS; relative paths resolve at insertion
+#                point (root), not in the fragment file itself (false positives)
+exclude_path = [
+  "templates",
+  "archive",
+  "de",
+  "slides",
+  "includes",
+]
+
 exclude = [
   # JavaScript pseudo-links
   "^javascript:",
