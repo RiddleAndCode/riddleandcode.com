@@ -1,0 +1,38 @@
+# Riddle&Code
+
+> Infrastructure for distributed energy behind the meter.
+
+Riddle&Code builds KERN — an autonomous energy dispatch platform used by utilities,
+aggregators, VPP platforms, and energy communities to forecast, dispatch, and confirm
+distributed energy flexibility at scale. Headquartered in Vienna, Austria. B2B only.
+
+## Products
+
+- [KERN Overview](https://riddleandcode.com/kern/): Autonomous flexibility dispatch platform — forecasting, dispatching and confirming distributed energy assets behind the meter.
+- [KERN for Aggregators](https://riddleandcode.com/kern/for-aggregators.html): Secured market bids with confirmed dispatch and real-time asset telemetry. No manual intervention, no missed bids.
+- [KERN for Utilities](https://riddleandcode.com/kern/for-utilities.html): Turn customer base (HEMS fleet, energy communities, C&I) into a steerable, monetisable flexibility portfolio.
+- [KERN for Energy Communities](https://riddleandcode.com/kern/for-communities.html): Maximise shared self-consumption automatically. Connect collective flexibility to aggregators and grid operators.
+- [KERN for VPP Platforms](https://riddleandcode.com/kern/for-platforms.html): Normalised API feed, confirmed dispatch, 24h forecasts for every asset behind the meter.
+
+## Technology
+
+- [Technology Overview](https://riddleandcode.com/technology/): NODE ZERO edge hardware, MIOTY (IEC-standard LPWAN, 10 km range), Zigbee Mesh, 24h autonomous forecast loop, confirmed dispatch.
+
+## Company
+
+- [About Riddle&Code](https://riddleandcode.com/company/about-us.html): Vienna-based infrastructure company building KERN for the European energy transition.
+- [References](https://riddleandcode.com/references/): Live utility deployments — MV/LV microgrid, utility-owned aggregator, energy community platform. Visitable on request in Austria.
+- [News](https://riddleandcode.com/company/news.html): Latest updates from Riddle&Code and KERN.
+- [Get in Touch](https://riddleandcode.com/company/get-in-touch.html): Book a demo, arrange a site visit, or discuss partnerships. Contact: office@riddleandcode.com
+
+## Key Facts
+
+- Headquartered in Vienna, Austria
+- Live production deployments with utility-owned aggregators and MV/LV microgrids
+- KERN is the autonomous layer between physical assets and energy markets
+- Supports MIOTY (IEC standard, 10 km range, 1.5M messages/day) and Zigbee Mesh
+- Three optimisation modes: self-consumption, economic (FCR/aFRR/intraday), community
+- Redispatch 2.0 compliant; compatible with §14a (DE) / EAG / EnFG (AT)
+- Target customers: aggregators, utilities, VPP platforms, energy communities
+- Hardware: NODE ZERO edge hub, developed in partnership with specialized hardware partners
+- Platform ARR: EUR 114 per HEMS household per year

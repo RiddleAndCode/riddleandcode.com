@@ -24,12 +24,63 @@ except ImportError:
 ROOT = Path(__file__).parent
 TEMPLATES_DIR = ROOT / "templates"
 LOCALES_DIR = ROOT / "locales"
+BASE_URL = "https://riddleandcode.com"
 
 # Maps language code → output directory
 LANGS = {
     "en": ROOT,
     "de": ROOT / "de",
 }
+
+
+def get_canonical_url(tmpl_path: Path) -> str | None:
+    """Return the canonical EN URL for a template, or None for partials."""
+    rel = str(tmpl_path.relative_to(TEMPLATES_DIR)).replace("\\", "/")
+    if rel.startswith("includes/"):
+        return None
+    if rel == "index.html":
+        return f"{BASE_URL}/"
+    if rel.endswith("/index.html"):
+        return f"{BASE_URL}/{rel[:-len('index.html')]}"
+    return f"{BASE_URL}/{rel}"
+
+
+def build_sitemap() -> None:
+    """Generate sitemap.xml with bilingual hreflang annotations."""
+    templates = sorted(TEMPLATES_DIR.rglob("*.html"))
+    entries = []
+    for tmpl_path in templates:
+        en_url = get_canonical_url(tmpl_path)
+        if en_url is None:
+            continue
+        rel = str(tmpl_path.relative_to(TEMPLATES_DIR)).replace("\\", "/")
+        if rel == "index.html":
+            de_url = f"{BASE_URL}/de/"
+        elif rel.endswith("/index.html"):
+            de_url = f"{BASE_URL}/de/{rel[:-len('index.html')]}"
+        else:
+            de_url = f"{BASE_URL}/de/{rel}"
+
+        for loc in (en_url, de_url):
+            entries.append(
+                f"  <url>\n"
+                f"    <loc>{loc}</loc>\n"
+                f"    <xhtml:link rel=\"alternate\" hreflang=\"en\" href=\"{en_url}\"/>\n"
+                f"    <xhtml:link rel=\"alternate\" hreflang=\"de\" href=\"{de_url}\"/>\n"
+                f"    <xhtml:link rel=\"alternate\" hreflang=\"x-default\" href=\"{en_url}\"/>\n"
+                f"  </url>"
+            )
+
+    xml = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n'
+        '        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+        + "\n".join(entries)
+        + "\n</urlset>\n"
+    )
+    out = ROOT / "sitemap.xml"
+    out.write_text(xml, encoding="utf-8")
+    print(f"  [sitemap] → sitemap.xml ({len(entries)} URLs)")
 
 
 def render(template: str, strings: dict) -> str:
@@ -73,7 +124,8 @@ def build() -> int:
         source = tmpl_path.read_text(encoding="utf-8")
 
         for lang, out_dir in LANGS.items():
-            strings = {**locales[lang], "lang": lang}
+            canonical = get_canonical_url(tmpl_path)
+            strings = {**locales[lang], "lang": lang, "canonical_url": canonical or ""}
             rendered = render(source, strings)
 
             out_path = out_dir / rel
@@ -83,6 +135,7 @@ def build() -> int:
             print(f"  [{lang}] {rel} → {out_path.relative_to(ROOT)}")
             built += 1
 
+    build_sitemap()
     return built
 
 
@@ -97,7 +150,8 @@ def check_mode():
         source = tmpl_path.read_text(encoding="utf-8")
 
         for lang, real_dir in LANGS.items():
-            strings = {**locales[lang], "lang": lang}
+            canonical = get_canonical_url(tmpl_path)
+            strings = {**locales[lang], "lang": lang, "canonical_url": canonical or ""}
             rendered = render(source, strings)
             real_file = real_dir / rel
 
