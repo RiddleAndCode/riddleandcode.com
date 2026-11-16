@@ -1,0 +1,1091 @@
+# Riddle&Code — Full Site Content
+
+> Infrastructure for distributed energy behind the meter.
+
+Riddle&Code builds KERN — an autonomous energy dispatch platform used by utilities,
+aggregators, VPP platforms, and energy communities to forecast, dispatch, and confirm
+distributed energy flexibility at scale. Headquartered in Vienna, Austria. B2B only.
+
+---
+
+## Homepage (/)
+
+URL: https://riddleandcode.com/
+
+Riddle&Code — Vienna
+Infrastructure for distributed energy.
+
+We build the platform utilities and aggregators use to connect, dispatch and monetise
+distributed energy assets at scale. Our product is KERN.
+
+### KERN — Who it is built for
+
+**Aggregators**
+Secure your bids every time. KERN dispatches behind the meter and confirms execution —
+no manual intervention, no penalties.
+
+**Utilities**
+Turn your customer base into a steerable flexibility portfolio. From HEMS fleet to energy
+communities — one platform, one autonomous layer.
+
+**Energy Communities**
+Maximize shared self-consumption automatically. KERN optimizes every asset in the community
+— and connects collective flexibility to markets.
+
+**VPP Platforms**
+Close the gap below your platform. KERN delivers a normalised API feed, confirmed dispatch
+and 24h forecasts — for every asset your clients have.
+
+### The autonomous loop
+
+You send a signal. KERN delivers. What happens behind the meter is our job.
+
+1. Forecast — Rolling 24h flexibility profile per asset and portfolio
+2. Demand — Flexibility signal from aggregator, utility or market
+3. Rebalance — Real-time comparison of signal vs. actual asset state
+4. Dispatch — Autonomous asset control via MIOTY or Zigbee Mesh
+5. Confirm — Execution confirmed back to aggregator in real-time
+
+KERN interacts with your platform at step 1 and 2.
+Steps 3–5 are fully autonomous — no manual intervention required.
+
+### Live Reference
+
+Leading utilities built their flexibility stack on R&C KERN
+- Live MV/LV microgrid — production system
+- Utility-owned aggregator securing market bids via KERN
+- Energy community platform — KERN optimization layer
+
+Live system — visitable on request.
+
+---
+
+## KERN — Platform Overview (/kern/)
+
+URL: https://riddleandcode.com/kern/
+
+Riddle&Code — Autonomous Energy Platform
+
+Autonomous energy behind the meter.
+
+KERN is the platform that sits behind the meter — autonomously optimising, forecasting and
+dispatching flexibility from households, facilities, microgrids and energy communities.
+
+### You send a signal. KERN delivers.
+
+What happens behind the meter is our job.
+
+Aggregators, utilities and platforms interact with KERN through a clean API — forecast in,
+demand signal in, flexibility confirmed out. KERN handles everything in between: rebalancing,
+asset selection, dispatch, confirmation.
+
+### Optimising behind the meter
+
+KERN works across four asset contexts — all on one platform.
+
+**Households**
+PV + home storage + heat pump + EV charger — optimised as a unit. HEMS fleet management
+for utilities.
+
+**Commercial & Industrial**
+Commercial PV, BESS, CHP, controllable loads on MV/LV level. Peak shaving, load management,
+flexibility dispatch.
+
+**Microgrids**
+Multiple assets behind a shared grid connection point. Coordinated optimisation, island-mode
+capable.
+
+**Energy Communities (ESC)**
+Community optimisation across multiple members and meters. Shared self-consumption maximised,
+collective flexibility aggregated.
+
+### Three optimisation modes
+
+Configurable per asset or portfolio — combinable.
+
+**Mode 01 — Self-consumption**
+Maximise local self-consumption. Minimise grid import and export. Default mode for households
+and small C&I.
+
+**Mode 02 — Economic optimisation**
+Maximise monetary yield — intraday arbitrage, FCR/aFRR bids, peak shaving, demand charge
+reduction. Dispatch driven by real-time day-ahead and intraday price signals. Default for
+aggregators and C&I flexibility.
+
+**Mode 03 — Community optimisation**
+Maximise shared self-consumption across multiple members. Fair allocation by share. Default
+for ESC and microgrids.
+
+### Connectivity by topology
+
+The right technology for every asset configuration — both managed as one unified layer in KERN.
+
+**Contiguous sites — Zigbee Mesh**
+For assets on the same premises — buildings, campuses, industrial sites. Low-cost, easy to
+deploy, self-healing mesh network. No complex gateway infrastructure required.
+
+**Distributed assets — MIOTY**
+IEC-standard LPWAN for geographically dispersed assets — rural PV, MV-connected BESS,
+distributed sites. 10km range, 1.5M messages/day, independent of LTE and WiFi.
+
+---
+
+## KERN for Aggregators (/kern/for-aggregators.html)
+
+URL: https://riddleandcode.com/kern/for-aggregators.html
+
+KERN — For Aggregators
+
+Your bids are only as good as what's behind the meter.
+
+KERN acts as a forecast-driven, autonomous sub-aggregator behind the meter. You send a
+flexibility signal — KERN selects assets based on real-time state and forecasted availability,
+executes via MIOTY or Zigbee, and confirms delivery back to you. No manual intervention.
+No missed bids.
+
+### The five pains KERN solves
+
+**Problem: Unreliable connectivity to distributed assets**
+Rural BESS sites, industrial premises, basements — LTE drops, WiFi is unstable. Assets can't
+be committed to bids. Portfolio size is limited by infrastructure, not by availability.
+
+KERN: MIOTY (10km, 1.5M msg/day, IEC standard) and Zigbee Mesh connect every asset —
+independent of LTE and WiFi.
+
+**Problem: No dispatch confirmation**
+Bid placed, dispatch sent — whether the asset responded remains unknown until the next meter
+reading. Deviations are detected too late.
+
+KERN: Every dispatch is confirmed at asset level and reported back in real-time. You know
+immediately whether the bid is being fulfilled.
+
+**Problem: Manual response to forecast deviations**
+Weather change, load shift, asset failure — someone has to notice, decide and intervene.
+This doesn't scale.
+
+KERN: KERN continuously compares actual asset state against bid position and rebalances
+autonomously — before the deviation becomes critical.
+
+**Problem: Poor forecast quality without asset visibility**
+Without real-time telemetry at asset level, flexibility forecasts are estimates. Overbidding
+means penalties. Underbidding means lost revenue.
+
+KERN: Rolling 24h flexibility forecast per asset and portfolio — driven by live state of
+charge, weather-based PV models and historical load patterns. Continuously refined as the
+delivery window approaches.
+
+**Problem: Operational overhead scales with portfolio**
+Every new asset, every new site, every new asset class adds complexity. Growth requires more
+team, more monitoring, more manual dispatch management.
+
+KERN: New assets are onboarded into KERN — the aggregator gets more flexibility capacity,
+not more operational burden.
+
+### The operative loop
+
+1. FORECAST (rolling, 24h ahead) — KERN calculates per asset and portfolio: what flexibility
+   is available, when? Output: flexibility profile (MW, time window, confidence). Basis for
+   your bidding strategy.
+2. DEMAND (flexibility signal from you / market) — You place bids based on the forecast. On
+   award, the demand signal comes back: "X kW, time window T, direction reduce/increase"
+3. REBALANCE (forecast vs. actual state) — KERN compares the demand signal against current
+   asset state in real-time: weather, state of charge, current load, failures. Deviation from
+   forecast → KERN reacts autonomously.
+4. DISPATCH (autonomous local control) — KERN decides which assets to control — BESS, HVAC,
+   EV chargers, PV curtailment — via Zigbee or MIOTY. Execution confirmed.
+5. CONFIRMATION — Fulfillment status back to you in real-time. Next forecast cycle starts.
+
+You interact with steps 1 and 2. Everything else is KERN.
+
+### Proven in production
+
+"Leading utilities use KERN to power their flexibility aggregator — securing bids on energy
+markets with confirmed dispatch from MV/LV assets."
+Live system · MV/LV microgrid · Visitable on request
+
+---
+
+## KERN for Utilities (/kern/for-utilities.html)
+
+URL: https://riddleandcode.com/kern/for-utilities.html
+
+KERN — For Utilities
+
+You have the customers. You have the assets. KERN connects them.
+
+Your customers have PV, storage, heat pumps and EV chargers. Your grid has flexibility
+requirements. KERN is the autonomous platform layer that turns your customer base into a
+steerable, monetisable flexibility portfolio — without building an operations team for it.
+
+### Where utilities are leaving value on the table
+
+**Problem: Controllable assets without an optimisation platform**
+Smart meters and CLS switches are rolling out — but there is no platform above them. No
+optimisation, no aggregation, no market access. The potential stays untapped.
+
+KERN: KERN sits above the meter as the autonomous management layer — real-time optimisation,
+fleet control, market-ready aggregation.
+
+**Problem: Redispatch 2.0 is manual and costly**
+Grid congestion management requires coordinated control of distributed generation — without
+a platform this is operationally complex, error-prone and doesn't scale.
+
+KERN: KERN handles Redispatch 2.0-compliant dispatch autonomously, with confirmation per
+asset.
+
+**Problem: Customers leaving for smarter energy providers**
+New energy players offer HEMS, community tariffs and flexibility revenues. Utilities without
+smart services lose the customers who want to actively participate.
+
+KERN: KERN is your behind-the-meter product — branded as your service, delivered by KERN.
+Customers stay and engage.
+
+**Problem: No access to flexibility markets from your own customer base**
+You have the customer relationships and the assets — but without an aggregation platform you
+can't monetise that flexibility.
+
+KERN: KERN aggregates your customer base into a marketable portfolio. You can run your own
+aggregator subsidiary — or partner with an external one.
+
+### Three ways to deploy KERN
+
+**Use case 01 — HEMS Fleet: Customer Base as Flexible Resource**
+Deploy KERN HEMS with household customers who have PV and storage. Customers benefit from
+self-consumption optimisation and lower bills. You gain a steerable fleet for Redispatch or
+flexibility monetisation — without operational load per customer.
+
+**Use case 02 — Energy Communities: Compliant, Automatic**
+KERN ESC manages optimisation and autonomous asset control for energy communities. You can
+offer energy communities as a service — no custom development, no manual billing processes
+needed from KERN's side.
+
+**Use case 03 — Flexibility Monetisation: From Your Customer Base**
+The aggregated flexibility from HEMS fleet, C&I customers and ESC becomes a marketable
+portfolio via KERN. Route it through your own aggregator subsidiary or an external partner
+to FCR, aFRR or intraday markets.
+
+### The reference model — running in production
+
+Leading utilities built their complete flexibility stack on KERN:
+- Grid: Live MV/LV microgrid — production system, Austria
+- Aggregator: Utility-owned aggregator securing bids on Austrian energy markets via KERN
+- Communities: Energy community platform — KERN as optimisation layer
+
+Live system — visitable on request in Austria.
+
+---
+
+## KERN for Energy Communities (/kern/for-communities.html)
+
+URL: https://riddleandcode.com/kern/for-communities.html
+
+KERN — For Energy Communities
+
+Your community generates energy. KERN keeps it in the community.
+
+KERN autonomously optimises storage, controllable loads and generation across all community
+members — maximising shared self-consumption and forecasting the collective flexibility that
+can be offered to markets or grid operators.
+
+### What holds energy communities back today
+
+**Problem: Self-consumption is measured, not optimised**
+Without real-time optimisation, energy is exported to the grid even when members have demand
+— the community's potential stays largely untapped.
+
+KERN: KERN forecasts generation and consumption per member (24h ahead) and steers assets to
+maximise what stays in the community.
+
+**Problem: No real-time visibility across the community**
+Operators don't know how much is being generated, consumed and shared right now — optimisation
+and steering are impossible without this view.
+
+KERN: Real-time telemetry from every asset, aggregated into a community dashboard. Full
+visibility, per member and as a whole.
+
+**Problem: Storage and loads are not coordinated**
+Community storage and controllable loads are managed manually or not at all — no automatic
+charging when PV surplus is available, no discharging when members need it.
+
+KERN: KERN steers shared storage and controllable loads autonomously — aligning generation,
+storage and consumption in real-time.
+
+**Problem: Connectivity across multiple sites is unsolved**
+Members at different buildings or locations are hard to reliably connect — LTE drops out,
+WiFi doesn't reach far enough.
+
+KERN: Zigbee Mesh for contiguous sites, MIOTY for distributed members (10km, independent of
+LTE/WiFi) — both managed as one unified layer.
+
+**Problem: Collective flexibility potential goes unused**
+An active community with PV and storage has real collective flexibility — but without a
+platform it can neither be forecasted nor offered to aggregators or grid operators.
+
+KERN: KERN provides rolling 24h flexibility forecasts for the whole community and connects to
+aggregators or grid operators on request.
+
+### How KERN operates the community
+
+1. REAL-TIME MONITORING — KERN tracks generation and consumption of all members continuously
+   — at meter level, in real-time.
+2. COMMUNITY OPTIMISATION (24h forecast + real-time) — KERN forecasts generation (PV) and
+   consumption per member. Goal: maximise shared self-consumption — who needs what, when,
+   and what is available right now?
+3. AUTONOMOUS CONTROL — KERN steers shared storage, controllable loads and feed-in points
+   to keep as much energy within the community as possible. No manual intervention required.
+4. FLEXIBILITY (optional) — Surplus or forecastable flexibility can be offered as a 24h
+   forecast to an aggregator or grid operator and dispatched on demand — confirmed back to
+   the requesting party.
+
+### What KERN does for communities
+
+- Community optimisation: Maximises collective self-consumption across all members — in
+  real-time and with a 24h forecast.
+- Storage and load control: Autonomous steering of shared storage and controllable loads to
+  align supply and demand within the community.
+- Real-time dashboard: Community generation, consumption, self-consumption rate and flexibility
+  potential — for operators and optionally for members.
+- Flexibility forecast: Rolling 24h forecast of available community flexibility — the basis for
+  aggregator or grid operator integration.
+- Multi-site connectivity: Zigbee Mesh for contiguous sites, MIOTY for distributed members —
+  every participant reliably connected.
+- Aggregator connection: Community flexibility dispatched on demand — with confirmed execution
+  back to the requesting party.
+
+Already handling ESC billing or member management? KERN is the optimisation and control layer
+— not a billing platform. We integrate with your existing billing infrastructure to add
+autonomous asset management and flexibility forecasting on top of what you already offer your
+ESC clients.
+
+---
+
+## KERN for VPP Platforms (/kern/for-platforms.html)
+
+URL: https://riddleandcode.com/kern/for-platforms.html
+
+KERN — For VPP Platforms
+
+Your platform is strong above the asset layer. KERN closes the gap below.
+
+KERN integrates below your VPP as the asset management and connectivity layer. Your platform
+gets a clean, normalised API feed, confirmed dispatch and 24h flexibility forecasts — for
+every asset your clients have, including those currently unreachable.
+
+### Where KERN fits in your stack
+
+  Market / TSO / Grid Operator
+            ↓
+  YOUR PLATFORM
+  VPP optimisation · Bidding · Redispatch · Trading · Reporting
+            ↓
+  Normalised telemetry feed / Dispatch commands + confirmation / 24h flexibility forecast
+            ↓
+  KERN
+  Asset management · Autonomous dispatch · Real-time optimisation · Forecasting
+            ↓
+  Zigbee Mesh · MIOTY
+            ↓
+  PV · BESS · Heat pumps · EV chargers · CHP · Controllable loads · Microgrids
+
+### Three gaps KERN fills
+
+**Problem: Assets with unreliable connectivity stay out of the portfolio**
+Rural sites, industrial premises, basements — LTE drops, WiFi is unstable. Your clients can't
+bring these assets into your platform. Potential stays on the table.
+
+KERN: MIOTY (10km, IEC standard) and Zigbee Mesh make every asset reachable — your clients
+grow their portfolio without infrastructure investment.
+
+**Problem: No dispatch feedback — the loop is open**
+Your platform sends commands — but whether the asset responded stays unknown until the next
+meter reading. Deviations are detected too late, penalties hit your clients.
+
+KERN: KERN confirms every dispatch at asset level and reports back in real-time. Your platform
+knows immediately whether the flexibility commitment is being met.
+
+**Problem: Heterogeneous assets increase integration overhead**
+Every new asset type, every new manufacturer, every new protocol means integration effort —
+for you or your clients. This slows onboarding and limits scale.
+
+KERN: KERN normalises all asset types to a single data model. Your platform speaks to KERN —
+not to every asset individually.
+
+### What your platform gets from KERN
+
+- Clean, normalised API feed: Unified telemetry regardless of how many asset types,
+  manufacturers or protocols are behind it. One integration, all assets.
+- Dispatch with confirmation: KERN receives your dispatch command, executes at asset level and
+  reports back whether and how it was fulfilled.
+- 24h flexibility forecast: Rolling 24h forecast per asset and portfolio — driven by live
+  telemetry, weather-based PV models and historical load patterns. Continuously refined as
+  delivery approaches. More precise bids, fewer penalties for your clients.
+- More assets in the portfolio: Assets currently excluded due to connectivity become available.
+  Your clients grow their dispatchable portfolio without CAPEX.
+
+### Integration options
+
+| Model | Description | Effort |
+|---|---|---|
+| API integration | KERN delivers normalised telemetry and accepts dispatch commands via REST/WebSocket. Your platform remains primary. | Low |
+| White-label | KERN runs under your brand as an "Asset Connectivity Module" for your clients. | Medium |
+| Pilot | One client, one asset class, defined scope — fast to start, low risk. | Minimal |
+
+---
+
+## Technology (/technology/)
+
+URL: https://riddleandcode.com/technology/
+
+Technology
+
+Built for energy infrastructure. Not adapted from IoT.
+
+MIOTY, Zigbee Mesh, a 24h autonomous forecast loop and confirmed dispatch — purpose-built
+for the demands of flexibility management behind the meter.
+
+### NODE ZERO — purpose-built hardware
+
+Developed in partnership with RDDL Foundation — designed from the ground up for energy
+infrastructure, not adapted from general IoT.
+
+Product line:
+- NODE ZERO Meter Bridge — local-first intelligence
+- NODE ZERO ZIGBEE³ — USB Zigbee coordinator
+- NODE ZERO Meter Link — Zigbee relay module for MBus & optical interfaces
+- NODE ZERO Meter Link — 3-phase metering
+
+### Connectivity by topology
+
+**Contiguous sites — Zigbee Mesh**
+Buildings, campuses, industrial premises, microgrids on one site
+- Range: Up to 100m per node, mesh extends coverage
+- Deployment: No gateway per room — mesh self-organises
+- Cost: Low hardware cost per node
+- Topology: Self-healing mesh — resilient to node failure
+- Use case: HEMS, C&I facilities, ESC on one campus
+
+**Distributed assets — MIOTY**
+Geographically dispersed assets — rural PV, MV BESS, multiple remote sites
+- Range: 10 km per gateway
+- Capacity: 1.5M messages/day per gateway
+- Standard: IEC 62657-1 — purpose-built for energy
+- Independence: No LTE, no WiFi required
+- Latency: <1 second for dispatch commands
+
+### MIOTY vs. LoRaWAN
+
+| Capability | MIOTY | LoRaWAN |
+|---|---|---|
+| Standard | IEC 62657-1 (international) | LoRa Alliance proprietary |
+| Range | Up to 10 km | Up to 5 km |
+| Messages/day/gateway | 1,500,000 | ~50,000 |
+| Designed for | Energy infrastructure, utility grade | General IoT sensing |
+| Dispatch latency | <1 second | Seconds to minutes |
+| LTE independence | Yes | Yes |
+
+### The autonomous loop
+
+KERN operates continuously — forecasting, reacting and dispatching without manual intervention.
+
+1. FORECAST (rolling, 24h ahead) — Per asset: state of charge, PV forecast (weather-based),
+   load forecast (historical patterns), available flexibility window. Per portfolio: aggregated
+   flexibility profile (MW, time, confidence). Delivered to aggregator / platform as API feed.
+2. DEMAND (inbound signal) — Flexibility signal received from aggregator, utility or market:
+   volume (kW), time window, direction (increase/decrease).
+3. REBALANCE (real-time delta) — KERN compares demand signal against current actual asset state.
+   Detects deviations: weather change, load shift, asset failure. Adjusts dispatch plan
+   autonomously — before deviation becomes critical.
+4. DISPATCH (autonomous asset control) — KERN selects assets, determines control sequence,
+   sends commands. Execution via Zigbee Mesh (contiguous) or MIOTY (distributed). Asset
+   protocols: Modbus, SunSpec, EEBUS, proprietary inverter APIs.
+5. CONFIRMATION — Asset-level execution confirmed back to KERN. Fulfillment status reported
+   to aggregator / platform in real-time. Next forecast cycle starts immediately.
+
+### How KERN makes decisions
+
+Each optimization cycle draws on live telemetry, market signals and learned patterns — not
+manual configuration.
+
+**Price-signal driven dispatch**
+KERN tracks day-ahead and intraday prices, FCR/aFRR signal values and grid tariff structures
+in real time. Every asset dispatch decision is evaluated against the active market environment
+— not a fixed schedule.
+
+**Rolling forecast engine**
+Consumption and generation forecast 24h ahead per asset — combining live state of charge,
+weather-based PV models and historical load patterns. Continuously refined as the delivery
+window approaches.
+
+**Continuous rebalancing**
+KERN compares actual asset state against committed dispatch position every few minutes.
+Detected deviations trigger automatic asset reselection and re-dispatch — before the delivery
+window closes and penalties apply.
+
+### Supported assets and protocols
+
+Asset types:
+- PV (residential)
+- PV (commercial)
+- Home storage
+- Commercial BESS
+- Heat pumps
+- EV chargers
+- CHP
+- Biogas
+- Controllable loads
+- MV-connected assets
+
+Communication protocols:
+- Modbus TCP/RTU
+- SunSpec
+- EEBUS
+- REST API
+- OCPP (EV)
+- Proprietary inverter APIs
+
+### Security & compliance
+
+- End-to-end encryption: All asset communication encrypted end-to-end — from sensor to
+  platform.
+- Certificate-based authentication: Every asset authenticated by certificate — no unauthorised
+  control possible.
+- Redispatch 2.0: Compliant with Redispatch 2.0 requirements for distributed generation
+  control.
+- §14a / EAG / EnFG: Compatible with controllable load regulations in Germany and Austria.
+
+---
+
+## References (/references/)
+
+URL: https://riddleandcode.com/references/
+
+References
+
+Grid. Aggregator. Community. All live.
+
+Leading utilities. Three production deployments on a single platform. Visitable on request.
+
+### Live Reference — Austria
+
+Leading utilities built their complete flexibility stack on R&C KERN
+
+**Grid — Live MV/LV Microgrid**
+Real medium and low-voltage grid in production. KERN managing all assets behind the meter —
+generation, storage, controllable loads.
+
+**Aggregator — Utility-owned Flexibility Aggregator**
+Utility subsidiary securing bids on Austrian energy markets. KERN provides autonomous dispatch
+with confirmed execution — enabling reliable bid fulfilment.
+
+**Community — Energy Community Platform**
+Energy community management running on KERN as the optimisation and control layer — autonomous
+asset coordination, collective self-consumption maximisation.
+
+The system is visitable. The live installation can be visited on request — a real microgrid,
+running KERN in production. Contact us to arrange a visit.
+
+More references coming. Additional customer references are in preparation. We are currently
+seeking approval to publish by name.
+
+---
+
+## About Riddle&Code (/company/about-us.html)
+
+URL: https://riddleandcode.com/company/about-us.html
+
+Vienna, Austria
+Infrastructure for distributed energy.
+
+Riddle&Code builds KERN — the platform utilities and aggregators use to connect, manage, and
+monetise distributed energy assets at scale. We own the full stack: hardware, connectivity,
+platform, and market access.
+
+### WHY WE EXIST — The infrastructure gap in the energy transition
+
+Distributed energy resources are multiplying — rooftop solar, batteries, heat pumps, EV
+chargers. Utilities face flexibility obligations. Aggregators need scale. Nobody wanted to
+build the connectivity and compliance layer from scratch. We did.
+
+**Infrastructure, not apps**
+KERN is the layer that sits between physical assets and energy markets. We're not a consumer
+app or a meter-reading service. We're the platform your operations team runs — reliably, at
+scale, without depending on consumer devices or WiFi.
+
+**Full stack ownership**
+Hardware, MIOTY wireless connectivity, HEMS/ESC/LSP platform, and direct market access in a
+single integration. Partners deploy once — they don't stitch together three separate vendor
+relationships to get an asset to market.
+
+**Regulatory complexity absorbed**
+ESC compliance, flexibility reporting, and audit documentation are built into KERN — not a
+manual process your team maintains. We carry the technical and regulatory complexity so you
+carry the customer relationship.
+
+### What KERN delivers — One platform. Three asset classes. One integration.
+
+**MIOTY wireless connectivity**
+10km range, 1.5 million messages per day, ultra-low power. No WiFi, no consumer app dependency
+— works in basements, rural areas, and industrial sites. One gateway covers an entire
+neighbourhood or industrial zone.
+Stats: IEC standard · 10km range · 1.5M msg/day · No per-asset commissioning
+
+**HEMS — residential assets**
+Manage residential PV and battery portfolios. Optimise intraday trading, flexibility dispatch,
+and curtailment prevention — automatically, across thousands of homes.
+Stats: PV + battery · Intraday trading · €114/asset/yr ARR
+
+**ESC — energy sharing communities**
+Community energy pooling built for Austrian and EU regulatory frameworks. Compliance is
+auditable and automated — not a spreadsheet your legal team reviews quarterly.
+Stats: EU regulatory compliant · Automated reporting · €24/member/yr ARR
+
+**LSP — grid-scale flexibility**
+Large Scale Plant management for grid-scale assets: BESS, industrial loads, and aggregated
+portfolios. Direct access to ancillary service and flexibility markets — no third-party
+aggregator required.
+Stats: aFRR / FCR · Direct market access · €25k/plant/yr ARR
+
+### TRACK RECORD — Validated, not promised
+
+**Leading utilities**
+Validated with leading utilities. The deployment model, regulatory alignment, and economics
+are validated at regional scale — the same playbook applies to any regional utility territory.
+
+**MIOTY at scale**
+1.5 million messages per day demonstrated capacity. IEC standardised — not proprietary lock-in.
+Partners aren't betting on a single vendor's survival; they're adopting a published standard.
+
+**Unit economics that work**
+Hardware at €239 sell / €100 COGS — 58% margin. Platform ARR of €114 per HEMS household per
+year. The economics support utility bundle pricing and operator margin at scale.
+
+### FOUNDERS — The team behind KERN
+
+- Manfred Bodner — Co-Founder
+- Tom Fürstner — Co-Founder
+- Rene Schrittwieser — Investor
+
+---
+
+## Careers (/company/career.html)
+
+URL: https://riddleandcode.com/company/career.html
+
+Join Our Team — Build the Infrastructure for the Energy Transition
+
+Riddle&Code builds KERN — the platform utilities and aggregators use to connect, dispatch and
+monetise distributed energy assets at scale. We work on hard problems in energy infrastructure,
+wireless connectivity and autonomous systems.
+
+### OUR PURPOSE — The Riddle&Code Spirit
+
+**Purpose: Why do we exist?**
+Building infrastructure for the energy transition.
+We provide the connectivity and autonomy layer that turns distributed energy assets into
+manageable, monetisable infrastructure — for utilities and aggregators across Europe.
+
+**Vision: Where are we headed?**
+A Europe where every distributed energy asset contributes to grid stability.
+We envision a grid where flexibility behind the meter is continuously forecasted, dispatched
+and confirmed — without manual intervention, at any scale.
+
+**Mission: How will we get there?**
+KERN in every utility flexibility stack in Europe by 2030.
+Our commitment is to deliver the autonomous energy management layer that makes distributed
+flexibility reliable, monetisable and scalable.
+
+### Our Core Values
+
+- Curiosity: We're constantly exploring, questioning, and learning.
+- Empathy: Understanding our colleagues, partners, and customers allows us to build solutions
+  that truly matter.
+- Listening: Active listening helps us understand needs, collaborate effectively, and build
+  better products together.
+- Grit: Solving hard problems requires perseverance. We embrace challenges and persist until
+  we achieve our goals.
+- Fun: We believe in enjoying the journey. A positive, engaging workplace culture brings out
+  our best work.
+- Commitment: We're dedicated to our mission, our team, and our partners.
+
+### BENEFITS — Why Join Riddle&Code
+
+- Real infrastructure impact: Work on a production system managing live energy assets. Your
+  code controls real hardware behind real meters — not a simulation.
+- Vienna & Remote: Vienna was ranked the most liveable city for the tenth time in a row. Work
+  where you're most productive.
+- Flexible Environment: A modern office or working remotely — enjoy a flexible working
+  environment that adapts to your needs and lifestyle.
+- European Energy Market: Work at the intersection of wireless technology, energy markets and
+  regulatory frameworks across Austria, Germany and the EU.
+- Fair Compensation: Receive fair compensation that corresponds to your qualifications and
+  experience.
+- Work-Life Balance: A refreshed you is a happy you.
+
+---
+
+## Get in Touch (/company/get-in-touch.html)
+
+URL: https://riddleandcode.com/company/get-in-touch.html
+
+Let's talk. Get in Touch.
+
+Book a demo, arrange an on-site visit to our live reference installation, or discuss how KERN
+fits into your utility or aggregator stack.
+
+### CONTACT — Ways to Reach Us
+
+**General Inquiries**
+For general questions about KERN, our technology and partnership options:
+office@riddleandcode.com
+
+**Book a Demo**
+30 minutes — live system, real assets. We'll show you the autonomous loop in action and map
+which assets in your portfolio are ready for KERN.
+
+**Request a Site Visit**
+Our reference installation in Austria is visitable on request — a live MV/LV microgrid with
+KERN running in production.
+
+### LOCATION — Headquarters
+
+Riddle & Code GmbH
+c/o Spaces Icon Central Station
+Gertrude-Fröhlich-Sandner-Straße 2-4/Tower 9
+1100 Vienna, Austria
+
+### WHY CONNECT — What We Can Help With
+
+- Executive Briefing: Strategic overview of KERN, the market opportunity and how we fit into
+  your flexibility strategy. 45 minutes, C-level format.
+- Technical Deep Dive: API specs, connectivity architecture, integration approach for your
+  specific asset mix. For your technical team.
+- Live Reference: Visit our production installation in Austria — a real utility deployment with
+  MV/LV microgrid, aggregator and energy community platform.
+- Partnership: Utility partnerships, aggregator relationships, platform integrations — let's
+  discuss the right commercial model.
+
+---
+
+## Media Hub (/company/media.html)
+
+URL: https://riddleandcode.com/company/media.html
+
+Media Hub. Press Kit & Brand Resources.
+
+### ABOUT US — Who We Are
+
+Riddle&Code builds KERN — the infrastructure platform for distributed energy management. We
+serve utilities, aggregators and energy communities across Europe, providing autonomous asset
+connectivity, flexibility forecasting and dispatch.
+
+Our technology, including MIOTY wireless connectivity and autonomous dispatch, is deployed in
+production with leading utilities in Austria — managing a live MV/LV microgrid, flexibility
+aggregator and energy community platform.
+
+### DOWNLOADS — Press Materials
+
+- Brand Logo: Download our official brand logos in various formats. Includes light and dark
+  versions, horizontal and vertical layouts.
+- Press Kit: Complete press kit including company information, product details, leadership
+  bios, and high-resolution images.
+
+### MEDIA INQUIRIES — For Journalists & Media
+
+- Press Releases: Access our latest press releases, announcements, and company news.
+- Media Contact: office@riddleandcode.com
+- Interview Requests: Available for expert commentary on distributed energy management,
+  flexibility markets, MIOTY technology and the energy transition.
+- Usage Guidelines: Please respect our brand guidelines when using Riddle&Code and KERN assets.
+
+---
+
+## News (/company/news.html)
+
+URL: https://riddleandcode.com/company/news.html
+
+News & Insights from Riddle&Code
+
+Stay up to date with our latest product updates, market research and company news.
+
+---
+
+## News Article: Low Power Networks (/news/low-power-networks-the-backbone-of-profitable-energy-communities.html)
+
+URL: https://riddleandcode.com/news/low-power-networks-the-backbone-of-profitable-energy-communities.html
+
+Press Release · February 28, 2025
+
+Low Power Networks: The Backbone of Profitable Energy Communities
+
+Have you ever wondered why energy communities struggle to reach their full potential? At
+Riddle&Code, we discovered it's often due to something surprisingly basic: connectivity.
+
+### The Vision vs. Reality
+
+Our mission is to transform energy communities into virtual power plants through intelligent
+load balancing. Sounds great in theory — but we quickly learned that you can't balance what
+you can't see.
+
+Real-time visibility of every energy asset is essential, but the connectivity challenges we
+encountered were eye-opening:
+- Thick concrete walls blocking signals from basement installations
+- Spotty or non-existent mobile coverage in rural communities
+- Metal meter box doors creating perfect signal blockers
+- "Sorry, we turned off the router before vacation!"
+
+### Our Breakthrough Solution
+
+After numerous field tests, we've developed a dual approach that actually works:
+- MIOTY technology for reliable long-distance connections across the community
+- Zigbee mesh networks for robust device clusters at individual locations
+
+### Proof in the Mountains
+
+We were in Stanz, testing our solution in challenging mountainous terrain. The results?
+Consistent connectivity where traditional methods had repeatedly failed.
+
+This isn't just about keeping devices online — it's about unlocking the true economic potential
+of energy communities through reliable, real-time data flow.
+
+---
+
+## News Article: EU Showcase Project Stanzertal (/news/press-release-energy-community-stanzertal-eu-showcase-project.html)
+
+URL: https://riddleandcode.com/news/press-release-energy-community-stanzertal-eu-showcase-project.html
+
+Press Release · May 11, 2023
+
+EU Showcase Project Stanz im Mürztal: The Energy Comes From the People
+
+The municipality of Stanz im Mürztal demonstrated what no one in Europe had yet implemented.
+During the "European Smart Villages Observatory Meeting" on May 11 in Graz, the project
+"Stanz Token" was presented to the European public as a lighthouse project of the EU Commission.
+
+Mayor Friedrich Pichler and Riddle&Code's CPO Kai Siefert activated the real-time connection
+of Stanz's first electricity producers and consumers. Members of the Stanzertal Energy Community
+(EEG) can adapt their consumption behavior to the amount of electricity produced by the
+community, while retaining full sovereignty over their own data. In the future, unconsumed
+energy will become its own currency (StanzerTaler) — strengthening the local economy.
+
+The technical implementation is based on blockchain technology. Riddle&Code's product MYPWR
+provided a simple plug and play solution including blockchain wallets for smart meters and all
+end devices.
+
+About Riddle&Code and MYPWR: Riddle&Code (R&C) was founded in Vienna and is a leading
+specialist in decentralized hardware and software solutions for developers and enterprises.
+R&C develops data infrastructure to connect digital and physical worlds with a focus on
+sustainable, decentralized business models.
+
+---
+
+## News Article: Revolutionizing Business Models (/news/revolutionizing-business-models-with-a-blockchain-for-machines.html)
+
+URL: https://riddleandcode.com/news/revolutionizing-business-models-with-a-blockchain-for-machines.html
+
+Press Release · April 4, 2023
+
+Revolutionizing Business Models with a Blockchain for Machines: Solving the Oracle Problem
+with Smart Hardware Wallets and Tokenization
+
+Riddle&Code is using the RDDL Foundation's invention, the decentralized trust anchor, to
+integrate traditional machines with blockchain technology. This innovative approach combines
+hardware and software, enabling data outputs to be tokenized and creating new business models
+in energy, supply chain and tech.
+
+The Trust Anchor can log and cryptographically convert energy output into tokens in real-time,
+enabling micro-investments and providing data on green energy sources and materials.
+
+Riddle&Code was founded with the mission of bringing the blockchain's efficiency in managing
+digital assets to the physical world. Founder and CTO Thomas Fürstner: "if we cannot bring
+physical assets to the blockchain, let's bring blockchain to physical assets."
+
+---
+
+## News Article: Fourth Industrial Revolution (/news/riddle-code-ignites-the-fourth-industrial-revolution-by-onboarding-machines-onto-web3.html)
+
+URL: https://riddleandcode.com/news/riddle-code-ignites-the-fourth-industrial-revolution-by-onboarding-machines-onto-web3.html
+
+November 2, 2022 · Vienna, Austria
+
+Riddle&Code ignites the fourth industrial revolution by onboarding machines onto Web3
+
+Riddle&Code established a new path of digitalization for industrial companies with its purpose
+of onboarding industries to Web3. Programs HW-03 Enterprise and HW-03 Community focus on
+hardware wallet adoption to accelerate Web3 knowledge and create new business opportunities.
+
+The RDDL Network uses a unique "Proof-of-Productivity" consensus mechanism, making machines
+tamper-proof and enabling a new kind of trust and traceability for generated machine data.
+With a cryptographic hardware wallet connected to a machine, the machine turns into a
+decentralised identifier — an Industrial Machine NFT.
+
+Riddle&Code anticipates over 50 million machines operating as nodes on the RDDL Network,
+powering the energy sector of the future.
+
+---
+
+## News Article: HW-03 Community Program (/news/riddle-code-introduces-the-hw-03-community-program-for-developers.html)
+
+URL: https://riddleandcode.com/news/riddle-code-introduces-the-hw-03-community-program-for-developers.html
+
+Riddle&Code introduces the HW-03 Community Program for Developers
+
+Vienna, Austria, 7th December 2022
+
+Riddle&Code launched the Hardware Wallet (HW-03) Community Program for developers to build
+innovative, sustainable solutions for Industry 4.0 and Web3.
+
+The HW-03 Community Kit is a powerful combination of a Hardware Wallet, a Data Logger and a
+Smart Energy Meter. It is the foundation to attest machine identities and their data signals
+to distributed ledgers.
+
+The program allows members to turn any device into a trusted data source and a wallet —
+securing the machine and its data at the source. IoT-connected devices can be equipped with
+dedicated hardware wallets following a BIP39 backup scheme.
+
+About the RDDL Network: A decentralized, industrial machine-powered blockchain protocol that
+uses a unique Proof-of-Productivity (PoP) consensus mechanism that proves identity, data
+accuracy, and usage for all types of machines.
+
+---
+
+## News Article: Web Summit 2022 (/news/riddle-code-is-attending-web-summit-in-lisbon.html)
+
+URL: https://riddleandcode.com/news/riddle-code-is-attending-web-summit-in-lisbon.html
+
+Riddle&Code is attending Web Summit in Lisbon
+
+Web Summit, November 1-4, 2022, Altice Arena & Fil Lisbon.
+
+Riddle&Code attendees: John Calian (CEO), Tom Fürstner (Founder & CTO), Christiane Rinke
+(Head of Marketing), Gianluca Graf (Head of Sales), Dietmar Kofler (Head of Product &
+Community), Gregory Stephen (Program Manager), Kai Siefert (Managing Director of Riddle&Code
+Energy Solutions).
+
+---
+
+## Legal (/legal.html)
+
+URL: https://riddleandcode.com/legal.html
+
+Legal — Company Information
+
+Official registration details for Riddle & Code GmbH
+
+**Company Details:**
+Riddle & Code GmbH
+c/o Spaces Icon Central Station
+Gertrude-Fröhlich-Sandner-Straße 2-4/Tower 9
+1100 Vienna, Austria, Europe
+
+Email: office@riddleandcode.com
+Complaints: privacy@riddleandcode.com
+
+Registration:
+- Commercial Court: Vienna, Austria
+- Registration Number: FN 462779 h
+- VAT ID: ATU72126558
+
+Licensed Activities: Trade, IT-Services and Exchange of components
+
+Consumer Protection: Complaints can be submitted to the EU's online dispute resolution
+platform: http://ec.europa.eu/odr
+Or directly to: privacy@riddleandcode.com
+
+---
+
+## Privacy Policy (/privacy-policy.html)
+
+URL: https://riddleandcode.com/privacy-policy.html
+
+Privacy Policy — Your Data, Your Rights
+
+Controller: Riddle & Code GmbH, c/o Spaces Icon Central Station, Gertrude-Fröhlich-Sandner-
+Straße 2-4/Tower 9, 1100 Vienna, Austria. Email: privacy@riddleandcode.com
+
+Data processing activities: website operation (hosted on GitHub Pages), cookies (technically
+necessary only), social media (LinkedIn, X), customer care and services, contact forms, job
+applications, website analytics (Google Analytics), webshop.
+
+Legal bases: Art. 6(1)(a)-(f) GDPR.
+
+Data subject rights: information (Art. 15), rectification (Art. 16), erasure (Art. 17),
+restriction (Art. 18), portability (Art. 20), objection (Art. 21), withdrawal of consent,
+complaint to supervisory authority (Austria: Data Protection Authority, Barichgasse 40-42,
+1030 Wien, www.dsb.gv.at).
+
+Retention: Business letters, contracts, bookings, orders: at least 7 years.
+Last update: 10.12.2025
+
+---
+
+## Terms & Conditions (/terms.html)
+
+URL: https://riddleandcode.com/terms.html
+
+Terms & Conditions — Riddle & Code GmbH
+
+Registration number FN 462779 h, address c/o Spaces Icon Central Station, Gertrude-Fröhlich-
+Sandner-Straße 2-4/Tower 9, 1100 Vienna, Austria.
+
+Covers: intellectual property, use of website, warranties, privacy (see Privacy Policy),
+unenforceable provisions, breach consequences, governing law (Austria).
+
+Contact for questions: admin@riddleandcode.com
+
+---
+
+## German Language Pages (/de/)
+
+URL prefix: https://riddleandcode.com/de/
+
+The following pages are available in German (Deutsch) with equivalent content to the English
+versions listed above:
+
+- /de/ — Homepage (Startseite)
+- /de/kern/ — KERN Plattform-Übersicht
+- /de/kern/for-aggregators.html — KERN für Aggregatoren
+- /de/kern/for-utilities.html — KERN für Energieversorger
+- /de/kern/for-communities.html — KERN für Energiegemeinschaften
+- /de/kern/for-platforms.html — KERN für VPP-Plattformen
+- /de/technology/ — Technologie
+- /de/references/ — Referenzen
+- /de/company/about-us.html — Über uns
+- /de/company/career.html — Karriere
+- /de/company/get-in-touch.html — Kontakt
+- /de/company/media.html — Media Hub
+- /de/company/news.html — Neuigkeiten
+
+Key German terminology used: KERN (unchanged), Energieversorger (utilities), Aggregatoren
+(aggregators), Energiegemeinschaften (energy communities), Flexibilität (flexibility),
+Eigenverbrauch (self-consumption), Prognose (forecast), Steuerung (dispatch/control),
+hinter dem Zähler (behind the meter), Netzeinspeisung (grid feed-in), Redispatch 2.0
+(unchanged).
+
+---
+
+## Key Facts Summary
+
+- Company: Riddle & Code GmbH, Vienna, Austria. FN 462779 h. VAT ATU72126558.
+- Product: KERN — autonomous energy dispatch platform
+- Contact: office@riddleandcode.com
+- Website: https://riddleandcode.com
+
+**Platform capabilities:**
+- Autonomous forecast-dispatch-confirm loop, 24h rolling horizon
+- Three optimisation modes: self-consumption, economic (FCR/aFRR/intraday), community
+- Three asset contexts: HEMS (households), ESC (energy communities), LSP (large scale plants)
+- Connectivity: MIOTY (IEC 62657-1, 10km range, 1.5M msg/day) + Zigbee Mesh
+- Protocols: Modbus TCP/RTU, SunSpec, EEBUS, REST API, OCPP
+- Compliance: Redispatch 2.0, §14a (DE), EAG/EnFG (AT), EU ESC regulations
+
+**Commercial metrics:**
+- Hardware: NODE ZERO edge hub, €239 sell / €100 COGS (58% margin)
+- HEMS ARR: €114 per household per year
+- ESC ARR: €24 per member per year
+- LSP ARR: €25,000 per plant per year
+
+**Live references (Austria):**
+- MV/LV microgrid — production system
+- Utility-owned flexibility aggregator securing market bids
+- Energy community platform with KERN optimisation layer
+- Visitable on request
